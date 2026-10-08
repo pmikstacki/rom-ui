@@ -1,9 +1,6 @@
 import fs from "node:fs";
-import crypto from "node:crypto";
-const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
-const packed = fs.readFileSync(pkg.name + "-" + pkg.version + ".tgz");
-const hash = crypto.createHash("sha256").update(packed).digest("hex");
-const candidate = "rom-ui-" + hash + ".tgz";
+import { consumerPackage } from "./consumer-package.mjs";
+const { packed, candidate } = consumerPackage();
 fs.writeFileSync(candidate, packed);
 const path = "tests/consumer/package.json";
 const consumer = JSON.parse(fs.readFileSync(path, "utf8"));

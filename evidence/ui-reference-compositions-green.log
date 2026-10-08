@@ -1,0 +1,539 @@
+
+added 55 packages, and audited 56 packages in 1s
+
+8 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> rom-ui@0.1.0-alpha.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/rom-ui
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> rom-ui@0.1.0-alpha.0 test:unit
+> node --experimental-strip-types --test tests/unit/*.test.ts
+
+TAP version 13
+# (node:2260019) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: capture detaches exact context and every export attempt receives fresh data
+ok 1 - capture detaches exact context and every export attempt receives fresh data
+  ---
+  duration_ms: 0.726607
+  type: 'test'
+  ...
+# Subtest: captured identity is deeply immutable and excludes extra fields
+ok 2 - captured identity is deeply immutable and excludes extra fields
+  ---
+  duration_ms: 0.342299
+  type: 'test'
+  ...
+# Subtest: identity is captured before the clone callback can change host selection
+ok 3 - identity is captured before the clone callback can change host selection
+  ---
+  duration_ms: 0.14789
+  type: 'test'
+  ...
+# Subtest: a snapshot is context, not current authorization or a file operation
+ok 4 - a snapshot is context, not current authorization or a file operation
+  ---
+  duration_ms: 0.642097
+  type: 'test'
+  ...
+# (node:2260020) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: content notifications coalesce and keep the view at its latest item
+ok 5 - content notifications coalesce and keep the view at its latest item
+  ---
+  duration_ms: 1.748184
+  type: 'test'
+  ...
+# Subtest: manual upward scroll cancels following until explicit resume
+ok 6 - manual upward scroll cancels following until explicit resume
+  ---
+  duration_ms: 0.232711
+  type: 'test'
+  ...
+# Subtest: a manual scroll after queued content wins over the pending frame
+ok 7 - a manual scroll after queued content wins over the pending frame
+  ---
+  duration_ms: 0.198005
+  type: 'test'
+  ...
+# Subtest: disposal cancels queued frames, observers and future scroll effects
+ok 8 - disposal cancels queued frames, observers and future scroll effects
+  ---
+  duration_ms: 0.213805
+  type: 'test'
+  ...
+# Subtest: invalid thresholds are rejected before installing observers
+ok 9 - invalid thresholds are rejected before installing observers
+  ---
+  duration_ms: 0.699185
+  type: 'test'
+  ...
+# Subtest: a viewport resize scroll event without upward movement keeps following
+ok 10 - a viewport resize scroll event without upward movement keeps following
+  ---
+  duration_ms: 0.419505
+  type: 'test'
+  ...
+# Subtest: even a small upward movement stops following until explicit resume
+ok 11 - even a small upward movement stops following until explicit resume
+  ---
+  duration_ms: 0.307212
+  type: 'test'
+  ...
+# Subtest: viewport enlargement clamping the previous position does not count as manual upward movement
+ok 12 - viewport enlargement clamping the previous position does not count as manual upward movement
+  ---
+  duration_ms: 0.197304
+  type: 'test'
+  ...
+# (node:2260021) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: history preserves exact IDs and detaches bounded display data
+ok 13 - history preserves exact IDs and detaches bounded display data
+  ---
+  duration_ms: 0.769168
+  type: 'test'
+  ...
+# Subtest: history rejects duplicate IDs, excessive values and invalid dates
+ok 14 - history rejects duplicate IDs, excessive values and invalid dates
+  ---
+  duration_ms: 0.463569
+  type: 'test'
+  ...
+# Subtest: history dates use explicit locale and timezone without changing stored instants
+ok 15 - history dates use explicit locale and timezone without changing stored instants
+  ---
+  duration_ms: 15.815234
+  type: 'test'
+  ...
+# Subtest: history captures each value once before validating its admitted bounds
+ok 16 - history captures each value once before validating its admitted bounds
+  ---
+  duration_ms: 0.202674
+  type: 'test'
+  ...
+# Subtest: history iterates only its captured entry count without calling an overridden map
+ok 17 - history iterates only its captured entry count without calling an overridden map
+  ---
+  duration_ms: 0.402203
+  type: 'test'
+  ...
+# (node:2260022) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: superseding settles the caller even when old work ignores cancellation
+ok 18 - superseding settles the caller even when old work ignores cancellation
+  ---
+  duration_ms: 5.00202
+  type: 'test'
+  ...
+# Subtest: late errors never classify or publish over a newer result
+ok 19 - late errors never classify or publish over a newer result
+  ---
+  duration_ms: 0.616849
+  type: 'test'
+  ...
+# Subtest: an abort listener may start a newer request without the interrupted run overwriting it
+ok 20 - an abort listener may start a newer request without the interrupted run overwriting it
+  ---
+  duration_ms: 0.255224
+  type: 'test'
+  ...
+# Subtest: pending notification can clear work before its task starts
+ok 21 - pending notification can clear work before its task starts
+  ---
+  duration_ms: 0.280772
+  type: 'test'
+  ...
+# Subtest: clone and classifier callbacks cannot publish after clearing ownership
+ok 22 - clone and classifier callbacks cannot publish after clearing ownership
+  ---
+  duration_ms: 0.345735
+  type: 'test'
+  ...
+# Subtest: ready data is cloned and errors expose only the host code
+ok 23 - ready data is cloned and errors expose only the host code
+  ---
+  duration_ms: 0.202394
+  type: 'test'
+  ...
+# Subtest: dispose settles pending work and never publishes again
+ok 24 - dispose settles pending work and never publishes again
+  ---
+  duration_ms: 1.211285
+  type: 'test'
+  ...
+# Subtest: a throwing notification rejects the wrapper without classifying host defects
+ok 25 - a throwing notification rejects the wrapper without classifying host defects
+  ---
+  duration_ms: 0.514916
+  type: 'test'
+  ...
+# Subtest: a synchronous task rejection becomes a sanitized current error
+ok 26 - a synchronous task rejection becomes a sanitized current error
+  ---
+  duration_ms: 0.2481
+  type: 'test'
+  ...
+# (node:2260023) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout proposals retain exact IDs and validate move/size/visibility without mutation
+ok 27 - layout proposals retain exact IDs and validate move/size/visibility without mutation
+  ---
+  duration_ms: 3.431103
+  type: 'test'
+  ...
+# Subtest: invalid commands and corrupt layouts never propose a fallback
+ok 28 - invalid commands and corrupt layouts never propose a fallback
+  ---
+  duration_ms: 0.182976
+  type: 'test'
+  ...
+# (node:2260032) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout capture detaches and freezes only a valid host-selected catalog
+ok 29 - layout capture detaches and freezes only a valid host-selected catalog
+  ---
+  duration_ms: 1.062764
+  type: 'test'
+  ...
+# Subtest: unknown duplicate and malformed layout IDs are rejected without a fallback
+ok 30 - unknown duplicate and malformed layout IDs are rejected without a fallback
+  ---
+  duration_ms: 0.22677
+  type: 'test'
+  ...
+# Subtest: position size and visible values must satisfy finite integer catalog bounds
+ok 31 - position size and visible values must satisfy finite integer catalog bounds
+  ---
+  duration_ms: 0.351286
+  type: 'test'
+  ...
+# Subtest: corrupt stored layouts and entry limits are rejected without throwing
+ok 32 - corrupt stored layouts and entry limits are rejected without throwing
+  ---
+  duration_ms: 0.214337
+  type: 'test'
+  ...
+# Subtest: invalid host catalogs and limits are configuration errors
+ok 33 - invalid host catalogs and limits are configuration errors
+  ---
+  duration_ms: 0.484378
+  type: 'test'
+  ...
+# Subtest: stored getters cannot widen the captured host bounds
+ok 34 - stored getters cannot widen the captured host bounds
+  ---
+  duration_ms: 0.186423
+  type: 'test'
+  ...
+# Subtest: inherited and changing catalog bounds remain in the exact validated snapshot
+ok 35 - inherited and changing catalog bounds remain in the exact validated snapshot
+  ---
+  duration_ms: 0.161165
+  type: 'test'
+  ...
+# Subtest: stored array proxy errors become invalid layout results
+ok 36 - stored array proxy errors become invalid layout results
+  ---
+  duration_ms: 0.732799
+  type: 'test'
+  ...
+# Subtest: layout entry getters cannot extend the captured item limit during iteration
+ok 37 - layout entry getters cannot extend the captured item limit during iteration
+  ---
+  duration_ms: 0.332551
+  type: 'test'
+  ...
+# (node:2260049) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: the UI entry exposes disposable computations without application imports
+ok 38 - the UI entry exposes disposable computations without application imports
+  ---
+  duration_ms: 1.102349
+  type: 'test'
+  ...
+# Subtest: public composition combines exact selection with validated display links
+ok 39 - public composition combines exact selection with validated display links
+  ---
+  duration_ms: 1.106267
+  type: 'test'
+  ...
+# Subtest: headless package entry validates host layouts without importing Svelte
+ok 40 - headless package entry validates host layouts without importing Svelte
+  ---
+  duration_ms: 2.54314
+  type: 'test'
+  ...
+# (node:2260058) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+ok 41 - reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+  ---
+  duration_ms: 1.643725
+  type: 'test'
+  ...
+# Subtest: reference admission rejects malformed/duplicate candidates and bounds search UTF8
+ok 42 - reference admission rejects malformed/duplicate candidates and bounds search UTF8
+  ---
+  duration_ms: 0.212643
+  type: 'test'
+  ...
+# (node:2260059) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: unknown classification holds one command until explicit reset without automatic retry
+ok 43 - unknown classification holds one command until explicit reset without automatic retry
+  ---
+  duration_ms: 0.72799
+  type: 'test'
+  ...
+# Subtest: old scope/rejection/disposal cannot publish a stale command result
+ok 44 - old scope/rejection/disposal cannot publish a stale command result
+  ---
+  duration_ms: 0.196603
+  type: 'test'
+  ...
+# Subtest: throwing then getter cannot establish an outcome
+ok 45 - throwing then getter cannot establish an outcome
+  ---
+  duration_ms: 0.995146
+  type: 'test'
+  ...
+# Subtest: callback acknowledgement failure is unknown until explicit host recovery
+ok 46 - callback acknowledgement failure is unknown until explicit host recovery
+  ---
+  duration_ms: 0.166245
+  type: 'test'
+  ...
+# Subtest: pending publisher reset or dispose prevents stale callback dispatch
+ok 47 - pending publisher reset or dispose prevents stale callback dispatch
+  ---
+  duration_ms: 0.161496
+  type: 'test'
+  ...
+# (node:2260068) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: selection preserves exact opaque IDs and returns detached snapshots
+ok 48 - selection preserves exact opaque IDs and returns detached snapshots
+  ---
+  duration_ms: 1.344809
+  type: 'test'
+  ...
+# Subtest: single selection toggles and replaces without inferring labels
+ok 49 - single selection toggles and replaces without inferring labels
+  ---
+  duration_ms: 0.150165
+  type: 'test'
+  ...
+# Subtest: removing available IDs prunes selection and clear empties it
+ok 50 - removing available IDs prunes selection and clear empties it
+  ---
+  duration_ms: 0.403415
+  type: 'test'
+  ...
+# Subtest: invalid catalogs and initial selection fail explicitly
+ok 51 - invalid catalogs and initial selection fail explicitly
+  ---
+  duration_ms: 0.29557
+  type: 'test'
+  ...
+# Subtest: invalid replacement is atomic and does not discard current selection
+ok 52 - invalid replacement is atomic and does not discard current selection
+  ---
+  duration_ms: 3.2765
+  type: 'test'
+  ...
+# (node:2260092) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: normalizes approved internal and external links without fetching
+ok 53 - normalizes approved internal and external links without fetching
+  ---
+  duration_ms: 1.792417
+  type: 'test'
+  ...
+# Subtest: scheme and credentials checks precede any internal callback
+ok 54 - scheme and credentials checks precede any internal callback
+  ---
+  duration_ms: 3.120754
+  type: 'test'
+  ...
+# Subtest: origin comparisons reject lookalike hosts and protocol-relative outsiders
+ok 55 - origin comparisons reject lookalike hosts and protocol-relative outsiders
+  ---
+  duration_ms: 0.349112
+  type: 'test'
+  ...
+# Subtest: internal callback sees immutable normalized path and failures reject links
+ok 56 - internal callback sees immutable normalized path and failures reject links
+  ---
+  duration_ms: 0.319646
+  type: 'test'
+  ...
+# Subtest: raw input has a fixed UTF8 bound and rejects control characters
+ok 57 - raw input has a fixed UTF8 bound and rejects control characters
+  ---
+  duration_ms: 0.301512
+  type: 'test'
+  ...
+# Subtest: unsafe or ambiguous configuration fails explicitly
+ok 58 - unsafe or ambiguous configuration fails explicitly
+  ---
+  duration_ms: 0.698894
+  type: 'test'
+  ...
+# Subtest: a JavaScript async internal validator cannot approve a blocked link
+ok 59 - a JavaScript async internal validator cannot approve a blocked link
+  ---
+  duration_ms: 0.231208
+  type: 'test'
+  ...
+# Subtest: a rejected async validator is ignored without an unhandled rejection
+ok 60 - a rejected async validator is ignored without an unhandled rejection
+  ---
+  duration_ms: 4.471935
+  type: 'test'
+  ...
+1..60
+# tests 60
+# suites 0
+# pass 60
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 205.73482
+rom-ui-0.1.0-alpha.0.tgz
+
+added 89 packages, and audited 90 packages in 1s
+
+20 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> rom-ui-consumer@0.0.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/rom-ui/tests/consumer
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> rom-ui-consumer@0.0.0 build
+> vite build
+
+4:45:07 PM [vite-plugin-svelte] no Svelte config found at /root/rom-ui/tests/consumer - using default configuration.
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 784 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.50 kB │ gzip:  0.29 kB
+dist/details.html                           0.56 kB │ gzip:  0.30 kB
+dist/history.html                           0.56 kB │ gzip:  0.30 kB
+dist/reference.html                         0.56 kB │ gzip:  0.30 kB
+dist/selection-layout.html                  0.57 kB │ gzip:  0.30 kB
+dist/assets/ui-components-CpGPpkO-.css      0.12 kB │ gzip:  0.11 kB
+dist/assets/index-Dy160qv2.css              0.42 kB │ gzip:  0.24 kB
+dist/assets/check-BHfKSrSN.css             51.17 kB │ gzip:  8.95 kB
+dist/assets/history-DDh6mGhL.js             2.03 kB │ gzip:  1.08 kB
+dist/assets/details-DBBr8fTP.js             2.05 kB │ gzip:  1.01 kB
+dist/assets/reference-Bu9Z8FIU.js           2.17 kB │ gzip:  1.20 kB
+dist/assets/selection-layout-DmQe_DsI.js    3.98 kB │ gzip:  1.72 kB
+dist/assets/index-DAOxi1K9.js              34.44 kB │ gzip:  9.30 kB
+dist/assets/ui-components-bJmbhLnd.js     135.93 kB │ gzip: 39.24 kB
+dist/assets/check-CjtMtkjO.js             142.30 kB │ gzip: 51.23 kB
+
+✓ built in 2.06s
+[WebServer] (node:2260819) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2260834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 72 tests using 1 worker
+
+(node:2260897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/controls.spec.ts:3:1 › installed public controls preserve bound values, native refs and keyboard operations (347ms)
+  ✓   2 [chromium] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 1280x900 (269ms)
+  ✓   3 [chromium] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 390x500 (172ms)
+  ✓   4 [chromium] › tests/details.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (223ms)
+  ✓   5 [chromium] › tests/details.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (415ms)
+  ✓   6 [chromium] › tests/details.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (213ms)
+  ✓   7 [chromium] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (410ms)
+  ✓   8 [chromium] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (411ms)
+  ✓   9 [chromium] › tests/details.spec.ts:59:1 › active close control uses the host's changed label (443ms)
+  ✓  10 [chromium] › tests/details.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (661ms)
+  ✓  11 [chromium] › tests/details.spec.ts:81:1 › reduced motion displays complete details without content animation (174ms)
+  ✓  12 [chromium] › tests/history.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (112ms)
+  ✓  13 [chromium] › tests/history.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (125ms)
+  ✓  14 [chromium] › tests/history.spec.ts:38:1 › history metadata and empty text follow a locale change (172ms)
+  ✓  15 [chromium] › tests/history.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (211ms)
+  ✓  16 [chromium] › tests/history.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (245ms)
+  ✓  17 [chromium] › tests/history.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (243ms)
+  ✓  18 [chromium] › tests/history.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (262ms)
+  ✓  19 [chromium] › tests/reference.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (329ms)
+  ✓  20 [chromium] › tests/reference.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (926ms)
+  ✓  21 [chromium] › tests/reference.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (212ms)
+  ✓  22 [chromium] › tests/reference.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.1s)
+  ✓  23 [chromium] › tests/reference.spec.ts:82:3 › Deny response leaves manual exact ID entry available (214ms)
+  ✓  24 [chromium] › tests/reference.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (206ms)
+  ✓  25 [chromium] › tests/reference.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.5s)
+  ✓  26 [chromium] › tests/reference.spec.ts:125:1 › host validation rejects a manual draft without publishing a different exact ID (149ms)
+  ✓  27 [chromium] › tests/selection-layout.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (161ms)
+  ✓  28 [chromium] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (226ms)
+  ✓  29 [chromium] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (212ms)
+  ✓  30 [chromium] › tests/selection-layout.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (211ms)
+  ✓  31 [chromium] › tests/selection-layout.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (309ms)
+  ✓  32 [chromium] › tests/selection-layout.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (345ms)
+  ✓  33 [chromium] › tests/selection-layout.spec.ts:164:1 › disabled host controls cannot dispatch (147ms)
+  ✓  34 [chromium] › tests/selection-layout.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (273ms)
+  ✓  35 [chromium] › tests/selection-layout.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (277ms)
+  ✓  36 [chromium] › tests/selection-layout.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (197ms)
+(node:2262344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  37 [webkit] › tests/controls.spec.ts:3:1 › installed public controls preserve bound values, native refs and keyboard operations (345ms)
+  ✓  38 [webkit] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 1280x900 (299ms)
+  ✓  39 [webkit] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 390x500 (302ms)
+  ✓  40 [webkit] › tests/details.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (315ms)
+  ✓  41 [webkit] › tests/details.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (545ms)
+  ✓  42 [webkit] › tests/details.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (340ms)
+  ✓  43 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (517ms)
+  ✓  44 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (518ms)
+  ✓  45 [webkit] › tests/details.spec.ts:59:1 › active close control uses the host's changed label (536ms)
+  ✓  46 [webkit] › tests/details.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (786ms)
+  ✓  47 [webkit] › tests/details.spec.ts:81:1 › reduced motion displays complete details without content animation (304ms)
+  ✓  48 [webkit] › tests/history.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (244ms)
+  ✓  49 [webkit] › tests/history.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (258ms)
+  ✓  50 [webkit] › tests/history.spec.ts:38:1 › history metadata and empty text follow a locale change (303ms)
+  ✓  51 [webkit] › tests/history.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (336ms)
+  ✓  52 [webkit] › tests/history.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (351ms)
+  ✓  53 [webkit] › tests/history.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (366ms)
+  ✓  54 [webkit] › tests/history.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (378ms)
+  ✓  55 [webkit] › tests/reference.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (492ms)
+  ✓  56 [webkit] › tests/reference.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (1.1s)
+  ✓  57 [webkit] › tests/reference.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (336ms)
+  ✓  58 [webkit] › tests/reference.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.3s)
+  ✓  59 [webkit] › tests/reference.spec.ts:82:3 › Deny response leaves manual exact ID entry available (385ms)
+  ✓  60 [webkit] › tests/reference.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (384ms)
+  ✓  61 [webkit] › tests/reference.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.7s)
+  ✓  62 [webkit] › tests/reference.spec.ts:125:1 › host validation rejects a manual draft without publishing a different exact ID (289ms)
+  ✓  63 [webkit] › tests/selection-layout.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (286ms)
+  ✓  64 [webkit] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (359ms)
+  ✓  65 [webkit] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (343ms)
+  ✓  66 [webkit] › tests/selection-layout.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (338ms)
+  ✓  67 [webkit] › tests/selection-layout.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (433ms)
+  ✓  68 [webkit] › tests/selection-layout.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (467ms)
+  ✓  69 [webkit] › tests/selection-layout.spec.ts:164:1 › disabled host controls cannot dispatch (286ms)
+  ✓  70 [webkit] › tests/selection-layout.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (406ms)
+  ✓  71 [webkit] › tests/selection-layout.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (401ms)
+  ✓  72 [webkit] › tests/selection-layout.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (353ms)
+
+  72 passed (33.2s)

@@ -1,0 +1,290 @@
+TAP version 13
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/export-snapshot.ts' imported from /root/rom-ui/tests/unit/ui-export-snapshot.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/export-snapshot.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-export-snapshot.test.ts
+not ok 1 - tests/unit/ui-export-snapshot.test.ts
+  ---
+  duration_ms: 170.280388
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-export-snapshot.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/follow-latest.ts' imported from /root/rom-ui/tests/unit/ui-follow-latest.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/follow-latest.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-follow-latest.test.ts
+not ok 2 - tests/unit/ui-follow-latest.test.ts
+  ---
+  duration_ms: 159.571962
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-follow-latest.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/history.ts' imported from /root/rom-ui/tests/unit/ui-history.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/history.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-history.test.ts
+not ok 3 - tests/unit/ui-history.test.ts
+  ---
+  duration_ms: 183.604267
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-history.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/latest-request.ts' imported from /root/rom-ui/tests/unit/ui-latest.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/latest-request.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-latest.test.ts
+not ok 4 - tests/unit/ui-latest.test.ts
+  ---
+  duration_ms: 168.790585
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-latest.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/components/layout-controls.ts' imported from /root/rom-ui/tests/unit/ui-layout-controls.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/components/layout-controls.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-layout-controls.test.ts
+not ok 5 - tests/unit/ui-layout-controls.test.ts
+  ---
+  duration_ms: 144.62614
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-layout-controls.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/layout.ts' imported from /root/rom-ui/tests/unit/ui-layout.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/layout.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-layout.test.ts
+not ok 6 - tests/unit/ui-layout.test.ts
+  ---
+  duration_ms: 166.526636
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-layout.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/ui.ts' imported from /root/rom-ui/tests/unit/ui-public.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/ui.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-public.test.ts
+not ok 7 - tests/unit/ui-public.test.ts
+  ---
+  duration_ms: 141.516909
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-public.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/components/selection-card.ts' imported from /root/rom-ui/tests/unit/ui-selection-card.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/components/selection-card.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-selection-card.test.ts
+not ok 8 - tests/unit/ui-selection-card.test.ts
+  ---
+  duration_ms: 155.243161
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-selection-card.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/selection.ts' imported from /root/rom-ui/tests/unit/ui-selection.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/selection.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-selection.test.ts
+not ok 9 - tests/unit/ui-selection.test.ts
+  ---
+  duration_ms: 132.679409
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-selection.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/root/rom-ui/src/lib/ui/source-link.ts' imported from /root/rom-ui/tests/unit/ui-source-link.test.ts
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:860:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:984:11)
+#     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+#     at \#cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///root/rom-ui/src/lib/ui/source-link.ts'
+# }
+# Node.js v22.16.0
+# Subtest: tests/unit/ui-source-link.test.ts
+not ok 10 - tests/unit/ui-source-link.test.ts
+  ---
+  duration_ms: 154.462192
+  type: 'test'
+  location: '/root/rom-ui/tests/unit/ui-source-link.test.ts:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 0
+# fail 10
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 194.721046

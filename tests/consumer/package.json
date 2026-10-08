@@ -8,7 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "rom-ui": "file:../../rom-ui-0923e68fe53c213f7e5617b6c9df9fdf8305e5963e03d1db7eb404b27a01dc2c.tgz",
+    "rom-ui": "file:../../rom-ui-90934801e6318172b571d7240d2a376a40a3ad80f25d77d12960826a9e0e4657.tgz",
     "svelte": "5.57.1"
   },
   "devDependencies": {

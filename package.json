@@ -27,7 +27,16 @@
       "svelte": "./src/controls.ts",
       "default": "./src/controls.ts"
     },
-    "./styles": "./src/styles.css"
+    "./styles": "./src/styles.css",
+    "./ui": {
+      "types": "./src/ui.ts",
+      "default": "./src/ui.ts"
+    },
+    "./ui/components": {
+      "types": "./src/ui-components.ts",
+      "svelte": "./src/ui-components.ts",
+      "default": "./src/ui-components.ts"
+    }
   },
   "peerDependencies": {
     "svelte": "5.57.1"
@@ -49,6 +58,7 @@
   },
   "scripts": {
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "test": "./scripts/check"
+    "test": "./scripts/check",
+    "test:unit": "node --experimental-strip-types --test tests/unit/*.test.ts"
   }
 }

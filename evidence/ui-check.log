@@ -1,0 +1,8 @@
+
+> rom-ui@0.1.0-alpha.0 check
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/rom-ui
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

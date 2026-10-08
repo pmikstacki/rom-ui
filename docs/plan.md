@@ -19,10 +19,10 @@ Files: `src/controls.ts`, `src/lib/components/ui`, `src/styles.css`, `tests/cons
 
 Files: `src/ui.ts`, `src/ui-components.ts`, focused modules and consumer cases.
 
-- [ ] Inventory dependencies for every helper and composition.
-- [ ] Extract generic helpers and compositions with their existing behavioral regressions.
+- [x] Inventory dependencies for every helper and composition.
+- [x] Extract generic helpers and compositions with their existing behavioral regressions.
 - [ ] Define a ROM-owned adapter for descriptor and codec dependent reference editing.
-- [ ] Verify disposal, focus, async cancellation and exact ID preservation.
+- [x] Verify disposal, focus, async cancellation and exact ID preservation.
 
 ## Task 3: ROM integration
 
