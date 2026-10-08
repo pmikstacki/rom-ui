@@ -1,0 +1,9 @@
+{"program":"corepack","args":["pnpm@10.30.0","run","check"],"cwd":"/var/tmp/rom-ui-root-public-pnpm/consumer","exit_code":0,"signal":null}
+
+> rom-public-controls-consumer@0.0.0 check /var/tmp/rom-ui-root-public-pnpm/consumer
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /var/tmp/rom-ui-root-public-pnpm/consumer
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

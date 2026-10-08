@@ -1,0 +1,23 @@
+[WebServer] (node:2396378) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2396396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 2 workers
+
+(node:2396483) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2396484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium] › tests/components/ui-follow-latest.spec.ts:22:1 › follow-latest preserves manual reading and supports explicit resume (310ms)
+  ✓   1 [webkit] › tests/components/ui-follow-latest.spec.ts:22:1 › follow-latest preserves manual reading and supports explicit resume (441ms)
+  ✓   3 [chromium] › tests/components/ui-follow-latest.spec.ts:48:1 › follow-latest uses actual frame and resized viewport without losing ownership (275ms)
+  ✓   5 [chromium] › tests/components/ui-follow-latest.spec.ts:70:1 › disposal suppresses a queued automatic scroll in the real browser (147ms)
+  ✓   4 [webkit] › tests/components/ui-follow-latest.spec.ts:48:1 › follow-latest uses actual frame and resized viewport without losing ownership (376ms)
+  ✓   6 [chromium] › tests/components/ui-follow-latest.spec.ts:90:1 › small manual upward movement requires explicit resume (139ms)
+  ✓   8 [chromium] › tests/components/ui-follow-latest.spec.ts:123:1 › a larger viewport can clamp the position without disabling following (118ms)
+  ✓   7 [webkit] › tests/components/ui-follow-latest.spec.ts:70:1 › disposal suppresses a queued automatic scroll in the real browser (295ms)
+  ✓   9 [webkit] › tests/components/ui-follow-latest.spec.ts:90:1 › small manual upward movement requires explicit resume (290ms)
+  ✓  10 [webkit] › tests/components/ui-follow-latest.spec.ts:123:1 › a larger viewport can clamp the position without disabling following (267ms)
+
+  10 passed (3.1s)

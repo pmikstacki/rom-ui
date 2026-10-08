@@ -1,0 +1,42 @@
+
+> rom-studio@0.0.3 build:components /root/.codex/worktrees/rom-ui-integration/ROM/studio
+> vite build --mode components --outDir .component-dist
+
+vite v8.3.2 building client environment for components...
+transforming...
+4:59:00 PM [vite-plugin-svelte] tests/components/SortableFieldsHarness.svelte:36:6 `invalidLayoutRejected` is updated, but is not declared with `$state(...)`. Changing its value will not correctly trigger updates
+https://svelte.dev/e/non_reactive_update
+34:     findRenderer(lifecycleCodec) === RegistryScalarHarnessRenderer &&
+35:     rendererLayout(lifecycleCodec) === "inline";
+36:   let invalidLayoutRejected = false;
+                               ^
+37:   try {
+38:     registerRenderer(
+✓ 5023 modules transformed.
+rendering chunks...
+✗ Build failed in 3.09s
+error during build:
+Build failed with 1 error:
+
+[plugin vite-plugin-rom-runtime-notices]
+Error: ENOENT: no such file or directory, lstat '/root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/rolldown'
+    at realpathSync (node:fs:2787:29)
+    at packageOwner (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.vite-temp/vite.config.ts.timestamp-1791478740183-2cff086805803.mjs:168:16)
+    at file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.vite-temp/vite.config.ts.timestamp-1791478740183-2cff086805803.mjs:193:46
+    at Array.map (<anonymous>)
+    at moduleOwner (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.vite-temp/vite.config.ts.timestamp-1791478740183-2cff086805803.mjs:193:32)
+    at collectRuntimeNotices (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.vite-temp/vite.config.ts.timestamp-1791478740183-2cff086805803.mjs:318:42)
+    at PluginContextImpl.handler (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.vite-temp/vite.config.ts.timestamp-1791478740183-2cff086805803.mjs:358:38)
+    at PluginContextImpl.handler (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/vite@8.3.2_@types+node@22.20.5_jiti@2.7.0/node_modules/vite/dist/node/chunks/node.js:34749:13)
+    at plugin (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/rolldown@1.2.12/node_modules/rolldown/dist/shared/bindingify-input-options-DCTviPFW.mjs:1897:17)
+    at file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/rolldown@1.2.12/node_modules/rolldown/dist/shared/bindingify-input-options-DCTviPFW.mjs:2118:21
+    at aggregateBindingErrorsIntoJsError (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/rolldown@1.2.12/node_modules/rolldown/dist/shared/error-Bj1xBdEY.mjs:49:18)
+    at unwrapBindingResult (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/rolldown@1.2.12/node_modules/rolldown/dist/shared/error-Bj1xBdEY.mjs:19:128)
+    at #build (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/rolldown@1.2.12/node_modules/rolldown/dist/shared/rolldown-jmAeXo_f.mjs:133:34)
+    at async buildEnvironment (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/vite@8.3.2_@types+node@22.20.5_jiti@2.7.0/node_modules/vite/dist/node/chunks/node.js:34490:66)
+    at async Object.build (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/vite@8.3.2_@types+node@22.20.5_jiti@2.7.0/node_modules/vite/dist/node/chunks/node.js:34911:19)
+    at async Object.buildApp (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/vite@8.3.2_@types+node@22.20.5_jiti@2.7.0/node_modules/vite/dist/node/chunks/node.js:34908:153)
+    at async CAC.<anonymous> (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/node_modules/.pnpm/vite@8.3.2_@types+node@22.20.5_jiti@2.7.0/node_modules/vite/dist/node/cli.js:780:3) {
+  errors: [Getter/Setter]
+}
+ ELIFECYCLE  Command failed with exit code 1.

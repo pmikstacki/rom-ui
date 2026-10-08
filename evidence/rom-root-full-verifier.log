@@ -1,0 +1,2767 @@
+- Validating...
+✓ change/add-provider-neutral-ai-flows
+✓ change/add-structured-action-inputs
+✓ change/compose-durable-mutation-recovery
+✓ change/design-capability-adapters
+✓ change/design-provider-neutral-auth
+✓ change/enforce-resource-transitions
+✓ change/establish-rom
+✓ change/evaluate-query-compensation-and-skills
+✓ change/expose-studio-control-api
+✓ change/harden-core-and-add-cli
+✓ change/improve-studio-ergonomics-0-0-3
+✓ change/integrate-resource-mvp
+✓ change/prepare-framework-release
+✓ change/release-rom-0-0-2-studio
+✓ change/release-rom-0-1-0
+✓ change/support-captured-transition-validation
+✓ change/support-delayed-channel-intents
+Totals: 17 passed, 0 failed (17 items)
+TAP version 13
+# Subtest: application copy keeps required test support but excludes private files and build caches
+ok 1 - application copy keeps required test support but excludes private files and build caches
+  ---
+  duration_ms: 17.024217
+  type: 'test'
+  ...
+# Subtest: dependency path audit rejects a ROM dependency resolved from the checkout or a sibling prefix
+ok 2 - dependency path audit rejects a ROM dependency resolved from the checkout or a sibling prefix
+  ---
+  duration_ms: 0.284202
+  type: 'test'
+  ...
+# Subtest: copied application inventory includes hidden configuration and shared support bytes
+ok 3 - copied application inventory includes hidden configuration and shared support bytes
+  ---
+  duration_ms: 13.995352
+  type: 'test'
+  ...
+# Subtest: successful tool cannot leave a live stdio-closed child
+ok 4 - successful tool cannot leave a live stdio-closed child
+  ---
+  duration_ms: 206.374828
+  type: 'test'
+  ...
+# Subtest: SIGTERM terminates the active owned tool group
+ok 5 - SIGTERM terminates the active owned tool group
+  ---
+  duration_ms: 134.590839
+  type: 'test'
+  ...
+# Subtest: SIGINT terminates the active owned tool group
+ok 6 - SIGINT terminates the active owned tool group
+  ---
+  duration_ms: 244.875018
+  type: 'test'
+  ...
+# Subtest: deadline preserves failure and stops descendants
+ok 7 - deadline preserves failure and stops descendants
+  ---
+  duration_ms: 1024.865837
+  type: 'test'
+  ...
+# Subtest: output budget preserves failure and stops descendants
+ok 8 - output budget preserves failure and stops descendants
+  ---
+  duration_ms: 117.139908
+  type: 'test'
+  ...
+# Subtest: manifest rewrite changes only four direct ROM paths and preserves Astrorust, features, lints, workspace and dev dependencies
+ok 9 - manifest rewrite changes only four direct ROM paths and preserves Astrorust, features, lints, workspace and dev dependencies
+  ---
+  duration_ms: 13.840627
+  type: 'test'
+  ...
+# Subtest: copy creates new private app inputs and routes exact extracted packages without copying ROM vendor
+ok 10 - copy creates new private app inputs and routes exact extracted packages without copying ROM vendor
+  ---
+  duration_ms: 12.867302
+  type: 'test'
+  ...
+# Subtest: source symlinks, symbolic package ancestors and unsafe output paths fail closed
+ok 11 - source symlinks, symbolic package ancestors and unsafe output paths fail closed
+  ---
+  duration_ms: 9.134866
+  type: 'test'
+  ...
+# Subtest: unknown and missing extracted packages are rejected
+ok 12 - unknown and missing extracted packages are rejected
+  ---
+  duration_ms: 7.472937
+  type: 'test'
+  ...
+# Subtest: graph audit rejects checkout paths, unexpected versions, mutation and unknown local crates
+ok 13 - graph audit rejects checkout paths, unexpected versions, mutation and unknown local crates
+  ---
+  duration_ms: 6.842786
+  type: 'test'
+  ...
+# Subtest: registry drift requires exact candidate version, source and checksum evidence
+ok 14 - registry drift requires exact candidate version, source and checksum evidence
+  ---
+  duration_ms: 6.609952
+  type: 'test'
+  ...
+# Subtest: runner rejects absent or unbounded explicit time/output budgets before preparing or launching Cargo
+ok 15 - runner rejects absent or unbounded explicit time/output budgets before preparing or launching Cargo
+  ---
+  duration_ms: 2.737519
+  type: 'test'
+  ...
+# Subtest: failed tool retains final source drift audit without replacing its primary failure
+ok 16 - failed tool retains final source drift audit without replacing its primary failure
+  ---
+  duration_ms: 88.361203
+  type: 'test'
+  ...
+# Subtest: external application manifest retains exact identity, optional features and dependency scopes
+ok 17 - external application manifest retains exact identity, optional features and dependency scopes
+  ---
+  duration_ms: 0.942657
+  type: 'test'
+  ...
+# Subtest: unsupported dependency kinds and alternate registries fail explicitly
+ok 18 - unsupported dependency kinds and alternate registries fail explicitly
+  ---
+  duration_ms: 0.428466
+  type: 'test'
+  ...
+# Subtest: complete static asset identity rejects changed, missing, and extra files
+ok 19 - complete static asset identity rejects changed, missing, and extra files
+  ---
+  duration_ms: 18.868563
+  type: 'test'
+  ...
+# Subtest: asset admission rejects links, caches, invalid UTF8, and external or escaping references
+ok 20 - asset admission rejects links, caches, invalid UTF8, and external or escaping references
+  ---
+  duration_ms: 10.00778
+  type: 'test'
+  ...
+# Subtest: fresh offline build produces an exclusively created immutable asset extraction
+ok 21 - fresh offline build produces an exclusively created immutable asset extraction
+  ---
+  duration_ms: 129.683104
+  type: 'test'
+  ...
+# Subtest: npm failures and changed copied lock prevent acceptance and retain command evidence
+ok 22 - npm failures and changed copied lock prevent acceptance and retain command evidence
+  ---
+  duration_ms: 12.869135
+  type: 'test'
+  ...
+# Subtest: packaged consumer must build locked inputs and run the actual-host command on the extraction
+ok 23 - packaged consumer must build locked inputs and run the actual-host command on the extraction
+  ---
+  duration_ms: 112.060335
+  type: 'test'
+  ...
+# Subtest: packaged consumer retains incomplete evidence if host fails or changes accepted assets
+ok 24 - packaged consumer retains incomplete evidence if host fails or changes accepted assets
+  ---
+  duration_ms: 185.103924
+  type: 'test'
+  ...
+# Subtest: shared installation retains portable module IDs and exact licenses
+ok 25 - shared installation retains portable module IDs and exact licenses
+  ---
+  duration_ms: 27.667399
+  type: 'test'
+  ...
+# Subtest: shared installation still rejects missing licenses, changed identity and external modules
+ok 26 - shared installation still rejects missing licenses, changed identity and external modules
+  ---
+  duration_ms: 25.448939
+  type: 'test'
+  ...
+# Subtest: package links cannot extend the configured installation boundary
+ok 27 - package links cannot extend the configured installation boundary
+  ---
+  duration_ms: 13.000846
+  type: 'test'
+  ...
+# Subtest: emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+ok 28 - emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+  ---
+  duration_ms: 4.163939
+  type: 'test'
+  ...
+# Subtest: build refuses missing full license text, unknown virtual code, or an untrusted package owner
+ok 29 - build refuses missing full license text, unknown virtual code, or an untrusted package owner
+  ---
+  duration_ms: 12.108475
+  type: 'test'
+  ...
+# Subtest: asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+ok 30 - asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+  ---
+  duration_ms: 8.543178
+  type: 'test'
+  ...
+# Subtest: inventory rejects missing owner bindings and malformed notice metadata before admission
+ok 31 - inventory rejects missing owner bindings and malformed notice metadata before admission
+  ---
+  duration_ms: 17.67624
+  type: 'test'
+  ...
+# Subtest: distinct transformed module IDs preserve query suffixes in the emitted inventory
+ok 32 - distinct transformed module IDs preserve query suffixes in the emitted inventory
+  ---
+  duration_ms: 13.802835
+  type: 'test'
+  ...
+# Subtest: unclassified JavaScript assets cannot bypass emitted runtime provenance
+ok 33 - unclassified JavaScript assets cannot bypass emitted runtime provenance
+  ---
+  duration_ms: 10.225675
+  type: 'test'
+  ...
+# Subtest: copied responsive hook and imported CSS retain their actual owners
+ok 34 - copied responsive hook and imported CSS retain their actual owners
+  ---
+  duration_ms: 13.666937
+  type: 'test'
+  ...
+# Subtest: emitted SVAR modules retain the original MIT notice with their pinned source commit
+ok 35 - emitted SVAR modules retain the original MIT notice with their pinned source commit
+  ---
+  duration_ms: 10.707885
+  type: 'test'
+  ...
+# Subtest: inventory rejects emitted SVAR code stripped of its required owner
+ok 36 - inventory rejects emitted SVAR code stripped of its required owner
+  ---
+  duration_ms: 6.789094
+  type: 'test'
+  ...
+# Subtest: SVAR owner cannot silently change its source commit or retained license profile
+ok 37 - SVAR owner cannot silently change its source commit or retained license profile
+  ---
+  duration_ms: 19.182251
+  type: 'test'
+  ...
+# Subtest: runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+ok 38 - runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+  ---
+  duration_ms: 11.814565
+  type: 'test'
+  ...
+# Subtest: ROM UI styles retain their nested shadcn and animation owners
+ok 39 - ROM UI styles retain their nested shadcn and animation owners
+  ---
+  duration_ms: 7.639955
+  type: 'test'
+  ...
+# Subtest: shared installation retains portable imported stylesheet IDs
+ok 40 - shared installation retains portable imported stylesheet IDs
+  ---
+  duration_ms: 4.090007
+  type: 'test'
+  ...
+# Subtest: Studio copied inputs retain complete regular sources and exact npm identities
+ok 41 - Studio copied inputs retain complete regular sources and exact npm identities
+  ---
+  duration_ms: 28.560512
+  type: 'test'
+  ...
+# Subtest: Studio source refuses incomplete inputs, incompatible npm lock, and source links
+ok 42 - Studio source refuses incomplete inputs, incompatible npm lock, and source links
+  ---
+  duration_ms: 13.716782
+  type: 'test'
+  ...
+# Subtest: private frontend environment and key inputs are never admitted to a fresh copy
+ok 43 - private frontend environment and key inputs are never admitted to a fresh copy
+  ---
+  duration_ms: 20.501967
+  type: 'test'
+  ...
+# gzip: /var/tmp/rom-artifact-test-ljAQV9/truncated-source.tar.gz: unexpected end of file
+# Subtest: commit extraction consumes only the Git header from a large source archive
+ok 44 - commit extraction consumes only the Git header from a large source archive
+  ---
+  duration_ms: 381.739323
+  type: 'test'
+  ...
+# Subtest: commit extraction rejects a tree archive with no commit marker
+ok 45 - commit extraction rejects a tree archive with no commit marker
+  ---
+  duration_ms: 145.990473
+  type: 'test'
+  ...
+# Subtest: commit extraction still rejects incomplete gzip content
+ok 46 - commit extraction still rejects incomplete gzip content
+  ---
+  duration_ms: 160.450461
+  type: 'test'
+  ...
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-g6RTny/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-g6RTny/.rom-release-stage-onMx7F/.studio-work-XhTU5c/extracted/rom-0.0.3-aa677ab8f7bb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-g6RTny/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-8mgvDG/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-8mgvDG/.rom-release-stage-5GqajQ/.studio-work-hTiaKr/extracted/rom-0.0.3-16b21eb6f770-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-8mgvDG/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-B6clPW/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-B6clPW/.rom-release-stage-MzOT2I/.studio-work-Mbe3gj/extracted/rom-0.0.3-52b0ae16805e-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-B6clPW/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-XgOnyY/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-XgOnyY/.rom-release-stage-F4bHo0/.studio-work-9KuTvc/extracted/rom-0.0.3-d6b9c4d134cb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-XgOnyY/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-wqKUd1/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-wqKUd1/.rom-release-stage-jGuk3q/.studio-work-vBOWMh/extracted/rom-0.0.3-4455849af0a2-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-wqKUd1/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-dSrJGg/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-dSrJGg/.rom-release-stage-wQiGIs/.studio-work-L6qQmZ/extracted/rom-0.0.3-596a7ccf01c9-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-dSrJGg/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-RNZMKr/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-RNZMKr/.rom-release-stage-hQRstD/.studio-work-jhYOkB/extracted/rom-0.0.3-0be1882dba56-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-RNZMKr/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-cBA9bx/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-cBA9bx/.rom-release-stage-jmLVBN/.studio-work-zAiGcx/extracted/rom-0.0.3-f29661bc4588-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-cBA9bx/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-I8h1iu/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-I8h1iu/.rom-release-stage-PKQj9K/.studio-work-qSfmGt/extracted/rom-0.0.3-5c621dfe5cf8-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-I8h1iu/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-H22FJ5/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-H22FJ5/.rom-release-stage-J5sVbY/.studio-work-nsI7SG/extracted/rom-0.0.3-5c621dfe5cf8-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-H22FJ5/completed
+# Subtest: archive traversal or links are rejected before extraction
+ok 47 - archive traversal or links are rejected before extraction
+  ---
+  duration_ms: 99.132609
+  type: 'test'
+  ...
+# Subtest: changed declared archive identity fails even with refreshed manifest checksum
+ok 48 - changed declared archive identity fails even with refreshed manifest checksum
+  ---
+  duration_ms: 1756.575721
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra unchecksummed files
+ok 49 - artifact verification rejects extra unchecksummed files
+  ---
+  duration_ms: 1046.924966
+  type: 'test'
+  ...
+# Subtest: verification checks archive commit and complete gate metadata
+ok 50 - verification checks archive commit and complete gate metadata
+  ---
+  duration_ms: 2936.698653
+  type: 'test'
+  ...
+# Subtest: verification notices unchecksummed cache directories
+ok 51 - verification notices unchecksummed cache directories
+  ---
+  duration_ms: 762.892931
+  type: 'test'
+  ...
+# Subtest: verification binds complete declared profile and package version to the extracted profile
+ok 52 - verification binds complete declared profile and package version to the extracted profile
+  ---
+  duration_ms: 2261.568442
+  type: 'test'
+  ...
+# Subtest: verification binds the complete declared selected file inventory
+ok 53 - verification binds the complete declared selected file inventory
+  ---
+  duration_ms: 708.702385
+  type: 'test'
+  ...
+# Subtest: Studio gate profile requires both source frontend and exact extracted host acceptance
+ok 54 - Studio gate profile requires both source frontend and exact extracted host acceptance
+  ---
+  duration_ms: 8.504804
+  type: 'test'
+  ...
+# Subtest: historical v1 profile retains exactly the original six command identities
+ok 55 - historical v1 profile retains exactly the original six command identities
+  ---
+  duration_ms: 0.284583
+  type: 'test'
+  ...
+# Subtest: control admission binds every required scenario to both actual report projects
+ok 56 - control admission binds every required scenario to both actual report projects
+  ---
+  duration_ms: 4.540477
+  type: 'test'
+  ...
+# Subtest: missing, extra, renamed and wrong-file scenarios cannot satisfy browser admission
+ok 57 - missing, extra, renamed and wrong-file scenarios cannot satisfy browser admission
+  ---
+  duration_ms: 4.889001
+  type: 'test'
+  ...
+# Subtest: report errors, retries, skipped, failed, crashed and interrupted execution fail admission
+ok 58 - report errors, retries, skipped, failed, crashed and interrupted execution fail admission
+  ---
+  duration_ms: 0.696208
+  type: 'test'
+  ...
+# Subtest: recovery admission requires all five lifecycle scenarios in both browser projects
+ok 59 - recovery admission requires all five lifecycle scenarios in both browser projects
+  ---
+  duration_ms: 0.280475
+  type: 'test'
+  ...
+# Subtest: a missing late-principal scenario cannot pass recovery admission using a stale eight-case report
+ok 60 - a missing late-principal scenario cannot pass recovery admission using a stale eight-case report
+  ---
+  duration_ms: 0.276397
+  type: 'test'
+  ...
+# Subtest: recovery admission rejects failed, retried, duplicated and mismatched lifecycle results
+ok 61 - recovery admission rejects failed, retried, duplicated and mismatched lifecycle results
+  ---
+  duration_ms: 2.81115
+  type: 'test'
+  ...
+# gzip: /tmp/rom-consumer-files-fObLOa/evidence/studio-source.tar.gz: not in gzip format
+# Subtest: retained package bytes and lock are checked against the source lease for all three consumers
+ok 62 - retained package bytes and lock are checked against the source lease for all three consumers
+  ---
+  duration_ms: 314.437061
+  type: 'test'
+  ...
+# Subtest: rewritten report hashes cannot hide changed installed source or consumer lock
+ok 63 - rewritten report hashes cannot hide changed installed source or consumer lock
+  ---
+  duration_ms: 70.155753
+  type: 'test'
+  ...
+# Subtest: changed archive bytes, symlinks and hardlinks fail retained file admission
+ok 64 - changed archive bytes, symlinks and hardlinks fail retained file admission
+  ---
+  duration_ms: 60.425652
+  type: 'test'
+  ...
+# Subtest: the source lease is checked again after reading evidence
+ok 65 - the source lease is checked again after reading evidence
+  ---
+  duration_ms: 105.816842
+  type: 'test'
+  ...
+# Subtest: a rehashed archive with changed source or source lock cannot satisfy file admission
+ok 66 - a rehashed archive with changed source or source lock cannot satisfy file admission
+  ---
+  duration_ms: 311.89869
+  type: 'test'
+  ...
+# Subtest: recovery fixture identity binds native source, consumer inputs, retained generated outputs and verifier
+ok 67 - recovery fixture identity binds native source, consumer inputs, retained generated outputs and verifier
+  ---
+  duration_ms: 9.380063
+  type: 'test'
+  ...
+# Subtest: changed fixture identities or missing inventory entries fail admission
+ok 68 - changed fixture identities or missing inventory entries fail admission
+  ---
+  duration_ms: 28.155679
+  type: 'test'
+  ...
+# Subtest: a rewritten output inventory cannot hide substituted fixture input or runtime source
+ok 69 - a rewritten output inventory cannot hide substituted fixture input or runtime source
+  ---
+  duration_ms: 35.288007
+  type: 'test'
+  ...
+# Subtest: linked generated output and source lease drift are rejected
+ok 70 - linked generated output and source lease drift are rejected
+  ---
+  duration_ms: 40.234047
+  type: 'test'
+  ...
+# Subtest: HTTP recovery evidence binds adapter, committed and replayed counts, tombstone and exact wire bytes
+ok 71 - HTTP recovery evidence binds adapter, committed and replayed counts, tombstone and exact wire bytes
+  ---
+  duration_ms: 4.601152
+  type: 'test'
+  ...
+# Subtest: HTTP replay cannot substitute identities, duplicate commits, lose integers or erase unknown-outcome limits
+ok 72 - HTTP replay cannot substitute identities, duplicate commits, lose integers or erase unknown-outcome limits
+  ---
+  duration_ms: 3.706336
+  type: 'test'
+  ...
+# Subtest: consumer package metadata binds controls and both adapters to the independently selected package and locks
+ok 73 - consumer package metadata binds controls and both adapters to the independently selected package and locks
+  ---
+  duration_ms: 6.153762
+  type: 'test'
+  ...
+# Subtest: old or substituted package identity cannot pass from a completed browser claim
+ok 74 - old or substituted package identity cannot pass from a completed browser claim
+  ---
+  duration_ms: 4.137418
+  type: 'test'
+  ...
+# Subtest: malformed independently supplied expectations are rejected rather than weakening binding
+ok 75 - malformed independently supplied expectations are rejected rather than weakening binding
+  ---
+  duration_ms: 1.694972
+  type: 'test'
+  ...
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-19qIvE/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-19qIvE/.rom-release-stage-KDXmaJ/.studio-work-eotsYb/extracted/rom-0.0.3-aa677ab8f7bb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-19qIvE/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-j5Q4Xe/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-j5Q4Xe/.rom-release-stage-k7ao9n/.studio-work-Xuo0rX/extracted/rom-0.0.3-16b21eb6f770-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-j5Q4Xe/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-DIlyH9/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-DIlyH9/.rom-release-stage-RDKGN5/.studio-work-A6NXIL/extracted/rom-0.0.3-d6b9c4d134cb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-DIlyH9/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-pIhS4D/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-pIhS4D/.rom-release-stage-Ufcw2B/.studio-work-2AkIiY/extracted/rom-0.0.3-4455849af0a2-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-pIhS4D/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-drYt4Q/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-drYt4Q/.rom-release-stage-vTW0La/.studio-work-EZvUXI/extracted/rom-0.0.3-596a7ccf01c9-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-drYt4Q/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-co40IM/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-co40IM/.rom-release-stage-fsCrTs/.studio-work-wUUkxN/extracted/rom-0.0.3-0be1882dba56-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-co40IM/completed
+# Subtest: verified extraction remains available through an async consumer and is removed only afterwards
+ok 76 - verified extraction remains available through an async consumer and is removed only afterwards
+  ---
+  duration_ms: 1834.605625
+  type: 'test'
+  ...
+# Subtest: no consumer executes when source tree identity is not verified
+ok 77 - no consumer executes when source tree identity is not verified
+  ---
+  duration_ms: 1215.362459
+  type: 'test'
+  ...
+# Subtest: consumer extraction requires matching payload digests before executing any fixture
+ok 78 - consumer extraction requires matching payload digests before executing any fixture
+  ---
+  duration_ms: 926.961393
+  type: 'test'
+  ...
+# Subtest: a changed extracted source or lock cannot return successful consumer evidence
+ok 79 - a changed extracted source or lock cannot return successful consumer evidence
+  ---
+  duration_ms: 2060.565473
+  type: 'test'
+  ...
+# Subtest: archive digest changes and callback failures cannot leave a usable extraction lease
+ok 80 - archive digest changes and callback failures cannot leave a usable extraction lease
+  ---
+  duration_ms: 1126.837847
+  type: 'test'
+  ...
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-OqKiEz/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-OqKiEz/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-OqKiEz/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-OqKiEz/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-OqKiEz/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-OqKiEz/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-iWcoAy/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-iWcoAy/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-iWcoAy/extracted/studio --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-W5Hipj/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-W5Hipj/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-W5Hipj/extracted/studio --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-cYw2oc/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-cYw2oc/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-cYw2oc/extracted/studio --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-FJW0GT/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-FJW0GT/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-FJW0GT/extracted/studio --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-Un7dBS/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-Un7dBS/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-Un7dBS/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-Un7dBS/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-Un7dBS/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-Un7dBS/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-wCRRF8/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-wCRRF8/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-wCRRF8/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-wCRRF8/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-wCRRF8/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-wCRRF8/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-pS7wnz/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-pS7wnz/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-pS7wnz/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-pS7wnz/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-pS7wnz/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-pS7wnz/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-eTuCE1/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-eTuCE1/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-eTuCE1/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-eTuCE1/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-eTuCE1/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-eTuCE1/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-49fS5U/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-49fS5U/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-49fS5U/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-49fS5U/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-49fS5U/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-49fS5U/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-49fS5U/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-49fS5U/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-49fS5U/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-49fS5U/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-49fS5U/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-ilLqhu/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-ilLqhu/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-ilLqhu/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-ilLqhu/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-ilLqhu/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-ilLqhu/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-iUtY6O/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-iUtY6O/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-iUtY6O/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-iUtY6O/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-iUtY6O/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-iUtY6O/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-dcrB26/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-dcrB26/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-dcrB26/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-dcrB26/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-dcrB26/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-dcrB26/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-dcrB26/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-dcrB26/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-dcrB26/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-dcrB26/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-dcrB26/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-5t8DHQ/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-5t8DHQ/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-5t8DHQ/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-5t8DHQ/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-5t8DHQ/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-5t8DHQ/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-EEgU7q/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-EEgU7q/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-EEgU7q/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-EEgU7q/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-EEgU7q/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-EEgU7q/native/target/debug/rom-recovery-host --port 43283 --admit
+# Release gate 9/11: node /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio/tests/public-controls/verify.mjs /tmp/rom-consumer-orchestration-m23aFJ/consumer-evidence/controls --source-dir /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio --admit
+# Release gate 10/11: node /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-m23aFJ/consumer-evidence/recovery-sqlite --source-dir /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio --adapter sqlite --host-binary /tmp/rom-consumer-orchestration-m23aFJ/native/target/debug/rom-recovery-host --port 43282 --admit
+# Release gate 11/11: node /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio/tests/mutation-recovery/verify.mjs /tmp/rom-consumer-orchestration-m23aFJ/consumer-evidence/recovery-redb --source-dir /tmp/rom-consumer-orchestration-m23aFJ/extracted/studio --adapter redb --host-binary /tmp/rom-consumer-orchestration-m23aFJ/native/target/debug/rom-recovery-host --port 43283 --admit
+# Subtest: consumer execution uses the prepared source-bound host and fixed ordered gates
+ok 81 - consumer execution uses the prepared source-bound host and fixed ordered gates
+  ---
+  duration_ms: 360.306009
+  type: 'test'
+  ...
+# Subtest: substituted source, binary or incomplete preceding gates execute no consumer
+ok 82 - substituted source, binary or incomplete preceding gates execute no consumer
+  ---
+  duration_ms: 7.199115
+  type: 'test'
+  ...
+# Subtest: source mutation after one consumer stops subsequent execution and retains its failure log
+ok 83 - source mutation after one consumer stops subsequent execution and retains its failure log
+  ---
+  duration_ms: 3.592709
+  type: 'test'
+  ...
+# Subtest: failed or bounded-aborted consumer stops the sequence without completion
+ok 84 - failed or bounded-aborted consumer stops the sequence without completion
+  ---
+  duration_ms: 7.442129
+  type: 'test'
+  ...
+# Subtest: occupied or linked output roots execute no consumer and preserve existing bytes
+ok 85 - occupied or linked output roots execute no consumer and preserve existing bytes
+  ---
+  duration_ms: 3.943238
+  type: 'test'
+  ...
+# Subtest: failure-summary storage errors preserve the original failure and existing evidence
+ok 86 - failure-summary storage errors preserve the original failure and existing evidence
+  ---
+  duration_ms: 5.666102
+  type: 'test'
+  ...
+# Subtest: linked command log directory cannot write into extracted source
+ok 87 - linked command log directory cannot write into extracted source
+  ---
+  duration_ms: 1.462078
+  type: 'test'
+  ...
+# Subtest: three successful command exits cannot admit absent consumer reports
+ok 88 - three successful command exits cannot admit absent consumer reports
+  ---
+  duration_ms: 12.279711
+  type: 'test'
+  ...
+# Subtest: successful exits preserve logs but cannot hide wrong browser scenarios or changed installed bytes
+ok 89 - successful exits preserve logs but cannot hide wrong browser scenarios or changed installed bytes
+  ---
+  duration_ms: 359.677231
+  type: 'test'
+  ...
+# Subtest: a recovery report cannot substitute a different binary or native compile lock
+ok 90 - a recovery report cannot substitute a different binary or native compile lock
+  ---
+  duration_ms: 1248.429217
+  type: 'test'
+  ...
+# Subtest: successful consumers cannot omit recovery fixture source identity
+ok 91 - successful consumers cannot omit recovery fixture source identity
+  ---
+  duration_ms: 258.341366
+  type: 'test'
+  ...
+# Subtest: successful commands cannot hide missing or changed retained HTTP recovery evidence
+ok 92 - successful commands cannot hide missing or changed retained HTTP recovery evidence
+  ---
+  duration_ms: 443.587656
+  type: 'test'
+  ...
+# Release gate 1/8: ./scripts/check 
+# Release gate 1/8: ./scripts/check 
+# Subtest: failed evidence write retains command outcome and bounded terminal diagnostics
+ok 93 - failed evidence write retains command outcome and bounded terminal diagnostics
+  ---
+  duration_ms: 111.368495
+  type: 'test'
+  ...
+# Subtest: summary storage failure retains a normally recorded failed gate
+ok 94 - summary storage failure retains a normally recorded failed gate
+  ---
+  duration_ms: 476.27131
+  type: 'test'
+  ...
+# Subtest: failure summary write cannot replace the original gate failure
+ok 95 - failure summary write cannot replace the original gate failure
+  ---
+  duration_ms: 527.797803
+  type: 'test'
+  ...
+# Subtest: native evidence binds the full source witness, exact commands and retained log digests without execution
+ok 96 - native evidence binds the full source witness, exact commands and retained log digests without execution
+  ---
+  duration_ms: 10.614076
+  type: 'test'
+  ...
+# Subtest: native evidence rejects substituted source, lock, binary or target identity
+ok 97 - native evidence rejects substituted source, lock, binary or target identity
+  ---
+  duration_ms: 2.607562
+  type: 'test'
+  ...
+# Subtest: native evidence rejects missing, reordered, failed, aborted or substituted commands
+ok 98 - native evidence rejects missing, reordered, failed, aborted or substituted commands
+  ---
+  duration_ms: 7.10713
+  type: 'test'
+  ...
+# Subtest: native evidence detects changed log bytes and extra or missing digest entries
+ok 99 - native evidence detects changed log bytes and extra or missing digest entries
+  ---
+  duration_ms: 1.966198
+  type: 'test'
+  ...
+# Subtest: native evidence enforces a twenty-minute whole-preparation budget and real calendar timestamps
+ok 100 - native evidence enforces a twenty-minute whole-preparation budget and real calendar timestamps
+  ---
+  duration_ms: 2.476462
+  type: 'test'
+  ...
+# Subtest: preparation binds external target and successful compile to the supplied source lease
+ok 101 - preparation binds external target and successful compile to the supplied source lease
+  ---
+  duration_ms: 34.017976
+  type: 'test'
+  ...
+# Subtest: source mutation fence failure never emits successful provenance
+ok 102 - source mutation fence failure never emits successful provenance
+  ---
+  duration_ms: 1.785435
+  type: 'test'
+  ...
+# Subtest: failed or bounded-aborted compiler retains logs without successful provenance
+ok 103 - failed or bounded-aborted compiler retains logs without successful provenance
+  ---
+  duration_ms: 1.456035
+  type: 'test'
+  ...
+# Subtest: an exhausted preparation deadline prevents the next compiler command and retains failure evidence
+ok 104 - an exhausted preparation deadline prevents the next compiler command and retains failure evidence
+  ---
+  duration_ms: 4.162577
+  type: 'test'
+  ...
+# Subtest: preparation rejects outputs inside source and refuses existing evidence
+ok 105 - preparation rejects outputs inside source and refuses existing evidence
+  ---
+  duration_ms: 0.672823
+  type: 'test'
+  ...
+# Subtest: native preparation rejects a changed lock even when the supplied fence omits that check
+ok 106 - native preparation rejects a changed lock even when the supplied fence omits that check
+  ---
+  duration_ms: 3.561219
+  type: 'test'
+  ...
+# Subtest: native preparation refuses a substituted symlink or nonexecutable binary
+ok 107 - native preparation refuses a substituted symlink or nonexecutable binary
+  ---
+  duration_ms: 1.996376
+  type: 'test'
+  ...
+# Subtest: failure metadata refusal preserves the original command failure and fallback diagnostic
+ok 108 - failure metadata refusal preserves the original command failure and fallback diagnostic
+  ---
+  duration_ms: 0.815675
+  type: 'test'
+  ...
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-b5Cfrk/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-b5Cfrk/.rom-release-stage-L39Ajl/.studio-work-gVb8O8/extracted/rom-0.0.3-16b21eb6f770-studio
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-b5Cfrk/.rom-release-stage-L39Ajl
+# Release gate 1/8: ./scripts/check 
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-I5SS0t/.rom-release-stage-27xPrK
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-6mmi7i/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-6mmi7i/.rom-release-stage-HTbNYw
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-bxBA3x/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-bxBA3x/.rom-release-stage-Lx37ra
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-fzmqxv/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-fzmqxv/.rom-release-stage-Kfo8Au/.studio-work-EwevOs/extracted/rom-0.0.3-d6b9c4d134cb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-fzmqxv/completed
+# Subtest: dirty tracked or untracked source refuses gates and artifacts
+ok 109 - dirty tracked or untracked source refuses gates and artifacts
+  ---
+  duration_ms: 303.583618
+  type: 'test'
+  ...
+# Subtest: existing output retains its bytes and refuses gates
+ok 110 - existing output retains its bytes and refuses gates
+  ---
+  duration_ms: 201.211673
+  type: 'test'
+  ...
+# Subtest: missing Git metadata or obsolete profile refuses gates
+ok 111 - missing Git metadata or obsolete profile refuses gates
+  ---
+  duration_ms: 360.928627
+  type: 'test'
+  ...
+# Subtest: late destination collision retains complete losing stage and existing output
+ok 112 - late destination collision retains complete losing stage and existing output
+  ---
+  duration_ms: 1301.964046
+  type: 'test'
+  ...
+# Subtest: failed gate retains incomplete evidence and exposes no final output
+ok 113 - failed gate retains incomplete evidence and exposes no final output
+  ---
+  duration_ms: 360.511522
+  type: 'test'
+  ...
+# Subtest: post-gate lock change or new committed revision prevents publication
+ok 114 - post-gate lock change or new committed revision prevents publication
+  ---
+  duration_ms: 819.787972
+  type: 'test'
+  ...
+# Subtest: successful fixture creates complete checksummed artifacts with matching extraction admission
+ok 115 - successful fixture creates complete checksummed artifacts with matching extraction admission
+  ---
+  duration_ms: 1238.681861
+  type: 'test'
+  ...
+# Release gate 1/6: ./scripts/check 
+# Release gate 2/6: ./scripts/build --release
+# Release gate 3/6: ./demo/verify 
+# Release gate 4/6: ./demo/verify-provider 
+# Release gate 5/6: ./scripts/check-skills 
+# Release gate 6/6: node scripts/check-packages.mjs /producer/source
+# Subtest: public consumer profile retains eight historical commands then adds three exact source-bound consumers
+ok 116 - public consumer profile retains eight historical commands then adds three exact source-bound consumers
+  ---
+  duration_ms: 2.130852
+  type: 'test'
+  ...
+# Subtest: consumer gates reject missing, additional, reordered and substituted executions
+ok 117 - consumer gates reject missing, additional, reordered and substituted executions
+  ---
+  duration_ms: 5.235582
+  type: 'test'
+  ...
+# Subtest: consumer context rejects missing, unknown, noncanonical paths and inconsistent identities
+ok 118 - consumer context rejects missing, unknown, noncanonical paths and inconsistent identities
+  ---
+  duration_ms: 0.584484
+  type: 'test'
+  ...
+# Subtest: historical profiles reject added consumer claims and retain their exact gate counts
+ok 119 - historical profiles reject added consumer claims and retain their exact gate counts
+  ---
+  duration_ms: 0.270565
+  type: 'test'
+  ...
+# Subtest: public consumer phases are explicit and preserve the original ordered execution boundary
+ok 120 - public consumer phases are explicit and preserve the original ordered execution boundary
+  ---
+  duration_ms: 0.565869
+  type: 'test'
+  ...
+# Subtest: explicit native execution runs all six native gates without a nonexistent asset phase
+ok 121 - explicit native execution runs all six native gates without a nonexistent asset phase
+  ---
+  duration_ms: 3.179943
+  type: 'test'
+  ...
+# Subtest: unsupported no-replace utility rejects before any acceptance gate
+ok 122 - unsupported no-replace utility rejects before any acceptance gate
+  ---
+  duration_ms: 407.186388
+  type: 'test'
+  ...
+# Subtest: dangling existing output rejects before gates
+ok 123 - dangling existing output rejects before gates
+  ---
+  duration_ms: 141.429739
+  type: 'test'
+  ...
+# Subtest: unsupported output filesystem rejects before gates
+ok 124 - unsupported output filesystem rejects before gates
+  ---
+  duration_ms: 554.544966
+  type: 'test'
+  ...
+# Subtest: publication refuses an existing empty directory
+ok 125 - publication refuses an existing empty directory
+  ---
+  duration_ms: 45.31876
+  type: 'test'
+  ...
+# Subtest: concurrent no-replace contenders expose exactly one complete directory
+ok 126 - concurrent no-replace contenders expose exactly one complete directory
+  ---
+  duration_ms: 21.459934
+  type: 'test'
+  ...
+# Subtest: release requirement ledger validates all fourteen source-bound records without executing reports
+ok 127 - release requirement ledger validates all fourteen source-bound records without executing reports
+  ---
+  duration_ms: 10.575483
+  type: 'test'
+  ...
+# Subtest: pending or failed requirements remain diagnostic records but block explicit release admission
+ok 128 - pending or failed requirements remain diagnostic records but block explicit release admission
+  ---
+  duration_ms: 6.819361
+  type: 'test'
+  ...
+# Subtest: requirement ledger rejects missing, duplicate, unknown, source-substituted or candidate acceptance
+ok 129 - requirement ledger rejects missing, duplicate, unknown, source-substituted or candidate acceptance
+  ---
+  duration_ms: 8.384755
+  type: 'test'
+  ...
+# Subtest: requirement evidence checks retained bytes and rejects links and escaped paths
+ok 130 - requirement evidence checks retained bytes and rejects links and escaped paths
+  ---
+  duration_ms: 4.886056
+  type: 'test'
+  ...
+# Subtest: requirement evidence detects later report mutation independently of link rejection
+ok 131 - requirement evidence detects later report mutation independently of link rejection
+  ---
+  duration_ms: 2.343568
+  type: 'test'
+  ...
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-xgFloO/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-xgFloO/.rom-release-stage-wtmQ9Z/.studio-work-aoLarF/extracted/rom-0.0.3-aa677ab8f7bb-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-xgFloO/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-tlZWg1/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-tlZWg1/.rom-release-stage-jABdee/.studio-work-rjsNwt/extracted/rom-0.0.3-16b21eb6f770-studio
+# Completed local source artifacts: /var/tmp/rom-artifact-test-tlZWg1/completed
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-aq4rwE/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-aq4rwE/.rom-release-stage-eiZ94x/.studio-work-7iDtY2/extracted/rom-0.0.3-4455849af0a2-studio
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-aq4rwE/.rom-release-stage-eiZ94x
+# Release gate 1/8: ./scripts/check 
+# Release gate 2/8: ./scripts/build --release
+# Release gate 3/8: ./demo/verify 
+# Release gate 4/8: ./demo/verify-provider 
+# Release gate 5/8: ./scripts/check-skills 
+# Release gate 6/8: node scripts/check-packages.mjs /var/tmp/rom-artifact-test-4O07Ql/source
+# Release gate 7/8: ./scripts/studio-browser-runtime-check 
+# Release gate 8/8: ./demo/verify-studio --assets-dir /var/tmp/rom-artifact-test-4O07Ql/.rom-release-stage-udeIK7/.studio-work-lXrKEW/extracted/rom-0.0.3-596a7ccf01c9-studio
+# Incomplete release evidence retained: /var/tmp/rom-artifact-test-4O07Ql/.rom-release-stage-udeIK7
+# Subtest: legacy version-one source-only manifest retains its six-gate contract
+ok 132 - legacy version-one source-only manifest retains its six-gate contract
+  ---
+  duration_ms: 1676.15152
+  type: 'test'
+  ...
+# Subtest: frontend source, npm commands, asset inventory and profile are bound to their records
+ok 133 - frontend source, npm commands, asset inventory and profile are bound to their records
+  ---
+  duration_ms: 2045.102349
+  type: 'test'
+  ...
+# Subtest: committed frontend generated caches are rejected before the first gate
+ok 134 - committed frontend generated caches are rejected before the first gate
+  ---
+  duration_ms: 533.275051
+  type: 'test'
+  ...
+# Subtest: incompatible frontend release version is rejected before gates or npm execution
+ok 135 - incompatible frontend release version is rejected before gates or npm execution
+  ---
+  duration_ms: 110.264886
+  type: 'test'
+  ...
+# Subtest: host gate must consume unchanged extracted assets and succeed before publication
+ok 136 - host gate must consume unchanged extracted assets and succeed before publication
+  ---
+  duration_ms: 768.577603
+  type: 'test'
+  ...
+# Subtest: supplied archive and extracted source report no invented checkout revision without git metadata
+ok 137 - supplied archive and extracted source report no invented checkout revision without git metadata
+  ---
+  duration_ms: 12.97118
+  type: 'test'
+  ...
+# Subtest: authoring evidence records only the exact fixture checkout revision
+ok 138 - authoring evidence records only the exact fixture checkout revision
+  ---
+  duration_ms: 49.814452
+  type: 'test'
+  ...
+# Subtest: source metadata rejects unknown modes instead of inventing artifact provenance
+ok 139 - source metadata rejects unknown modes instead of inventing artifact provenance
+  ---
+  duration_ms: 0.372901
+  type: 'test'
+  ...
+# Subtest: source archive admission rejects traversal, unknown members and links before extraction
+ok 140 - source archive admission rejects traversal, unknown members and links before extraction
+  ---
+  duration_ms: 1.569001
+  type: 'test'
+  ...
+# Subtest: source archive admission bounds entries and bytes and rejects duplicate members
+ok 141 - source archive admission bounds entries and bytes and rejects duplicate members
+  ---
+  duration_ms: 0.262721
+  type: 'test'
+  ...
+# Subtest: pnpm version checks preserve exact versions when the hoisted dependency layout changes
+ok 142 - pnpm version checks preserve exact versions when the hoisted dependency layout changes
+  ---
+  duration_ms: 3.307015
+  type: 'test'
+  ...
+# Subtest: pnpm version checks reject missing, unexpected and altered installed versions
+ok 143 - pnpm version checks reject missing, unexpected and altered installed versions
+  ---
+  duration_ms: 5.961516
+  type: 'test'
+  ...
+# Subtest: pnpm version checks reject a dependency linked outside the consumer installation
+ok 144 - pnpm version checks reject a dependency linked outside the consumer installation
+  ---
+  duration_ms: 0.818029
+  type: 'test'
+  ...
+# Subtest: a reused evidence directory is rejected before existing evidence changes
+ok 145 - a reused evidence directory is rejected before existing evidence changes
+  ---
+  duration_ms: 4.765726
+  type: 'test'
+  ...
+# Subtest: the verifier refuses an occupied output before overwriting an archive or successful result
+ok 146 - the verifier refuses an occupied output before overwriting an archive or successful result
+  ---
+  duration_ms: 111.899117
+  type: 'test'
+  ...
+# Subtest: locked admission rejects a changed dependency resolution
+ok 147 - locked admission rejects a changed dependency resolution
+  ---
+  duration_ms: 0.978516
+  type: 'test'
+  ...
+# Subtest: release admission rejects skipped browsers, one engine and copied dependencies
+ok 148 - release admission rejects skipped browsers, one engine and copied dependencies
+  ---
+  duration_ms: 0.412737
+  type: 'test'
+  ...
+# Subtest: release admission rejects failed engine results and unmatched installed sources
+ok 149 - release admission rejects failed engine results and unmatched installed sources
+  ---
+  duration_ms: 1.141947
+  type: 'test'
+  ...
+# Subtest: active and pending limits remain finite with visible rejected scheduling
+ok 150 - active and pending limits remain finite with visible rejected scheduling
+  ---
+  duration_ms: 9.055615
+  type: 'test'
+  ...
+# Subtest: operation identities cannot be reused and finite budgets reject invalid configuration
+ok 151 - operation identities cannot be reused and finite budgets reject invalid configuration
+  ---
+  duration_ms: 0.252752
+  type: 'test'
+  ...
+# Subtest: storage-stage diagnostics cannot reuse the default admission build
+ok 152 - storage-stage diagnostics cannot reuse the default admission build
+  ---
+  duration_ms: 0.69276
+  type: 'test'
+  ...
+# Subtest: optimized plan changes compiler profile only with separate bounded target
+ok 153 - optimized plan changes compiler profile only with separate bounded target
+  ---
+  duration_ms: 0.315762
+  type: 'test'
+  ...
+# Subtest: identical content in a replaced inode does not establish preserved original identity
+ok 154 - identical content in a replaced inode does not establish preserved original identity
+  ---
+  duration_ms: 1.551659
+  type: 'test'
+  ...
+# Subtest: SQLite detached-copy admission refuses every existing sidecar, including dangling links
+ok 155 - SQLite detached-copy admission refuses every existing sidecar, including dangling links
+  ---
+  duration_ms: 1.066623
+  type: 'test'
+  ...
+# Subtest: actual HTTP shape verifies resource identity and does not retain payload
+ok 156 - actual HTTP shape verifies resource identity and does not retain payload
+  ---
+  duration_ms: 63.055858
+  type: 'test'
+  ...
+# Subtest: denial and temporary failure are separate outcomes; absent mutation response is unknown
+ok 157 - denial and temporary failure are separate outcomes; absent mutation response is unknown
+  ---
+  duration_ms: 1.518716
+  type: 'test'
+  ...
+# Subtest: binary output must match actual bounded attachment bytes
+ok 158 - binary output must match actual bounded attachment bytes
+  ---
+  duration_ms: 2.536626
+  type: 'test'
+  ...
+# Subtest: HTTP 503 outcome_unknown is not mislabeled as capacity overload
+ok 159 - HTTP 503 outcome_unknown is not mislabeled as capacity overload
+  ---
+  duration_ms: 1.591875
+  type: 'test'
+  ...
+# Subtest: all Studio API POSTs carry origin and CSRF, including reads and queries
+ok 160 - all Studio API POSTs carry origin and CSRF, including reads and queries
+  ---
+  duration_ms: 0.47209
+  type: 'test'
+  ...
+# Subtest: scheduled latency includes generator delay and percentiles retain operation classes
+ok 161 - scheduled latency includes generator delay and percentiles retain operation classes
+  ---
+  duration_ms: 0.96016
+  type: 'test'
+  ...
+# Subtest: samples are finite and unknown labels or invalid timing are rejected
+ok 162 - samples are finite and unknown labels or invalid timing are rejected
+  ---
+  duration_ms: 0.430541
+  type: 'test'
+  ...
+# Subtest: load configuration separates page size from complete candidates and retained work
+ok 163 - load configuration separates page size from complete candidates and retained work
+  ---
+  duration_ms: 0.801057
+  type: 'test'
+  ...
+# Subtest: seed admission needs actual candidate bytes and completed reaction proof
+ok 164 - seed admission needs actual candidate bytes and completed reaction proof
+  ---
+  duration_ms: 0.334398
+  type: 'test'
+  ...
+# Subtest: retained Done work still counts towards finite ledger admission
+ok 165 - retained Done work still counts towards finite ledger admission
+  ---
+  duration_ms: 0.147231
+  type: 'test'
+  ...
+# Subtest: existing defaults stay finite and the load relay fits strict supervision
+ok 166 - existing defaults stay finite and the load relay fits strict supervision
+  ---
+  duration_ms: 2.315915
+  type: 'test'
+  ...
+# Subtest: unknown arguments cannot widen or disable provider lifetimes
+ok 167 - unknown arguments cannot widen or disable provider lifetimes
+  ---
+  duration_ms: 1.001139
+  type: 'test'
+  ...
+# Subtest: actual token timing needs traffic plus cleanup budget, distinct from expiry fault
+ok 168 - actual token timing needs traffic plus cleanup budget, distinct from expiry fault
+  ---
+  duration_ms: 2.219071
+  type: 'test'
+  ...
+# Subtest: full load temporarily sets exact synthetic validity and verifies restoration
+ok 169 - full load temporarily sets exact synthetic validity and verifies restoration
+  ---
+  duration_ms: 4.726531
+  type: 'test'
+  ...
+# Subtest: restoration runs after traffic failure and uncertain patch response
+ok 170 - restoration runs after traffic failure and uncertain patch response
+  ---
+  duration_ms: 1.550646
+  type: 'test'
+  ...
+# Subtest: restoration failure is explicit and cannot be accepted as successful load
+ok 171 - restoration failure is explicit and cannot be accepted as successful load
+  ---
+  duration_ms: 0.233946
+  type: 'test'
+  ...
+# Subtest: exploratory run reads existing five-minute setting without changing it
+ok 172 - exploratory run reads existing five-minute setting without changing it
+  ---
+  duration_ms: 0.253353
+  type: 'test'
+  ...
+# Subtest: body and restoration failures are both preserved
+ok 173 - body and restoration failures are both preserved
+  ---
+  duration_ms: 1.064329
+  type: 'test'
+  ...
+# Subtest: bounded scheduled traffic separates client refusal from server errors
+ok 174 - bounded scheduled traffic separates client refusal from server errors
+  ---
+  duration_ms: 12.694572
+  type: 'test'
+  ...
+# Subtest: execution failure is retained as a sample and does not leak payloads
+ok 175 - execution failure is retained as a sample and does not leak payloads
+  ---
+  duration_ms: 0.633238
+  type: 'test'
+  ...
+# Subtest: deadline abort is propagated to admitted executor and drains it
+ok 176 - deadline abort is propagated to admitted executor and drains it
+  ---
+  duration_ms: 11.69143
+  type: 'test'
+  ...
+# Subtest: only actual linked synthetic session and secure exact-origin cookie enter executor
+ok 177 - only actual linked synthetic session and secure exact-origin cookie enter executor
+  ---
+  duration_ms: 1.24321
+  type: 'test'
+  ...
+# Subtest: readable and intentionally unread response streams share bounded lifecycle
+ok 178 - readable and intentionally unread response streams share bounded lifecycle
+  ---
+  duration_ms: 107.606874
+  type: 'test'
+  ...
+# Subtest: refused or non-SSE observations do not masquerade as active subscriptions
+ok 179 - refused or non-SSE observations do not masquerade as active subscriptions
+  ---
+  duration_ms: 1.409677
+  type: 'test'
+  ...
+# Subtest: finite mixed traffic has exact request and durable work budgets
+ok 180 - finite mixed traffic has exact request and durable work budgets
+  ---
+  duration_ms: 74.123057
+  type: 'test'
+  ...
+# Subtest: replay fingerprints match original mutations even when arrival races them
+ok 181 - replay fingerprints match original mutations even when arrival races them
+  ---
+  duration_ms: 25.561624
+  type: 'test'
+  ...
+# Subtest: query pages and attachment transfers retain explicit bounded wire shapes
+ok 182 - query pages and attachment transfers retain explicit bounded wire shapes
+  ---
+  duration_ms: 22.271211
+  type: 'test'
+  ...
+# Subtest: recovery inventory accepts only the supported bounded reference profile
+ok 183 - recovery inventory accepts only the supported bounded reference profile
+  ---
+  duration_ms: 7.458019
+  type: 'test'
+  ...
+# Subtest: archive and object bytes are finite and names cannot escape the snapshot
+ok 184 - archive and object bytes are finite and names cannot escape the snapshot
+  ---
+  duration_ms: 2.298152
+  type: 'test'
+  ...
+# Subtest: secrets and unknown schema attributes are rejected, not silently copied
+ok 185 - secrets and unknown schema attributes are rejected, not silently copied
+  ---
+  duration_ms: 0.284362
+  type: 'test'
+  ...
+# Subtest: reference property order does not change the recovery contract
+ok 186 - reference property order does not change the recovery contract
+  ---
+  duration_ms: 0.243284
+  type: 'test'
+  ...
+# Subtest: snapshot copy checks exact bytes and digest without overwriting destination
+ok 187 - snapshot copy checks exact bytes and digest without overwriting destination
+  ---
+  duration_ms: 15.799662
+  type: 'test'
+  ...
+# Subtest: fresh object restore uses only digested backup bytes and rejects repeat publication
+ok 188 - fresh object restore uses only digested backup bytes and rejects repeat publication
+  ---
+  duration_ms: 379.507706
+  type: 'test'
+  ...
+# Subtest: changed object or unresolved reference prevents any restored object publication
+ok 189 - changed object or unresolved reference prevents any restored object publication
+  ---
+  duration_ms: 306.510363
+  type: 'test'
+  ...
+# Subtest: exact remaining budget admits the declared browser phase
+ok 190 - exact remaining budget admits the declared browser phase
+  ---
+  duration_ms: 3.825303
+  type: 'test'
+  ...
+# Subtest: expired or insufficient provider window refuses a new browser phase
+ok 191 - expired or insufficient provider window refuses a new browser phase
+  ---
+  duration_ms: 3.869908
+  type: 'test'
+  ...
+# Subtest: unbounded or changed phase declaration refuses admission
+ok 192 - unbounded or changed phase declaration refuses admission
+  ---
+  duration_ms: 0.240218
+  type: 'test'
+  ...
+# Subtest: all four actual cases must pass without skipped or failed tests
+ok 193 - all four actual cases must pass without skipped or failed tests
+  ---
+  duration_ms: 1.911234
+  type: 'test'
+  ...
+# Subtest: allocated HTTP and TLS lanes have distinct cookie contracts
+ok 194 - allocated HTTP and TLS lanes have distinct cookie contracts
+  ---
+  duration_ms: 1.197603
+  type: 'test'
+  ...
+# Subtest: unallocated origins and URL decorations are rejected before browser navigation
+ok 195 - unallocated origins and URL decorations are rejected before browser navigation
+  ---
+  duration_ms: 0.445339
+  type: 'test'
+  ...
+# Subtest: HTTP cookies cannot satisfy the TLS lane and TLS cookies cannot satisfy HTTP
+ok 196 - HTTP cookies cannot satisfy the TLS lane and TLS cookies cannot satisfy HTTP
+  ---
+  duration_ms: 0.318387
+  type: 'test'
+  ...
+# Subtest: session cookie must have the exact host, HttpOnly flag and bounded opaque value
+ok 197 - session cookie must have the exact host, HttpOnly flag and bounded opaque value
+  ---
+  duration_ms: 0.245909
+  type: 'test'
+  ...
+# Subtest: missing or duplicate sessions fail while unrelated cookies are ignored
+ok 198 - missing or duplicate sessions fail while unrelated cookies are ignored
+  ---
+  duration_ms: 0.224579
+  type: 'test'
+  ...
+# Subtest: a caller cannot forge the profile to bypass the allocated cookie contract
+ok 199 - a caller cannot forge the profile to bypass the allocated cookie contract
+  ---
+  duration_ms: 0.121241
+  type: 'test'
+  ...
+# Subtest: login rejects an unallocated origin before accessing the browser
+ok 200 - login rejects an unallocated origin before accessing the browser
+  ---
+  duration_ms: 0.421033
+  type: 'test'
+  ...
+# Subtest: both lanes require the deployed Host SameSite=Lax cookie contract
+ok 201 - both lanes require the deployed Host SameSite=Lax cookie contract
+  ---
+  duration_ms: 0.190704
+  type: 'test'
+  ...
+# Subtest: current provider redirect types are preserved and logout is not an authorization callback
+ok 202 - current provider redirect types are preserved and logout is not an authorization callback
+  ---
+  duration_ms: 2.059857
+  type: 'test'
+  ...
+# Subtest: unknown redirect types fail before mutation
+ok 203 - unknown redirect types fail before mutation
+  ---
+  duration_ms: 0.476939
+  type: 'test'
+  ...
+# Subtest: exact scoped callback is confirmed and original redirects are restored
+ok 204 - exact scoped callback is confirmed and original redirects are restored
+  ---
+  duration_ms: 0.59279
+  type: 'test'
+  ...
+# Subtest: lost patch acknowledgement restores state and does not start browser traffic
+ok 205 - lost patch acknowledgement restores state and does not start browser traffic
+  ---
+  duration_ms: 0.427695
+  type: 'test'
+  ...
+# Subtest: browser failure retains its cause and restores redirects
+ok 206 - browser failure retains its cause and restores redirects
+  ---
+  duration_ms: 1.348792
+  type: 'test'
+  ...
+# Subtest: restoration failure refuses success and preserves prior failure
+ok 207 - restoration failure refuses success and preserves prior failure
+  ---
+  duration_ms: 0.445579
+  type: 'test'
+  ...
+# Subtest: unallocated callback is rejected before provider access
+ok 208 - unallocated callback is rejected before provider access
+  ---
+  duration_ms: 0.355177
+  type: 'test'
+  ...
+# Subtest: existing exact callback needs no provider mutation
+ok 209 - existing exact callback needs no provider mutation
+  ---
+  duration_ms: 0.209961
+  type: 'test'
+  ...
+# Subtest: activationReadbackMismatch prevents traffic and restores original configuration
+ok 210 - activationReadbackMismatch prevents traffic and restores original configuration
+  ---
+  duration_ms: 1.178998
+  type: 'test'
+  ...
+# Subtest: malformedActivation prevents traffic and restores original configuration
+ok 211 - malformedActivation prevents traffic and restores original configuration
+  ---
+  duration_ms: 0.487249
+  type: 'test'
+  ...
+# Subtest: restorationReadbackMismatch refuses successful browser result
+ok 212 - restorationReadbackMismatch refuses successful browser result
+  ---
+  duration_ms: 0.378982
+  type: 'test'
+  ...
+# Subtest: loseRestorationAcknowledgement refuses successful browser result
+ok 213 - loseRestorationAcknowledgement refuses successful browser result
+  ---
+  duration_ms: 0.220891
+  type: 'test'
+  ...
+# Subtest: malformed initial configuration and capacity reject before mutation
+ok 214 - malformed initial configuration and capacity reject before mutation
+  ---
+  duration_ms: 0.343545
+  type: 'test'
+  ...
+# Subtest: existing regex redirects are preserved without treating them as exact approval
+ok 215 - existing regex redirects are preserved without treating them as exact approval
+  ---
+  duration_ms: 0.247021
+  type: 'test'
+  ...
+# Subtest: allocated TLS callback is confirmed and restored without changing HTTP redirects
+ok 216 - allocated TLS callback is confirmed and restored without changing HTTP redirects
+  ---
+  duration_ms: 0.274043
+  type: 'test'
+  ...
+# Subtest: TLS lost acknowledgement restores redirects before browser traffic
+ok 217 - TLS lost acknowledgement restores redirects before browser traffic
+  ---
+  duration_ms: 0.246179
+  type: 'test'
+  ...
+# Subtest: decorated and unallocated TLS callbacks fail before provider access
+ok 218 - decorated and unallocated TLS callbacks fail before provider access
+  ---
+  duration_ms: 0.292007
+  type: 'test'
+  ...
+# Subtest: changed browser configuration or imported helper refuses acceptance
+ok 219 - changed browser configuration or imported helper refuses acceptance
+  ---
+  duration_ms: 13.357987
+  type: 'test'
+  ...
+# Subtest: missing source closure refuses acceptance
+ok 220 - missing source closure refuses acceptance
+  ---
+  duration_ms: 0.180354
+  type: 'test'
+  ...
+# Subtest: failed final observation retains primary failure and records failure category
+ok 221 - failed final observation retains primary failure and records failure category
+  ---
+  duration_ms: 0.683533
+  type: 'test'
+  ...
+# Subtest: failed final observation cannot retain a successful status
+ok 222 - failed final observation cannot retain a successful status
+  ---
+  duration_ms: 0.143093
+  type: 'test'
+  ...
+# Subtest: evidence reservation creates an exclusive directory and preserves existing evidence
+ok 223 - evidence reservation creates an exclusive directory and preserves existing evidence
+  ---
+  duration_ms: 4.665525
+  type: 'test'
+  ...
+# Subtest: consumer lock admission compares the full graph and rejects bootstrap
+ok 224 - consumer lock admission compares the full graph and rejects bootstrap
+  ---
+  duration_ms: 0.822228
+  type: 'test'
+  ...
+# Subtest: source fence reads admitted regular files and rejects changed files, traversal and symlinks
+ok 225 - source fence reads admitted regular files and rejects changed files, traversal and symlinks
+  ---
+  duration_ms: 9.251138
+  type: 'test'
+  ...
+# Subtest: provider admission requires exact image digest, platform, version, and source identity
+ok 226 - provider admission requires exact image digest, platform, version, and source identity
+  ---
+  duration_ms: 0.615454
+  type: 'test'
+  ...
+# Subtest: source admission rejects unlisted files rather than fencing only a selected subset
+ok 227 - source admission rejects unlisted files rather than fencing only a selected subset
+  ---
+  duration_ms: 0.499352
+  type: 'test'
+  ...
+# Subtest: browser failure evidence is a closed classification without raw messages
+ok 228 - browser failure evidence is a closed classification without raw messages
+  ---
+  duration_ms: 3.31
+  type: 'test'
+  ...
+# Subtest: evaluate failures and lost contexts remain distinct from fetch failures
+ok 229 - evaluate failures and lost contexts remain distinct from fetch failures
+  ---
+  duration_ms: 0.254555
+  type: 'test'
+  ...
+# Subtest: unexpected inputs and browser deadlines never fabricate product rejection
+ok 230 - unexpected inputs and browser deadlines never fabricate product rejection
+  ---
+  duration_ms: 0.152631
+  type: 'test'
+  ...
+# Subtest: retained long fixture TMPDIR fails before Chromium launch with a closed diagnostic
+ok 231 - retained long fixture TMPDIR fails before Chromium launch with a closed diagnostic
+  ---
+  duration_ms: 0.983695
+  type: 'test'
+  ...
+# Subtest: short owned TMPDIR retains space for the Chromium socket suffix
+ok 232 - short owned TMPDIR retains space for the Chromium socket suffix
+  ---
+  duration_ms: 0.264464
+  type: 'test'
+  ...
+# Subtest: socket budget counts UTF-8 bytes and rejects non-absolute or malformed paths
+ok 233 - socket budget counts UTF-8 bytes and rejects non-absolute or malformed paths
+  ---
+  duration_ms: 0.195943
+  type: 'test'
+  ...
+# Subtest: storage evidence comes from actual owned directories and device identity
+ok 234 - storage evidence comes from actual owned directories and device identity
+  ---
+  duration_ms: 3.391746
+  type: 'test'
+  ...
+# Subtest: sibling prefix and paths outside the hard run tree are rejected
+ok 235 - sibling prefix and paths outside the hard run tree are rejected
+  ---
+  duration_ms: 0.684245
+  type: 'test'
+  ...
+# Subtest: symbolic links and non-directory storage are rejected
+ok 236 - symbolic links and non-directory storage are rejected
+  ---
+  duration_ms: 0.412767
+  type: 'test'
+  ...
+# Subtest: an uncreated profile or symbolic-link root cannot authorize storage evidence
+ok 237 - an uncreated profile or symbolic-link root cannot authorize storage evidence
+  ---
+  duration_ms: 0.486808
+  type: 'test'
+  ...
+# Subtest: re-enumeration detects added source files, not only changes to listed files
+ok 238 - re-enumeration detects added source files, not only changes to listed files
+  ---
+  duration_ms: 1.727754
+  type: 'test'
+  ...
+# Subtest: source snapshots reject symlinks and enforce finite file bytes
+ok 239 - source snapshots reject symlinks and enforce finite file bytes
+  ---
+  duration_ms: 1.701183
+  type: 'test'
+  ...
+# Subtest: binary preservation is exclusive, immutable by detachment, and hash checked
+ok 240 - binary preservation is exclusive, immutable by detachment, and hash checked
+  ---
+  duration_ms: 35.477468
+  type: 'test'
+  ...
+# Subtest: reuse checks retained binary bytes, hash, inode, and private ownership without a copy
+ok 241 - reuse checks retained binary bytes, hash, inode, and private ownership without a copy
+  ---
+  duration_ms: 14.008317
+  type: 'test'
+  ...
+# Subtest: capture attempt names cannot escape private evidence paths
+ok 242 - capture attempt names cannot escape private evidence paths
+  ---
+  duration_ms: 1.967501
+  type: 'test'
+  ...
+# Subtest: request projections retain known field names without retaining credentials
+ok 243 - request projections retain known field names without retaining credentials
+  ---
+  duration_ms: 0.753186
+  type: 'test'
+  ...
+# Subtest: focused provider repetitions retain closed adapter and engine identity
+ok 244 - focused provider repetitions retain closed adapter and engine identity
+  ---
+  duration_ms: 5.939093
+  type: 'test'
+  ...
+# Subtest: provider cgroup rejects uncapped, broader or partial controls
+ok 245 - provider cgroup rejects uncapped, broader or partial controls
+  ---
+  duration_ms: 5.552366
+  type: 'test'
+  ...
+# Subtest: resource membership must identify the exact fresh unified cgroup
+ok 246 - resource membership must identify the exact fresh unified cgroup
+  ---
+  duration_ms: 0.248283
+  type: 'test'
+  ...
+# Subtest: drain rejects live descendants, duplicate population fields and malformed events
+ok 247 - drain rejects live descendants, duplicate population fields and malformed events
+  ---
+  duration_ms: 0.941485
+  type: 'test'
+  ...
+# Subtest: owned container rejects replacement image/id/label, host networking and uncapped resources
+ok 248 - owned container rejects replacement image/id/label, host networking and uncapped resources
+  ---
+  duration_ms: 3.758746
+  type: 'test'
+  ...
+# Subtest: shared namespace can refer only to the exact previously owned PostgreSQL container
+ok 249 - shared namespace can refer only to the exact previously owned PostgreSQL container
+  ---
+  duration_ms: 0.242201
+  type: 'test'
+  ...
+# Subtest: caller matching a shared cgroup cannot authorize an owned container
+ok 250 - caller matching a shared cgroup cannot authorize an owned container
+  ---
+  duration_ms: 1.535968
+  type: 'test'
+  ...
+# Subtest: crypto projection retains exact regular bytes behind an admitted SONAME link
+ok 251 - crypto projection retains exact regular bytes behind an admitted SONAME link
+  ---
+  duration_ms: 0.91261
+  type: 'test'
+  ...
+# Subtest: crypto projection rejects absent, chained, escaping and unrelated SONAME targets
+ok 252 - crypto projection rejects absent, chained, escaping and unrelated SONAME targets
+  ---
+  duration_ms: 0.287307
+  type: 'test'
+  ...
+# Subtest: crypto projection rejects empty or oversized bytes and an unapproved profile
+ok 253 - crypto projection rejects empty or oversized bytes and an unapproved profile
+  ---
+  duration_ms: 0.197958
+  type: 'test'
+  ...
+# Subtest: browser mapping accepts actual direct owned cgroup and its owned launcher child
+ok 254 - browser mapping accepts actual direct owned cgroup and its owned launcher child
+  ---
+  duration_ms: 0.820314
+  type: 'test'
+  ...
+# Subtest: private crypto wrapper preserves original assets and exact argument forwarding
+ok 255 - private crypto wrapper preserves original assets and exact argument forwarding
+  ---
+  duration_ms: 0.258323
+  type: 'test'
+  ...
+# Subtest: wrapper fails closed on changed export structure and shell-bearing paths
+ok 256 - wrapper fails closed on changed export structure and shell-bearing paths
+  ---
+  duration_ms: 0.127633
+  type: 'test'
+  ...
+# Subtest: actual loaded crypto admission needs both selected libraries and rejects old copies
+ok 257 - actual loaded crypto admission needs both selected libraries and rejects old copies
+  ---
+  duration_ms: 0.400774
+  type: 'test'
+  ...
+# Subtest: Debian admission extracts only the bounded compressed data member
+ok 258 - Debian admission extracts only the bounded compressed data member
+  ---
+  duration_ms: 1.215648
+  type: 'test'
+  ...
+# Subtest: actual Debian BSD-style member names without a slash retain the same closed member contract
+ok 259 - actual Debian BSD-style member names without a slash retain the same closed member contract
+  ---
+  duration_ms: 2.397721
+  type: 'test'
+  ...
+# Subtest: Debian admission rejects alternate or duplicate members and wrong package format
+ok 260 - Debian admission rejects alternate or duplicate members and wrong package format
+  ---
+  duration_ms: 1.178396
+  type: 'test'
+  ...
+# Subtest: tool tar admission returns regular file bytes after checking the complete archive
+ok 261 - tool tar admission returns regular file bytes after checking the complete archive
+  ---
+  duration_ms: 0.73411
+  type: 'test'
+  ...
+# Subtest: observed GNU ustar signature keeps the same checksum and path admission
+ok 262 - observed GNU ustar signature keeps the same checksum and path admission
+  ---
+  duration_ms: 0.347422
+  type: 'test'
+  ...
+# Subtest: archive admission rejects absolute/traversal paths, escaping links and unsupported entry types
+ok 263 - archive admission rejects absolute/traversal paths, escaping links and unsupported entry types
+  ---
+  duration_ms: 9.601696
+  type: 'test'
+  ...
+# Subtest: bounded internal relative links remain metadata and cannot supply selected file bytes
+ok 264 - bounded internal relative links remain metadata and cannot supply selected file bytes
+  ---
+  duration_ms: 0.359044
+  type: 'test'
+  ...
+# Subtest: tar checksum, truncation, trailing content and entry-size bounds fail closed
+ok 265 - tar checksum, truncation, trailing content and entry-size bounds fail closed
+  ---
+  duration_ms: 0.289011
+  type: 'test'
+  ...
+# Subtest: pinned package admission rejects byte drift and length drift before archive parsing
+ok 266 - pinned package admission rejects byte drift and length drift before archive parsing
+  ---
+  duration_ms: 6.439427
+  type: 'test'
+  ...
+# Subtest: engine configuration names every isolated store and excludes inherited remote/credential variables
+ok 267 - engine configuration names every isolated store and excludes inherited remote/credential variables
+  ---
+  duration_ms: 9.918369
+  type: 'test'
+  ...
+# Subtest: isolated INFO rejects wrong store, remote service, shared driver, and existing containers
+ok 268 - isolated INFO rejects wrong store, remote service, shared driver, and existing containers
+  ---
+  duration_ms: 6.804834
+  type: 'test'
+  ...
+# Subtest: bounded engine configuration places all storage under admitted acquisition filesystem
+ok 269 - bounded engine configuration places all storage under admitted acquisition filesystem
+  ---
+  duration_ms: 2.109532
+  type: 'test'
+  ...
+# Subtest: explicit overlay lane records its driver and rejects shared or unknown drivers
+ok 270 - explicit overlay lane records its driver and rejects shared or unknown drivers
+  ---
+  duration_ms: 0.726265
+  type: 'test'
+  ...
+# Subtest: admission requires the exact complete adapter and actual engine scenario matrix
+ok 271 - admission requires the exact complete adapter and actual engine scenario matrix
+  ---
+  duration_ms: 8.1721
+  type: 'test'
+  ...
+# Subtest: strict evidence schema rejects credentials, raw tokens and arbitrary diagnostic fields
+ok 272 - strict evidence schema rejects credentials, raw tokens and arbitrary diagnostic fields
+  ---
+  duration_ms: 0.352913
+  type: 'test'
+  ...
+# Subtest: evidence writes are bounded and never replace an earlier report
+ok 273 - evidence writes are bounded and never replace an earlier report
+  ---
+  duration_ms: 1.372056
+  type: 'test'
+  ...
+# Subtest: evidence writer rejects private fields and symlinked output roots before creating a file
+ok 274 - evidence writer rejects private fields and symlinked output roots before creating a file
+  ---
+  duration_ms: 0.563564
+  type: 'test'
+  ...
+# Subtest: owned graceful provider stop is admitted while unexpected signals remain failures
+ok 275 - owned graceful provider stop is admitted while unexpected signals remain failures
+  ---
+  duration_ms: 0.358634
+  type: 'test'
+  ...
+# Subtest: malformed process records and coercible engine names fail the closed schema
+ok 276 - malformed process records and coercible engine names fail the closed schema
+  ---
+  duration_ms: 0.407977
+  type: 'test'
+  ...
+# Subtest: closure verification compares hash, size, complete references and exact path set
+ok 277 - closure verification compares hash, size, complete references and exact path set
+  ---
+  duration_ms: 3.679635
+  type: 'test'
+  ...
+# Subtest: Chromium keeps the ordinary owned Node browser entry
+ok 278 - Chromium keeps the ordinary owned Node browser entry
+  ---
+  duration_ms: 1.267667
+  type: 'test'
+  ...
+# Subtest: WebKit requires patched crypto and starts in a private mount namespace
+ok 279 - WebKit requires patched crypto and starts in a private mount namespace
+  ---
+  duration_ms: 0.5402
+  type: 'test'
+  ...
+# Subtest: unknown engines and malformed executable references are rejected
+ok 280 - unknown engines and malformed executable references are rejected
+  ---
+  duration_ms: 0.182689
+  type: 'test'
+  ...
+# Subtest: actual detached child records its birth, group and session before owned termination
+ok 281 - actual detached child records its birth, group and session before owned termination
+  ---
+  duration_ms: 22.949643
+  type: 'test'
+  ...
+# Subtest: invalid admission limits refuse execution before a child can write its marker
+ok 282 - invalid admission limits refuse execution before a child can write its marker
+  ---
+  duration_ms: 100.710134
+  type: 'test'
+  ...
+# Subtest: PID reuse, different group, and different boot cannot match an owned process
+ok 283 - PID reuse, different group, and different boot cannot match an owned process
+  ---
+  duration_ms: 0.350488
+  type: 'test'
+  ...
+# Subtest: signal guard refuses a reused child identity and records failed drain without sending a signal
+ok 284 - signal guard refuses a reused child identity and records failed drain without sending a signal
+  ---
+  duration_ms: 231.263645
+  type: 'test'
+  ...
+# Subtest: failed group ownership never executes the requested command
+ok 285 - failed group ownership never executes the requested command
+  ---
+  duration_ms: 113.700962
+  type: 'test'
+  ...
+# Subtest: failed resource admission refuses execution before approval
+ok 286 - failed resource admission refuses execution before approval
+  ---
+  duration_ms: 103.835363
+  type: 'test'
+  ...
+# Subtest: lifecycle requests are closed, sequential, and limited to server pause/resume
+ok 287 - lifecycle requests are closed, sequential, and limited to server pause/resume
+  ---
+  duration_ms: 6.871912
+  type: 'test'
+  ...
+# Subtest: overlapping polls cannot pause an owned provider twice
+ok 288 - overlapping polls cannot pause an owned provider twice
+  ---
+  duration_ms: 15.01167
+  type: 'test'
+  ...
+# Subtest: injected lifecycle roots preserve private ownership and containment checks
+ok 289 - injected lifecycle roots preserve private ownership and containment checks
+  ---
+  duration_ms: 0.926476
+  type: 'test'
+  ...
+# Subtest: a form that becomes visible after navigation is awaited before entry
+ok 290 - a form that becomes visible after navigation is awaited before entry
+  ---
+  duration_ms: 3.130939
+  type: 'test'
+  ...
+# Subtest: an existing provider session may dispatch the callback without a form
+ok 291 - an existing provider session may dispatch the callback without a form
+  ---
+  duration_ms: 0.197937
+  type: 'test'
+  ...
+# Subtest: both failed observations reject instead of inventing form or callback progress
+ok 292 - both failed observations reject instead of inventing form or callback progress
+  ---
+  duration_ms: 2.438409
+  type: 'test'
+  ...
+# Subtest: mount bridge waits for exact exclusive acknowledgement and rejects replacement
+ok 293 - mount bridge waits for exact exclusive acknowledgement and rejects replacement
+  ---
+  duration_ms: 18.470164
+  type: 'test'
+  ...
+# Subtest: listener admission requires exact allocated loopback port and owner PID
+ok 294 - listener admission requires exact allocated loopback port and owner PID
+  ---
+  duration_ms: 1.091791
+  type: 'test'
+  ...
+# Subtest: Nix hash conversion matches actual admitted tool output without one process per closure path
+ok 295 - Nix hash conversion matches actual admitted tool output without one process per closure path
+  ---
+  duration_ms: 2.729945
+  type: 'test'
+  ...
+# Subtest: conversion rejects other algorithms, malformed hashes and noncanonical base64
+ok 296 - conversion rejects other algorithms, malformed hashes and noncanonical base64
+  ---
+  duration_ms: 0.343405
+  type: 'test'
+  ...
+# Subtest: the browser read uses actual Fetch Response status and projects only safe result fields
+ok 297 - the browser read uses actual Fetch Response status and projects only safe result fields
+  ---
+  duration_ms: 38.467589
+  type: 'test'
+  ...
+# Subtest: missing CSRF is omitted and an actual denial never invents protected content
+ok 298 - missing CSRF is omitted and an actual denial never invents protected content
+  ---
+  duration_ms: 1.82569
+  type: 'test'
+  ...
+# Subtest: a non-JSON unauthenticated response retains its actual status
+ok 299 - a non-JSON unauthenticated response retains its actual status
+  ---
+  duration_ms: 0.798633
+  type: 'test'
+  ...
+# Subtest: unlinked account projection contains synthetic identity and no credential
+ok 300 - unlinked account projection contains synthetic identity and no credential
+  ---
+  duration_ms: 2.716799
+  type: 'test'
+  ...
+# Subtest: synthetic provider roles admit only their closed endpoints and methods
+ok 301 - synthetic provider roles admit only their closed endpoints and methods
+  ---
+  duration_ms: 3.712077
+  type: 'test'
+  ...
+# Subtest: actual key and JWKS projections require bounded public identifiers
+ok 302 - actual key and JWKS projections require bounded public identifiers
+  ---
+  duration_ms: 1.381815
+  type: 'test'
+  ...
+# Subtest: owned proxies replace forwarding authority without changing browser Origin or CSRF
+ok 303 - owned proxies replace forwarding authority without changing browser Origin or CSRF
+  ---
+  duration_ms: 0.752985
+  type: 'test'
+  ...
+# Subtest: private provider proxy admits only approved method and exact token/JWKS paths
+ok 304 - private provider proxy admits only approved method and exact token/JWKS paths
+  ---
+  duration_ms: 0.352051
+  type: 'test'
+  ...
+# Subtest: image metadata retains digest identity and rejects byte drift
+ok 305 - image metadata retains digest identity and rejects byte drift
+  ---
+  duration_ms: 5.618412
+  type: 'test'
+  ...
+# Subtest: platform selection rejects missing and ambiguous descriptors
+ok 306 - platform selection rejects missing and ambiguous descriptors
+  ---
+  duration_ms: 2.552827
+  type: 'test'
+  ...
+# Subtest: manifest layer inventory rejects foreign URLs and oversized acquisition budgets
+ok 307 - manifest layer inventory rejects foreign URLs and oversized acquisition budgets
+  ---
+  duration_ms: 0.309851
+  type: 'test'
+  ...
+# Subtest: blob redirects allow only the role CDN and never forward registry authorization
+ok 308 - blob redirects allow only the role CDN and never forward registry authorization
+  ---
+  duration_ms: 34.323448
+  type: 'test'
+  ...
+# Subtest: blob redirect policy rejects insecure, unrelated, credentialed, cross-role and repeated redirects
+ok 309 - blob redirect policy rejects insecure, unrelated, credentialed, cross-role and repeated redirects
+  ---
+  duration_ms: 1.318945
+  type: 'test'
+  ...
+# Subtest: a terminated relay cannot spend the provider readiness wait budget
+ok 310 - a terminated relay cannot spend the provider readiness wait budget
+  ---
+  duration_ms: 2.960283
+  type: 'test'
+  ...
+# Subtest: stopped admission retains immutable provider identity and rejects live or replaced containers
+ok 311 - stopped admission retains immutable provider identity and rejects live or replaced containers
+  ---
+  duration_ms: 2.169626
+  type: 'test'
+  ...
+# Subtest: rebirth requires distinct current init and monitor identities and stable namespace
+ok 312 - rebirth requires distinct current init and monitor identities and stable namespace
+  ---
+  duration_ms: 0.588743
+  type: 'test'
+  ...
+# Subtest: a fresh exclusive private stop file retains identity through the bounded stop request
+ok 313 - a fresh exclusive private stop file retains identity through the bounded stop request
+  ---
+  duration_ms: 14.769578
+  type: 'test'
+  ...
+# Subtest: replacement and symbolic links cannot reuse an admitted stop identity
+ok 314 - replacement and symbolic links cannot reuse an admitted stop identity
+  ---
+  duration_ms: 1.078897
+  type: 'test'
+  ...
+# Subtest: oversized, malformed and outside-root files cannot request an owned stop
+ok 315 - oversized, malformed and outside-root files cannot request an owned stop
+  ---
+  duration_ms: 8.970974
+  type: 'test'
+  ...
+# Subtest: supervision reports actual close and rejects invalid or duplicate process identities
+ok 316 - supervision reports actual close and rejects invalid or duplicate process identities
+  ---
+  duration_ms: 8.261972
+  type: 'test'
+  ...
+# Subtest: deadline terminates the owned group and retains forced exit evidence
+ok 317 - deadline terminates the owned group and retains forced exit evidence
+  ---
+  duration_ms: 13.355432
+  type: 'test'
+  ...
+# Subtest: combined stdout and stderr limits terminate without retaining secret output
+ok 318 - combined stdout and stderr limits terminate without retaining secret output
+  ---
+  duration_ms: 0.52431
+  type: 'test'
+  ...
+# Subtest: shutdown attempts every child and a non-draining process cannot appear successful
+ok 319 - shutdown attempts every child and a non-draining process cannot appear successful
+  ---
+  duration_ms: 11.495486
+  type: 'test'
+  ...
+# Subtest: registry enforces an aggregate output cap across all owned children
+ok 320 - registry enforces an aggregate output cap across all owned children
+  ---
+  duration_ms: 2.859762
+  type: 'test'
+  ...
+# Subtest: concurrency cap preserves earlier reports while allowing a replacement child after close
+ok 321 - concurrency cap preserves earlier reports while allowing a replacement child after close
+  ---
+  duration_ms: 0.421273
+  type: 'test'
+  ...
+# Subtest: TLS prerequisite requires the synthetic page and an actual request for trusted positive
+ok 322 - TLS prerequisite requires the synthetic page and an actual request for trusted positive
+  ---
+  duration_ms: 3.021951
+  type: 'test'
+  ...
+# Subtest: negative TLS admission rejects connection failures and successful navigation
+ok 323 - negative TLS admission rejects connection failures and successful navigation
+  ---
+  duration_ms: 0.596137
+  type: 'test'
+  ...
+# Subtest: expiry oracle waits past the original provider exp with a finite deadline
+ok 324 - expiry oracle waits past the original provider exp with a finite deadline
+  ---
+  duration_ms: 0.853568
+  type: 'test'
+  ...
+# Subtest: token timing projection keeps bounds and hashes without token or claims disclosure
+ok 325 - token timing projection keeps bounds and hashes without token or claims disclosure
+  ---
+  duration_ms: 2.369097
+  type: 'test'
+  ...
+# Subtest: original token key identifier is projected without private claims
+ok 326 - original token key identifier is projected without private claims
+  ---
+  duration_ms: 0.358815
+  type: 'test'
+  ...
+# Subtest: original subject comparison uses hashes without disclosing the subject
+ok 327 - original subject comparison uses hashes without disclosing the subject
+  ---
+  duration_ms: 0.317786
+  type: 'test'
+  ...
+# Subtest: trust namespace requires a different actual namespace and private root propagation
+ok 328 - trust namespace requires a different actual namespace and private root propagation
+  ---
+  duration_ms: 0.99622
+  type: 'test'
+  ...
+# Subtest: trust mount admission requires exact read-only mount and rejects missing/shared/writable mount
+ok 329 - trust mount admission requires exact read-only mount and rejects missing/shared/writable mount
+  ---
+  duration_ms: 0.376427
+  type: 'test'
+  ...
+# Subtest: both maintained relay profiles pass actual supervisor admission without widening its cap
+ok 330 - both maintained relay profiles pass actual supervisor admission without widening its cap
+  ---
+  duration_ms: 3.732476
+  type: 'test'
+  ...
+# Subtest: existing defaults remain finite and the explicit load profile uses the supervisor cap
+ok 331 - existing defaults remain finite and the explicit load profile uses the supervisor cap
+  ---
+  duration_ms: 0.928651
+  type: 'test'
+  ...
+# Subtest: nominal ready limit cannot erase relay startup or cleanup time
+ok 332 - nominal ready limit cannot erase relay startup or cleanup time
+  ---
+  duration_ms: 0.413849
+  type: 'test'
+  ...
+# Subtest: unknown arguments cannot widen or disable provider lifetimes
+ok 333 - unknown arguments cannot widen or disable provider lifetimes
+  ---
+  duration_ms: 0.179121
+  type: 'test'
+  ...
+# Subtest: container launch accepts only maintained finite lifetimes
+ok 334 - container launch accepts only maintained finite lifetimes
+  ---
+  duration_ms: 0.284933
+  type: 'test'
+  ...
+# Subtest: startup consumes admission time and cleanup reserve precedes actual lifetime deadlines
+ok 335 - startup consumes admission time and cleanup reserve precedes actual lifetime deadlines
+  ---
+  duration_ms: 0.225399
+  type: 'test'
+  ...
+# Subtest: expired lifetimes and malformed timing do not produce an admitted ready window
+ok 336 - expired lifetimes and malformed timing do not produce an admitted ready window
+  ---
+  duration_ms: 0.275686
+  type: 'test'
+  ...
+1..336
+# tests 336
+# suites 0
+# pass 336
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13034.013387
+rustc 1.99.0 (b940084d7 2026-09-28)
+    Checking rom-redb v0.0.3 (/root/ROM/crates/rom-redb)
+    Checking rom-demo v0.0.3 (/root/ROM/demo)
+    Checking rom-storage-conformance v0.0.3 (/root/ROM/tests/persistence)
+    Checking rom-config v0.0.3 (/root/ROM/crates/rom-config)
+    Checking rom-ai v0.0.3 (/root/ROM/crates/rom-ai)
+    Checking rom-openrouter v0.0.3 (/root/ROM/crates/rom-openrouter)
+    Checking rom-cli v0.0.3 (/root/ROM/crates/rom-cli)
+    Checking rom-recovery-host v0.0.3 (/root/ROM/tests/recovery-host)
+    Checking rom-studio-host v0.0.3 (/root/ROM/crates/rom-studio-host)
+    Finished `dev` profile [unoptimized] target(s) in 9.78s
+   Compiling rom-redb v0.0.3 (/root/ROM/crates/rom-redb)
+   Compiling rom-demo v0.0.3 (/root/ROM/demo)
+   Compiling rom-storage-conformance v0.0.3 (/root/ROM/tests/persistence)
+   Compiling rom-config v0.0.3 (/root/ROM/crates/rom-config)
+   Compiling rom-openrouter v0.0.3 (/root/ROM/crates/rom-openrouter)
+   Compiling rom-cli v0.0.3 (/root/ROM/crates/rom-cli)
+   Compiling rom-ai v0.0.3 (/root/ROM/crates/rom-ai)
+   Compiling rom-studio-host v0.0.3 (/root/ROM/crates/rom-studio-host)
+   Compiling rom-recovery-host v0.0.3 (/root/ROM/tests/recovery-host)
+    Finished `test` profile [unoptimized] target(s) in 31.16s
+     Running unittests src/lib.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/rom-21b482a07a776e13)
+
+running 171 tests
+test diagnostics::channel::tests::loss_count_saturates_instead_of_resetting_on_overflow ... ok
+test diagnostics::recording::tests::backwards_clock_observation_is_unavailable_instead_of_successful_zero ... ok
+test query_storage::tests::public_scalar_classification_preserves_wrapped_container_boundary ... ok
+test query_storage::tests::legacy_adapter_does_not_claim_runtime_ownership ... ok
+test diagnostics::channel::tests::sequence_exhaustion_drops_instead_of_reusing_an_observed_sequence ... ok
+test diagnostics::tests::generation_fences_claim_owner_without_changing_restart_root_or_work ... ok
+test query_storage::tests::default_read_delegates_to_one_bounded_snapshot ... ok
+test diagnostics::tests::parent_reference_matches_the_observed_parent_work_namespace ... ok
+test diagnostics::tests::capacity_loss_leaves_an_allocation_gap_instead_of_false_continuity ... ok
+test diagnostics::tests::closing_reader_disables_later_records_without_retaining_core_handles ... ok
+test diagnostics::tests::collector_drop_does_not_publish_and_explicit_publication_has_a_finite_budget ... ok
+test diagnostics::tests::independent_hmac_vectors_pin_versioned_identity_domains ... ok
+test query_storage::tests::scalar_wrappers_and_unreferenced_containers_are_eligible ... ok
+test query_storage::tests::selector_rejects_opaque_unknown_shapes_versions_and_identity ... ok
+test query_storage::tests::canonical_candidate_bytes_do_not_claim_stored_text_length ... ok
+test query_storage::tests::checked_score_rejects_addition_overflow_and_unrelated_snapshot_identity ... ok
+test diagnostics::tests::bounded_output_drops_without_waiting_and_keeps_fixed_categories ... ok
+test reaction_work::accounting_tests::rejected_contribution_changes_are_atomic ... ok
+test reaction_work::accounting_tests::empty_envelope_matches_canonical_serialization_with_and_without_limits ... ok
+test query_storage::tests::native_admits_whole_kind_and_rejects_inconsistent_responses ... ok
+test query_storage::tests::selector_requires_exact_capability_binding_and_strict_checked_saving ... ok
+test query_storage::tests::native_rejects_unknown_response_profiles_and_duplicate_candidates ... ok
+test query_storage::tests::reference_preserves_validation_order_and_sorts_ids ... ok
+test reaction_work::accounting_tests::source_and_notification_payloads_keep_frozen_json_contributions ... ok
+test reaction_work::delivery_profile_tests::expired_hold_conversion_does_not_skip_other_ready_work ... ok
+test reaction_work::delivery_profile_tests::default_profile_plain_retry_keeps_existing_unknown_delivery_policy ... ok
+test reaction_work::accounting_tests::affected_entries_match_whole_serialization_through_insert_replace_remove ... ok
+test reaction_work::accounting_tests::persisted_accounting_parts_reconstruct_checked_canonical_totals ... ok
+test reaction_work::delivery_profile_tests::generic_finish_retry_cannot_make_started_unknown_delivery_resendable ... ok
+test reaction_work::delivery_profile_tests::another_records_revision_overflow_rolls_back_prior_hold_conversion ... ok
+test reaction_work::delivery_profile_tests::confirmed_delivery_outcomes_keep_existing_terminal_and_retry_semantics ... ok
+test diagnostics::tests::concurrent_publication_has_unique_allocations_without_assuming_receive_order ... ok
+test reaction_work::delivery_profile_tests::panicked_hold_profile_fences_without_consuming_retry_budgets ... ok
+test reaction_work::delivery_profile_tests::expired_started_delivery_holds_while_active_and_unstarted_leases_are_not_held ... ok
+test reaction_work::delivery_profile_tests::unknown_hold_profile_fences_without_consuming_retry_budgets ... ok
+test reaction_work::delivery_profile_tests::plain_retry_cannot_bypass_unresolved_evidence_after_a_lifecycle_stop ... ok
+test reaction_work::incremental_bridge_tests::canonical_import_roundtrips_and_rejects_inconsistent_roots_and_epochs ... ok
+test reaction_work::delivery_profile_tests::verified_accepted_completes_hold_without_retrying_or_consuming_budget ... ok
+test reaction_work::accounting_tests::root_count_does_not_consume_record_capacity_and_byte_bounds_match_ledger ... ok
+test reaction_work::delivery_profile_tests::timed_out_hold_profile_fences_without_consuming_retry_budgets ... ok
+test reaction_work::delivery_profile_tests::verified_not_accepted_releases_hold_under_original_budgets ... ok
+test reaction_work::incremental_bridge_tests::idle_delta_cannot_cross_equal_accounting_candidate_contexts ... ok
+test reaction_work::delivery_profile_tests::retry_profiles_keep_frozen_identity_and_default_unknown_retry ... ok
+test reaction_work::incremental_bridge_tests::successful_idle_application_invalidates_earlier_context ... ok
+test reaction_work::incremental_bridge_tests::equal_accounting_does_not_authorize_foreign_prior_records ... ok
+test reaction_work::delivery_profile_tests::uncertainty_holds_at_exhausted_budgets_and_verified_rejection_retains_stop_precedence ... ok
+test reaction_work::incremental_bridge_tests::same_context_noop_checks_readonly_record_fact ... ok
+test reaction_work::incremental_bridge_tests::delta_applies_once_and_retains_canonical_done_history ... ok
+test reaction_work::incremental_bridge_tests::native_import_checks_all_stored_projections_without_repair ... ok
+test reaction_work::incremental_bridge_tests::unchanged_write_set_still_checks_exact_record_read_preconditions ... ok
+test reaction_work::incremental_bridge_tests::same_context_checks_exact_root_fact_before_publication ... ok
+test reaction_work::incremental_tests::failed_public_editor_cannot_publish_partial_enqueue_after_ignored_error ... ok
+test reaction_work::reference_tests::frozen_oracle_rejects_orphan_root_but_retains_zero_attempt_members ... ok
+test reaction_work::incremental_tests::incremental_enqueue_matches_frozen_storage_boundary_and_duplicate_identity ... ok
+test reaction_work::incremental_tests::empty_policy_and_invalid_epoch_headers_fail_without_work_reads ... ok
+test reaction_work::delivery_profile_tests::hold_generation_or_revision_overflow_rolls_back_all_candidate_changes ... ok
+test reaction_work::revision_tests::bounded_snapshot_rejects_colliding_opaque_handles ... ok
+test reaction_work::reference_tests::frozen_oracle_preserves_atomic_id_ordered_prefix_and_late_overflow ... ok
+test reaction_work::delivery_profile_tests::restore_holds_only_unresolved_started_profile_and_fences_each_lease_once ... ok
+test reaction_work::revision_tests::claim_retry_and_terminal_updates_invalidate_each_prior_revision ... ok
+test reaction_work::revision_tests::delivery_updates_increment_once_and_preserve_claim_generation ... ok
+test reaction_work::revision_tests::bounded_snapshot_versions_invalidate_delivery_views ... ok
+test reaction_work::scheduling_tests::archive_rejects_due_below_frozen_floor ... ok
+test reaction_work::revision_tests::revision_overflow_rejects_claim_without_consuming_budget ... ok
+test reaction_work::revision_tests::rejected_updates_preserve_revision_and_all_budgets ... ok
+test reaction_work::revision_tests::finish_preserves_attempt_and_root_budget_precedence_when_age_also_expires ... ok
+test reaction_work::revision_tests::materialization_versions_parent_and_initializes_children ... ok
+test reaction_work::incremental_tests::bundle_editor_checks_claim_and_completion_revision_before_enqueue ... ok
+test reaction_work::incremental_tests::epoch_policy_capacity_and_materialization_errors_preserve_original_precedence ... ok
+test reaction_work::revision_tests::restore_invalidates_revision_and_overflow_is_atomic ... ok
+test reaction_work::incremental_tests::id_ordered_prefix_and_late_overflow_are_atomic ... ok
+test reaction_work::scheduling_tests::backwards_clock_cannot_start_or_finish_delivery_before_floor ... ok
+test reaction_work::scheduling_tests::frozen_floor_prevents_early_claim_without_consuming_budgets ... ok
+test reaction_work::scheduling_tests::operator_retry_cannot_move_due_below_floor ... ok
+test resource::definition::tests::later_policy_restores_opaque_reads_and_later_read_policy_replaces_only_reads ... ok
+test resource::enum_labels_tests::bindings_reject_duplicate_unknown_and_invalid_leaf_metadata ... ok
+test resource::definition::tests::explicit_denial_never_calls_decoder_or_grants_field_access ... ok
+test resource::input_descriptor_tests::builtin_wrappers_preserve_leaf_codec_and_explicit_presentation_path ... ok
+test reaction_work::scheduling_tests::timing_is_part_of_frozen_identity_and_exact_duplicate_is_unchanged ... ok
+test reaction_work::scheduling_tests::restore_fences_claims_without_erasing_floor_or_attempts ... ok
+test reaction_work::scheduling_tests::age_deadline_before_floor_stops_without_claim_or_attempt ... ok
+test reaction_work::scheduling_tests::retry_respects_floor_and_overflow_does_not_publish_candidate ... ok
+test resource::definition::tests::explicit_read_rule_replaces_reads_and_keeps_row_dependent_writes ... ok
+test resource::definition::tests::only_explicit_whole_field_grant_sets_proof_and_field_override_clears_it ... ok
+test resource::definition::tests::transition_validator_keeps_named_pointer_and_noncapturing_callers ... ok
+test resource::input_descriptor_tests::codec_wrapper_paths_must_match_the_declared_shape ... ok
+test resource::input_descriptor_tests::derived_optional_nullable_input_members_preserve_missing_null_and_false ... ok
+test resource::input_descriptor_tests::descriptors_reject_ambiguous_or_invalid_metadata ... ok
+test resource::presentation_tests::title_requires_known_text_without_custom_semantics ... ok
+test resource::presentation_tests::validates_field_group_and_text_bounds ... ok
+test resource::input_descriptor_tests::manual_and_derived_inputs_share_metadata_and_codec_results ... ok
+test resource::input_descriptor_tests::standalone_presence_keeps_its_existing_tagged_codec_and_is_opaque ... ok
+test resource::input_descriptor_tests::typed_inputs_describe_their_actual_wire_values ... ok
+test resource::input_descriptor_tests::field_bindings_reject_duplicate_unknown_and_invalid_codec_identities ... ok
+test resource::enum_labels_tests::shared_invalid_vectors_fail_label_validation_or_wire_decoding ... ok
+test storage_ownership::tests::storage_ownership_excludes_until_guard_drops ... ok
+test storage_ownership::tests::storage_ownership_guard_can_move_between_threads ... ok
+test storage_ownership::tests::storage_ownership_clones_share_claim_and_guard_outlives_helper ... ok
+test storage_state::maintenance_tests::empty_state_never_calls_transform ... ok
+test storage_state::maintenance_tests::row_mapping_changes_only_resource_values_and_is_atomic_on_error ... ok
+test storage_state::maintenance_tests::tombstone_mapping_does_not_restore_a_live_value ... ok
+test storage_state::maintenance_tests::work_expansion_preserves_lifecycle_capacity_and_rolls_back ... ok
+test storage_state::maintenance_tests::mapping_rejects_growth_that_fits_current_bytes_but_consumes_lifecycle_reserve ... ok
+test storage_state::metadata_tests::causal_admission_below_floor_matches_canonical_pre_revision_checks ... ok
+test resource::presentation_tests::authoring_json_rejects_unknown_presentation_fields ... ok
+test storage_state::metadata_tests::native_metadata_excludes_retained_work_and_operator_collections ... ok
+test storage_state::metadata_tests::bounded_metadata_journal_uses_canonical_cursor_and_limit_rules ... ok
+test storage_state::maintenance_tests::state_mapping_rolls_back_journal_and_work_if_a_later_transform_fails ... ok
+test storage_state::maintenance_tests::journal_expansion_rejects_without_eviction_or_partial_changes ... ok
+test storage_state::maintenance_tests::state_mapping_preserves_obligation_identity_lifecycle_and_opaque_payloads ... ok
+test storage_state::metadata_tests::pre_revision_receipt_replay_bypasses_stale_claim ... ok
+test reaction_work::reference_tests::frozen_oracle_matches_all_five_updates_and_duplicate_enqueue ... ok
+test storage_state::metadata_tests::split_and_reassembly_preserve_canonical_archive_state ... ok
+test storage_state::native_journal::header_tests::rejects_disagreement_capacity_and_extreme_counts ... ok
+test storage_state::native_journal::header_tests::rejects_invalid_generation_epochs_and_limits ... ok
+test storage_state::native_journal::header_tests::scalar_header_round_trip ... ok
+test storage_state::native_journal::oracle_tests::native_bundle_engine_is_available_and_paging_preserves_gaps ... ok
+test storage_state::native_journal::image_tests::canonical_image_rejects_duplicate_identity_holes_and_retention_limits ... ok
+test storage_state::native_journal::image_tests::native_image_rejects_header_count_and_byte_disagreement ... ok
+test resource::definition::tests::explicit_reads_skip_decoder_but_writes_and_field_disclosure_keep_it ... ok
+test storage_state::native_journal::image_tests::canonical_and_native_images_preserve_exact_metadata ... ok
+test storage_state::metadata_tests::incremental_bundle_matches_canonical_completion_and_child_enqueue ... ok
+test storage_state::metadata_tests::rejected_bundle_does_not_publish_completion_or_counters ... ok
+test storage_state::native_journal::readset_tests::exact_read_facts_reject_read_only_and_header_mutations_and_cross_context ... ok
+test storage_state::native_journal::oracle_tests::one_large_append_retires_multiple_exact_prefix_entries ... ok
+test storage_state::native_journal::oracle_tests::exact_byte_thresholds_max_positions_and_permissive_row_contract_match_oracle ... ok
+test storage_state::native_journal::serialization_tests::parts_deserialization_rejects_missing_fields_and_type_mismatch ... ok
+test storage_state::native_journal::oracle_tests::native_delta_matches_every_canonical_field_and_retired_identity ... ok
+test storage_state::native_journal::readset_tests::work_only_publication_invalidates_combined_candidate ... ok
+test storage_state::native_journal::oracle_tests::paging_progress_across_other_kinds_and_mismatched_cursors_matches_oracle ... ok
+test storage_state::native_journal::serialization_tests::parts_deserialization_rejects_unknown_native_fields ... ok
+test storage_state::native_journal::readset_tests::touched_byte_mismatch_is_rejected_and_changed_false_does_not_scan ... ok
+test storage_state::native_journal::serialization_tests::deserialized_parts_are_not_validated_header_authority ... ok
+test storage_state::native_journal::readset_tests::cumulative_reader_budget_is_propagated_before_prefix_publication ... ok
+test storage_state::native_journal::serialization_tests::parts_serialization_preserves_advanced_epochs_and_empty_maximum_head ... ok
+test storage_state::operator_tests::delivery_profile_and_operator_metadata_are_required_and_category_checked ... ok
+test storage_state::operator_tests::exact_replay_precedes_cas_and_preserves_identity_budgets ... ok
+test storage_state::operator_tests::byte_capacity_and_revision_overflow_cannot_leave_a_receipt ... ok
+test storage_state::operator_tests::epochs_control_new_admission_and_replay_without_destroying_historical_receipts ... ok
+test storage_state::operator_tests::archive_validation_rejects_incoherent_retained_prior_control_states ... ok
+test storage_state::operator_tests::frozen_action_resolution_completes_without_consuming_attempts_or_mutation_budget ... ok
+test storage_state::operator_tests::current_receipt_decoding_requires_prior_state_and_explicit_delivery ... ok
+test storage_state::operator_tests::persisted_hold_is_not_claimable_and_requires_verified_reconciliation ... ok
+test storage_state::operator_tests::invalid_snapshot_generation_and_archive_generation_are_rejected ... ok
+test storage_state::operator_tests::receipt_capacity_cannot_block_worker_completion_or_restore_replay ... ok
+test storage_state::operator_tests::retry_cannot_bypass_fanout_stops ... ok
+test storage_state::operator_tests::snapshot_charges_receipts_and_all_metadata_without_truncation ... ok
+test storage_state::retention_tests::archive_and_enqueue_reject_inconsistent_work_epochs ... ok
+test storage_state::operator_tests::malformed_claim_identity_cannot_publish_candidate_before_error ... ok
+test storage_state::operator_tests::active_leases_hard_budgets_and_wrong_decisions_are_refused ... ok
+test storage_state::operator_tests::stopped_action_retry_retains_redacted_failure_history_through_replay_retirement_and_restore ... ok
+test storage_state::operator_tests::stale_versions_and_receipt_limits_reject_atomically ... ok
+test storage_state::native_journal::oracle_tests::completion_child_enqueue_replay_and_error_precedence_match_frozen_bundle ... ok
+test storage_state::retention_tests::replay_floor_and_resolution_only_claims_cannot_be_bypassed ... ok
+test storage_state::retention_tests::archive_requires_action_epoch_to_match_cause_and_floors_to_cover_obligations ... ok
+test storage_state::operator_tests::unverified_receipt_evidence_and_invalid_retained_epoch_fail_archive_validation ... ok
+test storage_state::retention_tests::bundle_cannot_persist_future_or_unrelated_reaction_epochs ... ok
+test storage_state::retention_tests::causal_admission_requires_the_current_stored_claim_in_the_same_epoch ... ok
+test storage_state::retention_tests::invalid_retention_never_mutates_state ... ok
+test storage_state::retention_tests::work_update_rejects_action_epoch_mismatch_without_finishing_source ... ok
+test storage_state::retention_tests::materialization_cannot_change_the_parent_epoch ... ok
+test storage_state::retention_tests::retry_epoch_defaults_and_journal_retention_are_explicit_and_repeatable ... ok
+test storage_state::retention_tests::unresolved_or_unknown_roots_block_retention_atomically ... ok
+test storage_state::retention_tests::retention_removes_complete_roots_and_preserves_newer_budgets ... ok
+test storage_state::retention_tests::only_accepted_done_notifications_are_retirable ... ok
+test storage_state::operator_tests::reconciliation_preserves_original_budgets_and_fences_stale_completion ... ok
+test storage_state::native_journal::oracle_tests::native_retention_and_canonical_delegation_match_prechange_oracle ... ok
+test reaction_work::accounting_tests::every_state_delivery_and_optional_floor_retains_exact_reservation ... ok
+test reaction_work::incremental_tests::all_five_updates_preserve_composed_revision_generation_and_root_summaries ... ok
+test reaction_work::incremental_bridge_tests::terminal_history_is_absent_from_active_id_selection ... ok
+test reaction_work::incremental_tests::local_transition_does_not_read_or_emit_unrelated_terminal_work ... ok
+
+test result: ok. 171 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests/json.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/json-ed913cd0f79838c2)
+
+running 3 tests
+test public_decoder_accepts_complete_json_roots_and_preserves_values ... ok
+test duplicate_keys_fail_at_any_depth_with_one_safe_error ... ok
+test invalid_trailing_and_excessively_nested_input_share_safe_errors ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/operator_protocol.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/operator_protocol-da6bad69e3db13a6)
+
+running 9 tests
+test handles_are_stable_opaque_and_canonical ... ok
+test page_charges_full_envelope_and_record_count_after_nested_validation ... ok
+test persisted_reconciliation_hold_has_a_public_safe_status ... ok
+test query_and_response_bounds_reject_zero_oversized_and_overflow ... ok
+test page_rejects_wrong_protocol_on_envelope_and_nested_view ... ok
+test requests_reject_unknown_fields_at_each_boundary ... ok
+test individual_outputs_validate_nested_fields_and_complete_envelope_bytes ... ok
+test control_identifiers_and_evidence_are_bounded_before_submission ... ok
+test page_rejects_nested_fields_its_json_decoder_cannot_accept ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/reference_schema.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/reference_schema-2c10198629bc08b1)
+
+running 5 tests
+test catalog_validation_checks_targets_duplicates_and_canonical_order ... ok
+test absence_null_and_tombstones_have_no_live_edges ... ok
+test malformed_reference_values_fail_instead_of_omitting_edges ... ok
+test nested_references_are_unique_and_preserve_full_identity ... ok
+test descriptors_round_trip_and_reject_invalid_layouts ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/replay_versions.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/replay_versions-a1c99a0aa5f43d9e)
+
+running 9 tests
+test replay_registration_rejects_wrong_kind_current_future_and_duplicate_versions ... ok
+test exact_legacy_codec_is_used_even_when_the_current_codec_accepts_input ... ok
+test current_receipt_never_tries_a_legacy_codec_that_would_match ... ok
+test current_authority_denial_precedes_legacy_normalization ... ok
+test unmarked_unmigrated_receipt_uses_the_current_catalog_version ... ok
+test renamed_create_replays_original_fingerprint_and_never_admits_legacy_fresh_writes ... ok
+test unavailable_legacy_codec_fails_closed_without_reexecution ... ok
+test renamed_patch_replays_with_the_original_field_codec ... ok
+test legacy_codec_panic_does_not_poison_the_runtime_gate ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/retry_epochs.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/retry_epochs-4d72af5ec5def1be)
+
+running 6 tests
+test omitted_wire_epoch_stays_zero ... ok
+test epoch_query_checks_current_actor_authority ... ok
+test epochs_validate_order_and_builder_fence_detects_rollback ... ok
+test floors_are_rechecked_after_normalization_and_after_proposal_work ... ok
+test sealed_epochs_replay_but_never_admit_fresh_input_and_expired_receipts_fail_closed ... ok
+test epochs_separate_identity_and_zero_preserves_the_legacy_identity ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/storage_ownership.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/storage_ownership-cdcc069262b022ed)
+
+running 4 tests
+test storage_ownership_pure_validation_precedes_acquisition ... ok
+test storage_ownership_failed_registration_releases_claim ... ok
+test storage_ownership_shutdown_retains_claim_until_last_runtime_drops ... ok
+test storage_ownership_excludes_wrapped_and_direct_builders_before_storage_reads ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/rom_ai-68cfd87577d541a1)
+
+running 4 tests
+test tools::calculation_tests::wrapper_caught_cpu_panic_is_sanitized_and_does_not_close_runtime ... ok
+test tools::calculation_tests::expired_wrapper_deadline_submits_no_cpu_job ... ok
+test tools::calculation_tests::wrapper_cancellation_keeps_real_adapter_admission_and_shutdown_until_cpu_finishes ... ok
+test tools::calculation_tests::wrapper_deadline_keeps_real_adapter_admission_and_shutdown_until_cpu_finishes ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/execution.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/execution-97f3d002fd9de578)
+
+running 4 tests
+test execution_deadline_rejects_empty_or_unbounded_host_time ... ok
+test compatible_defaults_delegate_without_changing_the_prepared_attempt ... ok
+test expired_execution_context_never_invokes_legacy_generation_or_lookup ... ok
+test clones_and_shortening_share_the_original_monotonic_budget ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/reservations.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/reservations-99d9461aab31082e)
+
+running 14 tests
+test free_attempt_needs_no_paid_authority ... ok
+test decoded_and_patched_policy_cannot_amplify_frozen_authority ... ok
+test concurrent_reservations_authorize_one_dispatch ... ok
+test trusted_settlement_is_exact_and_cannot_rewrite_known_usage ... ok
+test late_unknown_evidence_does_not_extend_or_release_expired_run ... ok
+test completed_checkpoint_checks_attempt_and_authorized_projection ... ok
+test reservation_then_run_commit_is_conservative ... ok
+test rounded_retry_at_expiry_fails_without_successor ... ok
+test expired_reconciliation_retains_charge_without_wake ... ok
+test restart_retains_unknown_cost_and_limits ... ok
+test reconciled_nonacceptance_is_explicit_atomic_and_preserves_evidence ... ok
+test waiting_checkpoint_is_atomic_and_replay_preserves_rounded_due ... ok
+test cancellation_retains_unknown_cost_and_hides_late_output ... ok
+test ledger_byte_limit_and_private_codecs_fail_atomically ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.08s
+
+     Running tests/routing.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/routing-ce9fb8688d825916)
+
+running 16 tests
+test capability_prices_and_deadline_fail_closed ... ok
+test debug_and_public_errors_do_not_disclose_private_payloads ... ok
+test exact_money_rounds_up_and_never_panics_on_overflow ... ok
+test cursor_version_and_injected_serialized_limits_are_rejected ... ok
+test native_tool_continuation_retains_calls_and_rejects_forged_results ... ok
+test paid_reservation_uses_request_ceiling_not_stale_catalog_quote ... ok
+test independent_runs_keep_candidate_and_paid_state ... ok
+test paid_routing_requires_explicit_budget_authority ... ok
+test provider_boundary_is_object_safe_send_and_preserves_unresolved_evidence ... ok
+test continuation_recomputes_exact_cap_without_resetting_frozen_routing_identity ... ok
+test decoded_prepared_contract_requires_explicit_validation ... ok
+test telemetry_failure_cannot_escape_or_render_payloads ... ok
+test request_limits_and_schema_requirements_are_hard ... ok
+test prepared_contract_rejects_forged_routes_before_dispatch ... ok
+test nested_json_envelopes_are_finite_before_serialization ... ok
+test completion_tool_ids_limits_and_debug_are_validated ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/tools.rs (/var/tmp/rom-ui-integration-cargo-target/debug/deps/tools-6003950f28f76b2f)
+
+running 75 tests
+test public_read_progress_contract_exposes_only_finite_status_and_ordinal ... ok
+test native_read_schema_uses_typed_input_and_rejects_model_selected_authority ... ok
+test decoded_action_contract_rejects_builtin_mutations_and_unbounded_identity ... ok
+test public_resume_future_size_characterization ... ok
+test redb_grant_revoked_during_calculation_blocks_private_result_publication ... ok
+test redb_cancel_tools_before_invocation_prevents_side_effects ... ok
+test redb_definite_read_tool_failure_reports_actionable_failure_without_more_io ... ok
+test redb_current_tool_grant_revocation_blocks_recovery_without_provider_lookup ... ok
+test redb_paid_tool_settlement_lost_ack_replays_exact_original_cost ... ok
+test redb_cancel_pending_tool_after_lost_ack_keeps_uncertainty ... ok
+test redb_paid_tool_settlement_noncommit_recovers_before_any_tool_io ... ok
+test redb_public_read_progress_rejects_current_referenced_row_grant_revocation ... ok
+test redb_historical_tool_actor_source_and_global_call_id_forgery_changes_no_state_or_events ... ok
+test redb_concurrent_and_duplicate_tool_resume_admits_one_original_receipt_replay ... ok
+test redb_public_read_resume_admission_noncommit_reopens_original_identity ... ok
+test redb_public_read_resume_admission_lost_ack_reopens_original_identity ... ok
+test redb_public_read_result_noncommit_reopens_with_exact_original_attempt ... ok
+test redb_public_read_result_lost_ack_reopens_with_exact_original_attempt ... ok
+test redb_public_read_progress_shows_advisory_recovery_and_queued_snapshots ... ok
+test redb_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once ... FAILED
+test redb_public_read_resume_different_owner_changes_no_run_account_or_callback ... ok
+test redb_public_read_resume_authority_wait_consumes_shared_deadline_without_admission ... ok
+test redb_submission_freezes_registry_and_replays_original_version_after_restart ... ok
+test redb_public_read_resume_expiry_reports_failed_without_read_or_charge ... ok
+test registry_rejects_unversioned_duplicate_and_unbounded_declarations ... ok
+test redb_public_read_resume_unstarted_reopened_call_fences_original_delivery ... ok
+test redb_public_read_resume_revoked_grant_reports_failed_without_read_or_charge ... ok
+test redb_public_read_resume_coalesces_duplicates_and_replays_current_projection ... ok
+test redb_public_read_resume_claimed_unknown_before_callback_preserves_ordinal ... ok
+test redb_public_read_resume_reopens_same_call_without_restarting_generation ... ok
+test redb_source_row_grant_revocation_denies_retained_private_output ... ok
+test redb_revoked_tool_grant_blocks_retained_output_disclosure ... ok
+test redb_repeated_native_call_id_holds_valid_provider_knowledge_without_more_effects ... ok
+test redb_revoked_tool_grant_blocks_successor_generation_and_reports_failure ... ok
+test redb_public_read_resume_frozen_retry_budget_exhaustion_is_actionable ... ok
+test redb_typed_null_result_remains_completed_through_durable_native_continuation ... ok
+test redb_revoked_paid_grant_blocks_tool_settlement_recovery_without_new_charge ... ok
+test sqlite_cancel_tools_before_invocation_prevents_side_effects ... ok
+test sqlite_cancel_pending_tool_after_lost_ack_keeps_uncertainty ... ok
+test redb_typed_tools_continue_original_request_and_commit_once ... ok
+test redb_unknown_tool_action_replays_original_receipt_after_restart ... ok
+test sqlite_definite_read_tool_failure_reports_actionable_failure_without_more_io ... ok
+test sqlite_grant_revoked_during_calculation_blocks_private_result_publication ... ok
+test sqlite_current_tool_grant_revocation_blocks_recovery_without_provider_lookup ... ok
+test sqlite_public_read_progress_rejects_current_referenced_row_grant_revocation ... ok
+test sqlite_paid_tool_settlement_noncommit_recovers_before_any_tool_io ... ok
+test sqlite_paid_tool_settlement_lost_ack_replays_exact_original_cost ... ok
+test sqlite_historical_tool_actor_source_and_global_call_id_forgery_changes_no_state_or_events ... ok
+test sqlite_concurrent_and_duplicate_tool_resume_admits_one_original_receipt_replay ... ok
+test sqlite_public_read_resume_different_owner_changes_no_run_account_or_callback ... ok
+test sqlite_public_read_progress_shows_advisory_recovery_and_queued_snapshots ... ok
+test sqlite_public_read_resume_expiry_reports_failed_without_read_or_charge ... ok
+test sqlite_public_read_result_lost_ack_reopens_with_exact_original_attempt ... ok
+test sqlite_public_read_resume_admission_lost_ack_reopens_original_identity ... ok
+test sqlite_public_read_result_noncommit_reopens_with_exact_original_attempt ... ok
+test sqlite_public_read_resume_admission_noncommit_reopens_original_identity ... ok
+test sqlite_public_read_resume_revoked_grant_reports_failed_without_read_or_charge ... ok
+test sqlite_submission_freezes_registry_and_replays_original_version_after_restart ... ok
+test sqlite_public_read_resume_coalesces_duplicates_and_replays_current_projection ... ok
+test sqlite_public_read_resume_claimed_unknown_before_callback_preserves_ordinal ... ok
+test sqlite_public_read_resume_unstarted_reopened_call_fences_original_delivery ... ok
+test sqlite_public_read_resume_reopens_same_call_without_restarting_generation ... ok
+test sqlite_revoked_tool_grant_blocks_retained_output_disclosure ... ok
+test sqlite_public_read_resume_frozen_retry_budget_exhaustion_is_actionable ... ok
+test sqlite_revoked_paid_grant_blocks_tool_settlement_recovery_without_new_charge ... ok
+test sqlite_revoked_tool_grant_blocks_successor_generation_and_reports_failure ... ok
+test sqlite_repeated_native_call_id_holds_valid_provider_knowledge_without_more_effects ... ok
+test sqlite_source_row_grant_revocation_denies_retained_private_output ... ok
+test sqlite_typed_null_result_remains_completed_through_durable_native_continuation ... ok
+test sqlite_typed_tools_continue_original_request_and_commit_once ... ok
+test redb_temporary_or_unknown_read_error_keeps_original_tool_pending ... ok
+test sqlite_public_read_resume_authority_wait_consumes_shared_deadline_without_admission ... ok
+test sqlite_unknown_tool_action_replays_original_receipt_after_restart ... ok
+test sqlite_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once has been running for over 60 seconds
+test sqlite_temporary_or_unknown_read_error_keeps_original_tool_pending has been running for over 60 seconds
+test sqlite_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once ... ok
+test sqlite_temporary_or_unknown_read_error_keeps_original_tool_pending ... ok
+
+failures:
+
+---- redb_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once stdout ----
+read recovery entered mode 18
+fixture reaches durable run commit state Some("Queued")
+read recovery submitted mode 18
+active CPU fixture entered
+active CPU fixture processing one durable work
+active CPU fixture processing one durable work
+fixture reaches durable run commit state Some("Queued")
+active CPU fixture processing one durable work
+fixture authority stage resolve
+fixture authority stage inspect
+fixture authority stage resolve
+fixture authority stage attempt
+fixture authority stage inspect
+fixture authority stage resolve
+fixture authority stage attempt
+fixture authority stage inspect
+fixture reaches durable run commit state Some("Prepared")
+fixture authority stage resolve
+fixture authority stage attempt
+fixture authority stage inspect
+fixture reaches durable run commit state Some("Executing")
+fixture authority stage resolve
+fixture authority stage attempt
+fixture authority stage inspect
+fixture authority stage resolve
+fixture authority stage attempt
+fixture authority stage inspect
+fixture reaches durable run commit state Some("ToolsPending")
+
+thread 'redb_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once' (2612013) panicked at crates/rom-ai/tests/tools/read_recovery.rs:71:5:
+the physical CPU descendant actually started
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    redb_read_resume_rejects_live_cpu_after_callback_timeout_then_retries_once
+
+test result: FAILED. 74 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 79.88s
+
+error: test failed, to rerun pass `-p rom-ai --test tools`

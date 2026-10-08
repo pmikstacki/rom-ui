@@ -1,0 +1,2610 @@
+
+> rom-studio@0.0.3 test:unit /root/ROM/studio
+> node --experimental-strip-types --test tests/unit/*.test.ts
+
+TAP version 13
+# (node:2587391) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonical query boundary survives cloning and float integer replay
+ok 1 - canonical query boundary survives cloning and float integer replay
+  ---
+  duration_ms: 103.203468
+  type: 'test'
+  ...
+# Subtest: anchors reject journal cursors and response identity changes
+ok 2 - anchors reject journal cursors and response identity changes
+  ---
+  duration_ms: 1.741291
+  type: 'test'
+  ...
+# Subtest: anchor admission rejects malformed native envelope members
+ok 3 - anchor admission rejects malformed native envelope members
+  ---
+  duration_ms: 1.289399
+  type: 'test'
+  ...
+# Subtest: anchor replies bind the requested literal order and predicate structure
+ok 4 - anchor replies bind the requested literal order and predicate structure
+  ---
+  duration_ms: 0.644439
+  type: 'test'
+  ...
+# Subtest: anchor correspondence leaves canonical codec operands opaque
+ok 5 - anchor correspondence leaves canonical codec operands opaque
+  ---
+  duration_ms: 9.559009
+  type: 'test'
+  ...
+# Subtest: anchor value states keep missing distinct from present null
+ok 6 - anchor value states keep missing distinct from present null
+  ---
+  duration_ms: 0.602209
+  type: 'test'
+  ...
+# Subtest: native comparison operators cannot be coerced from arrays
+ok 7 - native comparison operators cannot be coerced from arrays
+  ---
+  duration_ms: 0.278301
+  type: 'test'
+  ...
+# Subtest: native absence predicates retain their null and equality constraints
+ok 8 - native absence predicates retain their null and equality constraints
+  ---
+  duration_ms: 0.32506
+  type: 'test'
+  ...
+# Subtest: public anchor response is bound to the submitted snapshot despite caller edits
+ok 9 - public anchor response is bound to the submitted snapshot despite caller edits
+  ---
+  duration_ms: 2.249621
+  type: 'test'
+  ...
+# (node:2587392) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: managed application routes create through stable recovery and guards navigation until exact retry
+ok 10 - managed application routes create through stable recovery and guards navigation until exact retry
+  ---
+  duration_ms: 105.717894
+  type: 'test'
+  ...
+# Subtest: same-kind descriptor renewal creates a current writer when there is no retained draft
+ok 11 - same-kind descriptor renewal creates a current writer when there is no retained draft
+  ---
+  duration_ms: 22.563899
+  type: 'test'
+  ...
+# Subtest: descriptor renewal preserves the old draft until explicit discard permits current editing
+ok 12 - descriptor renewal preserves the old draft until explicit discard permits current editing
+  ---
+  duration_ms: 22.98951
+  type: 'test'
+  ...
+# (node:2587393) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: managed App bridge requires explicit trusted profile and storage
+ok 13 - managed App bridge requires explicit trusted profile and storage
+  ---
+  duration_ms: 72.833394
+  type: 'test'
+  ...
+# Subtest: App bridge shares refresh through binding and preserves transient context
+ok 14 - App bridge shares refresh through binding and preserves transient context
+  ---
+  duration_ms: 40.998504
+  type: 'test'
+  ...
+# Subtest: managed draft snapshots preserve decimal lexical categories
+ok 15 - managed draft snapshots preserve decimal lexical categories
+  ---
+  duration_ms: 10.334538
+  type: 'test'
+  ...
+# Subtest: editor draft snapshots preserve decimal lexical categories
+ok 16 - editor draft snapshots preserve decimal lexical categories
+  ---
+  duration_ms: 1.601033
+  type: 'test'
+  ...
+# Subtest: managed pause and same-principal rebind retain selected target and query context
+ok 17 - managed pause and same-principal rebind retain selected target and query context
+  ---
+  duration_ms: 7.313657
+  type: 'test'
+  ...
+# Subtest: same-principal discover 503 renewal keeps context stale and dispatch disabled
+ok 18 - same-principal discover 503 renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 8.000076
+  type: 'test'
+  ...
+# Subtest: same-principal discover network renewal keeps context stale and dispatch disabled
+ok 19 - same-principal discover network renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 7.719571
+  type: 'test'
+  ...
+# Subtest: same-principal query 503 renewal keeps context stale and dispatch disabled
+ok 20 - same-principal query 503 renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 6.600687
+  type: 'test'
+  ...
+# Subtest: same-principal query network renewal keeps context stale and dispatch disabled
+ok 21 - same-principal query network renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 4.866861
+  type: 'test'
+  ...
+# Subtest: same-principal read 503 renewal keeps context stale and dispatch disabled
+ok 22 - same-principal read 503 renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 5.306009
+  type: 'test'
+  ...
+# Subtest: same-principal read network renewal keeps context stale and dispatch disabled
+ok 23 - same-principal read network renewal keeps context stale and dispatch disabled
+  ---
+  duration_ms: 6.205554
+  type: 'test'
+  ...
+# Subtest: confirmed renewal denied clears private projection but retains unknown knowledge
+ok 24 - confirmed renewal denied clears private projection but retains unknown knowledge
+  ---
+  duration_ms: 6.002918
+  type: 'test'
+  ...
+# Subtest: confirmed renewal missing clears private projection but retains unknown knowledge
+ok 25 - confirmed renewal missing clears private projection but retains unknown knowledge
+  ---
+  duration_ms: 4.980708
+  type: 'test'
+  ...
+# Subtest: principal clearing publishes no prior recovery draft or result
+ok 26 - principal clearing publishes no prior recovery draft or result
+  ---
+  duration_ms: 2.909639
+  type: 'test'
+  ...
+# Subtest: confirmed discover denial hides obsolete descriptor metadata in subsequent publications
+ok 27 - confirmed discover denial hides obsolete descriptor metadata in subsequent publications
+  ---
+  duration_ms: 1.277126
+  type: 'test'
+  ...
+# Subtest: confirmed read denial hides obsolete descriptor metadata in subsequent publications
+ok 28 - confirmed read denial hides obsolete descriptor metadata in subsequent publications
+  ---
+  duration_ms: 1.61475
+  type: 'test'
+  ...
+# Subtest: reentrant target selection cannot stage an operation into a replacement lane
+ok 29 - reentrant target selection cannot stage an operation into a replacement lane
+  ---
+  duration_ms: 0.667213
+  type: 'test'
+  ...
+# Subtest: editor restore refuses to erase outstanding invalid local draft
+ok 30 - editor restore refuses to erase outstanding invalid local draft
+  ---
+  duration_ms: 12.757218
+  type: 'test'
+  ...
+# Subtest: reentrant editor publication cannot write an older draft after the newer draft
+ok 31 - reentrant editor publication cannot write an older draft after the newer draft
+  ---
+  duration_ms: 2.330965
+  type: 'test'
+  ...
+# Subtest: held editor restore cannot publish over a newer staged draft
+ok 32 - held editor restore cannot publish over a newer staged draft
+  ---
+  duration_ms: 3.805087
+  type: 'test'
+  ...
+# Subtest: same-owner rebind does not permit restore while prior draft durability is outstanding
+ok 33 - same-owner rebind does not permit restore while prior draft durability is outstanding
+  ---
+  duration_ms: 1.403627
+  type: 'test'
+  ...
+# Subtest: reentrant pause during renewal publication cannot publish active authority
+ok 34 - reentrant pause during renewal publication cannot publish active authority
+  ---
+  duration_ms: 0.565849
+  type: 'test'
+  ...
+# Subtest: reentrant principal replacement during clearing cannot be overwritten by old binding
+ok 35 - reentrant principal replacement during clearing cannot be overwritten by old binding
+  ---
+  duration_ms: 2.152085
+  type: 'test'
+  ...
+# Subtest: identity invalidation precedes reentrant mutation from clearing subscribers
+ok 36 - identity invalidation precedes reentrant mutation from clearing subscribers
+  ---
+  duration_ms: 1.079028
+  type: 'test'
+  ...
+# Subtest: later local draft can be persisted while transient session blocks dispatch
+ok 37 - later local draft can be persisted while transient session blocks dispatch
+  ---
+  duration_ms: 1.773352
+  type: 'test'
+  ...
+# Subtest: paused managed authority cannot dispatch a mutation
+ok 38 - paused managed authority cannot dispatch a mutation
+  ---
+  duration_ms: 0.853237
+  type: 'test'
+  ...
+# Subtest: managed state snapshots cannot change mutation authority
+ok 39 - managed state snapshots cannot change mutation authority
+  ---
+  duration_ms: 0.937067
+  type: 'test'
+  ...
+# Subtest: editor CAS preserves invalid text and exact base revision, then refuses stale overwrite
+ok 40 - editor CAS preserves invalid text and exact base revision, then refuses stale overwrite
+  ---
+  duration_ms: 8.10143
+  type: 'test'
+  ...
+# Subtest: held editor persistence blocks navigation and cannot republish after principal clearing
+ok 41 - held editor persistence blocks navigation and cannot republish after principal clearing
+  ---
+  duration_ms: 2.140382
+  type: 'test'
+  ...
+# Subtest: controller retains selected view when editor CAS fails
+ok 42 - controller retains selected view when editor CAS fails
+  ---
+  duration_ms: 1.378198
+  type: 'test'
+  ...
+# Subtest: queued editor writes keep navigation blocked until latest draft is durable
+ok 43 - queued editor writes keep navigation blocked until latest draft is durable
+  ---
+  duration_ms: 6.327177
+  type: 'test'
+  ...
+# Subtest: malformed editor records fail closed without restoring private text
+ok 44 - malformed editor records fail closed without restoring private text
+  ---
+  duration_ms: 1.906115
+  type: 'test'
+  ...
+# Subtest: wrong-owner or wrong-target editor records cannot be restored
+ok 45 - wrong-owner or wrong-target editor records cannot be restored
+  ---
+  duration_ms: 1.279019
+  type: 'test'
+  ...
+# Subtest: explicit restore cannot load replacement-owner editor records after reentrant identity change
+ok 46 - explicit restore cannot load replacement-owner editor records after reentrant identity change
+  ---
+  duration_ms: 2.145451
+  type: 'test'
+  ...
+# Subtest: unknown managed command blocks navigation and retries exact accepted wire after renewal
+ok 47 - unknown managed command blocks navigation and retries exact accepted wire after renewal
+  ---
+  duration_ms: 10.350779
+  type: 'test'
+  ...
+# Subtest: bound draft writer rejects stale principal context before persistence
+ok 48 - bound draft writer rejects stale principal context before persistence
+  ---
+  duration_ms: 1.668942
+  type: 'test'
+  ...
+# Subtest: bound draft writer rejects stale clear context before persistence
+ok 49 - bound draft writer rejects stale clear context before persistence
+  ---
+  duration_ms: 3.816779
+  type: 'test'
+  ...
+# Subtest: bound draft writer rejects stale denied context before persistence
+ok 50 - bound draft writer rejects stale denied context before persistence
+  ---
+  duration_ms: 1.21673
+  type: 'test'
+  ...
+# Subtest: bound draft writer rejects stale target context before persistence
+ok 51 - bound draft writer rejects stale target context before persistence
+  ---
+  duration_ms: 0.668936
+  type: 'test'
+  ...
+# Subtest: bound draft writer remains valid after same-owner renewal and stores invalid raw text
+ok 52 - bound draft writer remains valid after same-owner renewal and stores invalid raw text
+  ---
+  duration_ms: 1.799442
+  type: 'test'
+  ...
+# Subtest: reentrant principal change after editor CAS cannot stage old input in the new owner lane
+ok 53 - reentrant principal change after editor CAS cannot stage old input in the new owner lane
+  ---
+  duration_ms: 2.82649
+  type: 'test'
+  ...
+# Subtest: simultaneous bound frame updaters merge from current owner cache without losing a form
+ok 54 - simultaneous bound frame updaters merge from current owner cache without losing a form
+  ---
+  duration_ms: 3.864148
+  type: 'test'
+  ...
+# Subtest: bound frame updater reentrancy cannot write old draft after principal replacement
+ok 55 - bound frame updater reentrancy cannot write old draft after principal replacement
+  ---
+  duration_ms: 1.811936
+  type: 'test'
+  ...
+# Subtest: failed form composition blocks navigation and does not dispatch or store partial frames
+ok 56 - failed form composition blocks navigation and does not dispatch or store partial frames
+  ---
+  duration_ms: 1.114706
+  type: 'test'
+  ...
+# Subtest: draft-only owner clear permits fresh alice authority without automatic old-owner restoration
+ok 57 - draft-only owner clear permits fresh alice authority without automatic old-owner restoration
+  ---
+  duration_ms: 2.531958
+  type: 'test'
+  ...
+# Subtest: draft-only owner clear permits fresh bob authority without automatic old-owner restoration
+ok 58 - draft-only owner clear permits fresh bob authority without automatic old-owner restoration
+  ---
+  duration_ms: 4.528986
+  type: 'test'
+  ...
+# Subtest: accepted unknown owner clear permits fresh alice authority without automatic old-owner restoration
+ok 59 - accepted unknown owner clear permits fresh alice authority without automatic old-owner restoration
+  ---
+  duration_ms: 6.789758
+  type: 'test'
+  ...
+# Subtest: accepted unknown owner clear permits fresh bob authority without automatic old-owner restoration
+ok 60 - accepted unknown owner clear permits fresh bob authority without automatic old-owner restoration
+  ---
+  duration_ms: 7.883353
+  type: 'test'
+  ...
+# Subtest: outstanding draft CAS cannot republish old-owner bytes after clear and other-owner reacquisition
+ok 61 - outstanding draft CAS cannot republish old-owner bytes after clear and other-owner reacquisition
+  ---
+  duration_ms: 3.578996
+  type: 'test'
+  ...
+# (node:2587394) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: an expired authenticated session cannot retain the previous CSRF authority
+ok 62 - an expired authenticated session cannot retain the previous CSRF authority
+  ---
+  duration_ms: 46.082178
+  type: 'test'
+  ...
+# Subtest: an old expired response cannot clear replacement session authority
+ok 63 - an old expired response cannot clear replacement session authority
+  ---
+  duration_ms: 2.066762
+  type: 'test'
+  ...
+# (node:2587395) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: legacy auth exposes confirmed 401 denial separately from expiry and outage
+ok 64 - legacy auth exposes confirmed 401 denial separately from expiry and outage
+  ---
+  duration_ms: 25.534725
+  type: 'test'
+  ...
+# Subtest: legacy auth exposes confirmed 403 denial separately from expiry and outage
+ok 65 - legacy auth exposes confirmed 403 denial separately from expiry and outage
+  ---
+  duration_ms: 1.192273
+  type: 'test'
+  ...
+# Subtest: legacy auth keeps temporary 503 distinct from confirmed authority loss
+ok 66 - legacy auth keeps temporary 503 distinct from confirmed authority loss
+  ---
+  duration_ms: 1.187836
+  type: 'test'
+  ...
+# Subtest: legacy refresh returns the exact validated anonymous generation
+ok 67 - legacy refresh returns the exact validated anonymous generation
+  ---
+  duration_ms: 1.411913
+  type: 'test'
+  ...
+# Subtest: shared transport preserves expired versus anonymous outcomes without inventing generation
+ok 68 - shared transport preserves expired versus anonymous outcomes without inventing generation
+  ---
+  duration_ms: 0.528097
+  type: 'test'
+  ...
+# Subtest: one cancelled waiter cannot cancel another waiter's shared session acquisition
+ok 69 - one cancelled waiter cannot cancel another waiter's shared session acquisition
+  ---
+  duration_ms: 1.319606
+  type: 'test'
+  ...
+# Subtest: all cancelled waiters abort the shared driver and cannot install late credentials
+ok 70 - all cancelled waiters abort the shared driver and cannot install late credentials
+  ---
+  duration_ms: 1.935401
+  type: 'test'
+  ...
+# Subtest: shared session results are independent copies for simultaneous consumers
+ok 71 - shared session results are independent copies for simultaneous consumers
+  ---
+  duration_ms: 1.795695
+  type: 'test'
+  ...
+# Subtest: legacy refresh coalesces overlapping App and controller checks
+ok 72 - legacy refresh coalesces overlapping App and controller checks
+  ---
+  duration_ms: 0.602268
+  type: 'test'
+  ...
+# Subtest: shared provider validation rejects duplicates and missing primaries
+ok 73 - shared provider validation rejects duplicates and missing primaries
+  ---
+  duration_ms: 1.67259
+  type: 'test'
+  ...
+# Subtest: legacy rejects invalid anonymous and authenticated protocol without fabricating defaults
+ok 74 - legacy rejects invalid anonymous and authenticated protocol without fabricating defaults
+  ---
+  duration_ms: 2.260961
+  type: 'test'
+  ...
+# Subtest: legacy expiry remains the exact exported typed error
+ok 75 - legacy expiry remains the exact exported typed error
+  ---
+  duration_ms: 0.407156
+  type: 'test'
+  ...
+# Subtest: shared provider responses held across invalidation cannot republish old choices
+ok 76 - shared provider responses held across invalidation cannot republish old choices
+  ---
+  duration_ms: 0.345358
+  type: 'test'
+  ...
+# Subtest: a cancelled flight leaves its slot available for a bounded replacement
+ok 77 - a cancelled flight leaves its slot available for a bounded replacement
+  ---
+  duration_ms: 0.611676
+  type: 'test'
+  ...
+# Subtest: public driver suppresses protocol results invalidated before its adapter continuation
+ok 78 - public driver suppresses protocol results invalidated before its adapter continuation
+  ---
+  duration_ms: 0.799585
+  type: 'test'
+  ...
+# Subtest: legacy adapter preserves Session changed after logout between transport and adapter completion
+ok 79 - legacy adapter preserves Session changed after logout between transport and adapter completion
+  ---
+  duration_ms: 0.662944
+  type: 'test'
+  ...
+# Subtest: the shared provider bound accepts exactly one hundred unique choices and preserves encoded login identity
+ok 80 - the shared provider bound accepts exactly one hundred unique choices and preserves encoded login identity
+  ---
+  duration_ms: 3.16189
+  type: 'test'
+  ...
+# (node:2587397) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: simultaneous session checks share acquisition and publish sanitized identity
+ok 81 - simultaneous session checks share acquisition and publish sanitized identity
+  ---
+  duration_ms: 14.0957
+  type: 'test'
+  ...
+# Subtest: transient failure retains validated authority only until its original expiry
+ok 82 - transient failure retains validated authority only until its original expiry
+  ---
+  duration_ms: 6.674858
+  type: 'test'
+  ...
+# Subtest: logout invalidates a held check before calling the driver or publishing
+ok 83 - logout invalidates a held check before calling the driver or publishing
+  ---
+  duration_ms: 5.233209
+  type: 'test'
+  ...
+# Subtest: authority is cleared before a transition hook and reentrant logout suppresses the candidate
+ok 84 - authority is cleared before a transition hook and reentrant logout suppresses the candidate
+  ---
+  duration_ms: 4.345507
+  type: 'test'
+  ...
+# Subtest: listeners cannot disclose a late identity after a prior listener disposes
+ok 85 - listeners cannot disclose a late identity after a prior listener disposes
+  ---
+  duration_ms: 5.097331
+  type: 'test'
+  ...
+# Subtest: expiry cancels a check whose driver ignores abort without waiting for a response
+ok 86 - expiry cancels a check whose driver ignores abort without waiting for a response
+  ---
+  duration_ms: 5.525637
+  type: 'test'
+  ...
+# Subtest: state and transition snapshots are isolated from host mutations
+ok 87 - state and transition snapshots are isolated from host mutations
+  ---
+  duration_ms: 4.475214
+  type: 'test'
+  ...
+# Subtest: browser driver binds validated human subject to host authority and keeps CSRF private
+ok 88 - browser driver binds validated human subject to host authority and keeps CSRF private
+  ---
+  duration_ms: 127.613117
+  type: 'test'
+  ...
+# Subtest: browser driver distinguishes structured denial from temporary or malformed failures
+ok 89 - browser driver distinguishes structured denial from temporary or malformed failures
+  ---
+  duration_ms: 4.870428
+  type: 'test'
+  ...
+# Subtest: malformed sessions cannot renew authority and validated anonymous sessions clear it
+ok 90 - malformed sessions cannot renew authority and validated anonymous sessions clear it
+  ---
+  duration_ms: 5.268568
+  type: 'test'
+  ...
+# Subtest: malformed host checks cannot establish an unrecognized lifecycle state
+ok 91 - malformed host checks cannot establish an unrecognized lifecycle state
+  ---
+  duration_ms: 1.628656
+  type: 'test'
+  ...
+# Subtest: a refused logout cannot leak a driver error after replacement authority
+ok 92 - a refused logout cannot leak a driver error after replacement authority
+  ---
+  duration_ms: 0.703952
+  type: 'test'
+  ...
+# Subtest: a hook failure clears browser credential authority as well as observable identity
+ok 93 - a hook failure clears browser credential authority as well as observable identity
+  ---
+  duration_ms: 5.446917
+  type: 'test'
+  ...
+# Subtest: an invalid clock cannot establish or retain browser authority
+ok 94 - an invalid clock cannot establish or retain browser authority
+  ---
+  duration_ms: 9.772416
+  type: 'test'
+  ...
+# Subtest: browser acquisition has a finite deadline even when fetch ignores cancellation
+ok 95 - browser acquisition has a finite deadline even when fetch ignores cancellation
+  ---
+  duration_ms: 64.826503
+  type: 'test'
+  ...
+# Subtest: an expiry reached inside an asynchronous hook prevents authority publication
+ok 96 - an expiry reached inside an asynchronous hook prevents authority publication
+  ---
+  duration_ms: 2.222889
+  type: 'test'
+  ...
+# Subtest: credential invalidation cannot throw past disposal or retain observable private state
+ok 97 - credential invalidation cannot throw past disposal or retain observable private state
+  ---
+  duration_ms: 1.671176
+  type: 'test'
+  ...
+# Subtest: a reentrant acquisition during credential invalidation supersedes the clearing hook
+ok 98 - a reentrant acquisition during credential invalidation supersedes the clearing hook
+  ---
+  duration_ms: 2.898427
+  type: 'test'
+  ...
+# Subtest: browser driver captures its host profile rather than trusting later option mutations
+ok 99 - browser driver captures its host profile rather than trusting later option mutations
+  ---
+  duration_ms: 2.044729
+  type: 'test'
+  ...
+# Subtest: a browser response held across logout cannot replace fresh credential authority
+ok 100 - a browser response held across logout cannot replace fresh credential authority
+  ---
+  duration_ms: 9.684558
+  type: 'test'
+  ...
+# Subtest: oversized and invalid UTF-8 browser responses cannot establish authority
+ok 101 - oversized and invalid UTF-8 browser responses cannot establish authority
+  ---
+  duration_ms: 14.28981
+  type: 'test'
+  ...
+# Subtest: concurrent refresh remains single-flight while authority rebinding awaits its hook
+ok 102 - concurrent refresh remains single-flight while authority rebinding awaits its hook
+  ---
+  duration_ms: 2.108341
+  type: 'test'
+  ...
+# Subtest: logout captures transport credentials then invalidates them before hooks when the driver throws
+ok 103 - logout captures transport credentials then invalidates them before hooks when the driver throws
+  ---
+  duration_ms: 4.203556
+  type: 'test'
+  ...
+# Subtest: logout captures transport credentials then invalidates them before hooks when the driver rejects
+ok 104 - logout captures transport credentials then invalidates them before hooks when the driver rejects
+  ---
+  duration_ms: 1.066154
+  type: 'test'
+  ...
+# (node:2587405) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: blob capabilities and reserve bind the admitted kind, ID and exact integer body
+ok 105 - blob capabilities and reserve bind the admitted kind, ID and exact integer body
+  ---
+  duration_ms: 32.086869
+  type: 'test'
+  ...
+# Subtest: blob uploads use immutable bytes, same-origin CSRF and bound projected responses
+ok 106 - blob uploads use immutable bytes, same-origin CSRF and bound projected responses
+  ---
+  duration_ms: 2.77915
+  type: 'test'
+  ...
+# Subtest: blob capability limits, operation and response status admission fail closed
+ok 107 - blob capability limits, operation and response status admission fail closed
+  ---
+  duration_ms: 1.566818
+  type: 'test'
+  ...
+# Subtest: blob generation and finite deadline protect binary requests and explicit recovery
+ok 108 - blob generation and finite deadline protect binary requests and explicit recovery
+  ---
+  duration_ms: 15.549031
+  type: 'test'
+  ...
+# Subtest: download enforces admitted size and binary type without JSON decoding
+ok 109 - download enforces admitted size and binary type without JSON decoding
+  ---
+  duration_ms: 2.272885
+  type: 'test'
+  ...
+# Subtest: download IDs cannot normalize into another route and rejected headers cancel unused bytes
+ok 110 - download IDs cannot normalize into another route and rejected headers cancel unused bytes
+  ---
+  duration_ms: 2.074245
+  type: 'test'
+  ...
+# Subtest: returned capabilities cannot widen private admission and reserve input is frozen before waiting
+ok 111 - returned capabilities cannot widen private admission and reserve input is frozen before waiting
+  ---
+  duration_ms: 1.238231
+  type: 'test'
+  ...
+# Subtest: binary request pre-abort reaches no transport and failed capability refresh closes admission
+ok 112 - binary request pre-abort reaches no transport and failed capability refresh closes admission
+  ---
+  duration_ms: 1.230757
+  type: 'test'
+  ...
+# Subtest: capability completion cannot stamp an old response with a new session generation
+ok 113 - capability completion cannot stamp an old response with a new session generation
+  ---
+  duration_ms: 25.522391
+  type: 'test'
+  ...
+# Subtest: a superseded capability request cannot reopen admission after a newer denial
+ok 114 - a superseded capability request cannot reopen admission after a newer denial
+  ---
+  duration_ms: 1.692829
+  type: 'test'
+  ...
+# (node:2587422) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: binds result identity and preserves revision, never accepts wrong resource
+ok 115 - binds result identity and preserves revision, never accepts wrong resource
+  ---
+  duration_ms: 84.233493
+  type: 'test'
+  ...
+# Subtest: lost response retains exact frozen request and key for explicit retry
+ok 116 - lost response retains exact frozen request and key for explicit retry
+  ---
+  duration_ms: 2.021616
+  type: 'test'
+  ...
+# Subtest: session generation rejects stale replies and old mutation retries
+ok 117 - session generation rejects stale replies and old mutation retries
+  ---
+  duration_ms: 0.94853
+  type: 'test'
+  ...
+# Subtest: denial is rejected, conflict is distinct and unknown outcome is recoverable
+ok 118 - denial is rejected, conflict is distinct and unknown outcome is recoverable
+  ---
+  duration_ms: 1.899983
+  type: 'test'
+  ...
+# Subtest: response bounds, content type and rows are enforced
+ok 119 - response bounds, content type and rows are enforced
+  ---
+  duration_ms: 3.938952
+  type: 'test'
+  ...
+# Subtest: public mutation status cannot bypass private ownership or reuse a failed attempt
+ok 120 - public mutation status cannot bypass private ownership or reuse a failed attempt
+  ---
+  duration_ms: 0.284001
+  type: 'test'
+  ...
+# Subtest: an unclassified server failure remains unknown and must not imply rollback
+ok 121 - an unclassified server failure remains unknown and must not imply rollback
+  ---
+  duration_ms: 0.691769
+  type: 'test'
+  ...
+# Subtest: receipt replay rechecks current server authority rather than returning a cached result
+ok 122 - receipt replay rechecks current server authority rather than returning a cached result
+  ---
+  duration_ms: 1.220137
+  type: 'test'
+  ...
+# (node:2587430) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: wire codec preserves boundary integers and ordinary false/zero/null/empty values
+ok 123 - wire codec preserves boundary integers and ordinary false/zero/null/empty values
+  ---
+  duration_ms: 10.952586
+  type: 'test'
+  ...
+# Subtest: wire parser rejects duplicate keys, oversized text, excessive nesting, and infinite numbers
+ok 124 - wire parser rejects duplicate keys, oversized text, excessive nesting, and infinite numbers
+  ---
+  duration_ms: 0.735653
+  type: 'test'
+  ...
+# Subtest: wire maps preserve reserved names without prototype mutation
+ok 125 - wire maps preserve reserved names without prototype mutation
+  ---
+  duration_ms: 0.190103
+  type: 'test'
+  ...
+# Subtest: wire encoder refuses nonfinite and recursive values before sending them
+ok 126 - wire encoder refuses nonfinite and recursive values before sending them
+  ---
+  duration_ms: 0.239387
+  type: 'test'
+  ...
+# Subtest: scalar normalization applies exact integer ranges and finite float semantics
+ok 127 - scalar normalization applies exact integer ranges and finite float semantics
+  ---
+  duration_ms: 0.450158
+  type: 'test'
+  ...
+# Subtest: object and patch encoders distinguish omission, null, value and removal
+ok 128 - object and patch encoders distinguish omission, null, value and removal
+  ---
+  duration_ms: 0.455078
+  type: 'test'
+  ...
+# Subtest: structural normalization bounds nesting and validates enums, references and maps
+ok 129 - structural normalization bounds nesting and validates enums, references and maps
+  ---
+  duration_ms: 0.298248
+  type: 'test'
+  ...
+# Subtest: malformed runtime modes and shapes are refused, not coerced
+ok 130 - malformed runtime modes and shapes are refused, not coerced
+  ---
+  duration_ms: 0.142753
+  type: 'test'
+  ...
+# Subtest: wire strings agree with Rust Unicode and preserve signed zero
+ok 131 - wire strings agree with Rust Unicode and preserve signed zero
+  ---
+  duration_ms: 4.744017
+  type: 'test'
+  ...
+# Subtest: array and map accessors are rejected without executing user code
+ok 132 - array and map accessors are rejected without executing user code
+  ---
+  duration_ms: 0.505003
+  type: 'test'
+  ...
+# Subtest: parsed floating integer tokens retain their Rust number category on replay
+ok 133 - parsed floating integer tokens retain their Rust number category on replay
+  ---
+  duration_ms: 0.351981
+  type: 'test'
+  ...
+# (node:2587440) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: creation proof association compares field names without delimiter collisions
+ok 134 - creation proof association compares field names without delimiter collisions
+  ---
+  duration_ms: 0.872795
+  type: 'test'
+  ...
+# Subtest: creation drafts restore exact invalid ID and field text without converting large integer values
+ok 135 - creation drafts restore exact invalid ID and field text without converting large integer values
+  ---
+  duration_ms: 34.5777
+  type: 'test'
+  ...
+# Subtest: a principal change during a pending CAS never publishes the former owner's draft
+ok 136 - a principal change during a pending CAS never publishes the former owner's draft
+  ---
+  duration_ms: 6.798415
+  type: 'test'
+  ...
+# Subtest: a concurrent creation draft cannot overwrite an unobserved stored version
+ok 137 - a concurrent creation draft cannot overwrite an unobserved stored version
+  ---
+  duration_ms: 27.426853
+  type: 'test'
+  ...
+# Subtest: logout hides creation drafts and restore reads no private storage without an owner
+ok 138 - logout hides creation drafts and restore reads no private storage without an owner
+  ---
+  duration_ms: 1.440597
+  type: 'test'
+  ...
+# Subtest: a changed descriptor refuses stored drafts instead of silently applying them
+ok 139 - a changed descriptor refuses stored drafts instead of silently applying them
+  ---
+  duration_ms: 9.457185
+  type: 'test'
+  ...
+# Subtest: explicit local discard refuses another owner's stored creation envelope
+ok 140 - explicit local discard refuses another owner's stored creation envelope
+  ---
+  duration_ms: 5.527611
+  type: 'test'
+  ...
+# Subtest: explicit local discard cannot erase a concurrent replacement after its read
+ok 141 - explicit local discard cannot erase a concurrent replacement after its read
+  ---
+  duration_ms: 1.883452
+  type: 'test'
+  ...
+# Subtest: owner change during explicit discard read prevents deletion
+ok 142 - owner change during explicit discard read prevents deletion
+  ---
+  duration_ms: 1.717155
+  type: 'test'
+  ...
+# Subtest: a byte-limit refusal preserves the prior creation draft and blocks navigation
+ok 143 - a byte-limit refusal preserves the prior creation draft and blocks navigation
+  ---
+  duration_ms: 2.017347
+  type: 'test'
+  ...
+# Subtest: save confirmation clears only its matching creation draft and preserves later edits
+ok 144 - save confirmation clears only its matching creation draft and preserves later edits
+  ---
+  duration_ms: 17.19995
+  type: 'test'
+  ...
+# (node:2587449) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: creation acknowledgement loss restores its original command without knowing the Resource ID
+ok 145 - creation acknowledgement loss restores its original command without knowing the Resource ID
+  ---
+  duration_ms: 76.420644
+  type: 'test'
+  ...
+# Subtest: restart retry preserves later raw text even when its Resource ID and operation are unchanged
+ok 146 - restart retry preserves later raw text even when its Resource ID and operation are unchanged
+  ---
+  duration_ms: 34.284831
+  type: 'test'
+  ...
+# Subtest: a create invoked with different input must not acknowledge an unrelated editor draft
+ok 147 - a create invoked with different input must not acknowledge an unrelated editor draft
+  ---
+  duration_ms: 22.968581
+  type: 'test'
+  ...
+# Subtest: confirmation preserves child invalid editor data on a direct create
+ok 148 - confirmation preserves child invalid editor data on a direct create
+  ---
+  duration_ms: 17.904895
+  type: 'test'
+  ...
+# Subtest: confirmation preserves errors invalid editor data on a direct create
+ok 149 - confirmation preserves errors invalid editor data on a direct create
+  ---
+  duration_ms: 38.956891
+  type: 'test'
+  ...
+# Subtest: confirmation preserves row invalid editor data on a direct create
+ok 150 - confirmation preserves row invalid editor data on a direct create
+  ---
+  duration_ms: 26.015982
+  type: 'test'
+  ...
+# Subtest: later invalid creation edits survive confirmation of the earlier accepted command
+ok 151 - later invalid creation edits survive confirmation of the earlier accepted command
+  ---
+  duration_ms: 49.9694
+  type: 'test'
+  ...
+# Subtest: unknown creation prohibits a replacement operation and current permission gates retry
+ok 152 - unknown creation prohibits a replacement operation and current permission gates retry
+  ---
+  duration_ms: 41.868583
+  type: 'test'
+  ...
+# Subtest: another owner cannot recover or disclose the previous creation command
+ok 153 - another owner cannot recover or disclose the previous creation command
+  ---
+  duration_ms: 23.52933
+  type: 'test'
+  ...
+# (node:2587506) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: authorized discovery can omit an input descriptor that would disclose a hidden target
+ok 154 - authorized discovery can omit an input descriptor that would disclose a hidden target
+  ---
+  duration_ms: 28.924028
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible empty enum
+ok 155 - discovery rejects native-impossible empty enum
+  ---
+  duration_ms: 1.177996
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible oversized enum
+ok 156 - discovery rejects native-impossible oversized enum
+  ---
+  duration_ms: 0.823029
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible nested optional
+ok 157 - discovery rejects native-impossible nested optional
+  ---
+  duration_ms: 0.516905
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible nested nullable
+ok 158 - discovery rejects native-impossible nested nullable
+  ---
+  duration_ms: 0.801248
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible scalar presence
+ok 159 - discovery rejects native-impossible scalar presence
+  ---
+  duration_ms: 2.663359
+  type: 'test'
+  ...
+# Subtest: discovery rejects native-impossible codec UTF-8 bytes
+ok 160 - discovery rejects native-impossible codec UTF-8 bytes
+  ---
+  duration_ms: 0.832057
+  type: 'test'
+  ...
+# Subtest: accepts authorized descriptor and rejects duplicate or inconsistent metadata
+ok 161 - accepts authorized descriptor and rejects duplicate or inconsistent metadata
+  ---
+  duration_ms: 3.017345
+  type: 'test'
+  ...
+# Subtest: bounded POST stream handles split CRLF frames and surfaces terminal errors
+ok 162 - bounded POST stream handles split CRLF frames and surfaces terminal errors
+  ---
+  duration_ms: 2.41179
+  type: 'test'
+  ...
+# Subtest: stream rejects oversized frames and a wrong kind before disclosure
+ok 163 - stream rejects oversized frames and a wrong kind before disclosure
+  ---
+  duration_ms: 4.708459
+  type: 'test'
+  ...
+# Subtest: idle stream closes its reader on timeout and cancellation
+ok 164 - idle stream closes its reader on timeout and cancellation
+  ---
+  duration_ms: 20.286316
+  type: 'test'
+  ...
+# Subtest: stream flushes UTF8 decoder and treats silent EOF as stale
+ok 165 - stream flushes UTF8 decoder and treats silent EOF as stale
+  ---
+  duration_ms: 1.129794
+  type: 'test'
+  ...
+# Subtest: invalid stream media cancels its body, and opening errors retain server category
+ok 166 - invalid stream media cancels its body, and opening errors retain server category
+  ---
+  duration_ms: 0.752215
+  type: 'test'
+  ...
+# Subtest: live snapshots obey the requested page limit
+ok 167 - live snapshots obey the requested page limit
+  ---
+  duration_ms: 0.470567
+  type: 'test'
+  ...
+# Subtest: observation admission is finite and cancellation releases its slot
+ok 168 - observation admission is finite and cancellation releases its slot
+  ---
+  duration_ms: 1.768352
+  type: 'test'
+  ...
+# Subtest: discovery retains bounded wrapper paths and rejects shape mismatches
+ok 169 - discovery retains bounded wrapper paths and rejects shape mismatches
+  ---
+  duration_ms: 2.466895
+  type: 'test'
+  ...
+# (node:2587507) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: shared native discovery retains enum labels through wrappers and action inputs
+ok 170 - shared native discovery retains enum labels through wrappers and action inputs
+  ---
+  duration_ms: 18.38464
+  type: 'test'
+  ...
+# Subtest: shared native invalid enum label vectors are rejected
+ok 171 - shared native invalid enum label vectors are rejected
+  ---
+  duration_ms: 8.614437
+  type: 'test'
+  ...
+# Subtest: enum labels bound UTF8 and preserve prototype-shaped exact members
+ok 172 - enum labels bound UTF8 and preserve prototype-shaped exact members
+  ---
+  duration_ms: 0.22043
+  type: 'test'
+  ...
+# Subtest: enum label map bounds, omissions, partial labels and invalid container types
+ok 173 - enum label map bounds, omissions, partial labels and invalid container types
+  ---
+  duration_ms: 20.492649
+  type: 'test'
+  ...
+# Subtest: enum labels do not inherit object prototype or merge duplicate display labels
+ok 174 - enum labels do not inherit object prototype or merge duplicate display labels
+  ---
+  duration_ms: 0.183019
+  type: 'test'
+  ...
+# (node:2587511) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: filter round trip preserves exact values, comparisons and ordered fields
+ok 175 - filter round trip preserves exact values, comparisons and ordered fields
+  ---
+  duration_ms: 3.75974
+  type: 'test'
+  ...
+# Subtest: nested conjunctions retain all rules without invoking a numeric parser
+ok 176 - nested conjunctions retain all rules without invoking a numeric parser
+  ---
+  duration_ms: 0.237924
+  type: 'test'
+  ...
+# Subtest: unsupported operators, OR and hidden fields are rejected without silent dropping
+ok 177 - unsupported operators, OR and hidden fields are rejected without silent dropping
+  ---
+  duration_ms: 0.498521
+  type: 'test'
+  ...
+# Subtest: absence is distinct from null and allowed only for optional fields
+ok 178 - absence is distinct from null and allowed only for optional fields
+  ---
+  duration_ms: 0.226772
+  type: 'test'
+  ...
+# Subtest: native query bounds and scalar comparison restrictions apply before execution
+ok 179 - native query bounds and scalar comparison restrictions apply before execution
+  ---
+  duration_ms: 0.537906
+  type: 'test'
+  ...
+# Subtest: malformed trees, cyclic groups and unknown attributes are rejected
+ok 180 - malformed trees, cyclic groups and unknown attributes are rejected
+  ---
+  duration_ms: 0.229458
+  type: 'test'
+  ...
+# Subtest: draft conversion resets page continuation and never aliases active query arrays
+ok 181 - draft conversion resets page continuation and never aliases active query arrays
+  ---
+  duration_ms: 0.24131
+  type: 'test'
+  ...
+# Subtest: invalid saved query operators cannot enter an editable draft
+ok 182 - invalid saved query operators cannot enter an editable draft
+  ---
+  duration_ms: 0.126912
+  type: 'test'
+  ...
+# Subtest: wrapped custom values are cloned without aliasing or loss of reserved map names
+ok 183 - wrapped custom values are cloned without aliasing or loss of reserved map names
+  ---
+  duration_ms: 0.448676
+  type: 'test'
+  ...
+# Subtest: optional present comparison survives saved query conversion
+ok 184 - optional present comparison survives saved query conversion
+  ---
+  duration_ms: 0.383241
+  type: 'test'
+  ...
+# Subtest: inherited fields and getter rules are rejected without evaluating the getter
+ok 185 - inherited fields and getter rules are rejected without evaluating the getter
+  ---
+  duration_ms: 0.301545
+  type: 'test'
+  ...
+# Subtest: non-enumerable filter accessors are rejected before invocation
+ok 186 - non-enumerable filter accessors are rejected before invocation
+  ---
+  duration_ms: 0.210481
+  type: 'test'
+  ...
+# Subtest: draft envelope rejects inherited members, symbols, unknown and hidden getters
+ok 187 - draft envelope rejects inherited members, symbols, unknown and hidden getters
+  ---
+  duration_ms: 0.25719
+  type: 'test'
+  ...
+# (node:2587520) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: form snapshot retains invalid raw text independently of prior valid input and large revision
+ok 188 - form snapshot retains invalid raw text independently of prior valid input and large revision
+  ---
+  duration_ms: 3.467473
+  type: 'test'
+  ...
+# Subtest: form draft copies preserve lexical decimal categories and isolate snapshots
+ok 189 - form draft copies preserve lexical decimal categories and isolate snapshots
+  ---
+  duration_ms: 0.645702
+  type: 'test'
+  ...
+# Subtest: restore rejects changed descriptor and different action or form identity
+ok 190 - restore rejects changed descriptor and different action or form identity
+  ---
+  duration_ms: 0.484384
+  type: 'test'
+  ...
+# Subtest: restore retains original base revision rather than adopting a renewed resource revision
+ok 191 - restore retains original base revision rather than adopting a renewed resource revision
+  ---
+  duration_ms: 0.290474
+  type: 'test'
+  ...
+# Subtest: restore rejects malformed intent modes and value omissions
+ok 192 - restore rejects malformed intent modes and value omissions
+  ---
+  duration_ms: 0.533187
+  type: 'test'
+  ...
+# Subtest: snapshot uses an explicit byte bound and excludes functions from persisted editor state
+ok 193 - snapshot uses an explicit byte bound and excludes functions from persisted editor state
+  ---
+  duration_ms: 1.261185
+  type: 'test'
+  ...
+# Subtest: form snapshots retain arbitrary own field names without prototype mutation
+ok 194 - form snapshots retain arbitrary own field names without prototype mutation
+  ---
+  duration_ms: 0.393971
+  type: 'test'
+  ...
+# Subtest: frame set merges simultaneous resource and action drafts without losing either invalid editor
+ok 195 - frame set merges simultaneous resource and action drafts without losing either invalid editor
+  ---
+  duration_ms: 4.227001
+  type: 'test'
+  ...
+# Subtest: frame set rejects wrong action identity, unowned or extra frames and base revision changes
+ok 196 - frame set rejects wrong action identity, unowned or extra frames and base revision changes
+  ---
+  duration_ms: 5.305638
+  type: 'test'
+  ...
+# Subtest: aggregate form frame bounds cover all children and preserve exact wire lexical categories
+ok 197 - aggregate form frame bounds cover all children and preserve exact wire lexical categories
+  ---
+  duration_ms: 2.54847
+  type: 'test'
+  ...
+# Subtest: typed small base revision remains bigint through capture and restore
+ok 198 - typed small base revision remains bigint through capture and restore
+  ---
+  duration_ms: 0.269143
+  type: 'test'
+  ...
+# Subtest: nested small typed frame revisions restore as bigint and decimal revision tokens fail closed
+ok 199 - nested small typed frame revisions restore as bigint and decimal revision tokens fail closed
+  ---
+  duration_ms: 1.055333
+  type: 'test'
+  ...
+# (node:2587565) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: IndexedDB configuration requires an explicit bounded database before opening browser storage
+ok 200 - IndexedDB configuration requires an explicit bounded database before opening browser storage
+  ---
+  duration_ms: 18.620449
+  type: 'test'
+  ...
+# Subtest: missing IndexedDB capability fails closed instead of replacing durable storage with memory
+ok 201 - missing IndexedDB capability fails closed instead of replacing durable storage with memory
+  ---
+  duration_ms: 0.195853
+  type: 'test'
+  ...
+# (node:2587566) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: journal validates cursor generation, kind and strictly advancing positions
+ok 202 - journal validates cursor generation, kind and strictly advancing positions
+  ---
+  duration_ms: 24.825552
+  type: 'test'
+  ...
+# (node:2587587) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: lexical decimal, negative zero, exact limits and field-state values survive restore
+ok 203 - lexical decimal, negative zero, exact limits and field-state values survive restore
+  ---
+  duration_ms: 15.330485
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 204 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 6.854913
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 205 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 1.820612
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 206 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 0.7187
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 207 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 5.638843
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 208 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 5.91528
+  type: 'test'
+  ...
+# Subtest: corrupt saved record fails closed without dispatch or local replacement
+ok 209 - corrupt saved record fails closed without dispatch or local replacement
+  ---
+  duration_ms: 0.897742
+  type: 'test'
+  ...
+# Subtest: duplicate envelope keys and bounded payloads fail before dispatch
+ok 210 - duplicate envelope keys and bounded payloads fail before dispatch
+  ---
+  duration_ms: 0.379183
+  type: 'test'
+  ...
+# Subtest: a generation change during the submitting notification prevents transport dispatch
+ok 211 - a generation change during the submitting notification prevents transport dispatch
+  ---
+  duration_ms: 5.199175
+  type: 'test'
+  ...
+# Subtest: invalid discriminants, inherited inputs and excessive nesting cannot enter a lane
+ok 212 - invalid discriminants, inherited inputs and excessive nesting cannot enter a lane
+  ---
+  duration_ms: 5.538121
+  type: 'test'
+  ...
+# (node:2587608) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: tests/unit/mutation-recovery-support.test.ts
+ok 19 - tests/unit/mutation-recovery-support.test.ts
+  ---
+  duration_ms: 513.589992
+  type: 'test'
+  ...
+# (node:2587609) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: lost acknowledgement restores exact accepted wire into a new client without creating an identity
+ok 214 - lost acknowledgement restores exact accepted wire into a new client without creating an identity
+  ---
+  duration_ms: 43.883255
+  type: 'test'
+  ...
+# Subtest: later B and C drafts survive reload and A confirmation and never auto-dispatch
+ok 215 - later B and C drafts survive reload and A confirmation and never auto-dispatch
+  ---
+  duration_ms: 52.798636
+  type: 'test'
+  ...
+# Subtest: snapshots, subscribed values and result promises cannot mutate controller-owned values
+ok 216 - snapshots, subscribed values and result promises cannot mutate controller-owned values
+  ---
+  duration_ms: 16.907423
+  type: 'test'
+  ...
+# Subtest: storage refusal before dispatch and after acknowledgement prevents replacement identity
+ok 217 - storage refusal before dispatch and after acknowledgement prevents replacement identity
+  ---
+  duration_ms: 13.704194
+  type: 'test'
+  ...
+# Subtest: a denied retry cannot erase uncertainty of an earlier attempt
+ok 218 - a denied retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 72.159537
+  type: 'test'
+  ...
+# Subtest: a conflict retry cannot erase uncertainty of an earlier attempt
+ok 219 - a conflict retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 15.409887
+  type: 'test'
+  ...
+# Subtest: a identity_expired retry cannot erase uncertainty of an earlier attempt
+ok 220 - a identity_expired retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 15.346966
+  type: 'test'
+  ...
+# Subtest: a identity_mismatch retry cannot erase uncertainty of an earlier attempt
+ok 221 - a identity_mismatch retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 45.539313
+  type: 'test'
+  ...
+# Subtest: a history_gap retry cannot erase uncertainty of an earlier attempt
+ok 222 - a history_gap retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 18.91982
+  type: 'test'
+  ...
+# Subtest: a not_committed retry cannot erase uncertainty of an earlier attempt
+ok 223 - a not_committed retry cannot erase uncertainty of an earlier attempt
+  ---
+  duration_ms: 15.797716
+  type: 'test'
+  ...
+# Subtest: not_committed on a first attempt establishes failure without an earlier uncertain history
+ok 224 - not_committed on a first attempt establishes failure without an earlier uncertain history
+  ---
+  duration_ms: 10.556942
+  type: 'test'
+  ...
+# Subtest: principal switch and logout quarantine private draft and stale response promise
+ok 225 - principal switch and logout quarantine private draft and stale response promise
+  ---
+  duration_ms: 30.369254
+  type: 'test'
+  ...
+# Subtest: same principal invalidation is observed without retaining old-generation disclosures
+ok 226 - same principal invalidation is observed without retaining old-generation disclosures
+  ---
+  duration_ms: 15.499147
+  type: 'test'
+  ...
+# Subtest: principal-null restore performs no host storage read
+ok 227 - principal-null restore performs no host storage read
+  ---
+  duration_ms: 0.22026
+  type: 'test'
+  ...
+# Subtest: CAS cannot delete another helper's newer record
+ok 228 - CAS cannot delete another helper's newer record
+  ---
+  duration_ms: 0.835954
+  type: 'test'
+  ...
+# Subtest: already aborted dispatch retains prepared state, while disposal retains attempted storage
+ok 229 - already aborted dispatch retains prepared state, while disposal retains attempted storage
+  ---
+  duration_ms: 15.265461
+  type: 'test'
+  ...
+# Subtest: same-principal rebind retries exact identity using fresh transport credentials
+ok 230 - same-principal rebind retries exact identity using fresh transport credentials
+  ---
+  duration_ms: 17.427002
+  type: 'test'
+  ...
+# Subtest: changing durable principal other/human/alice never dispatches owner intent
+ok 231 - changing durable principal other/human/alice never dispatches owner intent
+  ---
+  duration_ms: 0.942267
+  type: 'test'
+  ...
+# Subtest: changing durable principal fixture/service/alice never dispatches owner intent
+ok 232 - changing durable principal fixture/service/alice never dispatches owner intent
+  ---
+  duration_ms: 0.706667
+  type: 'test'
+  ...
+# Subtest: changing durable principal fixture/human/bob never dispatches owner intent
+ok 233 - changing durable principal fixture/human/bob never dispatches owner intent
+  ---
+  duration_ms: 0.714292
+  type: 'test'
+  ...
+# Subtest: durability refusal at write 2 prevents invoke dispatch
+ok 234 - durability refusal at write 2 prevents invoke dispatch
+  ---
+  duration_ms: 1.447871
+  type: 'test'
+  ...
+# Subtest: durability refusal at write 3 prevents invoke dispatch
+ok 235 - durability refusal at write 3 prevents invoke dispatch
+  ---
+  duration_ms: 0.907861
+  type: 'test'
+  ...
+# Subtest: reload cannot replace a live accepted attempt
+ok 236 - reload cannot replace a live accepted attempt
+  ---
+  duration_ms: 18.699019
+  type: 'test'
+  ...
+# Subtest: principal switch while persistence is awaiting never publishes a late private draft
+ok 237 - principal switch while persistence is awaiting never publishes a late private draft
+  ---
+  duration_ms: 1.022269
+  type: 'test'
+  ...
+# Subtest: principal switch during refusal notification prevents old error disclosure through retry promise
+ok 238 - principal switch during refusal notification prevents old error disclosure through retry promise
+  ---
+  duration_ms: 10.528938
+  type: 'test'
+  ...
+# Subtest: switching away and back cannot revive an old principal's delayed completion
+ok 239 - switching away and back cannot revive an old principal's delayed completion
+  ---
+  duration_ms: 4.765247
+  type: 'test'
+  ...
+# Subtest: caller cancellation after dispatch retains unknown intent without a server cancellation request
+ok 240 - caller cancellation after dispatch retains unknown intent without a server cancellation request
+  ---
+  duration_ms: 1.690624
+  type: 'test'
+  ...
+# (node:2587632) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: rows are detached and transient failure has a finite attempt ceiling
+ok 241 - rows are detached and transient failure has a finite attempt ceiling
+  ---
+  duration_ms: 18.61569
+  type: 'test'
+  ...
+# Subtest: denial removes private data before the authority-loss callback
+ok 242 - denial removes private data before the authority-loss callback
+  ---
+  duration_ms: 8.111258
+  type: 'test'
+  ...
+# Subtest: rebind fences late rows from an ignored cancellation signal
+ok 243 - rebind fences late rows from an ignored cancellation signal
+  ---
+  duration_ms: 16.953881
+  type: 'test'
+  ...
+# Subtest: hidden observation aborts current source and reconnects only when visible
+ok 244 - hidden observation aborts current source and reconnects only when visible
+  ---
+  duration_ms: 16.880501
+  type: 'test'
+  ...
+# Subtest: row and byte violations do not publish partial data or retry
+ok 245 - row and byte violations do not publish partial data or retry
+  ---
+  duration_ms: 7.537343
+  type: 'test'
+  ...
+# Subtest: abort listeners can rebind without an older rebind overwriting the new owner
+ok 246 - abort listeners can rebind without an older rebind overwriting the new owner
+  ---
+  duration_ms: 6.506498
+  type: 'test'
+  ...
+# Subtest: a throwing error classifier fails closed instead of leaking an unhandled task rejection
+ok 247 - a throwing error classifier fails closed instead of leaking an unhandled task rejection
+  ---
+  duration_ms: 1.917808
+  type: 'test'
+  ...
+# Subtest: a retry timer clock defect terminates without an uncaught callback
+ok 248 - a retry timer clock defect terminates without an uncaught callback
+  ---
+  duration_ms: 2.814187
+  type: 'test'
+  ...
+# Subtest: throwing denied subscriber cannot suppress authority loss or healthy subscribers
+ok 249 - throwing denied subscriber cannot suppress authority loss or healthy subscribers
+  ---
+  duration_ms: 4.096592
+  type: 'test'
+  ...
+# Subtest: throwing connecting subscriber does not strand the source
+ok 250 - throwing connecting subscriber does not strand the source
+  ---
+  duration_ms: 4.12696
+  type: 'test'
+  ...
+# Subtest: nested idle rebind connects the surviving source once
+ok 251 - nested idle rebind connects the surviving source once
+  ---
+  duration_ms: 4.206852
+  type: 'test'
+  ...
+# Subtest: idle notification hide and disposal prevent the superseded connection
+ok 252 - idle notification hide and disposal prevent the superseded connection
+  ---
+  duration_ms: 16.91136
+  type: 'test'
+  ...
+# Subtest: callback defects have sanitized diagnostics and cannot break denial
+ok 253 - callback defects have sanitized diagnostics and cannot break denial
+  ---
+  duration_ms: 4.469272
+  type: 'test'
+  ...
+# Subtest: async callback rejections cannot escape lifecycle supervision
+ok 254 - async callback rejections cannot escape lifecycle supervision
+  ---
+  duration_ms: 20.208527
+  type: 'test'
+  ...
+# (node:2587644) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: public observation entry supports explicitly public host data
+ok 255 - public observation entry supports explicitly public host data
+  ---
+  duration_ms: 2.348318
+  type: 'test'
+  ...
+# (node:2587656) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: public observation requires an explicit stable public scope
+ok 256 - public observation requires an explicit stable public scope
+  ---
+  duration_ms: 1.83527
+  type: 'test'
+  ...
+# Subtest: principal scope preserves exact identity and a detached generation
+ok 257 - principal scope preserves exact identity and a detached generation
+  ---
+  duration_ms: 0.343875
+  type: 'test'
+  ...
+# Subtest: authority renewal and delimiter-shaped identities are distinct scopes
+ok 258 - authority renewal and delimiter-shaped identities are distinct scopes
+  ---
+  duration_ms: 0.262291
+  type: 'test'
+  ...
+# Subtest: malformed principal, generation and unbounded scope keys are rejected
+ok 259 - malformed principal, generation and unbounded scope keys are rejected
+  ---
+  duration_ms: 0.290424
+  type: 'test'
+  ...
+# Subtest: inherited fields cannot silently establish an observation scope
+ok 260 - inherited fields cannot silently establish an observation scope
+  ---
+  duration_ms: 0.195012
+  type: 'test'
+  ...
+# (node:2587671) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: discovery retains typed Resource and field presentation
+ok 261 - discovery retains typed Resource and field presentation
+  ---
+  duration_ms: 6.098781
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation UTF-8 label
+ok 262 - discovery rejects invalid presentation UTF-8 label
+  ---
+  duration_ms: 0.45051
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation empty label
+ok 263 - discovery rejects invalid presentation empty label
+  ---
+  duration_ms: 1.591605
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation unknown selector
+ok 264 - discovery rejects invalid presentation unknown selector
+  ---
+  duration_ms: 0.195734
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation hidden field
+ok 265 - discovery rejects invalid presentation hidden field
+  ---
+  duration_ms: 0.200262
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation unknown group
+ok 266 - discovery rejects invalid presentation unknown group
+  ---
+  duration_ms: 0.119458
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation duplicate group
+ok 267 - discovery rejects invalid presentation duplicate group
+  ---
+  duration_ms: 0.150096
+  type: 'test'
+  ...
+# Subtest: discovery rejects invalid presentation unknown executable hint
+ok 268 - discovery rejects invalid presentation unknown executable hint
+  ---
+  duration_ms: 0.086274
+  type: 'test'
+  ...
+# Subtest: title selectors cannot reinterpret custom codecs or nontext values
+ok 269 - title selectors cannot reinterpret custom codecs or nontext values
+  ---
+  duration_ms: 0.494463
+  type: 'test'
+  ...
+# Subtest: legacy descriptors omit presentation without changing discovery version
+ok 270 - legacy descriptors omit presentation without changing discovery version
+  ---
+  duration_ms: 0.481549
+  type: 'test'
+  ...
+# Subtest: client accepts the exact backend discovery conformance fixture
+ok 271 - client accepts the exact backend discovery conformance fixture
+  ---
+  duration_ms: 1.001289
+  type: 'test'
+  ...
+# (node:2587679) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: accepted editor proof is durable before dispatch and exact command survives restart and receipt recovery
+ok 272 - accepted editor proof is durable before dispatch and exact command survives restart and receipt recovery
+  ---
+  duration_ms: 65.634404
+  type: 'test'
+  ...
+# Subtest: accepted editor proof survives denied outcome and restore
+ok 273 - accepted editor proof survives denied outcome and restore
+  ---
+  duration_ms: 14.364933
+  type: 'test'
+  ...
+# Subtest: accepted editor proof survives conflict outcome and restore
+ok 274 - accepted editor proof survives conflict outcome and restore
+  ---
+  duration_ms: 18.903589
+  type: 'test'
+  ...
+# Subtest: accepted editor proof survives not_committed outcome and restore
+ok 275 - accepted editor proof survives not_committed outcome and restore
+  ---
+  duration_ms: 20.674957
+  type: 'test'
+  ...
+# Subtest: proof validator rejects malformed or unknown metadata and accepts old records without proof
+ok 276 - proof validator rejects malformed or unknown metadata and accepts old records without proof
+  ---
+  duration_ms: 15.213792
+  type: 'test'
+  ...
+# Subtest: invalid begin proof leaves durable command unaccepted and sends nothing
+ok 277 - invalid begin proof leaves durable command unaccepted and sends nothing
+  ---
+  duration_ms: 0.562903
+  type: 'test'
+  ...
+# Subtest: accepted proof is hidden after logout or foreign-owner rebind and kept for same-owner renewal
+ok 278 - accepted proof is hidden after logout or foreign-owner rebind and kept for same-owner renewal
+  ---
+  duration_ms: 1.033982
+  type: 'test'
+  ...
+# Subtest: owner change during proof CAS cannot publish the former owner's proof
+ok 279 - owner change during proof CAS cannot publish the former owner's proof
+  ---
+  duration_ms: 8.802887
+  type: 'test'
+  ...
+# Subtest: bounded native fingerprint distinguishes exact integers and raw editor text for equal operations
+ok 280 - bounded native fingerprint distinguishes exact integers and raw editor text for equal operations
+  ---
+  duration_ms: 61.295289
+  type: 'test'
+  ...
+# (node:2587695) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: a stable creation slot restores its exact accepted target without dispatch or a replacement key
+ok 281 - a stable creation slot restores its exact accepted target without dispatch or a replacement key
+  ---
+  duration_ms: 57.747333
+  type: 'test'
+  ...
+# Subtest: a restored controller retains normal same-owner rebind and exact retry behavior
+ok 282 - a restored controller retains normal same-owner rebind and exact retry behavior
+  ---
+  duration_ms: 16.042292
+  type: 'test'
+  ...
+# Subtest: a creation recovery scope refuses a later non-create draft before any dispatch
+ok 283 - a creation recovery scope refuses a later non-create draft before any dispatch
+  ---
+  duration_ms: 19.141613
+  type: 'test'
+  ...
+# Subtest: restore with no current principal never reads private storage
+ok 284 - restore with no current principal never reads private storage
+  ---
+  duration_ms: 1.247259
+  type: 'test'
+  ...
+# Subtest: restore rejects foreign owner, namespace, kind, and non-create accepted operations
+ok 285 - restore rejects foreign owner, namespace, kind, and non-create accepted operations
+  ---
+  duration_ms: 25.692485
+  type: 'test'
+  ...
+# Subtest: a changed stored target between both reads cannot be restored under the first target
+ok 286 - a changed stored target between both reads cannot be restored under the first target
+  ---
+  duration_ms: 14.151727
+  type: 'test'
+  ...
+# Subtest: generation change during discovery rejects the restored private projection
+ok 287 - generation change during discovery rejects the restored private projection
+  ---
+  duration_ms: 5.865556
+  type: 'test'
+  ...
+# (node:2587705) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: reference lookup bounds authorized candidates, preserves exact IDs and leaves navigation untouched
+ok 288 - reference lookup bounds authorized candidates, preserves exact IDs and leaves navigation untouched
+  ---
+  duration_ms: 52.048135
+  type: 'test'
+  ...
+# Subtest: hidden kinds and disconnected sessions perform no reference request
+ok 289 - hidden kinds and disconnected sessions perform no reference request
+  ---
+  duration_ms: 2.099534
+  type: 'test'
+  ...
+# Subtest: candidate titles cannot read a withheld title field
+ok 290 - candidate titles cannot read a withheld title field
+  ---
+  duration_ms: 6.62843
+  type: 'test'
+  ...
+# Subtest: denied lookup is distinct from no matching authorized candidates
+ok 291 - denied lookup is distinct from no matching authorized candidates
+  ---
+  duration_ms: 7.946825
+  type: 'test'
+  ...
+# Subtest: session changes and superseded requests discard delayed reference replies
+ok 292 - session changes and superseded requests discard delayed reference replies
+  ---
+  duration_ms: 6.514082
+  type: 'test'
+  ...
+# Subtest: reference candidate admission enforces bytes and row limits
+ok 293 - reference candidate admission enforces bytes and row limits
+  ---
+  duration_ms: 11.748194
+  type: 'test'
+  ...
+# Subtest: a full bounded page is marked limited without traversing subsequent pages
+ok 294 - a full bounded page is marked limited without traversing subsequent pages
+  ---
+  duration_ms: 4.103435
+  type: 'test'
+  ...
+# Subtest: lookup bounds simultaneous requests and rejects oversized search without fetching
+ok 295 - lookup bounds simultaneous requests and rejects oversized search without fetching
+  ---
+  duration_ms: 3.167651
+  type: 'test'
+  ...
+# Subtest: already cancelled lookup and tombstone candidates do not disclose selectable results
+ok 296 - already cancelled lookup and tombstone candidates do not disclose selectable results
+  ---
+  duration_ms: 2.50132
+  type: 'test'
+  ...
+# (node:2587720) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: POST deadline rejects even when transport ignores abort
+ok 297 - POST deadline rejects even when transport ignores abort
+  ---
+  duration_ms: 33.877233
+  type: 'test'
+  ...
+# Subtest: already aborted request does not invoke transport
+ok 298 - already aborted request does not invoke transport
+  ---
+  duration_ms: 0.457984
+  type: 'test'
+  ...
+# Subtest: oversized body rejection does not await transport cancellation
+ok 299 - oversized body rejection does not await transport cancellation
+  ---
+  duration_ms: 4.498669
+  type: 'test'
+  ...
+# Subtest: query reply obeys explicit page limit
+ok 300 - query reply obeys explicit page limit
+  ---
+  duration_ms: 2.051682
+  type: 'test'
+  ...
+# Subtest: mutation reply must match revision and deletion semantics
+ok 301 - mutation reply must match revision and deletion semantics
+  ---
+  duration_ms: 5.85192
+  type: 'test'
+  ...
+# Subtest: legal no-op revision and deletion are accepted
+ok 302 - legal no-op revision and deletion are accepted
+  ---
+  duration_ms: 1.878333
+  type: 'test'
+  ...
+# Subtest: response reader and parser use the same byte policy
+ok 303 - response reader and parser use the same byte policy
+  ---
+  duration_ms: 20.176045
+  type: 'test'
+  ...
+# Subtest: timer values outside execution range are rejected before transport
+ok 304 - timer values outside execution range are rejected before transport
+  ---
+  duration_ms: 0.227053
+  type: 'test'
+  ...
+# Subtest: floating wire tokens cannot become integer metadata
+ok 305 - floating wire tokens cannot become integer metadata
+  ---
+  duration_ms: 1.574232
+  type: 'test'
+  ...
+# Subtest: request timeout cancels an opened idle response body
+ok 306 - request timeout cancels an opened idle response body
+  ---
+  duration_ms: 18.215978
+  type: 'test'
+  ...
+# Subtest: a mutation without a prior row binds the initial revision
+ok 307 - a mutation without a prior row binds the initial revision
+  ---
+  duration_ms: 1.144743
+  type: 'test'
+  ...
+# (node:2587730) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: titles use declared authorized fields rather than interpreting identity
+ok 308 - titles use declared authorized fields rather than interpreting identity
+  ---
+  duration_ms: 0.638247
+  type: 'test'
+  ...
+# Subtest: missing titles fall back without guessing JSON identity
+ok 309 - missing titles fall back without guessing JSON identity
+  ---
+  duration_ms: 0.1574
+  type: 'test'
+  ...
+# Subtest: hidden undeclared title fields are not resolved
+ok 310 - hidden undeclared title fields are not resolved
+  ---
+  duration_ms: 0.085242
+  type: 'test'
+  ...
+# Subtest: settings catalog includes classified descriptors only and groups plugins
+ok 311 - settings catalog includes classified descriptors only and groups plugins
+  ---
+  duration_ms: 0.628839
+  type: 'test'
+  ...
+# (node:2587745) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Studio's stable UI entry uses the same shared implementation
+ok 312 - Studio's stable UI entry uses the same shared implementation
+  ---
+  duration_ms: 3.637306
+  type: 'test'
+  ...
+# (node:2587756) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: standard codec selection requires exact immutable identity
+ok 313 - standard codec selection requires exact immutable identity
+  ---
+  duration_ms: 4.300581
+  type: 'test'
+  ...
+# Subtest: semantic date preserves its canonical wire contract: 2024-02-29
+ok 314 - semantic date preserves its canonical wire contract: 2024-02-29
+  ---
+  duration_ms: 1.387356
+  type: 'test'
+  ...
+# Subtest: semantic time preserves its canonical wire contract: 12:30:01.123400000
+ok 315 - semantic time preserves its canonical wire contract: 12:30:01.123400000
+  ---
+  duration_ms: 0.19913
+  type: 'test'
+  ...
+# Subtest: semantic datetime preserves its canonical wire contract: 2026-10-05T12:01:02.123456789+02:00
+ok 316 - semantic datetime preserves its canonical wire contract: 2026-10-05T12:01:02.123456789+02:00
+  ---
+  duration_ms: 0.374214
+  type: 'test'
+  ...
+# Subtest: semantic datetime preserves its canonical wire contract: 0001-01-01T00:00:00Z
+ok 317 - semantic datetime preserves its canonical wire contract: 0001-01-01T00:00:00Z
+  ---
+  duration_ms: 0.226121
+  type: 'test'
+  ...
+# Subtest: semantic color preserves its canonical wire contract: \#ABCDEF88
+ok 318 - semantic color preserves its canonical wire contract: \#ABCDEF88
+  ---
+  duration_ms: 0.097335
+  type: 'test'
+  ...
+# Subtest: semantic decimal preserves its canonical wire contract: -000012.34000
+ok 319 - semantic decimal preserves its canonical wire contract: -000012.34000
+  ---
+  duration_ms: 0.25719
+  type: 'test'
+  ...
+# Subtest: semantic decimal preserves its canonical wire contract: -000.000
+ok 320 - semantic decimal preserves its canonical wire contract: -000.000
+  ---
+  duration_ms: 0.115901
+  type: 'test'
+  ...
+# Subtest: semantic decimal preserves its canonical wire contract: 9007199254740993.000000000000000001
+ok 321 - semantic decimal preserves its canonical wire contract: 9007199254740993.000000000000000001
+  ---
+  duration_ms: 0.290824
+  type: 'test'
+  ...
+# Subtest: semantic email preserves its canonical wire contract: Alice@EXAMPLE.COM
+ok 322 - semantic email preserves its canonical wire contract: Alice@EXAMPLE.COM
+  ---
+  duration_ms: 0.414631
+  type: 'test'
+  ...
+# Subtest: semantic url preserves its canonical wire contract: https://example.com
+ok 323 - semantic url preserves its canonical wire contract: https://example.com
+  ---
+  duration_ms: 0.192988
+  type: 'test'
+  ...
+# Subtest: semantic multiline preserves its canonical wire contract: one\\r\\ntwo
+ok 324 - semantic multiline preserves its canonical wire contract: one\\r\\ntwo
+  ---
+  duration_ms: 0.070574
+  type: 'test'
+  ...
+# Subtest: semantic json-document preserves its canonical wire contract: {"large":9007199254740993,"decimal":0.000000000000000001}
+ok 325 - semantic json-document preserves its canonical wire contract: {"large":9007199254740993,"decimal":0.000000000000000001}
+  ---
+  duration_ms: 4.226991
+  type: 'test'
+  ...
+# Subtest: semantic date rejects 2025-02-29
+ok 326 - semantic date rejects 2025-02-29
+  ---
+  duration_ms: 0.286416
+  type: 'test'
+  ...
+# Subtest: semantic date rejects 0000-01-01
+ok 327 - semantic date rejects 0000-01-01
+  ---
+  duration_ms: 0.071657
+  type: 'test'
+  ...
+# Subtest: semantic time rejects 24:00:00
+ok 328 - semantic time rejects 24:00:00
+  ---
+  duration_ms: 0.053742
+  type: 'test'
+  ...
+# Subtest: semantic time rejects 12:00:60
+ok 329 - semantic time rejects 12:00:60
+  ---
+  duration_ms: 0.047541
+  type: 'test'
+  ...
+# Subtest: semantic datetime rejects 2026-10-05T10:00:00
+ok 330 - semantic datetime rejects 2026-10-05T10:00:00
+  ---
+  duration_ms: 0.05252
+  type: 'test'
+  ...
+# Subtest: semantic datetime rejects 2026-02-30T10:00:00Z
+ok 331 - semantic datetime rejects 2026-02-30T10:00:00Z
+  ---
+  duration_ms: 0.067549
+  type: 'test'
+  ...
+# Subtest: semantic datetime rejects 2026-10-05T10:00:00-00:00
+ok 332 - semantic datetime rejects 2026-10-05T10:00:00-00:00
+  ---
+  duration_ms: 0.054985
+  type: 'test'
+  ...
+# Subtest: semantic datetime rejects 0001-01-01T00:00:00+01:00
+ok 333 - semantic datetime rejects 0001-01-01T00:00:00+01:00
+  ---
+  duration_ms: 0.069843
+  type: 'test'
+  ...
+# Subtest: semantic color rejects red
+ok 334 - semantic color rejects red
+  ---
+  duration_ms: 0.164204
+  type: 'test'
+  ...
+# Subtest: semantic color rejects \#123
+ok 335 - semantic color rejects \#123
+  ---
+  duration_ms: 0.053662
+  type: 'test'
+  ...
+# Subtest: semantic decimal rejects 1e3
+ok 336 - semantic decimal rejects 1e3
+  ---
+  duration_ms: 0.064523
+  type: 'test'
+  ...
+# Subtest: semantic decimal rejects 1.
+ok 337 - semantic decimal rejects 1.
+  ---
+  duration_ms: 0.054193
+  type: 'test'
+  ...
+# Subtest: semantic email rejects a..b@example.com
+ok 338 - semantic email rejects a..b@example.com
+  ---
+  duration_ms: 0.088168
+  type: 'test'
+  ...
+# Subtest: semantic email rejects x@-example.com
+ok 339 - semantic email rejects x@-example.com
+  ---
+  duration_ms: 0.060826
+  type: 'test'
+  ...
+# Subtest: semantic url rejects javascript:alert(1)
+ok 340 - semantic url rejects javascript:alert(1)
+  ---
+  duration_ms: 0.080213
+  type: 'test'
+  ...
+# Subtest: semantic url rejects https://user:pass@example.com
+ok 341 - semantic url rejects https://user:pass@example.com
+  ---
+  duration_ms: 0.077007
+  type: 'test'
+  ...
+# Subtest: semantic json-document rejects {"invalid":}
+ok 342 - semantic json-document rejects {"invalid":}
+  ---
+  duration_ms: 0.080614
+  type: 'test'
+  ...
+# Subtest: unit magnitude remains exact and unit tokens are explicit
+ok 343 - unit magnitude remains exact and unit tokens are explicit
+  ---
+  duration_ms: 1.568311
+  type: 'test'
+  ...
+# Subtest: frontend validates the same semantic codec vectors as the backend
+ok 344 - frontend validates the same semantic codec vectors as the backend
+  ---
+  duration_ms: 60.650921
+  type: 'test'
+  ...
+# (node:2587771) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: creation slots preserve owner and kind without colliding with Resource IDs
+ok 345 - creation slots preserve owner and kind without colliding with Resource IDs
+  ---
+  duration_ms: 2.616249
+  type: 'test'
+  ...
+# Subtest: creation slots reject foreign authority and invalid or oversized scope
+ok 346 - creation slots reject foreign authority and invalid or oversized scope
+  ---
+  duration_ms: 0.751743
+  type: 'test'
+  ...
+# Subtest: the frontend accepts the shared backend bootstrap fixture without epoch conversion
+ok 347 - the frontend accepts the shared backend bootstrap fixture without epoch conversion
+  ---
+  duration_ms: 0.446803
+  type: 'test'
+  ...
+# Subtest: bootstrap identifiers accept Unicode scalars and reject control or lone surrogate values like the Rust host
+ok 348 - bootstrap identifiers accept Unicode scalars and reject control or lone surrogate values like the Rust host
+  ---
+  duration_ms: 0.722838
+  type: 'test'
+  ...
+# Subtest: host bootstrap preserves exact retry epoch and explicit stores without credential inference
+ok 349 - host bootstrap preserves exact retry epoch and explicit stores without credential inference
+  ---
+  duration_ms: 0.280836
+  type: 'test'
+  ...
+# Subtest: bootstrap rejects absent identity, inferred configuration, ambiguous epochs and unbounded storage
+ok 350 - bootstrap rejects absent identity, inferred configuration, ambiguous epochs and unbounded storage
+  ---
+  duration_ms: 0.384904
+  type: 'test'
+  ...
+# Subtest: second store refusal closes the first store and publishes no usable profile
+ok 351 - second store refusal closes the first store and publishes no usable profile
+  ---
+  duration_ms: 0.42432
+  type: 'test'
+  ...
+# Subtest: slots reject another authority and excessive encoded identifiers
+ok 352 - slots reject another authority and excessive encoded identifiers
+  ---
+  duration_ms: 0.275325
+  type: 'test'
+  ...
+# Subtest: opened profiles retain a snapshot of host configuration and separate colliding-looking identifiers
+ok 353 - opened profiles retain a snapshot of host configuration and separate colliding-looking identifiers
+  ---
+  duration_ms: 0.476759
+  type: 'test'
+  ...
+# (node:2587772) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: capture detaches exact context and every export attempt receives fresh data
+ok 354 - capture detaches exact context and every export attempt receives fresh data
+  ---
+  duration_ms: 1.049561
+  type: 'test'
+  ...
+# Subtest: wire clone preserves integer precision and member numeric token categories
+ok 355 - wire clone preserves integer precision and member numeric token categories
+  ---
+  duration_ms: 1.313234
+  type: 'test'
+  ...
+# Subtest: captured identity is deeply immutable and excludes extra fields
+ok 356 - captured identity is deeply immutable and excludes extra fields
+  ---
+  duration_ms: 1.45207
+  type: 'test'
+  ...
+# Subtest: identity is captured before the clone callback can change host selection
+ok 357 - identity is captured before the clone callback can change host selection
+  ---
+  duration_ms: 0.187578
+  type: 'test'
+  ...
+# Subtest: a snapshot is context, not current authorization or a file operation
+ok 358 - a snapshot is context, not current authorization or a file operation
+  ---
+  duration_ms: 0.819633
+  type: 'test'
+  ...
+# (node:2587785) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: content notifications coalesce and keep the view at its latest item
+ok 359 - content notifications coalesce and keep the view at its latest item
+  ---
+  duration_ms: 3.531133
+  type: 'test'
+  ...
+# Subtest: manual upward scroll cancels following until explicit resume
+ok 360 - manual upward scroll cancels following until explicit resume
+  ---
+  duration_ms: 2.882047
+  type: 'test'
+  ...
+# Subtest: a manual scroll after queued content wins over the pending frame
+ok 361 - a manual scroll after queued content wins over the pending frame
+  ---
+  duration_ms: 0.18892
+  type: 'test'
+  ...
+# Subtest: disposal cancels queued frames, observers and future scroll effects
+ok 362 - disposal cancels queued frames, observers and future scroll effects
+  ---
+  duration_ms: 0.281186
+  type: 'test'
+  ...
+# Subtest: invalid thresholds are rejected before installing observers
+ok 363 - invalid thresholds are rejected before installing observers
+  ---
+  duration_ms: 1.606924
+  type: 'test'
+  ...
+# Subtest: a viewport resize scroll event without upward movement keeps following
+ok 364 - a viewport resize scroll event without upward movement keeps following
+  ---
+  duration_ms: 0.296595
+  type: 'test'
+  ...
+# Subtest: even a small upward movement stops following until explicit resume
+ok 365 - even a small upward movement stops following until explicit resume
+  ---
+  duration_ms: 0.287288
+  type: 'test'
+  ...
+# Subtest: viewport enlargement clamping the previous position does not count as manual upward movement
+ok 366 - viewport enlargement clamping the previous position does not count as manual upward movement
+  ---
+  duration_ms: 0.909274
+  type: 'test'
+  ...
+# (node:2587788) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: history preserves exact IDs and detaches bounded display data
+ok 367 - history preserves exact IDs and detaches bounded display data
+  ---
+  duration_ms: 0.795066
+  type: 'test'
+  ...
+# Subtest: history rejects duplicate IDs, excessive values and invalid dates
+ok 368 - history rejects duplicate IDs, excessive values and invalid dates
+  ---
+  duration_ms: 0.453695
+  type: 'test'
+  ...
+# Subtest: history dates use explicit locale and timezone without changing stored instants
+ok 369 - history dates use explicit locale and timezone without changing stored instants
+  ---
+  duration_ms: 17.329748
+  type: 'test'
+  ...
+# Subtest: history captures each value once before validating its admitted bounds
+ok 370 - history captures each value once before validating its admitted bounds
+  ---
+  duration_ms: 0.256549
+  type: 'test'
+  ...
+# Subtest: history iterates only its captured entry count without calling an overridden map
+ok 371 - history iterates only its captured entry count without calling an overridden map
+  ---
+  duration_ms: 0.26771
+  type: 'test'
+  ...
+# (node:2587815) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: superseding settles the caller even when old work ignores cancellation
+ok 372 - superseding settles the caller even when old work ignores cancellation
+  ---
+  duration_ms: 6.474076
+  type: 'test'
+  ...
+# Subtest: late errors never classify or publish over a newer result
+ok 373 - late errors never classify or publish over a newer result
+  ---
+  duration_ms: 1.791807
+  type: 'test'
+  ...
+# Subtest: an abort listener may start a newer request without the interrupted run overwriting it
+ok 374 - an abort listener may start a newer request without the interrupted run overwriting it
+  ---
+  duration_ms: 0.349336
+  type: 'test'
+  ...
+# Subtest: pending notification can clear work before its task starts
+ok 375 - pending notification can clear work before its task starts
+  ---
+  duration_ms: 0.301606
+  type: 'test'
+  ...
+# Subtest: clone and classifier callbacks cannot publish after clearing ownership
+ok 376 - clone and classifier callbacks cannot publish after clearing ownership
+  ---
+  duration_ms: 0.378372
+  type: 'test'
+  ...
+# Subtest: ready data is cloned and errors expose only the host code
+ok 377 - ready data is cloned and errors expose only the host code
+  ---
+  duration_ms: 0.258343
+  type: 'test'
+  ...
+# Subtest: dispose settles pending work and never publishes again
+ok 378 - dispose settles pending work and never publishes again
+  ---
+  duration_ms: 3.591629
+  type: 'test'
+  ...
+# Subtest: a throwing notification rejects the wrapper without classifying host defects
+ok 379 - a throwing notification rejects the wrapper without classifying host defects
+  ---
+  duration_ms: 1.321791
+  type: 'test'
+  ...
+# Subtest: a synchronous task rejection becomes a sanitized current error
+ok 380 - a synchronous task rejection becomes a sanitized current error
+  ---
+  duration_ms: 0.312846
+  type: 'test'
+  ...
+# (node:2587832) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout proposals retain exact IDs and validate move/size/visibility without mutation
+ok 381 - layout proposals retain exact IDs and validate move/size/visibility without mutation
+  ---
+  duration_ms: 4.31062
+  type: 'test'
+  ...
+# Subtest: invalid commands and corrupt layouts never propose a fallback
+ok 382 - invalid commands and corrupt layouts never propose a fallback
+  ---
+  duration_ms: 0.169713
+  type: 'test'
+  ...
+# (node:2587845) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout capture detaches and freezes only a valid host-selected catalog
+ok 383 - layout capture detaches and freezes only a valid host-selected catalog
+  ---
+  duration_ms: 0.856945
+  type: 'test'
+  ...
+# Subtest: unknown duplicate and malformed layout IDs are rejected without a fallback
+ok 384 - unknown duplicate and malformed layout IDs are rejected without a fallback
+  ---
+  duration_ms: 0.191756
+  type: 'test'
+  ...
+# Subtest: position size and visible values must satisfy finite integer catalog bounds
+ok 385 - position size and visible values must satisfy finite integer catalog bounds
+  ---
+  duration_ms: 0.275896
+  type: 'test'
+  ...
+# Subtest: corrupt stored layouts and entry limits are rejected without throwing
+ok 386 - corrupt stored layouts and entry limits are rejected without throwing
+  ---
+  duration_ms: 0.196244
+  type: 'test'
+  ...
+# Subtest: invalid host catalogs and limits are configuration errors
+ok 387 - invalid host catalogs and limits are configuration errors
+  ---
+  duration_ms: 0.61898
+  type: 'test'
+  ...
+# Subtest: stored getters cannot widen the captured host bounds
+ok 388 - stored getters cannot widen the captured host bounds
+  ---
+  duration_ms: 1.99287
+  type: 'test'
+  ...
+# Subtest: inherited and changing catalog bounds remain in the exact validated snapshot
+ok 389 - inherited and changing catalog bounds remain in the exact validated snapshot
+  ---
+  duration_ms: 0.146509
+  type: 'test'
+  ...
+# Subtest: stored array proxy errors become invalid layout results
+ok 390 - stored array proxy errors become invalid layout results
+  ---
+  duration_ms: 0.769647
+  type: 'test'
+  ...
+# Subtest: layout entry getters cannot extend the captured item limit during iteration
+ok 391 - layout entry getters cannot extend the captured item limit during iteration
+  ---
+  duration_ms: 0.261289
+  type: 'test'
+  ...
+# (node:2587853) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: the UI entry exposes disposable computations without application imports
+ok 392 - the UI entry exposes disposable computations without application imports
+  ---
+  duration_ms: 0.921247
+  type: 'test'
+  ...
+# Subtest: public composition combines exact selection with validated display links
+ok 393 - public composition combines exact selection with validated display links
+  ---
+  duration_ms: 2.114142
+  type: 'test'
+  ...
+# Subtest: headless package entry validates host layouts without importing Svelte
+ok 394 - headless package entry validates host layouts without importing Svelte
+  ---
+  duration_ms: 1.304017
+  type: 'test'
+  ...
+# (node:2587855) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+ok 395 - reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+  ---
+  duration_ms: 1.639927
+  type: 'test'
+  ...
+# Subtest: reference admission rejects malformed/duplicate candidates and bounds search UTF8
+ok 396 - reference admission rejects malformed/duplicate candidates and bounds search UTF8
+  ---
+  duration_ms: 0.21507
+  type: 'test'
+  ...
+# (node:2587881) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: unknown classification holds one command until explicit reset without automatic retry
+ok 397 - unknown classification holds one command until explicit reset without automatic retry
+  ---
+  duration_ms: 0.848729
+  type: 'test'
+  ...
+# Subtest: old scope/rejection/disposal cannot publish a stale command result
+ok 398 - old scope/rejection/disposal cannot publish a stale command result
+  ---
+  duration_ms: 0.220831
+  type: 'test'
+  ...
+# Subtest: throwing then getter cannot establish an outcome
+ok 399 - throwing then getter cannot establish an outcome
+  ---
+  duration_ms: 0.712428
+  type: 'test'
+  ...
+# Subtest: callback acknowledgement failure is unknown until explicit host recovery
+ok 400 - callback acknowledgement failure is unknown until explicit host recovery
+  ---
+  duration_ms: 0.226812
+  type: 'test'
+  ...
+# Subtest: pending publisher reset or dispose prevents stale callback dispatch
+ok 401 - pending publisher reset or dispose prevents stale callback dispatch
+  ---
+  duration_ms: 0.182508
+  type: 'test'
+  ...
+# (node:2587894) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: selection preserves exact opaque IDs and returns detached snapshots
+ok 402 - selection preserves exact opaque IDs and returns detached snapshots
+  ---
+  duration_ms: 1.570815
+  type: 'test'
+  ...
+# Subtest: single selection toggles and replaces without inferring labels
+ok 403 - single selection toggles and replaces without inferring labels
+  ---
+  duration_ms: 0.179362
+  type: 'test'
+  ...
+# Subtest: removing available IDs prunes selection and clear empties it
+ok 404 - removing available IDs prunes selection and clear empties it
+  ---
+  duration_ms: 0.397999
+  type: 'test'
+  ...
+# Subtest: invalid catalogs and initial selection fail explicitly
+ok 405 - invalid catalogs and initial selection fail explicitly
+  ---
+  duration_ms: 0.32515
+  type: 'test'
+  ...
+# Subtest: invalid replacement is atomic and does not discard current selection
+ok 406 - invalid replacement is atomic and does not discard current selection
+  ---
+  duration_ms: 0.173871
+  type: 'test'
+  ...
+# (node:2587895) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: normalizes approved internal and external links without fetching
+ok 407 - normalizes approved internal and external links without fetching
+  ---
+  duration_ms: 1.51029
+  type: 'test'
+  ...
+# Subtest: scheme and credentials checks precede any internal callback
+ok 408 - scheme and credentials checks precede any internal callback
+  ---
+  duration_ms: 0.190474
+  type: 'test'
+  ...
+# Subtest: origin comparisons reject lookalike hosts and protocol-relative outsiders
+ok 409 - origin comparisons reject lookalike hosts and protocol-relative outsiders
+  ---
+  duration_ms: 0.216422
+  type: 'test'
+  ...
+# Subtest: internal callback sees immutable normalized path and failures reject links
+ok 410 - internal callback sees immutable normalized path and failures reject links
+  ---
+  duration_ms: 0.144966
+  type: 'test'
+  ...
+# Subtest: raw input has a fixed UTF8 bound and rejects control characters
+ok 411 - raw input has a fixed UTF8 bound and rejects control characters
+  ---
+  duration_ms: 0.187819
+  type: 'test'
+  ...
+# Subtest: unsafe or ambiguous configuration fails explicitly
+ok 412 - unsafe or ambiguous configuration fails explicitly
+  ---
+  duration_ms: 1.12761
+  type: 'test'
+  ...
+# Subtest: a JavaScript async internal validator cannot approve a blocked link
+ok 413 - a JavaScript async internal validator cannot approve a blocked link
+  ---
+  duration_ms: 0.133855
+  type: 'test'
+  ...
+# Subtest: a rejected async validator is ignored without an unhandled rejection
+ok 414 - a rejected async validator is ignored without an unhandled rejection
+  ---
+  duration_ms: 3.639361
+  type: 'test'
+  ...
+# (node:2587903) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: work reads bind handles and validate protocol, state and counters
+ok 415 - work reads bind handles and validate protocol, state and counters
+  ---
+  duration_ms: 17.85547
+  type: 'test'
+  ...
+# Subtest: operator control binds key, operation, history and coherent revision
+ok 416 - operator control binds key, operation, history and coherent revision
+  ---
+  duration_ms: 2.716991
+  type: 'test'
+  ...
+# Subtest: work capabilities and lists reject invalid booleans, handles, duplicate rows and limits
+ok 417 - work capabilities and lists reject invalid booleans, handles, duplicate rows and limits
+  ---
+  duration_ms: 1.080079
+  type: 'test'
+  ...
+# Subtest: response is bound to the original submitted control despite caller edits
+ok 418 - response is bound to the original submitted control despite caller edits
+  ---
+  duration_ms: 0.328597
+  type: 'test'
+  ...
+1..418
+# tests 418
+# suites 0
+# pass 418
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1392.108006

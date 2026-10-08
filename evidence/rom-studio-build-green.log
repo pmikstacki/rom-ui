@@ -1,0 +1,87 @@
+
+> rom-studio@0.0.3 build:components /root/.codex/worktrees/rom-ui-integration/ROM/studio
+> vite build --mode components --outDir .component-dist
+
+vite v8.3.2 building client environment for components...
+transforming...
+5:02:31 PM [vite-plugin-svelte] tests/components/SortableFieldsHarness.svelte:36:6 `invalidLayoutRejected` is updated, but is not declared with `$state(...)`. Changing its value will not correctly trigger updates
+https://svelte.dev/e/non_reactive_update
+34:     findRenderer(lifecycleCodec) === RegistryScalarHarnessRenderer &&
+35:     rendererLayout(lifecycleCodec) === "inline";
+36:   let invalidLayoutRejected = false;
+                               ^
+37:   try {
+38:     registerRenderer(
+✓ 5023 modules transformed.
+rendering chunks...
+computing gzip size...
+.component-dist/tests/components/history-composition.html                                                 1.04 kB │ gzip:  0.49 kB
+.component-dist/tests/components/details-composition.html                                                 1.06 kB │ gzip:  0.50 kB
+.component-dist/notices/npm/cn/0.3.3/LICENSE                                                              1.06 kB
+.component-dist/notices/npm/tw-animate-css/1.4.0/LICENSE                                                  1.06 kB
+.component-dist/notices/npm/svelte-dnd-action/0.9.80/LICENSE                                              1.06 kB
+.component-dist/notices/npm/bits-ui/2.19.5/LICENSE                                                        1.07 kB
+.component-dist/notices/npm/rom-ui/0.1.0-alpha.1/LICENSE                                                  1.07 kB
+.component-dist/notices/npm/tailwind-variants/3.3.1/LICENSE                                               1.07 kB
+.component-dist/notices/vendored/svar-filter-vendored/1c581c3312c626c525ee64b8f94446a025fa141c/LICENSE    1.07 kB
+.component-dist/notices/npm/tabbable/6.5.0/LICENSE                                                        1.07 kB
+.component-dist/notices/npm/_floating-ui_core/1.8.0/LICENSE                                               1.08 kB
+.component-dist/notices/npm/_floating-ui_dom/1.8.0/LICENSE                                                1.08 kB
+.component-dist/notices/npm/_floating-ui_utils/0.2.12/LICENSE                                             1.08 kB
+.component-dist/notices/npm/inline-style-parser/0.2.7/LICENSE                                             1.09 kB
+.component-dist/notices/npm/clsx/2.1.1/license                                                            1.10 kB
+.component-dist/tests/components/reference-composition.html                                               1.10 kB │ gzip:  0.51 kB
+.component-dist/notices/npm/style-to-object/1.0.14/LICENSE                                                1.11 kB
+.component-dist/tests/components/selection-layout-composition.html                                        1.11 kB │ gzip:  0.51 kB
+.component-dist/notices/npm/svelte/5.57.1/LICENSE.md                                                      1.12 kB
+.component-dist/notices/npm/runed/0.35.1/LICENSE                                                          1.16 kB
+.component-dist/notices/npm/svelte-toolbelt/0.10.6/LICENSE                                                1.16 kB
+.component-dist/notices/npm/rom-ui/0.1.0-alpha.1/src/lib/components/ui/LICENSE.md                         1.19 kB
+.component-dist/notices/npm/shadcn-svelte/1.7.0/LICENSE.md                                                1.19 kB
+.component-dist/notices/vendored/shadcn-svelte-vendored/source-checkout/LICENSE.md                        1.19 kB
+.component-dist/notices/tool-runtime/rolldown/1.2.12/LICENSE                                              1.30 kB
+.component-dist/tests/components/direct-form.html                                                         1.42 kB │ gzip:  0.57 kB
+.component-dist/tests/components/reference.html                                                           1.48 kB │ gzip:  0.57 kB
+.component-dist/tests/components/renderer-regressions.html                                                1.50 kB │ gzip:  0.58 kB
+.component-dist/tests/components/semantic-fields.html                                                     1.60 kB │ gzip:  0.59 kB
+.component-dist/tests/components/sortable-fields.html                                                     1.65 kB │ gzip:  0.61 kB
+.component-dist/tests/components/harness.html                                                             1.75 kB │ gzip:  0.62 kB
+.component-dist/tests/components/details.html                                                             2.00 kB │ gzip:  0.64 kB
+.component-dist/index.html                                                                                2.20 kB │ gzip:  0.73 kB
+.component-dist/notices/tool-runtime/rolldown/1.2.12/THIRD-PARTY-LICENSE                                  2.20 kB
+.component-dist/tests/components/creation.html                                                            2.22 kB │ gzip:  0.70 kB
+.component-dist/notices/npm/_lucide_svelte/1.51.0/LICENSE                                                 3.20 kB
+.component-dist/notices/tool-runtime/vite/8.3.2/LICENSE.md                                              108.78 kB
+.component-dist/third-party-notices.json                                                                191.77 kB │ gzip: 13.66 kB
+.component-dist/assets/SelectAdapter-CV-KWLNP.css                                                         0.28 kB │ gzip:  0.14 kB
+.component-dist/assets/app-D3tBIn_X.css                                                                 178.21 kB │ gzip: 26.05 kB
+.component-dist/assets/ui-components-DBfWrlvZ.js                                                          0.06 kB │ gzip:  0.07 kB
+.component-dist/assets/resource-presentation-Bsbcryo9.js                                                  0.59 kB │ gzip:  0.36 kB
+.component-dist/assets/ResponsiveInspector-B_OanedX.js                                                    0.63 kB │ gzip:  0.37 kB
+.component-dist/assets/details-Py5PHbOY.js                                                                1.33 kB │ gzip:  0.74 kB
+.component-dist/assets/creation-CJDx9_31.js                                                               1.49 kB │ gzip:  0.79 kB
+.component-dist/assets/directForm-gKwbie9f.js                                                             1.55 kB │ gzip:  0.75 kB
+.component-dist/assets/historyComposition-CiQUrYqy.js                                                     2.03 kB │ gzip:  1.08 kB
+.component-dist/assets/detailsComposition-B_YvPIus.js                                                     2.04 kB │ gzip:  1.02 kB
+.component-dist/assets/semanticFields-DeTx4kOF.js                                                         2.07 kB │ gzip:  1.09 kB
+.component-dist/assets/referenceComposition-CT001uTj.js                                                   2.11 kB │ gzip:  1.17 kB
+.component-dist/assets/reference-Cv_z41m3.js                                                              2.87 kB │ gzip:  1.47 kB
+.component-dist/assets/rendererRegressions-BV5RTwAu.js                                                    3.00 kB │ gzip:  1.36 kB
+.component-dist/assets/ReferencePicker-BI-Eo6vn.js                                                        3.26 kB │ gzip:  1.33 kB
+.component-dist/assets/ValueDisplay-C6DQ1E65.js                                                           3.43 kB │ gzip:  1.36 kB
+.component-dist/assets/ActionForm-J3RhCFq_.js                                                             3.93 kB │ gzip:  1.83 kB
+.component-dist/assets/selectionLayoutComposition-V6aUemIC.js                                             3.97 kB │ gzip:  1.72 kB
+.component-dist/assets/bootstrap-CAa4vbJq.js                                                              4.86 kB │ gzip:  2.01 kB
+.component-dist/assets/sortableFields-ClQA7ZJF.js                                                         5.20 kB │ gzip:  2.07 kB
+.component-dist/assets/ResourceTable-DrDKBb5v.js                                                          5.87 kB │ gzip:  1.78 kB
+.component-dist/assets/components-Be-eUv6X.js                                                             7.14 kB │ gzip:  2.86 kB
+.component-dist/assets/FilterBuilder-ChtRwSAs.js                                                         10.26 kB │ gzip:  3.74 kB
+.component-dist/assets/ResourceForm-DirjxfRn.js                                                          42.05 kB │ gzip: 12.31 kB
+.component-dist/assets/SelectAdapter-CRePLI_h.js                                                         56.82 kB │ gzip: 15.62 kB
+.component-dist/assets/controller-B1m0k3mb.js                                                            60.33 kB │ gzip: 17.93 kB
+.component-dist/assets/ResourcePage-CdElM_8j.js                                                          68.88 kB │ gzip: 17.51 kB
+.component-dist/assets/ValueEditor-D052SNUS.js                                                           81.95 kB │ gzip: 24.76 kB
+.component-dist/assets/main-B8xbY_0w.js                                                                  88.58 kB │ gzip: 25.12 kB
+.component-dist/assets/app-6wXShnE5.js                                                                  288.86 kB │ gzip: 91.20 kB
+
+✓ built in 3.61s

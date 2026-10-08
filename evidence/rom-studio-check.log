@@ -1,0 +1,8 @@
+
+> rom-studio@0.0.3 check /root/.codex/worktrees/rom-ui-integration/ROM/studio
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-integration/ROM/studio
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

@@ -11,8 +11,16 @@ Client, discovery, authentication and durable mutation recovery remain in ROM.
 ReferencePicker requires a host normalizer. It does not import ROM codecs or descriptors.
 See [composition contracts](docs/compositions.md).
 
-This is an extraction candidate, not a published npm release.
-ROM Studio compatibility integration remains open.
+The extraction package is available as [v0.1.0-alpha.1](https://github.com/pmikstacki/rom-ui/releases/tag/v0.1.0-alpha.1).
+ROM Studio uses this package through its existing public exports.
+The distribution uses a GitHub release archive and a frozen pnpm lock.
+See [ROM integration evidence](docs/rom-integration.md).
+
+Install the alpha archive in a separate application:
+
+```sh
+corepack pnpm@10.30.0 add https://github.com/pmikstacki/rom-ui/releases/download/v0.1.0-alpha.1/rom-ui-0.1.0-alpha.1.tgz
+```
 
 Use the pinned pnpm 10.30.0 through Corepack.
 Run `corepack pnpm install --frozen-lockfile`, then `corepack pnpm run build`, `corepack pnpm run check` and `corepack pnpm run test:unit`.

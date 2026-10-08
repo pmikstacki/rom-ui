@@ -46,4 +46,6 @@ ROM retains codec-specific precision tests for its clone adapter.
 The installed consumer exercises the public source package with an independent dependency lock.
 Its callbacks simulate host ownership changes and rejected or unknown commands.
 These tests do not establish actual backend authorization or durable Settings persistence.
-ROM compatibility and its complete local verifier remain separate integration gates.
+ROM compatibility is verified through stable Studio facades and a separate installed consumer.
+The complete ROM verifier is a separate integration gate.
+See [ROM integration evidence](rom-integration.md).

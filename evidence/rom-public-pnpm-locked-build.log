@@ -1,0 +1,20 @@
+{"program":"corepack","args":["pnpm@10.30.0","run","build"],"cwd":"/var/tmp/rom-ui-studio-public-pnpm-locked/consumer","exit_code":0,"signal":null}
+
+> rom-public-controls-consumer@0.0.0 build /var/tmp/rom-ui-studio-public-pnpm-locked/consumer
+> vite build
+
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 5014 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.35 kB │ gzip:   0.25 kB
+dist/assets/index-r3XEY2ac.css  178.99 kB │ gzip:  26.30 kB
+dist/assets/index-BEigIQbz.js   752.24 kB │ gzip: 210.85 kB
+
+✓ built in 3.21s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

@@ -1,0 +1,24 @@
+[WebServer] (node:2544132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2544149) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:2544214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (773ms)
+(node:2544492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (681ms)
+(node:2544589) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (682ms)
+(node:2544695) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (656ms)
+(node:2544838) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (688ms)
+
+  5 passed (7.3s)

@@ -1,0 +1,131 @@
+TAP version 13
+# Subtest: shared installation retains portable module IDs and exact licenses
+ok 1 - shared installation retains portable module IDs and exact licenses
+  ---
+  duration_ms: 11.457514
+  type: 'test'
+  ...
+# Subtest: shared installation still rejects missing licenses, changed identity and external modules
+ok 2 - shared installation still rejects missing licenses, changed identity and external modules
+  ---
+  duration_ms: 5.556019
+  type: 'test'
+  ...
+# Subtest: package links cannot extend the configured installation boundary
+ok 3 - package links cannot extend the configured installation boundary
+  ---
+  duration_ms: 3.98916
+  type: 'test'
+  ...
+# Subtest: emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+ok 4 - emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+  ---
+  duration_ms: 2.249264
+  type: 'test'
+  ...
+# Subtest: build refuses missing full license text, unknown virtual code, or an untrusted package owner
+ok 5 - build refuses missing full license text, unknown virtual code, or an untrusted package owner
+  ---
+  duration_ms: 6.448474
+  type: 'test'
+  ...
+# Subtest: asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+ok 6 - asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+  ---
+  duration_ms: 3.385585
+  type: 'test'
+  ...
+# Subtest: inventory rejects missing owner bindings and malformed notice metadata before admission
+ok 7 - inventory rejects missing owner bindings and malformed notice metadata before admission
+  ---
+  duration_ms: 9.044067
+  type: 'test'
+  ...
+# Subtest: distinct transformed module IDs preserve query suffixes in the emitted inventory
+ok 8 - distinct transformed module IDs preserve query suffixes in the emitted inventory
+  ---
+  duration_ms: 2.321462
+  type: 'test'
+  ...
+# Subtest: unclassified JavaScript assets cannot bypass emitted runtime provenance
+ok 9 - unclassified JavaScript assets cannot bypass emitted runtime provenance
+  ---
+  duration_ms: 1.914849
+  type: 'test'
+  ...
+# Subtest: copied responsive hook and imported CSS retain their actual owners
+ok 10 - copied responsive hook and imported CSS retain their actual owners
+  ---
+  duration_ms: 9.694584
+  type: 'test'
+  ...
+# Subtest: emitted SVAR modules retain the original MIT notice with their pinned source commit
+ok 11 - emitted SVAR modules retain the original MIT notice with their pinned source commit
+  ---
+  duration_ms: 2.736651
+  type: 'test'
+  ...
+# Subtest: inventory rejects emitted SVAR code stripped of its required owner
+ok 12 - inventory rejects emitted SVAR code stripped of its required owner
+  ---
+  duration_ms: 2.21536
+  type: 'test'
+  ...
+# Subtest: SVAR owner cannot silently change its source commit or retained license profile
+ok 13 - SVAR owner cannot silently change its source commit or retained license profile
+  ---
+  duration_ms: 3.939456
+  type: 'test'
+  ...
+# Subtest: runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+not ok 14 - runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+  ---
+  duration_ms: 2.182107
+  type: 'test'
+  location: '/root/.codex/worktrees/rom-ui-integration/ROM/scripts/packages/studio-notices.test.mjs:259:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, lstat '/tmp/rom-runtime-notice-test-I7oTNz/studio/node_modules/rolldown'"
+  code: 'ENOENT'
+  stack: |-
+    realpathSync (node:fs:2787:29)
+    packageOwner (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/build/notices/ownership.mjs:34:17)
+    file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/build/notices/ownership.mjs:53:46
+    Array.map (<anonymous>)
+    moduleOwner (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/build/notices/ownership.mjs:53:34)
+    collectRuntimeNotices (file:///root/.codex/worktrees/rom-ui-integration/ROM/studio/build/notices/collection.mjs:26:47)
+    TestContext.<anonymous> (file:///root/.codex/worktrees/rom-ui-integration/ROM/scripts/packages/studio-notices.test.mjs:267:34)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+  ...
+# Subtest: ROM UI styles retain their nested shadcn and animation owners
+not ok 15 - ROM UI styles retain their nested shadcn and animation owners
+  ---
+  duration_ms: 2.856318
+  type: 'test'
+  location: '/root/.codex/worktrees/rom-ui-integration/ROM/scripts/packages/studio-notices.test.mjs:272:1'
+  failureType: 'testCodeFailure'
+  error: 'rom-ui'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///root/.codex/worktrees/rom-ui-integration/ROM/scripts/packages/studio-notices.test.mjs:287:14)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 13
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 118.271486

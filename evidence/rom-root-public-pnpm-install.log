@@ -1,0 +1,10 @@
+{"program":"corepack","args":["pnpm@10.30.0","install","--frozen-lockfile","--ignore-scripts","--config.node-linker=hoisted","--config.package-import-method=copy"],"cwd":"/var/tmp/rom-ui-root-public-pnpm/consumer","exit_code":0,"signal":null}
+Lockfile is up to date, resolution step is skipped
+Packages: +207
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 0, reused 1, downloaded 0, added 0
+Progress: resolved 0, reused 207, downloaded 0, added 135
+Progress: resolved 0, reused 207, downloaded 0, added 206
+Progress: resolved 0, reused 207, downloaded 0, added 207, done
+
+Done in 2.5s using pnpm v10.30.0

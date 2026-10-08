@@ -1,0 +1,564 @@
+
+> rom-studio@0.0.3 test:components /root/ROM/studio
+> corepack pnpm run build:components && playwright test --config tests/components/playwright.config.ts
+
+
+> rom-studio@0.0.3 build:components /root/ROM/studio
+> vite build --mode components --outDir .component-dist
+
+vite v8.3.2 building client environment for components...
+transforming...
+5:28:31 PM [vite-plugin-svelte] tests/components/SortableFieldsHarness.svelte:36:6 `invalidLayoutRejected` is updated, but is not declared with `$state(...)`. Changing its value will not correctly trigger updates
+https://svelte.dev/e/non_reactive_update
+34:     findRenderer(lifecycleCodec) === RegistryScalarHarnessRenderer &&
+35:     rendererLayout(lifecycleCodec) === "inline";
+36:   let invalidLayoutRejected = false;
+                               ^
+37:   try {
+38:     registerRenderer(
+5:28:31 PM [vite-plugin-svelte] src/lib/ui/components/ConversationLayout.svelte:73:2 noninteractive element cannot have nonnegative tabIndex value
+https://svelte.dev/e/a11y_no_noninteractive_tabindex
+71:     <div class="layout-history border-b p-3">{@render history()}</div>
+72:   {/if}
+73:   <div
+          ^
+74:     bind:this={bodyRef}
+75:     data-rom-conversation-body
+✓ 5046 modules transformed.
+rendering chunks...
+computing gzip size...
+.component-dist/notices/npm/cn/0.3.3/LICENSE                                                              1.06 kB
+.component-dist/notices/npm/tw-animate-css/1.4.0/LICENSE                                                  1.06 kB
+.component-dist/notices/npm/svelte-dnd-action/0.9.80/LICENSE                                              1.06 kB
+.component-dist/notices/npm/bits-ui/2.19.5/LICENSE                                                        1.07 kB
+.component-dist/notices/npm/rom-ui/0.1.0-alpha.1/LICENSE                                                  1.07 kB
+.component-dist/notices/npm/tailwind-variants/3.3.1/LICENSE                                               1.07 kB
+.component-dist/notices/vendored/svar-filter-vendored/1c581c3312c626c525ee64b8f94446a025fa141c/LICENSE    1.07 kB
+.component-dist/notices/npm/tabbable/6.5.0/LICENSE                                                        1.07 kB
+.component-dist/notices/npm/_floating-ui_core/1.8.0/LICENSE                                               1.08 kB
+.component-dist/notices/npm/_floating-ui_dom/1.8.0/LICENSE                                                1.08 kB
+.component-dist/notices/npm/_floating-ui_utils/0.2.12/LICENSE                                             1.08 kB
+.component-dist/notices/npm/inline-style-parser/0.2.7/LICENSE                                             1.09 kB
+.component-dist/notices/npm/clsx/2.1.1/license                                                            1.10 kB
+.component-dist/notices/npm/style-to-object/1.0.14/LICENSE                                                1.11 kB
+.component-dist/notices/npm/svelte/5.57.1/LICENSE.md                                                      1.12 kB
+.component-dist/tests/components/history-composition.html                                                 1.14 kB │ gzip:  0.51 kB
+.component-dist/tests/components/details-composition.html                                                 1.15 kB │ gzip:  0.51 kB
+.component-dist/notices/npm/runed/0.35.1/LICENSE                                                          1.16 kB
+.component-dist/notices/npm/svelte-toolbelt/0.10.6/LICENSE                                                1.16 kB
+.component-dist/notices/npm/rom-ui/0.1.0-alpha.1/src/lib/components/ui/LICENSE.md                         1.19 kB
+.component-dist/notices/npm/shadcn-svelte/1.7.0/LICENSE.md                                                1.19 kB
+.component-dist/notices/vendored/shadcn-svelte-vendored/source-checkout/LICENSE.md                        1.19 kB
+.component-dist/tests/components/reference-composition.html                                               1.19 kB │ gzip:  0.52 kB
+.component-dist/tests/components/selection-layout-composition.html                                        1.21 kB │ gzip:  0.53 kB
+.component-dist/notices/tool-runtime/rolldown/1.2.12/LICENSE                                              1.30 kB
+.component-dist/tests/components/direct-form.html                                                         1.42 kB │ gzip:  0.57 kB
+.component-dist/tests/components/reference.html                                                           1.48 kB │ gzip:  0.58 kB
+.component-dist/tests/components/renderer-regressions.html                                                1.50 kB │ gzip:  0.59 kB
+.component-dist/tests/components/semantic-fields.html                                                     1.60 kB │ gzip:  0.60 kB
+.component-dist/tests/components/sortable-fields.html                                                     1.65 kB │ gzip:  0.61 kB
+.component-dist/tests/components/harness.html                                                             1.75 kB │ gzip:  0.62 kB
+.component-dist/tests/components/details.html                                                             2.00 kB │ gzip:  0.64 kB
+.component-dist/notices/tool-runtime/rolldown/1.2.12/THIRD-PARTY-LICENSE                                  2.20 kB
+.component-dist/index.html                                                                                2.29 kB │ gzip:  0.74 kB
+.component-dist/tests/components/creation.html                                                            2.31 kB │ gzip:  0.72 kB
+.component-dist/tests/components/conversation-layout.html                                                 2.70 kB │ gzip:  0.77 kB
+.component-dist/notices/npm/_lucide_svelte/1.51.0/LICENSE                                                 3.20 kB
+.component-dist/notices/tool-runtime/vite/8.3.2/LICENSE.md                                              108.78 kB
+.component-dist/third-party-notices.json                                                                195.41 kB │ gzip: 13.89 kB
+.component-dist/assets/SelectAdapter-CV-KWLNP.css                                                         0.28 kB │ gzip:  0.14 kB
+.component-dist/assets/conversationLayout-OJl9WCuo.css                                                    0.41 kB │ gzip:  0.25 kB
+.component-dist/assets/ui-components-CV_q9nGa.css                                                         1.22 kB │ gzip:  0.43 kB
+.component-dist/assets/app-DFosNnVz.css                                                                 178.36 kB │ gzip: 26.07 kB
+.component-dist/assets/recovery-L16QqlHk.js                                                               0.03 kB │ gzip:  0.05 kB
+.component-dist/assets/resource-presentation-Bsbcryo9.js                                                  0.59 kB │ gzip:  0.36 kB
+.component-dist/assets/ResponsiveInspector-BBAM1e6f.js                                                    0.63 kB │ gzip:  0.37 kB
+.component-dist/assets/main-Bu3TRbo1.js                                                                   0.81 kB │ gzip:  0.51 kB
+.component-dist/assets/details-CY5O-DYL.js                                                                1.33 kB │ gzip:  0.74 kB
+.component-dist/assets/creation-CXRIayXt.js                                                               1.52 kB │ gzip:  0.80 kB
+.component-dist/assets/directForm-COcgFJCx.js                                                             1.55 kB │ gzip:  0.75 kB
+.component-dist/assets/ui-components-CVZLWZpD.js                                                          1.99 kB │ gzip:  1.04 kB
+.component-dist/assets/historyComposition-DHRA9v0L.js                                                     2.03 kB │ gzip:  1.08 kB
+.component-dist/assets/detailsComposition-Cevoboi3.js                                                     2.04 kB │ gzip:  1.02 kB
+.component-dist/assets/semanticFields-C-mt7_1R.js                                                         2.07 kB │ gzip:  1.09 kB
+.component-dist/assets/referenceComposition-gjYGuIwq.js                                                   2.11 kB │ gzip:  1.18 kB
+.component-dist/assets/reference-CMIFqhTo.js                                                              2.87 kB │ gzip:  1.47 kB
+.component-dist/assets/rendererRegressions-BtDzLL2p.js                                                    3.00 kB │ gzip:  1.36 kB
+.component-dist/assets/ReferencePicker-BJ3kbpKQ.js                                                        3.26 kB │ gzip:  1.33 kB
+.component-dist/assets/ValueDisplay-BzTP7GMM.js                                                           3.43 kB │ gzip:  1.36 kB
+.component-dist/assets/conversationLayout-CvApexAE.js                                                     3.78 kB │ gzip:  1.84 kB
+.component-dist/assets/ActionForm-B_qdIZaz.js                                                             3.93 kB │ gzip:  1.84 kB
+.component-dist/assets/selectionLayoutComposition-DX8WnBqU.js                                             3.97 kB │ gzip:  1.72 kB
+.component-dist/assets/bootstrap-DyeJo_fE.js                                                              4.86 kB │ gzip:  2.01 kB
+.component-dist/assets/sortableFields-BRPgwqjn.js                                                         5.20 kB │ gzip:  2.07 kB
+.component-dist/assets/ResourceTable-ByiB_4uq.js                                                          5.84 kB │ gzip:  1.75 kB
+.component-dist/assets/components-DHWSoyLa.js                                                             7.14 kB │ gzip:  2.86 kB
+.component-dist/assets/FilterBuilder-DZe1Izkl.js                                                         10.26 kB │ gzip:  3.74 kB
+.component-dist/assets/ResourceForm-Dy4g2Fsf.js                                                          42.05 kB │ gzip: 12.31 kB
+.component-dist/assets/SelectAdapter-KqUkAG6D.js                                                         56.82 kB │ gzip: 15.63 kB
+.component-dist/assets/controller-C78u2V0-.js                                                            60.33 kB │ gzip: 17.93 kB
+.component-dist/assets/ResourcePage-C5tEnnV8.js                                                          68.88 kB │ gzip: 17.51 kB
+.component-dist/assets/ValueEditor-JDoLuw7G.js                                                           81.95 kB │ gzip: 24.76 kB
+.component-dist/assets/App-tqPwoyAa.js                                                                   87.84 kB │ gzip: 24.79 kB
+.component-dist/assets/app-Cz4Xjzoc.js                                                                  288.86 kB │ gzip: 91.20 kB
+
+✓ built in 6.82s
+[WebServer] (node:2598244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2598269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 324 tests using 2 workers
+
+(node:2598342) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2598341) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [webkit] › tests/components/application.spec.ts:9:1 › real SDK composes two metadata-driven pages; logout clears details (980ms)
+  ✓    2 [webkit] › tests/components/attachments-ergonomics.spec.ts:166:1 › attachment selection uses right inspector and exact confirmation binding (1.1s)
+  ✓    3 [webkit] › tests/components/application.spec.ts:93:1 › real app reports unavailable session without simulated data (452ms)
+  ✓    4 [webkit] › tests/components/attachments-ergonomics.spec.ts:217:1 › lost reservation acknowledgement retains exact request and contents through inspector close (1.2s)
+  ✓    5 [webkit] › tests/components/application.spec.ts:106:1 › moving pages use native query anchors and previous refetches (870ms)
+  ✓    6 [webkit] › tests/components/attachments-ergonomics.spec.ts:263:1 › denied capability has explicit unavailable state and no successful empty list (757ms)
+  ✓    7 [webkit] › tests/components/controls.spec.ts:7:1 › integer fields request a numeric mobile keyboard without losing exact input (857ms)
+  ✓    8 [webkit] › tests/components/attachments-ergonomics.spec.ts:277:1 › mobile attachment details contain focus and return to selected row (932ms)
+  ✓    9 [webkit] › tests/components/controls.spec.ts:19:1 › Resource references identify the target kind while accepting an exact ID (961ms)
+  ✓   10 [webkit] › tests/components/attachments-ergonomics.spec.ts:311:1 › lost upload response retries identical bytes and prevents pending navigation (1.2s)
+  ✓   11 [webkit] › tests/components/controls.spec.ts:30:1 › Resource controls preserve integer, presence, boolean and nested edits (1.6s)
+  ✓   12 [webkit] › tests/components/attachments-ergonomics.spec.ts:345:1 › attachment list error stays distinct from empty success and can refresh (1.0s)
+  ✓   14 [webkit] › tests/components/conversation-layout.spec.ts:4:1 › keyboard users can focus and scroll noninteractive conversation content (699ms)
+  ✓   15 [webkit] › tests/components/conversation-layout.spec.ts:20:1 › hiding the focused expansion control keeps focus in the conversation (517ms)
+  ✓   16 [webkit] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 1280x900 (431ms)
+  ✓   13 [webkit] › tests/components/controls.spec.ts:58:1 › same field hosts support custom codec, nested collections and generic action input (2.4s)
+  ✓   17 [webkit] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 390x844 (406ms)
+  ✓   19 [webkit] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 390x500 (441ms)
+  ✓   18 [webkit] › tests/components/controls.spec.ts:82:1 › expanded action input describes submission rather than Resource saving (640ms)
+  ✓   20 [webkit] › tests/components/conversation-layout.spec.ts:69:1 › desktop expansion and viewport changes preserve raw draft node and focus (419ms)
+  ✓   22 [webkit] › tests/components/conversation-layout.spec.ts:106:1 › caller composer handles keyboard and IME without layout owning submission (418ms)
+  ✓   21 [webkit] › tests/components/controls.spec.ts:91:1 › unsupported action stays visible, generic table selects, query emits values (706ms)
+  ✓   23 [webkit] › tests/components/conversation-layout.spec.ts:123:1 › caller follow-latest preserves manual scrolling and resumes explicitly (604ms)
+  ✓   25 [webkit] › tests/components/conversation-layout.spec.ts:156:1 › layout remains reachable under reduced motion (344ms)
+  ✓   24 [webkit] › tests/components/controls.spec.ts:108:1 › keyboard controls and assembled accessibility (1.1s)
+  ✓   26 [webkit] › tests/components/creation-recovery.spec.ts:47:1 › descriptor renewal keeps existing creation edits until explicit discard enables the current definition (1.2s)
+  ✓   27 [webkit] › tests/components/controls.spec.ts:118:1 › descriptor change retains an open draft and requires explicit reopen (1.4s)
+  ✓   28 [webkit] › tests/components/creation-recovery.spec.ts:94:1 › descriptor renewal preserves exact pending creation for explicit retry (612ms)
+  ✓   29 [webkit] › tests/components/controls.spec.ts:166:1 › invalid field keeps keyboard focus and cannot submit until corrected (568ms)
+  ✓   31 [webkit] › tests/components/controls.spec.ts:192:1 › shared Select Checkbox and submit keyboard semantics preserve a boolean (404ms)
+  ✓   30 [webkit] › tests/components/creation-recovery.spec.ts:127:1 › pending creation disables row and page navigation without an uncaught rejection (797ms)
+  ✓   33 [webkit] › tests/components/creation-recovery.spec.ts:178:1 › confirmed creation after restart removes its original draft and closes the form (857ms)
+  ✓   32 [webkit] › tests/components/controls.spec.ts:212:1 › optional remove and empty string remain distinct from omitted fields (1.3s)
+  ✓   34 [webkit] › tests/components/creation-recovery.spec.ts:229:1 › creation restores raw ID and accepted intent explicitly after reload without automatic dispatch (1.0s)
+  ✓   36 [webkit] › tests/components/details-composition.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (322ms)
+  ✓   35 [webkit] › tests/components/controls.spec.ts:233:1 › nested invalid input survives sibling edits and removal releases only its error (1.2s)
+  ✓   37 [webkit] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (617ms)
+  ✓   39 [webkit] › tests/components/details-composition.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (373ms)
+  ✓   40 [webkit] › tests/components/details-composition.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (608ms)
+  ✓   41 [webkit] › tests/components/details-composition.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (596ms)
+  ✓   38 [webkit] › tests/components/controls.spec.ts:254:1 › enum reference and prototype-shaped map keys use generic controls (2.2s)
+  ✓   43 [webkit] › tests/components/controls.spec.ts:274:1 › opaque input uses the shared strict lossless codec (449ms)
+  ✓   42 [webkit] › tests/components/details-composition.spec.ts:59:1 › active close control uses the host's changed label (640ms)
+  ✓   45 [webkit] › tests/components/details-composition.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (823ms)
+  ✓   44 [webkit] › tests/components/controls.spec.ts:290:1 › sort field is independent from filter field (1.2s)
+  ✓   46 [webkit] › tests/components/details-composition.spec.ts:81:1 › reduced motion displays complete details without content animation (342ms)
+  ✓   47 [webkit] › tests/components/controls.spec.ts:304:1 › sort picker excludes collection fields but retains scalar fields (445ms)
+  ✓   48 [webkit] › tests/components/details.spec.ts:2:1 › selected Resource shows its current title as a direct editable field (420ms)
+  ✓   50 [webkit] › tests/components/details.spec.ts:27:1 › direct boolean control keeps false and becomes an explicit edit only when switched (466ms)
+  ✓   51 [webkit] › tests/components/details.spec.ts:42:1 › mobile Resource editor uses the full viewport and a concise heading (484ms)
+  ✓   52 [webkit] › tests/components/details.spec.ts:53:1 › live revision retains draft and disables stale submission until explicit reload (637ms)
+  ✓   53 [webkit] › tests/components/details.spec.ts:88:1 › an open field popup cannot mutate a draft after a newer revision (533ms)
+  ✓   54 [webkit] › tests/components/details.spec.ts:117:1 › stale Resource keeps collection details readable without reopening mutation (571ms)
+  ✓   49 [webkit] › tests/components/controls.spec.ts:319:1 › wrapped custom codecs apply only to leaves; unknown leaves remain read-only (3.0s)
+  ✓   55 [webkit] › tests/components/direct-form.spec.ts:3:1 › current null and absent fields are distinct from an empty value (379ms)
+  ✓   57 [webkit] › tests/components/direct-form.spec.ts:14:1 › generic scalar fields fit label, control and actions in one mobile row (379ms)
+  ✓   56 [webkit] › tests/components/controls.spec.ts:383:1 › query filters preserve wrapper provenance and edit only registered leaves (709ms)
+  ✓   58 [webkit] › tests/components/direct-form.spec.ts:35:1 › choosing Set a value starts from the current value (829ms)
+ROM_TABLE_FRAME {"engine":"webkit","rows":100,"columns":16,"cells_before":1600,"cells_after_clear":0,"navigation_to_visible_frame_ms":590,"clear_to_frame_ms":128,"api_requests":0,"scope":"Local descriptor-only browser fixture, warm asset cache, real generic ResourceTable and custom codec renderers. Navigation includes module execution and frame scheduling. DOM retention count, not heap reclamation or database/parser cost."}
+  ✓   59 [webkit] › tests/components/controls.spec.ts:399:3 › finite generic table 100 row frame and DOM retention sample (1.1s)
+  ✓   60 [webkit] › tests/components/direct-form.spec.ts:53:1 › switching an invalid omitted field to a value resets its draft (733ms)
+  ✓   62 [webkit] › tests/components/direct-form.spec.ts:72:1 › nested null differs from an empty value in an expanded list editor (870ms)
+  ✓   63 [webkit] › tests/components/direct-form.spec.ts:105:1 › large collections remain readable when editing is bounded (404ms)
+  ✓   64 [webkit] › tests/components/direct-form.spec.ts:118:1 › descriptor change keeps existing collection available for read-only inspection (441ms)
+  ✓   65 [webkit] › tests/components/direct-form.spec.ts:133:1 › direct fields distinguish unchanged, false, zero, empty, null and removal (1.7s)
+  ✓   66 [webkit] › tests/components/filter-workspace.spec.ts:54:1 › compact actions keep their names and the inspector toggle stays on the right (519ms)
+ROM_TABLE_FRAME {"engine":"webkit","rows":500,"columns":16,"cells_before":8000,"cells_after_clear":0,"navigation_to_visible_frame_ms":2261,"clear_to_frame_ms":1626,"api_requests":0,"scope":"Local descriptor-only browser fixture, warm asset cache, real generic ResourceTable and custom codec renderers. Navigation includes module execution and frame scheduling. DOM retention count, not heap reclamation or database/parser cost."}
+  ✓   61 [webkit] › tests/components/controls.spec.ts:399:3 › finite generic table 500 row frame and DOM retention sample (4.4s)
+  ✓   68 [webkit] › tests/components/generic-presentation.spec.ts:7:1 › shared mode picker uses keyboard and keeps nullable operation controlled (762ms)
+  ✓   67 [webkit] › tests/components/filter-workspace.spec.ts:111:1 › quick and full filters share draft without querying until Apply (1.2s)
+  ✓   69 [webkit] › tests/components/generic-presentation.spec.ts:26:1 › shared query picker preserves independent sort selection and closes on Escape (948ms)
+  ✓   71 [webkit] › tests/components/history-composition.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (341ms)
+  ✓   72 [webkit] › tests/components/history-composition.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (381ms)
+  ✓   70 [webkit] › tests/components/filter-workspace.spec.ts:166:1 › Resource draft survives filter tab, Apply and mobile inspector lifecycle (1.5s)
+  ✓   73 [webkit] › tests/components/history-composition.spec.ts:38:1 › history metadata and empty text follow a locale change (388ms)
+  ✓   75 [webkit] › tests/components/history-composition.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (393ms)
+  ✓   76 [webkit] › tests/components/history-composition.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (442ms)
+  ✓   74 [webkit] › tests/components/filter-workspace.spec.ts:229:1 › invalid filter input survives popover close and switching editors (1.2s)
+  ✓   77 [webkit] › tests/components/history-composition.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (431ms)
+  ✓   78 [webkit] › tests/components/filter-workspace.spec.ts:292:1 › removing an earlier rule preserves the later rule's invalid draft (761ms)
+  ✓   79 [webkit] › tests/components/history-composition.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (408ms)
+  ✓   81 [webkit] › tests/components/login-ergonomics.spec.ts:3:1 › sign-in providers stay readable on narrow screens and preserve exact login route (398ms)
+  ✓   82 [webkit] › tests/components/login-ergonomics.spec.ts:53:1 › unavailable session presents retry without exposing workspace values (323ms)
+  ✓   80 [webkit] › tests/components/filter-workspace.spec.ts:328:1 › descriptor change permits explicit discard of an obsolete filter (760ms)
+  ✓   83 [webkit] › tests/components/login-ergonomics.spec.ts:74:1 › primary provider auto-redirect retains explicit sign-in choice (546ms)
+  ✓   84 [webkit] › tests/components/filter-workspace.spec.ts:360:1 › invalid input after an applied numeric filter is marked pending (861ms)
+  ✓   85 [webkit] › tests/components/login-ergonomics.spec.ts:105:1 › expired session clears protected values and explains sign-in (486ms)
+  ✓   87 [webkit] › tests/components/login-ergonomics.spec.ts:172:1 › expired authenticated response retains available provider sign-in (326ms)
+  ✓   86 [webkit] › tests/components/presentation-ux.spec.ts:53:1 › generic Resource presentation separates human title, field label, and exact identity (532ms)
+  ✓   89 [webkit] › tests/components/presentation-ux.spec.ts:88:1 › mobile Resource details returns focus to the actual row opener (523ms)
+  ✓   88 [webkit] › tests/components/reference-composition.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (592ms)
+  ✓   91 [webkit] › tests/components/reference-picker.spec.ts:7:1 › reference lookup is lazy and chooses an authorized title without changing exact identity or main navigation (580ms)
+  ✓   90 [webkit] › tests/components/reference-composition.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (1.2s)
+  ✓   92 [webkit] › tests/components/reference-picker.spec.ts:30:1 › debounced search filters bounded candidates and Escape restores focus (706ms)
+  ✓   93 [webkit] › tests/components/reference-composition.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (465ms)
+  ✓   94 [webkit] › tests/components/reference-picker.spec.ts:68:1 › denied lookup preserves the exact ID fallback and never reports an empty successful search (433ms)
+  ✓   96 [webkit] › tests/components/reference-picker.spec.ts:88:1 › withheld titles use the shared safe fallback and undisclosed kinds do not query (490ms)
+  ✓   95 [webkit] › tests/components/reference-composition.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.3s)
+  ✓   97 [webkit] › tests/components/reference-picker.spec.ts:109:1 › session invalidation removes delayed and selected descriptions without erasing an exact ID (1.1s)
+  ✓   98 [webkit] › tests/components/reference-composition.spec.ts:82:3 › Deny response leaves manual exact ID entry available (446ms)
+  ✓   99 [webkit] › tests/components/reference-picker.spec.ts:130:1 › without lookup context the supported reference stays an exact ID editor (345ms)
+  ✓  100 [webkit] › tests/components/reference-composition.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (443ms)
+  ✓  101 [webkit] › tests/components/reference-picker.spec.ts:143:1 › the picker remains inside a narrow mobile viewport (421ms)
+  ✓  102 [webkit] › tests/components/reference-composition.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.8s)
+  ✓  103 [webkit] › tests/components/reference-picker.spec.ts:164:1 › search requests are capped per open picker while exact ID editing remains available (2.7s)
+  ✓  104 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar text (296ms)
+  ✓  106 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar zero (286ms)
+  ✓  105 [webkit] › tests/components/reference-picker.spec.ts:197:1 › selected authorized descriptions disappear with the session while the exact ID stays intact (525ms)
+  ✓  107 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar false (310ms)
+  ✓  108 [webkit] › tests/components/reference-picker.spec.ts:215:1 › empty reference input reports the canonical field path without replacing the last value (281ms)
+  ✓  109 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Explicit null (299ms)
+  ✓  111 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Missing optional (283ms)
+  ✓  110 [webkit] › tests/components/reference-picker.spec.ts:224:1 › a denied relookup retires the previously selected title and preserves the ID (542ms)
+  ✓  112 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Empty codec list (294ms)
+  ✓  113 [webkit] › tests/components/right-inspector.spec.ts:3:1 › right inspector toggles by keyboard and preserves filter drafts (492ms)
+  ✓  114 [webkit] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Empty codec map (288ms)
+  ✓  115 [webkit] › tests/components/right-inspector.spec.ts:52:1 › right mobile Sheet restores toggle focus and preserves Resource draft across resize (537ms)
+  ✓  116 [webkit] › tests/components/renderer-regressions.spec.ts:40:1 › mobile nested Select remains usable after scrolling its Sheet (769ms)
+  ✓  117 [webkit] › tests/components/selection-layout-composition.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (291ms)
+  ✓  119 [webkit] › tests/components/selection-layout-composition.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (378ms)
+  ✓  118 [webkit] › tests/components/renderer-regressions.spec.ts:76:1 › mobile nested Select dismisses by ordinary outside click without closing its Sheet (694ms)
+  ✓  120 [webkit] › tests/components/selection-layout-composition.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (352ms)
+  ✓  122 [webkit] › tests/components/selection-layout-composition.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (352ms)
+  ✓  121 [webkit] › tests/components/renderer-regressions.spec.ts:103:1 › mobile Escape dismisses Select before Sheet and restores toolbar focus (591ms)
+  ✓  123 [webkit] › tests/components/selection-layout-composition.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (445ms)
+  ✓  124 [webkit] › tests/components/semantic-fields.spec.ts:3:1 › standard fields provide shared compact controls without application renderers (379ms)
+  ✓  126 [webkit] › tests/components/semantic-fields.spec.ts:42:1 › invalid semantic drafts block submission and retain the user's exact input (311ms)
+  ✓  125 [webkit] › tests/components/selection-layout-composition.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (494ms)
+  ✓  128 [webkit] › tests/components/selection-layout-composition.spec.ts:164:1 › disabled host controls cannot dispatch (308ms)
+  ✓  127 [webkit] › tests/components/semantic-fields.spec.ts:67:1 › expanded document preserves numeric tokens and multiline source (633ms)
+  ✓  129 [webkit] › tests/components/selection-layout-composition.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (401ms)
+  ✓  130 [webkit] › tests/components/semantic-fields.spec.ts:101:1 › read-only semantic details expose the complete exact value (567ms)
+  ✓  131 [webkit] › tests/components/selection-layout-composition.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (418ms)
+  ✓  132 [webkit] › tests/components/semantic-fields.spec.ts:120:1 › compact measurement keeps its magnitude visible beside the unit (380ms)
+  ✓  133 [webkit] › tests/components/selection-layout-composition.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (424ms)
+  ✓  134 [webkit] › tests/components/settings-presentation.spec.ts:72:1 › Settings groups disclosed plugin Resources and uses the authorized patch path (965ms)
+  ✓  136 [webkit] › tests/components/settings-presentation.spec.ts:120:1 › Settings exposes no group when discovery discloses no settings metadata (435ms)
+  ✓  135 [webkit] › tests/components/shell-presentation.spec.ts:3:1 › mobile sidebar opens, selects a descriptor and returns space to the page (1.5s)
+  ✓  138 [webkit] › tests/components/ui-follow-latest.spec.ts:22:1 › follow-latest preserves manual reading and supports explicit resume (386ms)
+  ✓  139 [webkit] › tests/components/ui-follow-latest.spec.ts:48:1 › follow-latest uses actual frame and resized viewport without losing ownership (398ms)
+  ✓  137 [webkit] › tests/components/sortable-fields.spec.ts:10:1 › manual reorder keeps invalid duplicate row draft and blocks resource submission (1.2s)
+  ✓  140 [webkit] › tests/components/ui-follow-latest.spec.ts:70:1 › disposal suppresses a queued automatic scroll in the real browser (283ms)
+  ✓  142 [webkit] › tests/components/ui-follow-latest.spec.ts:90:1 › small manual upward movement requires explicit resume (326ms)
+  ✓  143 [webkit] › tests/components/ui-follow-latest.spec.ts:123:1 › a larger viewport can clamp the position without disabling following (260ms)
+  ✓  141 [webkit] › tests/components/sortable-fields.spec.ts:40:1 › keyboard drag submits only canonical values and retains duplicate identity (736ms)
+  ✓  144 [webkit] › tests/components/work-presentation.spec.ts:79:1 › Work loads readable snapshots automatically and applies operator filters (558ms)
+  ✓  146 [webkit] › tests/components/work-presentation.spec.ts:111:1 › Work inspector close preserves the exact recovery retry request (636ms)
+  ✓  145 [webkit] › tests/components/sortable-fields.spec.ts:63:1 › pointer reorder keeps invalid drafts attached and removal clears row error (1.2s)
+  ✓  148 [webkit] › tests/components/sortable-fields.spec.ts:98:1 › readonly and bounded lists expose no drag or mutation controls (349ms)
+  ✓  147 [webkit] › tests/components/work-presentation.spec.ts:144:1 › mobile Work details returns focus to the actual row opener (570ms)
+(node:2612564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  149 [webkit] › tests/components/sortable-fields.spec.ts:114:1 › codec row draft survives pointer replacement without losing exact decimal source (1.2s)
+  ✓  150 [chromium] › tests/components/application.spec.ts:9:1 › real SDK composes two metadata-driven pages; logout clears details (567ms)
+  ✓  152 [chromium] › tests/components/application.spec.ts:93:1 › real app reports unavailable session without simulated data (170ms)
+  ✓  153 [chromium] › tests/components/application.spec.ts:106:1 › moving pages use native query anchors and previous refetches (473ms)
+  ✓  151 [webkit] › tests/components/sortable-fields.spec.ts:152:1 › action inputs use the same canonical list reorder (1.3s)
+  ✓  154 [chromium] › tests/components/attachments-ergonomics.spec.ts:166:1 › attachment selection uses right inspector and exact confirmation binding (632ms)
+  ✓  155 [webkit] › tests/components/sortable-fields.spec.ts:177:1 › filter candidates retain invalid row state after reorder (497ms)
+  -  157 [webkit] › tests/components/sortable-fields.spec.ts:200:1 › touch handle reorders a duplicate row without serializing drag metadata
+  ✓  156 [chromium] › tests/components/attachments-ergonomics.spec.ts:217:1 › lost reservation acknowledgement retains exact request and contents through inspector close (696ms)
+  ✓  159 [chromium] › tests/components/attachments-ergonomics.spec.ts:263:1 › denied capability has explicit unavailable state and no successful empty list (306ms)
+  ✓  160 [chromium] › tests/components/attachments-ergonomics.spec.ts:277:1 › mobile attachment details contain focus and return to selected row (439ms)
+  ✓  158 [webkit] › tests/components/sortable-fields.spec.ts:252:1 › closing a keyboard drag releases the action and preserves the form candidate (1.3s)
+  ✓  161 [chromium] › tests/components/attachments-ergonomics.spec.ts:311:1 › lost upload response retries identical bytes and prevents pending navigation (538ms)
+  ✓  163 [chromium] › tests/components/attachments-ergonomics.spec.ts:345:1 › attachment list error stays distinct from empty success and can refresh (458ms)
+  ✓  162 [webkit] › tests/components/sortable-fields.spec.ts:279:1 › prototype-shaped map keys keep invalid drafts local to their editor (852ms)
+  ✓  164 [chromium] › tests/components/controls.spec.ts:7:1 › integer fields request a numeric mobile keyboard without losing exact input (531ms)
+  ✓  166 [chromium] › tests/components/controls.spec.ts:19:1 › Resource references identify the target kind while accepting an exact ID (463ms)
+  ✓  165 [webkit] › tests/components/sortable-fields.spec.ts:314:1 › labelled enum bulk append preserves duplicates and canonical ordered values (1.1s)
+  ✓  167 [chromium] › tests/components/controls.spec.ts:30:1 › Resource controls preserve integer, presence, boolean and nested edits (865ms)
+  ✓  169 [chromium] › tests/components/controls.spec.ts:58:1 › same field hosts support custom codec, nested collections and generic action input (1.7s)
+  ✓  170 [chromium] › tests/components/controls.spec.ts:82:1 › expanded action input describes submission rather than Resource saving (437ms)
+  ✓  171 [chromium] › tests/components/controls.spec.ts:91:1 › unsupported action stays visible, generic table selects, query emits values (3.0s)
+  ✓  172 [chromium] › tests/components/controls.spec.ts:108:1 › keyboard controls and assembled accessibility (1.7s)
+  ✓  173 [chromium] › tests/components/controls.spec.ts:118:1 › descriptor change retains an open draft and requires explicit reopen (2.4s)
+  ✓  174 [chromium] › tests/components/controls.spec.ts:166:1 › invalid field keeps keyboard focus and cannot submit until corrected (2.1s)
+  ✓  175 [chromium] › tests/components/controls.spec.ts:192:1 › shared Select Checkbox and submit keyboard semantics preserve a boolean (627ms)
+  ✓  176 [chromium] › tests/components/controls.spec.ts:212:1 › optional remove and empty string remain distinct from omitted fields (1.7s)
+  ✓  177 [chromium] › tests/components/controls.spec.ts:233:1 › nested invalid input survives sibling edits and removal releases only its error (3.5s)
+  ✓  178 [chromium] › tests/components/controls.spec.ts:254:1 › enum reference and prototype-shaped map keys use generic controls (6.0s)
+  ✓  179 [chromium] › tests/components/controls.spec.ts:274:1 › opaque input uses the shared strict lossless codec (1.8s)
+  ✓  180 [chromium] › tests/components/controls.spec.ts:290:1 › sort field is independent from filter field (5.5s)
+  ✓  181 [chromium] › tests/components/controls.spec.ts:304:1 › sort picker excludes collection fields but retains scalar fields (2.1s)
+  ✓  182 [chromium] › tests/components/controls.spec.ts:319:1 › wrapped custom codecs apply only to leaves; unknown leaves remain read-only (9.7s)
+  ✓  183 [chromium] › tests/components/controls.spec.ts:383:1 › query filters preserve wrapper provenance and edit only registered leaves (1.6s)
+ROM_TABLE_FRAME {"engine":"chromium","rows":100,"columns":16,"cells_before":1600,"cells_after_clear":0,"navigation_to_visible_frame_ms":1857.6000000238419,"clear_to_frame_ms":65.39999997615814,"api_requests":0,"scope":"Local descriptor-only browser fixture, warm asset cache, real generic ResourceTable and custom codec renderers. Navigation includes module execution and frame scheduling. DOM retention count, not heap reclamation or database/parser cost."}
+  ✓  184 [chromium] › tests/components/controls.spec.ts:399:3 › finite generic table 100 row frame and DOM retention sample (7.7s)
+ROM_TABLE_FRAME {"engine":"chromium","rows":500,"columns":16,"cells_before":8000,"cells_after_clear":0,"navigation_to_visible_frame_ms":1404.8999999761581,"clear_to_frame_ms":109.10000002384186,"api_requests":0,"scope":"Local descriptor-only browser fixture, warm asset cache, real generic ResourceTable and custom codec renderers. Navigation includes module execution and frame scheduling. DOM retention count, not heap reclamation or database/parser cost."}
+  ✓  185 [chromium] › tests/components/controls.spec.ts:399:3 › finite generic table 500 row frame and DOM retention sample (4.5s)
+  ✓  186 [chromium] › tests/components/conversation-layout.spec.ts:4:1 › keyboard users can focus and scroll noninteractive conversation content (1.3s)
+  ✘  168 [webkit] › tests/components/sortable-fields.spec.ts:357:1 › bulk chooser cancellation emits nothing and unknown stored enum remains visible (35.0s)
+  ✘  187 [chromium] › tests/components/conversation-layout.spec.ts:20:1 › hiding the focused expansion control keeps focus in the conversation (5.2s)
+(node:2616373) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2616429) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  189 [chromium] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 1280x900 (667ms)
+  ✓  190 [chromium] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 390x844 (205ms)
+  ✓  191 [chromium] › tests/components/conversation-layout.spec.ts:42:3 › composer stays reachable with long messages and history at 390x500 (289ms)
+  ✓  192 [chromium] › tests/components/conversation-layout.spec.ts:69:1 › desktop expansion and viewport changes preserve raw draft node and focus (191ms)
+  ✓  193 [chromium] › tests/components/conversation-layout.spec.ts:106:1 › caller composer handles keyboard and IME without layout owning submission (305ms)
+  ✓  188 [webkit] › tests/components/sortable-fields.spec.ts:406:1 › action and filter reuse labelled enum bulk append with exact members (2.1s)
+  ✘  194 [chromium] › tests/components/conversation-layout.spec.ts:123:1 › caller follow-latest preserves manual scrolling and resumes explicitly (1.1s)
+(node:2617023) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  196 [chromium] › tests/components/conversation-layout.spec.ts:156:1 › layout remains reachable under reduced motion (319ms)
+  ✓  197 [chromium] › tests/components/creation-recovery.spec.ts:47:1 › descriptor renewal keeps existing creation edits until explicit discard enables the current definition (915ms)
+  ✓  198 [chromium] › tests/components/creation-recovery.spec.ts:94:1 › descriptor renewal preserves exact pending creation for explicit retry (468ms)
+  ✓  199 [chromium] › tests/components/creation-recovery.spec.ts:127:1 › pending creation disables row and page navigation without an uncaught rejection (647ms)
+  ✓  200 [chromium] › tests/components/creation-recovery.spec.ts:178:1 › confirmed creation after restart removes its original draft and closes the form (715ms)
+  ✘  195 [webkit] › tests/components/sortable-fields.spec.ts:464:1 › enum labels display across wrapped collections and unknown members stay exact (5.3s)
+(node:2618266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  201 [chromium] › tests/components/creation-recovery.spec.ts:229:1 › creation restores raw ID and accepted intent explicitly after reload without automatic dispatch (1.0s)
+  ✓  203 [chromium] › tests/components/details-composition.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (213ms)
+  ✓  202 [webkit] › tests/components/sortable-fields.spec.ts:487:1 › renderer unregister lifecycle preserves newer inline registration and collections stay expanded (469ms)
+  ✓  204 [chromium] › tests/components/details-composition.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (443ms)
+  ✓  206 [chromium] › tests/components/details-composition.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (851ms)
+  ✓  205 [webkit] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening entries retains invalid draft after dialog unmount (1.0s)
+  ✓  207 [chromium] › tests/components/details-composition.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (423ms)
+  ✓  209 [chromium] › tests/components/details-composition.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (545ms)
+  ✓  208 [webkit] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening amounts retains invalid draft after dialog unmount (995ms)
+  ✓  210 [chromium] › tests/components/details-composition.spec.ts:59:1 › active close control uses the host's changed label (477ms)
+  ✓  211 [webkit] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening dictionary retains invalid draft after dialog unmount (976ms)
+  ✓  212 [chromium] › tests/components/details-composition.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (744ms)
+(node:2618949) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  213 [chromium] › tests/components/details-composition.spec.ts:81:1 › reduced motion displays complete details without content animation (334ms)
+  ✓  215 [chromium] › tests/components/direct-form.spec.ts:3:1 › current null and absent fields are distinct from an empty value (203ms)
+  ✓  216 [chromium] › tests/components/direct-form.spec.ts:14:1 › generic scalar fields fit label, control and actions in one mobile row (253ms)
+  ✓  214 [chromium] › tests/components/details.spec.ts:2:1 › selected Resource shows its current title as a direct editable field (511ms)
+  ✓  218 [chromium] › tests/components/details.spec.ts:27:1 › direct boolean control keeps false and becomes an explicit edit only when switched (254ms)
+  ✓  217 [chromium] › tests/components/direct-form.spec.ts:35:1 › choosing Set a value starts from the current value (906ms)
+  ✓  219 [chromium] › tests/components/details.spec.ts:42:1 › mobile Resource editor uses the full viewport and a concise heading (281ms)
+  ✓  221 [chromium] › tests/components/details.spec.ts:53:1 › live revision retains draft and disables stale submission until explicit reload (352ms)
+  ✓  220 [chromium] › tests/components/direct-form.spec.ts:53:1 › switching an invalid omitted field to a value resets its draft (590ms)
+  ✓  222 [chromium] › tests/components/details.spec.ts:88:1 › an open field popup cannot mutate a draft after a newer revision (294ms)
+  ✓  224 [chromium] › tests/components/details.spec.ts:117:1 › stale Resource keeps collection details readable without reopening mutation (333ms)
+  ✓  223 [chromium] › tests/components/direct-form.spec.ts:72:1 › nested null differs from an empty value in an expanded list editor (656ms)
+  ✓  225 [chromium] › tests/components/filter-workspace.spec.ts:54:1 › compact actions keep their names and the inspector toggle stays on the right (354ms)
+  ✓  226 [chromium] › tests/components/direct-form.spec.ts:105:1 › large collections remain readable when editing is bounded (207ms)
+  ✓  228 [chromium] › tests/components/direct-form.spec.ts:118:1 › descriptor change keeps existing collection available for read-only inspection (257ms)
+  ✓  227 [chromium] › tests/components/filter-workspace.spec.ts:111:1 › quick and full filters share draft without querying until Apply (743ms)
+  ✓  229 [chromium] › tests/components/direct-form.spec.ts:133:1 › direct fields distinguish unchanged, false, zero, empty, null and removal (1.3s)
+  ✓  230 [chromium] › tests/components/filter-workspace.spec.ts:166:1 › Resource draft survives filter tab, Apply and mobile inspector lifecycle (938ms)
+  ✓  231 [chromium] › tests/components/generic-presentation.spec.ts:7:1 › shared mode picker uses keyboard and keeps nullable operation controlled (442ms)
+  ✓  232 [chromium] › tests/components/filter-workspace.spec.ts:229:1 › invalid filter input survives popover close and switching editors (861ms)
+  ✓  233 [chromium] › tests/components/generic-presentation.spec.ts:26:1 › shared query picker preserves independent sort selection and closes on Escape (477ms)
+  ✓  235 [chromium] › tests/components/history-composition.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (136ms)
+  ✓  236 [chromium] › tests/components/history-composition.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (127ms)
+  ✓  237 [chromium] › tests/components/history-composition.spec.ts:38:1 › history metadata and empty text follow a locale change (187ms)
+  ✓  234 [chromium] › tests/components/filter-workspace.spec.ts:292:1 › removing an earlier rule preserves the later rule's invalid draft (502ms)
+  ✓  238 [chromium] › tests/components/history-composition.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (243ms)
+  ✓  240 [chromium] › tests/components/history-composition.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (257ms)
+  ✓  239 [chromium] › tests/components/filter-workspace.spec.ts:328:1 › descriptor change permits explicit discard of an obsolete filter (505ms)
+  ✓  241 [chromium] › tests/components/history-composition.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (262ms)
+  ✓  242 [chromium] › tests/components/filter-workspace.spec.ts:360:1 › invalid input after an applied numeric filter is marked pending (482ms)
+  ✓  243 [chromium] › tests/components/history-composition.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (247ms)
+  ✓  244 [chromium] › tests/components/login-ergonomics.spec.ts:3:1 › sign-in providers stay readable on narrow screens and preserve exact login route (164ms)
+  ✓  245 [chromium] › tests/components/presentation-ux.spec.ts:53:1 › generic Resource presentation separates human title, field label, and exact identity (304ms)
+  ✓  246 [chromium] › tests/components/login-ergonomics.spec.ts:53:1 › unavailable session presents retry without exposing workspace values (162ms)
+  ✓  248 [chromium] › tests/components/login-ergonomics.spec.ts:74:1 › primary provider auto-redirect retains explicit sign-in choice (237ms)
+  ✓  247 [chromium] › tests/components/presentation-ux.spec.ts:88:1 › mobile Resource details returns focus to the actual row opener (262ms)
+  ✓  249 [chromium] › tests/components/login-ergonomics.spec.ts:105:1 › expired session clears protected values and explains sign-in (253ms)
+  ✓  250 [chromium] › tests/components/reference-composition.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (325ms)
+  ✓  251 [chromium] › tests/components/login-ergonomics.spec.ts:172:1 › expired authenticated response retains available provider sign-in (144ms)
+  ✓  253 [chromium] › tests/components/reference-picker.spec.ts:7:1 › reference lookup is lazy and chooses an authorized title without changing exact identity or main navigation (304ms)
+  ✓  254 [chromium] › tests/components/reference-picker.spec.ts:30:1 › debounced search filters bounded candidates and Escape restores focus (510ms)
+  ✓  252 [chromium] › tests/components/reference-composition.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (941ms)
+  ✓  255 [chromium] › tests/components/reference-picker.spec.ts:68:1 › denied lookup preserves the exact ID fallback and never reports an empty successful search (223ms)
+  ✓  256 [chromium] › tests/components/reference-composition.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (206ms)
+  ✓  257 [chromium] › tests/components/reference-picker.spec.ts:88:1 › withheld titles use the shared safe fallback and undisclosed kinds do not query (188ms)
+  ✓  259 [chromium] › tests/components/reference-picker.spec.ts:109:1 › session invalidation removes delayed and selected descriptions without erasing an exact ID (936ms)
+  ✓  258 [chromium] › tests/components/reference-composition.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.1s)
+  ✓  260 [chromium] › tests/components/reference-picker.spec.ts:130:1 › without lookup context the supported reference stays an exact ID editor (134ms)
+  ✓  261 [chromium] › tests/components/reference-composition.spec.ts:82:3 › Deny response leaves manual exact ID entry available (223ms)
+  ✓  262 [chromium] › tests/components/reference-picker.spec.ts:143:1 › the picker remains inside a narrow mobile viewport (199ms)
+  ✓  263 [chromium] › tests/components/reference-composition.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (207ms)
+  ✓  264 [chromium] › tests/components/reference-picker.spec.ts:164:1 › search requests are capped per open picker while exact ID editing remains available (2.4s)
+  ✓  265 [chromium] › tests/components/reference-composition.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.5s)
+  ✓  267 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar text (139ms)
+  ✓  266 [chromium] › tests/components/reference-picker.spec.ts:197:1 › selected authorized descriptions disappear with the session while the exact ID stays intact (340ms)
+  ✓  268 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar zero (132ms)
+  ✓  269 [chromium] › tests/components/reference-picker.spec.ts:215:1 › empty reference input reports the canonical field path without replacing the last value (133ms)
+  ✓  270 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Scalar false (140ms)
+  ✓  272 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Explicit null (125ms)
+  ✓  273 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Missing optional (137ms)
+  ✓  271 [chromium] › tests/components/reference-picker.spec.ts:224:1 › a denied relookup retires the previously selected title and preserves the ID (420ms)
+  ✓  274 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Empty codec list (133ms)
+  ✓  276 [chromium] › tests/components/renderer-regressions.spec.ts:14:3 › generic display exposes visible text for Empty codec map (125ms)
+  ✓  275 [chromium] › tests/components/right-inspector.spec.ts:3:1 › right inspector toggles by keyboard and preserves filter drafts (265ms)
+  ✓  278 [chromium] › tests/components/right-inspector.spec.ts:52:1 › right mobile Sheet restores toggle focus and preserves Resource draft across resize (281ms)
+  ✓  279 [chromium] › tests/components/selection-layout-composition.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (159ms)
+  ✓  277 [chromium] › tests/components/renderer-regressions.spec.ts:40:1 › mobile nested Select remains usable after scrolling its Sheet (586ms)
+  ✓  280 [chromium] › tests/components/selection-layout-composition.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (227ms)
+  ✓  282 [chromium] › tests/components/selection-layout-composition.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (230ms)
+  ✓  281 [chromium] › tests/components/renderer-regressions.spec.ts:76:1 › mobile nested Select dismisses by ordinary outside click without closing its Sheet (555ms)
+  ✓  283 [chromium] › tests/components/selection-layout-composition.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (208ms)
+  ✓  285 [chromium] › tests/components/selection-layout-composition.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (310ms)
+  ✓  284 [chromium] › tests/components/renderer-regressions.spec.ts:103:1 › mobile Escape dismisses Select before Sheet and restores toolbar focus (445ms)
+  ✓  287 [chromium] › tests/components/semantic-fields.spec.ts:3:1 › standard fields provide shared compact controls without application renderers (229ms)
+  ✓  286 [chromium] › tests/components/selection-layout-composition.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (346ms)
+  ✓  289 [chromium] › tests/components/selection-layout-composition.spec.ts:164:1 › disabled host controls cannot dispatch (163ms)
+  ✓  288 [chromium] › tests/components/semantic-fields.spec.ts:42:1 › invalid semantic drafts block submission and retain the user's exact input (209ms)
+  ✓  290 [chromium] › tests/components/selection-layout-composition.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (308ms)
+  ✓  291 [chromium] › tests/components/semantic-fields.spec.ts:67:1 › expanded document preserves numeric tokens and multiline source (410ms)
+  ✓  292 [chromium] › tests/components/selection-layout-composition.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (410ms)
+  ✓  293 [chromium] › tests/components/semantic-fields.spec.ts:101:1 › read-only semantic details expose the complete exact value (401ms)
+  ✓  294 [chromium] › tests/components/selection-layout-composition.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (248ms)
+  ✓  295 [chromium] › tests/components/semantic-fields.spec.ts:120:1 › compact measurement keeps its magnitude visible beside the unit (181ms)
+  ✓  296 [chromium] › tests/components/settings-presentation.spec.ts:72:1 › Settings groups disclosed plugin Resources and uses the authorized patch path (677ms)
+  ✓  298 [chromium] › tests/components/settings-presentation.spec.ts:120:1 › Settings exposes no group when discovery discloses no settings metadata (243ms)
+  ✓  297 [chromium] › tests/components/shell-presentation.spec.ts:3:1 › mobile sidebar opens, selects a descriptor and returns space to the page (1.2s)
+  ✓  300 [chromium] › tests/components/ui-follow-latest.spec.ts:22:1 › follow-latest preserves manual reading and supports explicit resume (212ms)
+  ✓  301 [chromium] › tests/components/ui-follow-latest.spec.ts:48:1 › follow-latest uses actual frame and resized viewport without losing ownership (331ms)
+  ✓  299 [chromium] › tests/components/sortable-fields.spec.ts:10:1 › manual reorder keeps invalid duplicate row draft and blocks resource submission (902ms)
+  ✓  302 [chromium] › tests/components/ui-follow-latest.spec.ts:70:1 › disposal suppresses a queued automatic scroll in the real browser (129ms)
+  ✓  304 [chromium] › tests/components/ui-follow-latest.spec.ts:90:1 › small manual upward movement requires explicit resume (137ms)
+  ✓  305 [chromium] › tests/components/ui-follow-latest.spec.ts:123:1 › a larger viewport can clamp the position without disabling following (107ms)
+  ✓  303 [chromium] › tests/components/sortable-fields.spec.ts:40:1 › keyboard drag submits only canonical values and retains duplicate identity (477ms)
+  ✓  306 [chromium] › tests/components/work-presentation.spec.ts:79:1 › Work loads readable snapshots automatically and applies operator filters (425ms)
+  ✓  308 [chromium] › tests/components/work-presentation.spec.ts:111:1 › Work inspector close preserves the exact recovery retry request (547ms)
+  ✓  309 [chromium] › tests/components/work-presentation.spec.ts:144:1 › mobile Work details returns focus to the actual row opener (327ms)
+  ✓  307 [chromium] › tests/components/sortable-fields.spec.ts:63:1 › pointer reorder keeps invalid drafts attached and removal clears row error (1.2s)
+  ✓  310 [chromium] › tests/components/sortable-fields.spec.ts:98:1 › readonly and bounded lists expose no drag or mutation controls (191ms)
+  ✓  311 [chromium] › tests/components/sortable-fields.spec.ts:114:1 › codec row draft survives pointer replacement without losing exact decimal source (1.1s)
+  ✓  312 [chromium] › tests/components/sortable-fields.spec.ts:152:1 › action inputs use the same canonical list reorder (804ms)
+  ✓  313 [chromium] › tests/components/sortable-fields.spec.ts:177:1 › filter candidates retain invalid row state after reorder (241ms)
+  ✓  314 [chromium] › tests/components/sortable-fields.spec.ts:200:1 › touch handle reorders a duplicate row without serializing drag metadata (1.7s)
+  ✓  315 [chromium] › tests/components/sortable-fields.spec.ts:252:1 › closing a keyboard drag releases the action and preserves the form candidate (859ms)
+  ✓  316 [chromium] › tests/components/sortable-fields.spec.ts:279:1 › prototype-shaped map keys keep invalid drafts local to their editor (461ms)
+  ✓  317 [chromium] › tests/components/sortable-fields.spec.ts:314:1 › labelled enum bulk append preserves duplicates and canonical ordered values (828ms)
+  ✓  318 [chromium] › tests/components/sortable-fields.spec.ts:357:1 › bulk chooser cancellation emits nothing and unknown stored enum remains visible (1.0s)
+  ✓  319 [chromium] › tests/components/sortable-fields.spec.ts:406:1 › action and filter reuse labelled enum bulk append with exact members (1.8s)
+  ✓  320 [chromium] › tests/components/sortable-fields.spec.ts:464:1 › enum labels display across wrapped collections and unknown members stay exact (465ms)
+  ✓  321 [chromium] › tests/components/sortable-fields.spec.ts:487:1 › renderer unregister lifecycle preserves newer inline registration and collections stay expanded (190ms)
+  ✓  322 [chromium] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening entries retains invalid draft after dialog unmount (792ms)
+  ✓  323 [chromium] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening amounts retains invalid draft after dialog unmount (803ms)
+  ✓  324 [chromium] › tests/components/sortable-fields.spec.ts:521:3 › closing and reopening dictionary retains invalid draft after dialog unmount (897ms)
+
+
+  1) [webkit] › tests/components/sortable-fields.spec.ts:357:1 › bulk chooser cancellation emits nothing and unknown stored enum remains visible 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('[role="listbox"][data-state="open"]').locator('[role="option"][data-rom-select-value="queued"]')
+        - locator resolved to <div id="bits-c81" role="option" data-value="0" data-select-item="" data-highlighted="" data-label="Waiting" data-slot="select-item" data-rom-select-value="queued" class="focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 relative flex w-full cursor-default items-center outline-hidden select-none dat…>…</div>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying click action
+        - waiting 20ms
+
+
+       at select-value.ts:12
+
+      10 |   await popup
+      11 |     .locator(`[role="option"][data-rom-select-value="${escaped}"]`)
+    > 12 |     .click();
+         |      ^
+      13 | }
+      14 |
+        at selectValue (/root/ROM/studio/tests/components/select-value.ts:12:6)
+        at /root/ROM/studio/tests/components/sortable-fields.spec.ts:397:3
+
+    Error Context: test-results/sortable-fields-bulk-choos-99140-stored-enum-remains-visible-webkit/error-context.md
+
+  2) [webkit] › tests/components/sortable-fields.spec.ts:464:1 › enum labels display across wrapped collections and unknown members stay exact 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('region', { name: 'Nested enum display' })
+    Expected: "[{first: Waiting,second: Active,unknown: retired}]"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('region', { name: 'Nested enum display' }) with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Nested enum display' })
+
+
+      468 |   await expect(
+      469 |     page.getByRole("region", { name: "Nested enum display" }),
+    > 470 |   ).toHaveText("[{first: Waiting,second: Active,unknown: retired}]");
+          |     ^
+      471 |   const resource = page.getByRole("region", { name: "Resource editor" });
+      472 |   await expect(
+      473 |     resource.getByLabel("phase value", { exact: true }),
+        at /root/ROM/studio/tests/components/sortable-fields.spec.ts:470:5
+
+    Error Context: test-results/sortable-fields-enum-label-ee418--unknown-members-stay-exact-webkit/error-context.md
+
+  3) [chromium] › tests/components/conversation-layout.spec.ts:20:1 › hiding the focused expansion control keeps focus in the conversation 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('region', { name: 'Conversation', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('region', { name: 'Conversation', exact: true }) with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Conversation', exact: true })
+        13 × locator resolved to <section tabindex="-1" aria-label="Conversation" class="conversation-layout rounded-lg border bg-card text-card-foreground svelte-1ut4bge">…</section>
+           - unexpected value "inactive"
+
+
+      29 |   await expect(
+      30 |     page.getByRole("region", { name: "Conversation", exact: true }),
+    > 31 |   ).toBeFocused();
+         |     ^
+      32 |   await expect(
+      33 |     page.getByRole("textbox", { name: "Message", exact: true }),
+      34 |   ).toBeInViewport({ ratio: 1 });
+        at /root/ROM/studio/tests/components/conversation-layout.spec.ts:31:5
+
+    Error Context: test-results/conversation-layout-hiding-f0dfa-s-focus-in-the-conversation-chromium/error-context.md
+
+  4) [chromium] › tests/components/conversation-layout.spec.ts:123:1 › caller follow-latest preserves manual scrolling and resumes explicitly 
+
+    Error: page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:43173/rom-studio/tests/components/conversation-layout.html
+    Call log:
+      - navigating to "http://127.0.0.1:43173/rom-studio/tests/components/conversation-layout.html", waiting until "load"
+
+
+      124 |   page,
+      125 | }) => {
+    > 126 |   await page.goto(fixture);
+          |              ^
+      127 |   const body = page.locator("[data-rom-conversation-body]");
+      128 |   await expect
+      129 |     .poll(() => body.evaluate((element) => element.scrollTop))
+        at /root/ROM/studio/tests/components/conversation-layout.spec.ts:126:14
+
+    Error Context: test-results/conversation-layout-caller-e1252-ling-and-resumes-explicitly-chromium/error-context.md
+
+  4 failed
+    [webkit] › tests/components/sortable-fields.spec.ts:357:1 › bulk chooser cancellation emits nothing and unknown stored enum remains visible 
+    [webkit] › tests/components/sortable-fields.spec.ts:464:1 › enum labels display across wrapped collections and unknown members stay exact 
+    [chromium] › tests/components/conversation-layout.spec.ts:20:1 › hiding the focused expansion control keeps focus in the conversation 
+    [chromium] › tests/components/conversation-layout.spec.ts:123:1 › caller follow-latest preserves manual scrolling and resumes explicitly 
+  1 skipped
+  319 passed (2.9m)
+ ELIFECYCLE  Command failed with exit code 1.

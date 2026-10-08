@@ -21,17 +21,17 @@ Files: `src/ui.ts`, `src/ui-components.ts`, focused modules and consumer cases.
 
 - [x] Inventory dependencies for every helper and composition.
 - [x] Extract generic helpers and compositions with their existing behavioral regressions.
-- [ ] Define a ROM-owned adapter for descriptor and codec dependent reference editing.
+- [x] Define a ROM-owned adapter for descriptor and codec dependent reference editing.
 - [x] Verify disposal, focus, async cancellation and exact ID preservation.
 
 ## Task 3: ROM integration
 
 Files in ROM: Studio manifests, lockfile, compatibility facades, styles and release packaging scripts.
 
-- [ ] Coordinate source ownership with the active ROM release work.
-- [ ] Replace duplicate primitive implementations with stable public re-exports.
-- [ ] Run affected checks, installed consumers and the complete local verifier.
-- [ ] Record package identity, migration guidance and remaining release limits.
+- [x] Coordinate source ownership with the active ROM release work.
+- [x] Replace duplicate primitive implementations with stable public re-exports.
+- [x] Run affected checks, installed consumers and the complete local verifier.
+- [x] Record package identity, migration guidance and remaining release limits.
 
 ## Package manager and installed Node support
 
@@ -39,3 +39,8 @@ User instruction: use pnpm. Both projects pin pnpm 10.30.0 and maintain independ
 Preserve the previous npm locks as historical evidence.
 Compile the headless entry to JavaScript and declarations before packing.
 Test the installed headless entry in plain Node, without type stripping or a checkout link.
+
+## Completed integration
+
+See [ROM integration evidence](rom-integration.md) for the applied source manifest, source identities and final checks.
+The ROM checkout retains concurrent journal and ConversationLayout changes.

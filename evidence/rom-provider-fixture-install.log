@@ -1,0 +1,10 @@
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +40
+++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 40, reused 2, downloaded 38, added 40, done
+
+dependencies:
++ oidc-provider 9.12.2
+
+Done in 773ms using pnpm v10.30.0

@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: shared installation retains portable module IDs and exact licenses
+ok 1 - shared installation retains portable module IDs and exact licenses
+  ---
+  duration_ms: 18.256356
+  type: 'test'
+  ...
+# Subtest: shared installation still rejects missing licenses, changed identity and external modules
+ok 2 - shared installation still rejects missing licenses, changed identity and external modules
+  ---
+  duration_ms: 10.807846
+  type: 'test'
+  ...
+# Subtest: package links cannot extend the configured installation boundary
+ok 3 - package links cannot extend the configured installation boundary
+  ---
+  duration_ms: 4.016655
+  type: 'test'
+  ...
+# Subtest: emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+ok 4 - emitted runtime ownership retains exact license and notice bytes without requiring SPDX
+  ---
+  duration_ms: 2.594726
+  type: 'test'
+  ...
+# Subtest: build refuses missing full license text, unknown virtual code, or an untrusted package owner
+ok 5 - build refuses missing full license text, unknown virtual code, or an untrusted package owner
+  ---
+  duration_ms: 8.603352
+  type: 'test'
+  ...
+# Subtest: asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+ok 6 - asset admission fails closed on missing inventory, missing or changed notices, and uncovered JavaScript
+  ---
+  duration_ms: 3.729319
+  type: 'test'
+  ...
+# Subtest: inventory rejects missing owner bindings and malformed notice metadata before admission
+ok 7 - inventory rejects missing owner bindings and malformed notice metadata before admission
+  ---
+  duration_ms: 53.22152
+  type: 'test'
+  ...
+# Subtest: distinct transformed module IDs preserve query suffixes in the emitted inventory
+ok 8 - distinct transformed module IDs preserve query suffixes in the emitted inventory
+  ---
+  duration_ms: 10.169515
+  type: 'test'
+  ...
+# Subtest: unclassified JavaScript assets cannot bypass emitted runtime provenance
+ok 9 - unclassified JavaScript assets cannot bypass emitted runtime provenance
+  ---
+  duration_ms: 2.234361
+  type: 'test'
+  ...
+# Subtest: copied responsive hook and imported CSS retain their actual owners
+ok 10 - copied responsive hook and imported CSS retain their actual owners
+  ---
+  duration_ms: 4.472741
+  type: 'test'
+  ...
+# Subtest: emitted SVAR modules retain the original MIT notice with their pinned source commit
+ok 11 - emitted SVAR modules retain the original MIT notice with their pinned source commit
+  ---
+  duration_ms: 2.617148
+  type: 'test'
+  ...
+# Subtest: inventory rejects emitted SVAR code stripped of its required owner
+ok 12 - inventory rejects emitted SVAR code stripped of its required owner
+  ---
+  duration_ms: 2.355591
+  type: 'test'
+  ...
+# Subtest: SVAR owner cannot silently change its source commit or retained license profile
+ok 13 - SVAR owner cannot silently change its source commit or retained license profile
+  ---
+  duration_ms: 7.152608
+  type: 'test'
+  ...
+# Subtest: runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+ok 14 - runtime polyfill ownership resolves rolldown through the installed Vite dependency tree
+  ---
+  duration_ms: 9.755528
+  type: 'test'
+  ...
+# Subtest: ROM UI styles retain their nested shadcn and animation owners
+ok 15 - ROM UI styles retain their nested shadcn and animation owners
+  ---
+  duration_ms: 3.765678
+  type: 'test'
+  ...
+# Subtest: shared installation retains portable imported stylesheet IDs
+ok 16 - shared installation retains portable imported stylesheet IDs
+  ---
+  duration_ms: 2.975389
+  type: 'test'
+  ...
+# Subtest: pnpm version checks preserve exact versions when the hoisted dependency layout changes
+ok 17 - pnpm version checks preserve exact versions when the hoisted dependency layout changes
+  ---
+  duration_ms: 14.148288
+  type: 'test'
+  ...
+# Subtest: pnpm version checks reject missing, unexpected and altered installed versions
+ok 18 - pnpm version checks reject missing, unexpected and altered installed versions
+  ---
+  duration_ms: 1.626247
+  type: 'test'
+  ...
+# Subtest: pnpm version checks reject a dependency linked outside the consumer installation
+ok 19 - pnpm version checks reject a dependency linked outside the consumer installation
+  ---
+  duration_ms: 0.685101
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 205.192818

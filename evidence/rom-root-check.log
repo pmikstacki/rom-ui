@@ -1,0 +1,25 @@
+
+> rom-studio@0.0.3 check /root/ROM/studio
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/ROM/studio
+Getting Svelte diagnostics...
+
+/root/ROM/studio/src/lib/ui/components/ConversationLayout.svelte:73:3
+Warn: noninteractive element cannot have nonnegative tabIndex value
+https://svelte.dev/e/a11y_no_noninteractive_tabindex (svelte)
+  {/if}
+  <div
+    bind:this={bodyRef}
+    data-rom-conversation-body
+    tabindex="0"
+    role="region"
+    aria-label={bodyLabel}
+    class="layout-body p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
+  >
+    {@render body()}
+  </div>
+  <footer class="layout-footer border-t p-3">{@render footer()}</footer>
+
+====================================
+svelte-check found 0 errors and 1 warning in 1 file
