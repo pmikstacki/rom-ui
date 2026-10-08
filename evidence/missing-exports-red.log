@@ -1,0 +1,36 @@
+
+> rom-ui-consumer@0.0.0 build
+> vite build
+
+4:39:41 PM [vite-plugin-svelte] no Svelte config found at /root/rom-ui/tests/consumer - using default configuration.
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 110 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                  0.35 kB │ gzip:  0.25 kB
+dist/assets/index-Dy160qv2.css   0.42 kB │ gzip:  0.24 kB
+dist/assets/index-CVETDr3y.js   28.11 kB │ gzip: 11.11 kB
+
+✗ Build failed in 423ms
+error during build:
+Build failed with 1 error:
+
+Error: [vite]: Rolldown failed to resolve import "rom-ui/styles" from "/root/rom-ui/tests/consumer/src/main.ts".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rolldownOptions.external`
+    at viteLog (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34583:57)
+    at onRollupLog (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34616:7)
+    at onLog (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34375:4)
+    at file:///root/rom-ui/tests/consumer/node_modules/rolldown/dist/shared/create-bundler-option-2b9QJDoZ.mjs:48:26
+    at logger (file:///root/rom-ui/tests/consumer/node_modules/rolldown/dist/shared/create-bundler-option-2b9QJDoZ.mjs:39:3)
+    at aggregateBindingErrorsIntoJsError (file:///root/rom-ui/tests/consumer/node_modules/rolldown/dist/shared/error-Dsqzw0Oa.mjs:49:18)
+    at unwrapBindingResult (file:///root/rom-ui/tests/consumer/node_modules/rolldown/dist/shared/error-Dsqzw0Oa.mjs:19:128)
+    at #build (file:///root/rom-ui/tests/consumer/node_modules/rolldown/dist/shared/rolldown-D_vNlorD.mjs:133:34)
+    at async buildEnvironment (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34490:66)
+    at async Object.build (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34911:19)
+    at async Object.buildApp (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/chunks/node.js:34908:153)
+    at async CAC.<anonymous> (file:///root/rom-ui/tests/consumer/node_modules/vite/dist/node/cli.js:780:3) {
+  errors: [Getter/Setter]
+}

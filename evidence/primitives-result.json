@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-08",
+  "stage": "primitive extraction candidate",
+  "command": "ROM_CHROMIUM_PATH=/root/.nix-profile/bin/chromium ROM_WEBKIT_EXECUTABLE=/var/tmp/rom-studio-webkit-2359/pw_run.sh ./scripts/check",
+  "exitCode": 0,
+  "typeErrors": 0,
+  "typeWarnings": 0,
+  "browserPassed": 6,
+  "browserSkipped": 0,
+  "browserEngines": [
+    "Chromium",
+    "WebKit 2359"
+  ],
+  "source": {
+    "src/controls.ts": "aa667bb505fa4fc00ad59845f3199ef02aa9d1d6eb0be5c2ca11d009d831b620",
+    "src/lib/components/ui/LICENSE.md": "230594c9dedb06fb0759381a520b449c1b47b0f63b95fc88ef9d7e851e2540a9",
+    "src/lib/components/ui/button/button.svelte": "8e76cc363e99636b3e84da0d8a690235efe590649c401fda93b1d7a0428fb80b",
+    "src/lib/components/ui/button/index.ts": "0f6b6f040d92b4153821d3f9b4d6b9cbc567247e4fda913e64c1d0fcc4a2f386",
+    "src/lib/components/ui/checkbox/checkbox.svelte": "99989d0426edc28ea0bdee65b915ac45071220045eb8f95769259b7c3e79e03f",
+    "src/lib/components/ui/checkbox/index.ts": "39b322ab4a26c63f60c64588ff4b18552c8b596e8472b9261fb68429b8cff1d6",
+    "src/lib/components/ui/input/index.ts": "4e0ad69d49a27194c7f3dfd0cdd5933ee13fc40cc13a77138b547d300701d390",
+    "src/lib/components/ui/input/input.svelte": "6a06a8241d2e1b1adfda1550c48b01b0e37a2b02db65755f163200ddd04aef23",
+    "src/lib/components/ui/label/index.ts": "ea17621b03066fc6c0ab811ec97aac0cb2de4b504c0a1fc3f480c8fc4bef12f1",
+    "src/lib/components/ui/label/label.svelte": "3d7a85f07bd55c5960d6c932c8d81f272f3b1ef3f668dcd3a1bba0b8e809385c",
+    "src/lib/components/ui/native-select/index.ts": "5b4a2b59e247be89e9586dd8e82e3e6578698be5ca03e5332d70383646ff201a",
+    "src/lib/components/ui/native-select/native-select-opt-group.svelte": "abecee2dd243a32a8a1c45119d75c6d63ce1a52d84a9c91c6fcd6e7c7fec26fb",
+    "src/lib/components/ui/native-select/native-select-option.svelte": "421e6b51e7944ee6ec2875748265a83112bec8b02987dd405f7208a11f537d19",
+    "src/lib/components/ui/native-select/native-select.svelte": "e547f37247b70dd34933fd732d5225247337392aec2abf24b3fb0ea0446adb2b",
+    "src/lib/components/ui/slider/index.ts": "0e2bda41f2c93303b7c87ddf67ff6e1d05ecfdfb3e834fbf5707ba6961eeb4d5",
+    "src/lib/components/ui/slider/slider.svelte": "5adbf19d6546e02d9e834dc15dd5976115413f3d55f71f11a6f23fc1a378e29a",
+    "src/lib/components/ui/textarea/index.ts": "3b5f25dfd5d1d9b5305f613f7544a7e39362cd4b0a9c3250414cd5ff02e45398",
+    "src/lib/components/ui/textarea/textarea.svelte": "dde89bc4a47d864e6a1b011a26600d491df89d800247617b9adc4255178c5c1e",
+    "src/lib/components/ui/utils.ts": "dd7655a5da820337bc13825305885e2aedc6649dfd1149087550de6a9b334472"
+  },
+  "consumerLockSha256": "dae2605783d36650812a1c5eb7ff046787ff25821b69d00f4fcab2b78b7f495d",
+  "limits": [
+    "Authoring checkout provenance; npm release not published",
+    "ROM Studio compatibility integration not performed",
+    "Generic UI compositions and ROM-dependent adapters remain open"
+  ]
+}

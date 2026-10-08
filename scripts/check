@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+npm ci --ignore-scripts
+npm run check
+npm pack --ignore-scripts --quiet
+node scripts/prepare-consumer.mjs
+cd tests/consumer
+npm ci --ignore-scripts
+if test -L node_modules/rom-ui; then
+  echo 'Installed consumer must not link to the source checkout' >&2
+  exit 1
+fi
+npm run check
+npm run build
+npm exec playwright test
