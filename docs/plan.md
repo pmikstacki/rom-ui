@@ -32,3 +32,10 @@ Files in ROM: Studio manifests, lockfile, compatibility facades, styles and rele
 - [ ] Replace duplicate primitive implementations with stable public re-exports.
 - [ ] Run affected checks, installed consumers and the complete local verifier.
 - [ ] Record package identity, migration guidance and remaining release limits.
+
+## Package manager and installed Node support
+
+User instruction: use pnpm. Both projects pin pnpm 10.30.0 and maintain independent frozen pnpm locks.
+Preserve the previous npm locks as historical evidence.
+Compile the headless entry to JavaScript and declarations before packing.
+Test the installed headless entry in plain Node, without type stripping or a checkout link.

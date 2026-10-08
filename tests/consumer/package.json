@@ -8,7 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "rom-ui": "file:../../rom-ui-90934801e6318172b571d7240d2a376a40a3ad80f25d77d12960826a9e0e4657.tgz",
+    "rom-ui": "file:../../rom-ui-0140385db7770b5ff9ed35d392883ed6c9eb5a1e95e38fb729e56ee6a2f09221.tgz",
     "svelte": "5.57.1"
   },
   "devDependencies": {
@@ -21,7 +21,10 @@
     "typescript": "6.0.3",
     "vite": "8.3.2"
   },
-  "overrides": {
-    "cookie": "0.7.2"
+  "packageManager": "pnpm@10.30.0",
+  "pnpm": {
+    "overrides": {
+      "cookie": "0.7.2"
+    }
   }
 }

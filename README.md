@@ -14,10 +14,11 @@ See [composition contracts](docs/compositions.md).
 This is an extraction candidate, not a published npm release.
 ROM Studio compatibility integration remains open.
 
-Run `npm ci`, then `npm run check` and `npm run test:unit`.
+Use the pinned pnpm 10.30.0 through Corepack.
+Run `corepack pnpm install --frozen-lockfile`, then `corepack pnpm run build`, `corepack pnpm run check` and `corepack pnpm run test:unit`.
 Run `./scripts/check` for the packed consumer and browser checks.
 Set `ROM_CHROMIUM_PATH` and `ROM_WEBKIT_EXECUTABLE` when using external browser executables.
 
-After a reviewed source change, run `npm pack --ignore-scripts` and `node scripts/update-consumer.mjs`.
-Update the consumer lock with `npm install --package-lock-only --ignore-scripts --prefix tests/consumer`.
+After a reviewed source change, run `corepack pnpm pack` and `node scripts/update-consumer.mjs`.
+Update the consumer lock with `corepack pnpm --dir tests/consumer install --lockfile-only --ignore-scripts`.
 The verifier rejects a packed candidate that differs from the pinned consumer manifest.

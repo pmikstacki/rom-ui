@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext",
+    "strict": true, "skipLibCheck": true, "verbatimModuleSyntax": true,
+    "rewriteRelativeImportExtensions": true, "declaration": true,
+    "rootDir": "src", "outDir": "dist/headless"
+  },
+  "include": ["src/ui.ts", "src/lib/ui/**/*.ts"]
+}

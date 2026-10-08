@@ -8,8 +8,8 @@ A token does not grant authorization. Recheck current authority before disclosin
 
 Import components from `rom-ui/ui/components` and headless helpers from `rom-ui/ui`.
 The headless entry imports no Svelte components, ROM client, codec, authentication or recovery module.
-The package ships TypeScript and Svelte source for application bundlers.
-Direct Node execution of installed TypeScript requires a compatible host loader.
+The component entries ship TypeScript and Svelte source for application bundlers.
+The headless entry ships JavaScript and type declarations for direct Node use.
 
 ResponsiveDetails retains one mounted editor across desktop and mobile transitions.
 HistoryList uses exact IDs and host-confirmed selection.

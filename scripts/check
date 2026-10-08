@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-npm ci --ignore-scripts
-npm run check
-npm run test:unit
-npm pack --ignore-scripts --quiet
+corepack pnpm install --frozen-lockfile --ignore-scripts
+corepack pnpm run build
+corepack pnpm run check
+corepack pnpm run test:unit
+corepack pnpm pack --pack-destination .
 node scripts/prepare-consumer.mjs
 cd tests/consumer
-npm ci --ignore-scripts
-if test -L node_modules/rom-ui; then
-  echo 'Installed consumer must not link to the source checkout' >&2
-  exit 1
-fi
-npm run check
-npm run build
-npm exec playwright test
+corepack pnpm install --frozen-lockfile --ignore-scripts
+node ../../scripts/verify-installed-package.mjs
+corepack pnpm run check
+corepack pnpm run build
+node --test tests/headless.test.mjs
+corepack pnpm exec playwright test

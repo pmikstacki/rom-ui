@@ -1,0 +1,16 @@
+(node:2284897) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:internal/modules/typescript:143
+    throw new ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING(filename);
+          ^
+
+Error [ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING]: Stripping types is currently unsupported for files under node_modules, for "file:///root/rom-ui/tests/consumer/node_modules/rom-ui/src/ui.ts"
+    at stripTypeScriptModuleTypes (node:internal/modules/typescript:143:11)
+    at ModuleLoader.<anonymous> (node:internal/modules/esm/translators:471:16)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19) {
+  code: 'ERR_UNSUPPORTED_NODE_MODULES_TYPE_STRIPPING'
+}
+
+Node.js v22.16.0
