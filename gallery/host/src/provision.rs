@@ -118,6 +118,24 @@ pub async fn provision(
         )
         .await?;
         let workflow_id = format!("{}-workflow", visitor.id);
+        let conversation_id = format!("{}-chat", visitor.id);
+        if let Some(row) =
+            storage.load(&key::<crate::conversation::Conversation>(&conversation_id))?
+            && let Some(value) = row.value
+            && crate::conversation::Conversation::decode(value)?.owner != visitor.subject
+        {
+            return Err(invalid());
+        }
+        seed(
+            runtime,
+            storage,
+            &conversation_id,
+            crate::conversation::Conversation::example(
+                &visitor.subject,
+                &format!("{}'s conversation", visitor.label),
+            ),
+        )
+        .await?;
         let map_id = format!("{}-map", visitor.id);
         if let Some(row) = storage.load(&key::<crate::map_scene::MapScene>(&map_id))?
             && let Some(value) = row.value

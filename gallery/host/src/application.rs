@@ -20,6 +20,33 @@ fn owned(actor: &Actor, _: Access, sample: &Sample) -> bool {
 fn gallery_builder() -> Builder {
     Runtime::builder()
         .resource(
+            crate::conversation::Conversation::definition()
+                .policy(|actor, _, conversation| {
+                    bootstrap(actor)
+                        || (actor.authority == "gallery-visitors"
+                            && conversation.owner == actor.subject)
+                })
+                .field_policy(|actor, access, field, _| {
+                    matches!(access, Access::Read)
+                        || bootstrap(actor)
+                        || matches!(field, "name" | "messages")
+                })
+                .validate_transition(|actor, before, after| {
+                    if bootstrap(actor) {
+                        if let Some(conversation) = after {
+                            conversation.validate()?;
+                        }
+                        return Ok(());
+                    }
+                    let (Some(before), Some(after)) = (before, after) else {
+                        return Err(rom::Error::Denied);
+                    };
+                    after.validate_append(before)
+                })
+                .action(crate::conversation::SEND)
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
+        .resource(
             crate::map_scene::MapScene::definition()
                 .policy(|actor, _, scene| {
                     bootstrap(actor)

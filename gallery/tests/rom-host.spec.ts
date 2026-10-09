@@ -18,7 +18,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
     return { status: response.status, body: await response.json() };
   });
   expect(discovered.status).toBe(200);
-  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind).sort()).toEqual(["gallery-fields", "gallery-maps", "gallery-samples", "gallery-tasks", "gallery-workflows"]);
+  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind).sort()).toEqual(["gallery-conversations", "gallery-fields", "gallery-maps", "gallery-samples", "gallery-tasks", "gallery-workflows"]);
 
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await expect(page.getByRole("button", { name: "bob-sample", exact: true })).toHaveCount(0);

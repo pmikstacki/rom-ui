@@ -1,0 +1,31 @@
+{
+  "scope": "ROM-backed gallery conversation using installed shared chat controls and public ROM session facade",
+  "fullVerifier": {
+    "exitCode": 0,
+    "log": "/var/tmp/rom-ui-conversation-full-verifier.log",
+    "consumerBrowserPassed": 140,
+    "galleryBrowserPassed": 110,
+    "hostTests": 13
+  },
+  "actualHostBrowser": {
+    "passed": 10,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "log": "/var/tmp/rom-gallery-conversation-complete-host-browser.log"
+  },
+  "review": {
+    "materialFindingsRemaining": 0,
+    "scope": "restore/retry serialization and owned submission confirmation"
+  },
+  "limits": [
+    "No AI model is invoked.",
+    "Production authenticated acceptance requires an approved gallery account mapping."
+  ],
+  "recovery": [
+    "Two lost acknowledgements retry the same command and persist one message.",
+    "Composer clears only after its owned submission is confirmed.",
+    "Restore and retry share a synchronous activity barrier."
+  ]
+}
