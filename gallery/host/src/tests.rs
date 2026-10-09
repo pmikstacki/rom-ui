@@ -287,3 +287,60 @@ async fn rich_fields_keep_exact_values_and_visitor_ownership() {
     ));
     runtime.shutdown().await.unwrap();
 }
+
+#[tokio::test]
+async fn task_actions_preserve_ownership_and_original_revision() {
+    use crate::tasks::{CANCEL, RETRY, Task};
+    let storage = Arc::new(rom_sqlite::Sqlite::open(":memory:").unwrap());
+    let runtime = build_runtime(storage).unwrap();
+    let alice = Actor::trusted("gallery-visitors", "alice");
+    let bob = Actor::trusted("gallery-visitors", "bob");
+    runtime
+        .execute(
+            &alice,
+            Command::create("alice-task", Task::example("alice")).idempotency("task-create"),
+        )
+        .await
+        .unwrap();
+    assert!(matches!(
+        runtime
+            .execute(
+                &bob,
+                Command::action("alice-task", CANCEL, ())
+                    .at_revision(1)
+                    .idempotency("bob-cancel")
+            )
+            .await,
+        Err(Error::Denied)
+    ));
+    runtime
+        .execute(
+            &alice,
+            Command::action("alice-task", CANCEL, ())
+                .at_revision(1)
+                .idempotency("alice-cancel"),
+        )
+        .await
+        .unwrap();
+    assert!(matches!(
+        runtime
+            .execute(
+                &alice,
+                Command::action("alice-task", RETRY, ())
+                    .at_revision(1)
+                    .idempotency("stale-retry")
+            )
+            .await,
+        Err(Error::Conflict)
+    ));
+    runtime
+        .execute(
+            &alice,
+            Command::action("alice-task", RETRY, ())
+                .at_revision(2)
+                .idempotency("alice-retry"),
+        )
+        .await
+        .unwrap();
+    runtime.shutdown().await.unwrap();
+}

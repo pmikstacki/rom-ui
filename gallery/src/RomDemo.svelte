@@ -10,6 +10,7 @@
   import type { WireValue, ResourceDescriptor } from "rom-studio/client";
   import Showcase from "./Showcase.svelte";
   import RomResourceForm from "./RomResourceForm.svelte";
+  import RomTaskActivity from "./RomTaskActivity.svelte";
   import { createRomConnection } from "./rom-connection";
   const componentId = $props.id();
   const resourceKindId = `${componentId}-resource-kind`;
@@ -94,10 +95,19 @@
           {#each appState.descriptors as item}<option value={item.kind}>{item.presentation?.label ?? item.kind}</option>{/each}
         </select>
       </div>
+      {#if appState.kind === "gallery-tasks"}
+        <p class="muted">Changes from other tabs can appear live. If another tab changes this task, restore saved work before sending another action.</p>
+        <Button onclick={() => appState?.live ? connection!.application.stopLive() : void perform(() => connection!.application.observe())}>
+          {appState.live ? "Stop live task updates" : "Start live task updates"}
+        </Button>
+      {/if}
       <div aria-label="Authorized Resources">
         {#each appState.rows as row}<Button onclick={() => perform(() => connection!.application.selectRow(row.key.id))}>{row.key.id}</Button>{/each}
       </div>
       {#if appState.selected?.value}
+        {#if appState.selected.key.kind === "gallery-tasks"}
+          <RomTaskActivity record={appState.selected} disabled={blocked || submitting || draftBlocked} invoke={name => perform(() => invoke(name, null))} />
+        {/if}
         <Button onclick={() => perform(async () => { await connection!.application.restoreSelectedIntent(); restoreEpoch++; })}>Restore saved draft and mutation</Button>
         <p>Resource: {appState.selected.key.id} · Revision: {String(appState.selected.revision)}</p>
         {#key `${appState.selected.key.kind}:${appState.selected.key.id}:${appState.selected.revision}`}

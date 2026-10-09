@@ -64,7 +64,7 @@
 
 <div class="demo-card">
   <p class="muted">
-    Interactive task presentation inspired by Astral. This example simulates
+    Interactive task presentation. This example simulates
     updates locally; ROM-backed execution remains pending.
   </p>
   <AgentActivity label="Agent activity" statusText={status} {steps}>

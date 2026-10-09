@@ -8,7 +8,7 @@
     "fullRomVerifierPassed": true
   },
   "host": {
-    "tests": 8,
+    "tests": 9,
     "lockedBuildPassed": true,
     "clippyWarningsDeniedPassed": true,
     "sigtermExit": 0
@@ -48,7 +48,7 @@
   },
   "limits": [
     "Production OIDC configuration pending",
-    "Flow, maps and task resources pending",
+    "Flow and maps ROM resource bindings pending",
     "Public ROM deployment and HTTPS acceptance pending"
   ],
   "logs": {
@@ -66,7 +66,26 @@
     "galleryBrowserPassed": 108,
     "backendDependentSkipped": 4,
     "includesHost": true,
-    "log": "/var/tmp/rom-ui-rich-host-full-verifier.log"
+    "log": "/var/tmp/rom-ui-rich-host-full-verifier.log",
+    "taskInitialRun": {
+      "exit": 1,
+      "consumerPassed": 138,
+      "consumerFailed": 2,
+      "log": "/var/tmp/rom-ui-live-task-full-verifier.log"
+    },
+    "detailsTargetedRepeat": {
+      "passed": 6,
+      "sourceChanged": false,
+      "log": "/var/tmp/rom-ui-task-details-reproduction.log"
+    },
+    "taskFullRepeat": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 4,
+      "hostTests": 9,
+      "log": "/var/tmp/rom-ui-live-task-full-verifier-repeat.log"
+    }
   },
   "container": {
     "image": "localhost/rom-ui-gallery-host:local-rich-fields",
@@ -77,5 +96,45 @@
     "actualBrowserPassed": 2,
     "log": "/var/tmp/rom-gallery-container-browser.log",
     "runtimeInputs": "/var/tmp/rom-gallery-host-image-context/runtime-inputs.json"
+  },
+  "liveTask": {
+    "implemented": true,
+    "actualBrowserPassed": 2,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "log": "/var/tmp/rom-gallery-live-task-startstate-browser.log",
+    "checks": [
+      "visitor-owned task cancel",
+      "cancel persists after reload",
+      "retry resumes task",
+      "second-tab cancellation observed without reload",
+      "explicit restore before mutation after another tab changes shared durable intent"
+    ],
+    "limits": [
+      "Synthetic task does not execute an AI model",
+      "Shared durable command updates require explicit restore before new actions"
+    ],
+    "earlierFailures": [
+      "/var/tmp/rom-gallery-live-task-browser.log",
+      "/var/tmp/rom-gallery-live-task-restored-browser.log"
+    ],
+    "sourceReview": {
+      "mode": "read-only",
+      "materialFindings": 0,
+      "scope": [
+        "owner access",
+        "task state transitions",
+        "observation delegation",
+        "synthetic task claim limits"
+      ]
+    }
+  },
+  "mapAdoption": {
+    "inspectedCommit": "17a9007",
+    "extrasRomVersion": "0.0.3",
+    "galleryRomVersion": "0.1.0",
+    "state": "Pending version-boundary integration and installed-consumer qualification"
   }
 }

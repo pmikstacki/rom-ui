@@ -24,7 +24,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
     return { status: response.status, body: await response.json() };
   });
   expect(discovered.status).toBe(200);
-  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind).sort()).toEqual(["gallery-fields", "gallery-samples"]);
+  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind).sort()).toEqual(["gallery-fields", "gallery-samples", "gallery-tasks"]);
 
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await expect(page.getByRole("button", { name: "bob-sample", exact: true })).toHaveCount(0);
@@ -77,6 +77,39 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
   await page.getByRole("button", { name: "alice-fields", exact: true }).click();
   await expect(page.getByRole("textbox", { name: "measurement value", exact: true })).toHaveValue(measurement);
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-tasks");
+  await expect(page.getByRole("button", { name: "bob-task", exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "alice-task", exact: true }).click();
+  const activity = page.getByRole("region", { name: "ROM agent activity", exact: true });
+  await expect(activity).toBeVisible();
+  if (await activity.getByRole("status").textContent() === "canceled") {
+    await page.getByRole("button", { name: "Restore saved draft and mutation", exact: true }).click();
+    await page.getByRole("button", { name: "Retry ROM task", exact: true }).click();
+    await expect(activity.getByRole("status")).toHaveText("running");
+  }
+  await page.getByRole("button", { name: "Cancel ROM task", exact: true }).click();
+  await expect(activity.getByRole("status")).toHaveText("canceled");
+  await page.reload();
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-tasks");
+  await page.getByRole("button", { name: "alice-task", exact: true }).click();
+  await expect(activity.getByRole("status")).toHaveText("canceled");
+  await page.getByRole("button", { name: "Retry ROM task", exact: true }).click();
+  await expect(activity.getByRole("status")).toHaveText("running");
+  await page.getByRole("button", { name: "Start live task updates", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Stop live task updates", exact: true })).toBeVisible();
+  const other = await page.context().newPage();
+  try {
+    await other.goto(base.href + "#rom");
+    await other.getByLabel("Resource kind", { exact: true }).selectOption("gallery-tasks");
+    await other.getByRole("button", { name: "alice-task", exact: true }).click();
+    await other.getByRole("button", { name: "Cancel ROM task", exact: true }).click();
+    await expect(activity.getByRole("status")).toHaveText("canceled");
+    await page.getByRole("button", { name: "Restore saved draft and mutation", exact: true }).click();
+    await page.getByRole("button", { name: "Retry ROM task", exact: true }).click();
+    await expect(activity.getByRole("status")).toHaveText("running");
+  } finally { await other.close(); }
+  await page.getByRole("button", { name: "Stop live task updates", exact: true }).click();
+
   await page.getByRole("button", { name: "Sign out", exact: true }).click();
   await expect(count).toHaveCount(0);
   const bob = await browser.newPage();

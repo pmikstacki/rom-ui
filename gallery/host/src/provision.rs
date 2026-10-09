@@ -117,6 +117,20 @@ pub async fn provision(
             },
         )
         .await?;
+        let task_id = format!("{}-task", visitor.id);
+        if let Some(row) = storage.load(&key::<crate::tasks::Task>(&task_id))?
+            && let Some(value) = row.value
+            && crate::tasks::Task::decode(value)?.owner != visitor.subject
+        {
+            return Err(invalid());
+        }
+        seed(
+            runtime,
+            storage,
+            &task_id,
+            crate::tasks::Task::example(&visitor.subject),
+        )
+        .await?;
         let fields_id = format!("{}-fields", visitor.id);
         if let Some(row) = storage.load(&key::<crate::fields::Fields>(&fields_id))?
             && let Some(value) = row.value

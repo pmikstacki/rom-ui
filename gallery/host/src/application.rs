@@ -20,6 +20,17 @@ fn owned(actor: &Actor, _: Access, sample: &Sample) -> bool {
 fn gallery_builder() -> Builder {
     Runtime::builder()
         .resource(
+            crate::tasks::Task::definition()
+                .policy(|actor, _, task| {
+                    bootstrap(actor)
+                        || (actor.authority == "gallery-visitors" && task.owner == actor.subject)
+                })
+                .allow_all_fields()
+                .action(crate::tasks::CANCEL)
+                .action(crate::tasks::RETRY)
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
+        .resource(
             Fields::definition()
                 .policy(|actor, _, fields| {
                     bootstrap(actor)

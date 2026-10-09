@@ -2,7 +2,7 @@
 
 This application serves gallery assets and session-bound ROM APIs through `rom-studio-host`. SQLite stores sample values and mutation receipts.
 
-The host registers `gallery-samples`, `gallery-fields`, and private identity resources. Flow, map, and agent-task resources remain pending.
+The host registers `gallery-samples`, `gallery-fields`, `gallery-tasks`, and private identity resources. Flow and map resources remain pending.
 
 ## Build and verify
 
@@ -12,7 +12,7 @@ Use Rust 1.99.0. Set `ROM_GALLERY_SOURCE` to the qualified ROM source directory,
 ./gallery/host/check
 ```
 
-The check compares ROM inputs with `source/rom-inputs.json`. It runs formatting, eight host tests, Clippy, and a locked build.
+The check compares ROM inputs with `source/rom-inputs.json`. It runs formatting, nine host tests, Clippy, and a locked build.
 
 The manifest has no machine-specific dependency paths. The check supplies Cargo source overrides for the selected ROM crates.
 
