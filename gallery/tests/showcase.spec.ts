@@ -5,7 +5,7 @@ test("catalog keeps overview, search and keyboard navigation aligned", async ({ 
   const cards = page.locator(".category-card");
   const families = page.getByRole("navigation", { name: "Component gallery" }).getByRole("button");
   await expect(cards).toHaveCount((await families.count()) - 1);
-  await expect(families.first().locator(".nav-count")).toHaveText("09");
+  await expect(families.first().locator(".nav-count")).toHaveText("10");
   await page.getByRole("searchbox", { name: "Search components" }).fill("semantic");
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText("Forms");

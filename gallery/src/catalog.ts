@@ -15,6 +15,7 @@ const entries: GallerySection[] = [
     description: "See what you can build.",
     tags: "gallery all components",
   },
+  { id: "rom", label: "ROM connection", icon: "↔", count: "Live", description: "Resources and actions through the installed ROM session.", tags: "backend session resources persistence recovery authorization", load: () => import("./RomDemo.svelte") },
   {
     id: "controls",
     load: () => import("./ControlsDemo.svelte"),
