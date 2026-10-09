@@ -18,8 +18,8 @@ importers:
         specifier: 6.7.0
         version: 6.7.0
       rom-ui:
-        specifier: file:../rom-ui-2bc50f4467e125cfe8a32dc493d82c22aa86416eac8efab777ae18f3892cc45b.tgz
-        version: file:../rom-ui-2bc50f4467e125cfe8a32dc493d82c22aa86416eac8efab777ae18f3892cc45b.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(svelte@5.57.1)
+        specifier: file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz
+        version: file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(svelte@5.57.1)
       svelte:
         specifier: 5.57.1
         version: 5.57.1
@@ -755,9 +755,9 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  rom-ui@file:../rom-ui-2bc50f4467e125cfe8a32dc493d82c22aa86416eac8efab777ae18f3892cc45b.tgz:
-    resolution: {integrity: sha512-HZiPEnnRzGnSG2A9s9mZ1d0+ufnYdM2kFWvRUdS+XPtW/zigJxIUYa4Vfm22zhtWZSsFDpYSki+wACkl3CILvQ==, tarball: file:../rom-ui-2bc50f4467e125cfe8a32dc493d82c22aa86416eac8efab777ae18f3892cc45b.tgz}
-    version: 0.1.0-alpha.5
+  rom-ui@file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz:
+    resolution: {integrity: sha512-4L2opHvqVbaxOKOW16du8Caqk1pZOvWNqQSAb9ytFCxRK04sPW2UCSMlErLc1eC4aC02CuAVARuYZdQu74gzKQ==, tarball: file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz}
+    version: 0.1.0-alpha.6
     peerDependencies:
       '@xyflow/svelte': 1.7.0
       maplibre-gl: 6.7.0
@@ -1486,7 +1486,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.13
       '@rolldown/binding-win32-x64-msvc': 1.2.13
 
-  rom-ui@file:../rom-ui-2bc50f4467e125cfe8a32dc493d82c22aa86416eac8efab777ae18f3892cc45b.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(svelte@5.57.1):
+  rom-ui@file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(svelte@5.57.1):
     dependencies:
       '@animotion/motion': 2.0.3(svelte@5.57.1)
       '@lucide/svelte': 1.51.0(svelte@5.57.1)

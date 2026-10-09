@@ -1,0 +1,61 @@
+
+Running 2 tests using 1 worker
+
+(node:1825480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/gallery.spec.ts:348:1 › composer extensions are interactive without submitting the draft (1.1m)
+(node:1829649) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/gallery.spec.ts:380:1 › agent activity details and application actions are interactive (12.8s)
+
+
+  1) [chromium] › tests/gallery.spec.ts:348:1 › composer extensions are interactive without submitting the draft 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Microphone extension', exact: true })
+
+
+      354 |   await page
+      355 |     .getByRole("button", { name: "Microphone extension", exact: true })
+    > 356 |     .click();
+          |      ^
+      357 |   await expect(
+      358 |     page.getByRole("button", { name: "Microphone extension", exact: true }),
+      359 |   ).toHaveAttribute("aria-pressed", "true");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:356:6
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+
+    Error Context: test-results/gallery-composer-extension-74586-ithout-submitting-the-draft-chromium/error-context.md
+
+  2) [chromium] › tests/gallery.spec.ts:380:1 › agent activity details and application actions are interactive 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('region', { name: 'Agent activity', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('region', { name: 'Agent activity', exact: true }) with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Agent activity', exact: true })
+
+
+      386 |     exact: true,
+      387 |   });
+    > 388 |   await expect(activity).toBeVisible();
+          |                          ^
+      389 |   await activity.locator("summary").filter({ hasText: "Inspect resource" }).click();
+      390 |   await expect(
+      391 |     activity.getByText("Read the authorized resource projection.", {
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:388:26
+
+    Error Context: test-results/gallery-agent-activity-det-8855e-ion-actions-are-interactive-chromium/error-context.md
+
+  2 failed
+    [chromium] › tests/gallery.spec.ts:348:1 › composer extensions are interactive without submitting the draft 
+    [chromium] › tests/gallery.spec.ts:380:1 › agent activity details and application actions are interactive 

@@ -29,6 +29,20 @@
     signature++;
   }}>Load replacement graph</button
 >
+<button
+  data-load-graph
+  onclick={() => {
+    nodes = [
+      { id: "left", position: { x: 0, y: 0 }, data: { label: "Left node" } },
+      {
+        id: "right",
+        position: { x: 2000, y: 900 },
+        data: { label: "Right node" },
+      },
+    ];
+    signature++;
+  }}>Load wide graph</button
+>
 <div style="width:600px;height:400px">
   <SvelteFlow {nodes} minZoom={0.1} maxZoom={2}>
     {#if mounted}<FlowFit {signature} {active} />{/if}

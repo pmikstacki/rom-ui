@@ -21,7 +21,7 @@ const expected = {
     "ReferencePicker",
     "ConversationLayout",
   ],
-  chat: ["ConversationLayout", "ChatComposer", "ChatMessages"],
+  chat: ["ConversationLayout", "ChatComposer", "ChatMessages", "AgentActivity"],
   flow: ["FlowChoiceNode", "FlowFit"],
   flex: ["ROMUIFlex", "FlexView"],
   maps: [

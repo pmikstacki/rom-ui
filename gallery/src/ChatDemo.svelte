@@ -1,11 +1,13 @@
 <script lang="ts">
   import { tick } from "svelte";
+  import AgentActivityDemo from "./AgentActivityDemo.svelte";
   import { Button } from "rom-ui/controls";
   import {
     ConversationLayout,
     ChatComposer,
     ChatMessages,
     type ChatMessage,
+    type ChatComposerActions,
   } from "rom-ui/chat";
   import { ResponsiveDetails } from "rom-ui/ui/components";
   import {
@@ -13,6 +15,9 @@
     captureEditorFocus,
   } from "rom-ui/ui/commands/preserve-editor";
   let draft = $state("");
+  let microphoneSelected = $state(false);
+  let toolsOpen = $state(false);
+  const toolsId = $props.id();
   let expanded = $state(false);
   let open = $state(false);
   let opener = $state<HTMLElement | null>(null);
@@ -111,7 +116,86 @@
     sendLabel="Send"
     hint="Enter sends · Shift+Enter adds a new line"
     errorLabel="Could not send. Try again."
+    actions={messageActions}
   />
+{/snippet}
+{#snippet messageActions(state: ChatComposerActions)}
+  <Button
+    type="button"
+    variant="ghost"
+    size="icon"
+    disabled={state.disabled}
+    aria-label="Microphone extension"
+    aria-pressed={microphoneSelected}
+    onclick={() => {
+      microphoneSelected = !microphoneSelected;
+    }}
+  >
+    <svg
+      aria-hidden="true"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.7"
+    >
+      <rect x="9" y="2" width="6" height="13" rx="3" />
+      <path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8" />
+    </svg>
+  </Button>
+  <div class="extension-menu" role="group" aria-label="Composer extension menu">
+    <Button
+      type="button"
+      variant="ghost"
+      size="icon"
+      disabled={state.disabled}
+      id={`${toolsId}-trigger`}
+      onkeydown={(event) => {
+        if (event.key === "Escape") toolsOpen = false;
+      }}
+      aria-label="More message actions"
+      aria-expanded={toolsOpen && !state.disabled}
+      aria-controls={toolsId}
+      onclick={() => {
+        toolsOpen = !toolsOpen;
+      }}
+    >
+      <svg
+        aria-hidden="true"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"><path d="M12 5v14M5 12h14" /></svg
+      >
+    </Button>
+    {#if toolsOpen && !state.disabled}
+      <div id={toolsId} class="extension-dropdown">
+        <Button
+          type="button"
+          variant="ghost"
+          disabled={state.disabled}
+          onkeydown={(event) => {
+            if (event.key === "Escape") {
+              toolsOpen = false;
+              document.getElementById(`${toolsId}-trigger`)?.focus();
+            }
+          }}
+          onclick={() => {
+            draft += `${draft ? " " : ""}resource/a`;
+            toolsOpen = false;
+          }}
+        >
+          Insert resource reference
+        </Button>
+      </div>
+    {/if}
+  </div>
+  {#if microphoneSelected}<span class="extension-status" role="status"
+      >Microphone extension selected · demo only</span
+    >{/if}
 {/snippet}
 {#snippet sessions()}
   <div class="session-heading">
@@ -177,3 +261,28 @@
     Independent of any specific backend.
   </p>
 </div>
+
+<AgentActivityDemo />
+
+<style>
+  .extension-menu {
+    position: relative;
+  }
+  .extension-dropdown {
+    position: absolute;
+    bottom: calc(100% + 0.4rem);
+    left: 0;
+    z-index: 20;
+    width: max-content;
+    max-width: min(18rem, 75vw);
+    padding: 0.35rem;
+    border: 1px solid var(--border);
+    border-radius: 0.65rem;
+    background: var(--background);
+    box-shadow: 0 8px 24px #0002;
+  }
+  .extension-status {
+    font-size: 0.7rem;
+    color: var(--muted-foreground);
+  }
+</style>

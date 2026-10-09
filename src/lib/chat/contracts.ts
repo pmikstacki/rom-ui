@@ -1,3 +1,9 @@
+/** State supplied to application-owned composer extension controls. */
+export interface ChatComposerActions {
+  readonly disabled: boolean;
+  readonly pending: boolean;
+}
+
 /** The host owns message identity, storage and delivery. Content is plain text. */
 export interface ChatMessage {
   id: string;
@@ -51,4 +57,12 @@ export function citationHref(href: string): string | null {
   } catch {
     return null;
   }
+}
+
+/** Exact step identity and task updates are supplied by the host. */
+export interface AgentActivityStep {
+  id: string;
+  label: string;
+  status: "queued" | "running" | "done" | "error" | "canceled";
+  detail?: string;
 }

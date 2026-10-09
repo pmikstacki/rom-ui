@@ -1,0 +1,134 @@
+[WebServer] (node:1765233) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1765261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:1765355) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting (6.0s)
+(node:1766003) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting (6.1s)
+(node:1766667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting (6.1s)
+(node:1767940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting (6.5s)
+
+
+  1) [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.svelte-flow__viewport')
+    Expected: "transform: translate(41.1752px, 32.0024px) scale(0.815074);"
+    Received: "transform: translate(-675px, -720px) scale(1);"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.svelte-flow__viewport') with timeout 5000ms
+      - waiting for locator('.svelte-flow__viewport')
+        14 × locator resolved to <div class="svelte-flow__viewport xyflow__viewport svelte-flow__container">…</div>
+           - unexpected value "transform: translate(-675px, -720px) scale(1);"
+
+
+      82 |     await page.getByRole("button", { name: "Load replacement graph", exact: true }).click();
+      83 |     await page.waitForTimeout(600); // A stale upstream fit must not restart on replacement node initialization.
+    > 84 |     await expect(viewport).toHaveAttribute("style", stopped!);
+         |                            ^
+      85 |   });
+      86 | }
+      87 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/flow-lifetime.spec.ts:84:28
+
+    Error Context: test-results/flow-lifetime-stopped-anim-e276f-ement-on-Deactivate-fitting-chromium/error-context.md
+
+  2) [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.svelte-flow__viewport')
+    Expected: "transform: translate(41.3878px, 32.1721px) scale(0.814072);"
+    Received: "transform: translate(-675px, -720px) scale(1);"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.svelte-flow__viewport') with timeout 5000ms
+      - waiting for locator('.svelte-flow__viewport')
+        14 × locator resolved to <div class="svelte-flow__viewport xyflow__viewport svelte-flow__container">…</div>
+           - unexpected value "transform: translate(-675px, -720px) scale(1);"
+
+
+      82 |     await page.getByRole("button", { name: "Load replacement graph", exact: true }).click();
+      83 |     await page.waitForTimeout(600); // A stale upstream fit must not restart on replacement node initialization.
+    > 84 |     await expect(viewport).toHaveAttribute("style", stopped!);
+         |                            ^
+      85 |   });
+      86 | }
+      87 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/flow-lifetime.spec.ts:84:28
+
+    Error Context: test-results/flow-lifetime-stopped-anim-df4a6-lacement-on-Unmount-fitting-chromium/error-context.md
+
+  3) [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.svelte-flow__viewport')
+    Expected: "transform: translate(38.969565px, 30.244804px) scale(0.825433);"
+    Received: "transform: translate(-675px, -720px) scale(1);"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.svelte-flow__viewport') with timeout 5000ms
+      - waiting for locator('.svelte-flow__viewport')
+        14 × locator resolved to <div class="svelte-flow__viewport xyflow__viewport svelte-flow__container">…</div>
+           - unexpected value "transform: translate(-675px, -720px) scale(1);"
+
+
+      82 |     await page.getByRole("button", { name: "Load replacement graph", exact: true }).click();
+      83 |     await page.waitForTimeout(600); // A stale upstream fit must not restart on replacement node initialization.
+    > 84 |     await expect(viewport).toHaveAttribute("style", stopped!);
+         |                            ^
+      85 |   });
+      86 | }
+      87 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/flow-lifetime.spec.ts:84:28
+
+    Error Context: test-results/flow-lifetime-stopped-anim-e276f-ement-on-Deactivate-fitting-webkit/error-context.md
+
+  4) [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.svelte-flow__viewport')
+    Expected: "transform: translate(93.302101px, 78.1531px) scale(0.521931);"
+    Received: "transform: translate(-675px, -720px) scale(1);"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.svelte-flow__viewport') with timeout 5000ms
+      - waiting for locator('.svelte-flow__viewport')
+        14 × locator resolved to <div class="svelte-flow__viewport xyflow__viewport svelte-flow__container">…</div>
+           - unexpected value "transform: translate(-675px, -720px) scale(1);"
+
+
+      82 |     await page.getByRole("button", { name: "Load replacement graph", exact: true }).click();
+      83 |     await page.waitForTimeout(600); // A stale upstream fit must not restart on replacement node initialization.
+    > 84 |     await expect(viewport).toHaveAttribute("style", stopped!);
+         |                            ^
+      85 |   });
+      86 | }
+      87 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/flow-lifetime.spec.ts:84:28
+
+    Error Context: test-results/flow-lifetime-stopped-anim-df4a6-lacement-on-Unmount-fitting-webkit/error-context.md
+
+  4 failed
+    [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting 
+    [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting 
+    [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting 
+    [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting 

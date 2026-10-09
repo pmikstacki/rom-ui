@@ -309,3 +309,100 @@ test("collapsed mobile navigation does not receive keyboard focus", async ({
     await page.evaluate(() => !!document.activeElement?.closest(".sidebar")),
   ).toBe(false);
 });
+
+for (const reducedMotion of ["no-preference", "reduce"] as const) {
+  test(`Flow auto fit animates according to ${reducedMotion}`, async ({
+    page,
+  }) => {
+    await page.emulateMedia({ reducedMotion });
+    await page.goto("/#flow");
+    await page.getByRole("button", { name: "Zoom In", exact: true }).waitFor();
+    await page.waitForTimeout(500); // Allow the initial fit to settle before manually zooming.
+    await page.getByRole("button", { name: "Zoom In", exact: true }).click();
+    await page.waitForTimeout(400); // Svelte Flow's zoom control animates for 300ms.
+    const transforms = await page.evaluate(async () => {
+      const viewport = document.querySelector<HTMLElement>(
+        ".svelte-flow__viewport",
+      )!;
+      const seen = new Set<string>([viewport.style.transform]);
+      const start = performance.now();
+      [...document.querySelectorAll<HTMLButtonElement>("button")]
+        .find((button) => button.textContent?.trim() === "Fit view")!
+        .click();
+      await new Promise<void>((resolve) => {
+        function sample() {
+          seen.add(viewport.style.transform);
+          if (performance.now() - start < 600) requestAnimationFrame(sample);
+          else resolve();
+        }
+        requestAnimationFrame(sample);
+      });
+      return [...seen];
+    });
+    if (reducedMotion === "reduce")
+      expect(transforms.length).toBeLessThanOrEqual(2);
+    else expect(transforms.length).toBeGreaterThan(4);
+  });
+}
+
+test("composer extensions are interactive without submitting the draft", async ({
+  page,
+}) => {
+  await page.goto("/#chat");
+  const draft = page.getByRole("textbox", { name: "Message", exact: true });
+  await draft.fill("Keep this draft");
+  await page
+    .getByRole("button", { name: "Microphone extension", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Microphone extension", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await expect(draft).toHaveValue("Keep this draft");
+  await expect(page.getByText("Keep this draft", { exact: true })).toHaveCount(
+    0,
+  );
+  await page
+    .getByRole("button", { name: "More message actions", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Insert resource reference", exact: true })
+    .click();
+  await expect(draft).toHaveValue("Keep this draft resource/a");
+  await page.getByRole("button", { name: "Send", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Microphone extension", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    page.getByText("Keep this draft resource/a", { exact: true }),
+  ).toBeVisible();
+});
+
+test("agent activity details and application actions are interactive", async ({
+  page,
+}) => {
+  await page.goto("/#chat");
+  const activity = page.getByRole("region", {
+    name: "Agent activity",
+    exact: true,
+  });
+  await expect(activity).toBeVisible();
+  await activity
+    .locator("summary")
+    .filter({ hasText: "Inspect resource" })
+    .click();
+  await expect(
+    activity.getByText("Read the authorized resource projection.", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await activity
+    .getByRole("button", { name: "Run example task", exact: true })
+    .click();
+  await expect(activity.getByRole("status")).toContainText("Running");
+  await activity
+    .getByRole("button", { name: "Cancel example task", exact: true })
+    .click();
+  await expect(activity.getByRole("status")).toContainText("Canceled");
+  await page.waitForTimeout(1000); // Canceled work must not publish its later completion.
+  await expect(activity.getByRole("status")).toContainText("Canceled");
+});

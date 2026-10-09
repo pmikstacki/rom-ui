@@ -46,7 +46,7 @@
       id: "chat",
       label: "AI Chat",
       icon: "✳",
-      count: "03",
+      count: "04",
       description: "A space to chat with any model.",
       tags: "assistant conversation composer messages astral plane",
     },

@@ -3,6 +3,7 @@
   import { Button } from "../components/ui/button/index.js";
   import { Textarea } from "../components/ui/textarea/index.js";
   import { canSubmitMessage, isMessageSubmitKey } from "./contracts.ts";
+  import type { ChatComposerActions } from "./contracts.ts";
 
   const generatedId = $props.id();
   let {
@@ -10,6 +11,8 @@
     value = $bindable(""),
     rows = 2,
     sendContent,
+    actions,
+    actionsLabel = "Message actions",
     label,
     placeholder,
     sendLabel,
@@ -23,6 +26,8 @@
     id?: string;
     rows?: number;
     sendContent?: Snippet;
+    actions?: Snippet<[ChatComposerActions]>;
+    actionsLabel?: string;
     value?: string;
     label: string;
     placeholder?: string;
@@ -106,9 +111,16 @@
     }}
   />
   <div class="composer-actions">
-    <span id={`${id}-hint`} class="text-xs text-muted-foreground"
-      >{hint ?? ""} <span>{value.length}/{maxLength}</span></span
-    >
+    <div class="composer-leading">
+      {#if actions}
+        <div class="composer-tools" role="group" aria-label={actionsLabel}>
+          {@render actions({ disabled: disabled || pending, pending })}
+        </div>
+      {/if}
+      <span id={`${id}-hint`} class="text-xs text-muted-foreground"
+        >{hint ?? ""} <span>{value.length}/{maxLength}</span></span
+      >
+    </div>
     <Button type="submit" size="sm" disabled={!canSubmit} aria-label={sendLabel}
       >{#if sendContent}{@render sendContent()}{:else}{sendLabel}{/if}</Button
     >
@@ -141,5 +153,19 @@
   }
   .composer-actions span span {
     white-space: nowrap;
+  }
+  .composer-leading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .composer-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
   }
 </style>

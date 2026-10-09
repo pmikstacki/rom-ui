@@ -124,6 +124,13 @@ const compositions = [
   conversation,
 ];
 const chat = [
+  example(
+    "AgentActivity",
+    "rom-ui/chat",
+    '  let canceled = $state(false);\n  const steps = $derived([{ id: "inspect", label: "Inspect resource", status: canceled ? "canceled" as const : "running" as const, detail: "Read an authorized projection." }]);',
+    '<AgentActivity label="Agent activity" statusText={canceled ? "Canceled" : "Running"} {steps}>\n  {#snippet actions()}\n    <button type="button" onclick={() => canceled = true}>Cancel task</button>\n  {/snippet}\n</AgentActivity>',
+    "The host supplies progress, cancellation and exact task identities. Connect these to authorized ROM observation and actions.",
+  ),
   {
     ...conversation,
     code: conversation.code.replace("rom-ui/ui/components", "rom-ui/chat"),
@@ -131,8 +138,8 @@ const chat = [
   example(
     "ChatComposer",
     "rom-ui/chat",
-    '  let draft = $state("");\n  let submitted = $state("");\n  async function send(message: string) { submitted = message; }',
-    '<ChatComposer bind:value={draft} authorityToken="session-1" onSubmit={send} label="Message" sendLabel="Send" errorLabel="Send failed. Try again." hint="Enter sends; Shift+Enter adds a line" />\n<p role="status">{submitted}</p>',
+    '  let draft = $state("");\n  let microphoneSelected = $state(false);\n  let submitted = $state("");\n  async function send(message: string) { submitted = message; }',
+    '{#snippet actions(state: { disabled: boolean; pending: boolean })}\n  <button type="button" disabled={state.disabled} aria-label="Microphone extension" aria-pressed={microphoneSelected} onclick={() => microphoneSelected = !microphoneSelected}>\n    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="2" width="6" height="13" rx="3" /><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3" /></svg>\n  </button>\n{/snippet}\n<ChatComposer {actions} bind:value={draft} authorityToken="session-1" onSubmit={send} label="Message" sendLabel="Send" errorLabel="Send failed. Try again." hint="Enter sends; Shift+Enter adds a line" />\n<p role="status">{submitted}</p>',
     "send records text locally. Replace it with your host request; throw on failure and change authorityToken when the conversation changes.",
   ),
   example(
@@ -150,7 +157,7 @@ const flowCode = (name: string) =>
     '  import { SvelteFlow, type Node } from "@xyflow/svelte";\n  import "@xyflow/svelte/dist/style.css";\n  import { ' +
       (name === "FlowFit" ? "FlowChoiceNode" : "FlowFit") +
       ', type FlowChoiceData } from "rom-ui/flow";\n  let selected = $state(false);\n  let revision = $state(0);\n  const nodes = $derived<Node<FlowChoiceData>[]>([{ id: "choice", type: "choice", position: { x: 0, y: 0 }, data: { stage: "01", label: "Choose", selected, choose: () => { selected = !selected; } } }]);\n  const nodeTypes = { choice: FlowChoiceNode };',
-    '<button onclick={() => revision++}>Fit view</button>\n<div style="height: 24rem">\n  <SvelteFlow {nodes} edges={[]} {nodeTypes}>\n    <FlowFit signature={revision} focusIds={["choice"]} />\n  </SvelteFlow>\n</div>',
+    '<button onclick={() => revision++}>Fit view</button>\n<div style="height: 24rem">\n  <SvelteFlow {nodes} edges={[]} {nodeTypes}>\n    <FlowFit signature={revision} focusIds={["choice"]} duration={320} />\n  </SvelteFlow>\n</div>',
     "Install the optional @xyflow/svelte peer. Both components need SvelteFlow context and a bounded host.",
   );
 const mapExample = (

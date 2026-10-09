@@ -66,5 +66,30 @@ The `choose` callback belongs to the host. Native buttons support keyboard selec
 Set `side` for a left target handle; the default target is above the node.
 `FlowFit` receives `signature`, optional `focusIds` and `active`.
 Change `signature` after host layout or container changes. Empty `focusIds` fits all nodes.
-Inactive or disposed fitting cancels scheduled animation frames.
+Fitting animates for 320 milliseconds by default. Set `duration` to customize the transition, or `0` for immediate fitting.
+Reduced-motion preferences use immediate fitting.
+Inactive or disposed fitting cancels scheduled frames and stops its running animation at the current viewport.
 The host still owns graph layout, path history, data validation and selection rules.
+
+## Composer extension controls
+
+Supply the optional `actions` Svelte snippet to add icon buttons, dropdowns or other application controls below the message field.
+Its `ChatComposerActions` argument supplies `disabled` and `pending`.
+The `disabled` value includes a pending message submission. Apply it to extension controls that must pause during submission.
+Use `type="button"` for extension buttons inside the composer form.
+Provide accessible labels for icon buttons. Set `actionsLabel` to localize the extension group's label.
+The host implements attachments, voice capture, tool selection and their authorization.
+The slot does not enable microphone access or attach a Resource automatically.
+`sendContent` remains available to customize the submit button.
+
+## Agent activity
+
+Import `AgentActivity` and `AgentActivityStep` from `rom-ui/chat`.
+Supply `label`, `statusText` and steps with unique exact IDs, labels, statuses and optional plain-text details.
+Supported statuses are `queued`, `running`, `done`, `error` and `canceled`.
+Users can open step details with a mouse or keyboard.
+Supply `actions` for task controls and `stepActions` for controls associated with an individual step.
+The host supplies live progress, elapsed time, cancellation, retry and authorized Resource actions.
+The component does not run a model, infer completion or grant permission from a progress status.
+Set `statusLabels` to localize status names. `elapsedSeconds` is optional.
+The host must bound its displayed progress history.
