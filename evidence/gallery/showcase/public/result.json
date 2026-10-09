@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-09T08:08:53.502Z",
+  "sourceCommit": "b722ba2",
+  "url": "https://romui.cybernomad.it",
+  "image": "rom-ui-gallery:b722ba2",
+  "imageId": "sha256:9d95d6e4bb9dfc73ec8143c0f6cdaf187fe40b90df05da7cd662199601a3c5b4",
+  "httpsCertificateVerification": true,
+  "publicAssetsMatched": 34,
+  "missingAssetStatus": 404,
+  "focusedBrowserCases": 6,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "fullPublicSuiteExecuted": false,
+  "limits": [
+    "Focused public run does not establish full public qualification.",
+    "Static nginx remains the host."
+  ]
+}

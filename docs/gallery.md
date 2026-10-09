@@ -129,3 +129,7 @@ All 102 gallery browser cases passed in Chromium and WebKit. All 61 snippets com
 An initial frame around the chat conversation failed the mobile composer visibility check.
 The final layout preserves the conversation viewport and frames the activity panel instead.
 See [showcase evidence](../evidence/gallery/showcase/result.json).
+
+The showcase refactor is deployed from commit `b722ba2`.
+All six affected public browser cases passed. All 34 public files match the local build.
+See [showcase deployment evidence](../evidence/gallery/showcase/public/result.json).

@@ -1,0 +1,176 @@
+{
+  "origin": "https://romui.cybernomad.it",
+  "verified": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "87978631de91630de2d3a70a040444b90e2a1b9549ce477fca7b663abf3a5691"
+    },
+    {
+      "path": "licenses.txt",
+      "status": 200,
+      "sha256": "38506b4d5e6d55c0f60ff5bd7ddfa22e3160689362c58180c44c771b8c19ebeb"
+    },
+    {
+      "path": "assets/ChatDemo-D6pthJj_.js",
+      "status": 200,
+      "sha256": "d0d6368ff2121633ce1f6f024e532288d175515a9d801d02d2e2ccb7dda3aa59"
+    },
+    {
+      "path": "assets/ChatDemo-ReY77sn3.css",
+      "status": 200,
+      "sha256": "33b14cf57382bcb2deb52ef2e36bcd5d91748d4be67fa000692302d3bcf70e85"
+    },
+    {
+      "path": "assets/CompositionsDemo-7QoqQPvg.js",
+      "status": 200,
+      "sha256": "f446c09bd04a27d1ef1715d8ab378254afbb97cd5dd163b88926cc72780c3a38"
+    },
+    {
+      "path": "assets/ControlsDemo-Ck1L0Se8.js",
+      "status": 200,
+      "sha256": "70408d89d6a0ada1313428ead09b53e1560e96ef93160699d7ec2cce68a38124"
+    },
+    {
+      "path": "assets/FlexDemo-D8HcIj3G.js",
+      "status": 200,
+      "sha256": "8966d71a92d8e9bed070167e0d185355a4c4b82dc800ccf24ee5e9e7c2f2d608"
+    },
+    {
+      "path": "assets/FlexDemo-DnQ8jeIX.css",
+      "status": 200,
+      "sha256": "1c6eb32489f087bc29e704cc4c9a2229a5c82de40f100ff7c6ec267a00084bae"
+    },
+    {
+      "path": "assets/FlowDemo-CWH-HSky.js",
+      "status": 200,
+      "sha256": "2a4287782f431e33dbef9f8b721aadeb055badbe6559537ae6e57e46d60477be"
+    },
+    {
+      "path": "assets/FlowDemo-MhiWoNAo.css",
+      "status": 200,
+      "sha256": "fb9dc662795328ee9bdb08f97692ff224c4f22f5e34f3dba32e1fd27481d9eb2"
+    },
+    {
+      "path": "assets/FormsDemo-CPrC2zro.js",
+      "status": 200,
+      "sha256": "a8c3c8784b5f311b56f2d97f3d350611f62bd4e1da84a935f8dc9a0801cb7653"
+    },
+    {
+      "path": "assets/FormsDemo-CYDF9VoS.css",
+      "status": 200,
+      "sha256": "e346c571467afb09e9fe10893bebe50358c7ca546e85f90bc5e83f524ba3e6cb"
+    },
+    {
+      "path": "assets/MapsDemo-CW0kxos2.js",
+      "status": 200,
+      "sha256": "faff31bd9e7f2d9317df4af86afe5eb12274412e7bb61f9995019bde010fc978"
+    },
+    {
+      "path": "assets/MapsDemo-DhBiOQy5.css",
+      "status": 200,
+      "sha256": "f514aee2af7a413720e2ac50d6c86d3ac49de298c14956f37f163b97b4ce11c1"
+    },
+    {
+      "path": "assets/OverlaysDemo-BJCP4Dl1.css",
+      "status": 200,
+      "sha256": "05b13504ee83072fbdf423f5a75dd6572de1a8f10b85bf4a0153305647d10344"
+    },
+    {
+      "path": "assets/OverlaysDemo-D68eTURB.js",
+      "status": 200,
+      "sha256": "5545e78463f07417ca8d818ae35cf41d9f8cf1ff0c6be79da3008168f0fab9bf"
+    },
+    {
+      "path": "assets/StudioPrimitivesDemo-B7zDIvr1.js",
+      "status": 200,
+      "sha256": "ef5996addf57e9fd22b1c1753ac75416e59a2879e6fe2bd05077ebec4e768cb8"
+    },
+    {
+      "path": "assets/StudioPrimitivesDemo-C4-eXJWY.css",
+      "status": 200,
+      "sha256": "eeb1c6384cb1a6677c540447533d36712dae6a6022b16c83aed970bb758d9bca"
+    },
+    {
+      "path": "assets/alert-DwI9-Kka.js",
+      "status": 200,
+      "sha256": "ceeb06c4eaf2c318570691296ae46ee554d7c72bf32f960a238886ffe024830b"
+    },
+    {
+      "path": "assets/chevron-right-B8hGTtAO.js",
+      "status": 200,
+      "sha256": "857995e2a6cb98e0b24a797c39e9ebc8352cf53d8eff71b57eca721be4b41c7b"
+    },
+    {
+      "path": "assets/controls-DW9Q0EjU.js",
+      "status": 200,
+      "sha256": "86ea70ff0a600e3c1c27ee01f98f58fe531a6b61ec7f92e501ee1abbc4d40adc"
+    },
+    {
+      "path": "assets/dialog-ut03qJip.js",
+      "status": 200,
+      "sha256": "9dab5921fb88f45acfde9b09cc5358b322f362def7764375409930e7d2098053"
+    },
+    {
+      "path": "assets/dropdown-menu-CV-KWLNP.css",
+      "status": 200,
+      "sha256": "77781424ad291ef2757fa6622f6989e009af29438d4463c36d053f51d5996ecf"
+    },
+    {
+      "path": "assets/dropdown-menu-ChxOWDs3.js",
+      "status": 200,
+      "sha256": "508128df8d7c8fa680cc6731e45844032cb3897f1e22b45ddbacdc0e52705240"
+    },
+    {
+      "path": "assets/index-Cz4UKdfT.css",
+      "status": 200,
+      "sha256": "18be534a955b554469f9c9fd4abcdcf45e4f84b9619521d2450f4432fdacd26b"
+    },
+    {
+      "path": "assets/index-TwLGPAEA.js",
+      "status": 200,
+      "sha256": "4964e5f11b71b315d9195fed0a2143b64afda37a0617a741381ea0290dbfe470"
+    },
+    {
+      "path": "assets/maplibre-gl-worker-Cg01Uqq1.js",
+      "status": 200,
+      "sha256": "732dd5f5d1ab0dbca0b014a494c84bdf6e893a70f9475a1c67a394abfcc8d728"
+    },
+    {
+      "path": "assets/selection-card-DuOmtIQ1.js",
+      "status": 200,
+      "sha256": "62c8431e3cab1d1417c1763c7879516605b91eaab943bfccd962fafc2b0ca330"
+    },
+    {
+      "path": "assets/sheet-zvn5GcMe.js",
+      "status": 200,
+      "sha256": "8646290b8088c62f6c85e5c317bbbcd5d2efb4b8df8c21ab056ada395d193c00"
+    },
+    {
+      "path": "assets/switch-Dl_LG_q0.js",
+      "status": 200,
+      "sha256": "a7bcc2fe7f42e732b35130556e2667720ea61c6148881cebde09c338890b4283"
+    },
+    {
+      "path": "assets/switch-kZZkr3hy.css",
+      "status": 200,
+      "sha256": "d514c255af21e3673c55985ac5e05a736c694df18deded289876998d6b349b73"
+    },
+    {
+      "path": "assets/ui-components-BuXtCOq5.css",
+      "status": 200,
+      "sha256": "021c2d9cbc511ee91db4bf6ebef2504992b13bee1f752dc5d93709594ceed0b2"
+    },
+    {
+      "path": "assets/ui-components-DbPTfQs_.js",
+      "status": 200,
+      "sha256": "3a6cd29e095714c58b712f4e8e28e9019441e75e4c8e91f573e1b3ec19d2b1ee"
+    },
+    {
+      "path": "assets/x-CNwUa-hC.js",
+      "status": 200,
+      "sha256": "dfeeb77aeaabe89953be39ce49592b1d2bcb528a7877175489cd53d70b0f6aa2"
+    }
+  ],
+  "missingAsset": 404
+}
