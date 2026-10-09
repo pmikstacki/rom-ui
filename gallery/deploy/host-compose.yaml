@@ -1,0 +1,23 @@
+services:
+  gallery:
+    image: ${ROM_UI_GALLERY_HOST_IMAGE:?Set the verified host image}
+    container_name: rom-ui-gallery
+    restart: unless-stopped
+    read_only: true
+    stop_grace_period: 30s
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ${ROM_UI_GALLERY_CONFIG:?Set the approved configuration directory}:/gallery/config:ro
+      - ${ROM_UI_GALLERY_DATA:?Set the persistent data directory}:/gallery/data
+    labels:
+      caddy: romui.cybernomad.it
+      caddy.reverse_proxy: "{{upstreams 8080}}"
+      caddy_ingress_network: coolify
+    networks:
+      - coolify
+networks:
+  coolify:
+    external: true

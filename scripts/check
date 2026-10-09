@@ -23,3 +23,7 @@ corepack pnpm run check
 node --experimental-strip-types ../scripts/check-gallery-snippets.mjs
 corepack pnpm run build
 corepack pnpm exec playwright test
+cd ..
+if [[ -n "${ROM_GALLERY_SOURCE:-}" ]]; then
+  ./gallery/host/check
+fi

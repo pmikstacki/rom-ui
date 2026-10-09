@@ -8,7 +8,7 @@
     "fullRomVerifierPassed": true
   },
   "host": {
-    "tests": 7,
+    "tests": 8,
     "lockedBuildPassed": true,
     "clippyWarningsDeniedPassed": true,
     "sigtermExit": 0
@@ -25,9 +25,22 @@
       "unchanged value save resets form",
       "only sample resource discovered",
       "cross-visitor read denied",
-      "sign-out clears form"
+      "sign-out clears form",
+      "rich-field name save and reload",
+      "exact semantic decimal preservation",
+      "typed measure action and reload",
+      "visitor-scoped reference selection"
     ],
-    "usesApiRouteMocks": false
+    "usesApiRouteMocks": false,
+    "referenceFirstRun": {
+      "chromium": "passed",
+      "webkit": "navigation-time query access-control error",
+      "trace": "/var/tmp/rom-gallery-rich-reference-results"
+    },
+    "referenceUnchangedRepeat": {
+      "passed": 2,
+      "log": "/var/tmp/rom-gallery-rich-reference-repeat-browser.log"
+    }
   },
   "publicDeployment": {
     "romHosted": false,
@@ -35,12 +48,12 @@
   },
   "limits": [
     "Production OIDC configuration pending",
-    "Rich fields, Flow, maps and task resources pending",
+    "Flow, maps and task resources pending",
     "Public ROM deployment and HTTPS acceptance pending"
   ],
   "logs": {
     "producer": "/var/tmp/rom-editor-cleanup-full-verifier.log",
-    "host": "/var/tmp/rom-gallery-owned-host-check-final.log",
+    "host": "/var/tmp/rom-gallery-rich-fields-check.log",
     "browser": "/var/tmp/rom-gallery-noop-reset-browser.log",
     "owner": "/var/tmp/rom-ui-cleanup-full-verifier-configured.log"
   },
@@ -51,6 +64,18 @@
     "consumerBrowserPassed": 140,
     "compiledSnippets": 61,
     "galleryBrowserPassed": 108,
-    "backendDependentSkipped": 4
+    "backendDependentSkipped": 4,
+    "includesHost": true,
+    "log": "/var/tmp/rom-ui-rich-host-full-verifier.log"
+  },
+  "container": {
+    "image": "localhost/rom-ui-gallery-host:local-rich-fields",
+    "imageId": "02593be5d508aad4b5ca0dceac2087a5c5372c96f1434571f65af6a9516d13a5",
+    "user": "10001:10001",
+    "readOnlyRoot": true,
+    "sigtermExit": 0,
+    "actualBrowserPassed": 2,
+    "log": "/var/tmp/rom-gallery-container-browser.log",
+    "runtimeInputs": "/var/tmp/rom-gallery-host-image-context/runtime-inputs.json"
   }
 }

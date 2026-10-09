@@ -163,6 +163,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "chrono"
+version = "0.4.45"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1aa79e62e7697b8e29b513a68abacf485adcd1fe8284a4316c5ae868e6633327"
+dependencies = [
+ "num-traits",
+]
+
+[[package]]
 name = "cmake"
 version = "0.1.58"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1190,6 +1199,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "rom-fields"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "rom",
+ "serde_json",
+ "url",
+]
+
+[[package]]
 name = "rom-http"
 version = "0.1.0"
 dependencies = [
@@ -1250,6 +1269,7 @@ name = "rom-ui-gallery-host"
 version = "0.1.0"
 dependencies = [
  "rom",
+ "rom-fields",
  "rom-identity",
  "rom-sqlite",
  "rom-studio-host",

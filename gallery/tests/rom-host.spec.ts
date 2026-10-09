@@ -24,8 +24,9 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
     return { status: response.status, body: await response.json() };
   });
   expect(discovered.status).toBe(200);
-  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind)).toEqual(["gallery-samples"]);
+  expect(discovered.body.resources.map((resource: { kind: string }) => resource.kind).sort()).toEqual(["gallery-fields", "gallery-samples"]);
 
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await expect(page.getByRole("button", { name: "bob-sample", exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "alice-sample", exact: true }).click();
   const count = page.getByLabel("count value", { exact: true });
@@ -34,17 +35,55 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
   await expect(page.getByRole("button", { name: "Save changes", exact: true })).toBeDisabled();
   await page.reload();
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await page.getByRole("button", { name: "alice-sample", exact: true }).click();
   await expect(count).toHaveValue(saved);
   await count.fill(saved);
   await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
   await expect(page.getByRole("button", { name: "Save changes", exact: true })).toBeDisabled();
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
+  await expect(page.getByRole("button", { name: "bob-fields", exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "alice-fields", exact: true }).click();
+  const chooseSample = page.getByRole("button", { name: "Choose sample reference", exact: true });
+  if (await chooseSample.count() === 0) {
+    await page.getByRole("button", { name: "sample options", exact: true }).click();
+    await page.getByRole("menuitem", { name: "Set a value", exact: true }).click();
+  }
+  await chooseSample.click();
+  await expect(page.getByRole("option", { name: /Bob's sample/ })).toHaveCount(0);
+  await page.getByRole("option", { name: /Alice's sample/ }).click();
+  await expect(page.getByText("Alice's sample", { exact: true })).toBeVisible();
+  const decimal = page.getByRole("textbox", { name: "decimal value", exact: true });
+  await expect(decimal).toHaveValue("12345678901234567890.123456789");
+  const title = page.getByRole("textbox", { name: "name value", exact: true });
+  const renamed = "Rich fields " + Date.now();
+  await title.fill(renamed);
+  await expect(page.getByText("Alice's sample", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Save 2 changes", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Save changes", exact: true })).toBeDisabled();
+  await page.reload();
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
+  await page.getByRole("button", { name: "alice-fields", exact: true }).click();
+  await expect(title).toHaveValue(renamed);
+  await expect(decimal).toHaveValue("12345678901234567890.123456789");
+  const measurement = "13.250000000000000001";
+  await page.getByRole("button", { name: "input mode", exact: true }).click();
+  await page.getByRole("option", { name: "Set value", exact: true }).click();
+  await page.getByRole("textbox", { name: "input value", exact: true }).fill(measurement);
+  await page.getByRole("textbox", { name: "input unit", exact: true }).fill("kg");
+  await page.getByRole("button", { name: "Run measure", exact: true }).click();
+  await expect(page.getByRole("textbox", { name: "measurement value", exact: true })).toHaveValue(measurement);
+  await page.reload();
+  await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
+  await page.getByRole("button", { name: "alice-fields", exact: true }).click();
+  await expect(page.getByRole("textbox", { name: "measurement value", exact: true })).toHaveValue(measurement);
   await page.getByRole("button", { name: "Sign out", exact: true }).click();
   await expect(count).toHaveCount(0);
   const bob = await browser.newPage();
   bob.on("pageerror", error => errors.push(error.message));
   try {
   await login(bob, "bob");
+  await bob.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await expect(bob.getByRole("button", { name: "alice-sample", exact: true })).toHaveCount(0);
   await bob.getByRole("button", { name: "bob-sample", exact: true }).click();
   await expect(bob.getByLabel("count value", { exact: true })).toHaveValue("9007199254740993");

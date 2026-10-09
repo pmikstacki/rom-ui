@@ -11,3 +11,4 @@ mod provision;
 pub use provision::{Visitor, provision};
 mod host;
 pub use host::{read_configuration, serve};
+mod fields;

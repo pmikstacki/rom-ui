@@ -13,7 +13,7 @@ for (const [file, expected] of Object.entries(inputs)) {
 }
 JS
 config=()
-for crate in rom rom-identity rom-sqlite rom-studio-host; do
+for crate in rom rom-fields rom-identity rom-sqlite rom-studio-host; do
   config+=(--config "patch.crates-io.$crate.path=\"$ROM_GALLERY_SOURCE/crates/$crate\"")
 done
 cargo fmt -- --check

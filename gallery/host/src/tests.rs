@@ -253,3 +253,37 @@ async fn provisioning_preserves_saved_samples_and_keeps_identity_records_private
     );
     runtime.shutdown().await.unwrap();
 }
+
+#[tokio::test]
+async fn rich_fields_keep_exact_values_and_visitor_ownership() {
+    use crate::fields::Fields;
+    use rom::Field;
+    let storage = Arc::new(rom_sqlite::Sqlite::open(":memory:").unwrap());
+    let runtime = build_runtime(storage).unwrap();
+    let alice = Actor::trusted("gallery-visitors", "alice");
+    let bob = Actor::trusted("gallery-visitors", "bob");
+    let fields = Fields::example("alice", "Alice's fields").unwrap();
+    runtime
+        .execute(
+            &alice,
+            Command::create("alice-fields", fields).idempotency("fields-create"),
+        )
+        .await
+        .unwrap();
+    let restored = runtime
+        .read::<Fields>(&alice, "alice-fields")
+        .await
+        .unwrap()
+        .value
+        .unwrap();
+    assert_eq!(
+        restored.decimal.encode(),
+        rom::Value::String("12345678901234567890.123456789".into())
+    );
+    assert_eq!(restored.count, 9_007_199_254_740_993);
+    assert!(matches!(
+        runtime.read::<Fields>(&bob, "alice-fields").await,
+        Err(Error::Denied)
+    ));
+    runtime.shutdown().await.unwrap();
+}

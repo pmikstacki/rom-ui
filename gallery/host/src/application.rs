@@ -1,4 +1,7 @@
-use crate::Sample;
+use crate::{
+    Sample,
+    fields::{Fields, MEASURE},
+};
 use rom::{Access, Actor, Builder, PrincipalKind, Resource, Result, Runtime, Storage};
 use rom_identity::{IdentityGate, IdentityLink, IdentityProvider, User};
 use std::sync::Arc;
@@ -15,12 +18,23 @@ fn owned(actor: &Actor, _: Access, sample: &Sample) -> bool {
     bootstrap(actor) || (actor.authority == "gallery-visitors" && sample.owner == actor.subject)
 }
 fn gallery_builder() -> Builder {
-    Runtime::builder().resource(
-        Sample::definition()
-            .policy(owned)
-            .allow_all_fields()
-            .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
-    )
+    Runtime::builder()
+        .resource(
+            Fields::definition()
+                .policy(|actor, _, fields| {
+                    bootstrap(actor)
+                        || (actor.authority == "gallery-visitors" && fields.owner == actor.subject)
+                })
+                .allow_all_fields()
+                .action(MEASURE)
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
+        .resource(
+            Sample::definition()
+                .policy(owned)
+                .allow_all_fields()
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
 }
 #[cfg(test)]
 pub fn build_runtime(storage: Arc<dyn Storage>) -> Result<Runtime> {
