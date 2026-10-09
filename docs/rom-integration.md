@@ -1,4 +1,60 @@
-# ROM Studio integration
+# ROM integration for application authors
+
+Use `rom-ui` for generic presentation. Use `rom-studio` for ROM sessions, descriptors, semantic forms and durable recovery.
+The gallery installs both packages through its frozen pnpm lock. It does not import producer source files.
+
+| Application need | Supported installed entry | Responsibility |
+| --- | --- | --- |
+| Inputs, dialogs, notifications and layout | rom-ui/controls, rom-ui/primitives, rom-ui/ui/components | Shared generic behavior |
+| Chat messages, composer and extension actions | rom-ui/chat | Presentation and submission callback lifetime |
+| Agent progress and activity actions | rom-ui/chat | Display disclosed progress; invoke host callbacks |
+| Workflow presentation and smooth fitting | rom-ui/flow | Graph interaction and viewport behavior |
+| Maps and provider presentation | rom-ui/maps | Render an explicitly supplied style and data |
+| View transitions | rom-ui/flex | Transitions, reduced motion and focus |
+| Descriptor-driven forms and typed actions | rom-studio/forms | Codec-aware editing and field-state semantics |
+| Authenticated Resource operations | rom-studio/application | Public createAppSession composition |
+
+## Connect once per application scope
+
+Obtain a trusted bootstrap from the ROM host. The gallery reads its `rom-studio-auth-profile` JSON script.
+Validate it with `parseStudioBootstrap`, then call `createStudioBootstrap` from `rom-studio`.
+Pass its profile and the host base URL to `createAppSession` from `rom-studio/application`.
+Use the returned controller and lifecycle subscriptions. Refresh the session before showing private Resource data.
+Destroy the session and close the bootstrap when the application scope ends.
+
+The executable gallery composition is [RomDemo](../gallery/src/RomDemo.svelte).
+Its [connection adapter](../gallery/src/rom-connection.ts) delegates to the installed public session facade.
+The adapter tracks only its own accepted intent-store versions for composer confirmation. ROM retains command recovery and authorization.
+
+## Bind domain views
+
+Use discovered descriptors and the controller's authorized Resource projection.
+Route writes through controller mutations, preserving the selected exact ID and revision.
+Pass the same authority generation to pending UI callbacks. Clear disclosed data when that authority changes.
+Keep unknown outcomes unresolved until native receipt recovery establishes their result.
+
+Forms use installed `ResourceForm` and `ActionForm`. The gallery supplies the session-owned reference lookup contract.
+Flow, maps, chat and activity use small application projections because each host owns its domain shape.
+These projections are not generic ROM UI codecs or alternative session controllers.
+See [workflow](../gallery/src/RomWorkflow.svelte), [map](../gallery/src/RomMap.svelte),
+[conversation](../gallery/src/RomConversation.svelte) and [activity](../gallery/src/RomTaskActivity.svelte).
+
+Supply composer icon buttons or dropdowns through its actions snippet. Hardware, uploads and tool authorization belong to the host.
+The activity panel uses synthetic ROM tasks in the gallery. It does not connect to the Astral application or execute a model.
+
+## Qualification and limits
+
+The current gallery pins ROM UI archive SHA-256 `840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164`.
+Its Studio archive SHA-256 is `39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305`.
+Both identities are verified by the installed consumer. Use pnpm 10.30.0 and frozen installation.
+The Studio package remains an authoring candidate; this guide does not change ROM release admission.
+
+See [current coverage](rom-integration-coverage.md) and [actual-host qualification](../evidence/gallery/rom-host/conversation.json).
+The public gallery runs on ROM hosting. Authenticated production acceptance still requires an approved account mapping.
+
+The following record preserves the original extraction evidence and package identities. It describes an earlier integration stage.
+
+# Historical Studio extraction
 
 Date: 2026-10-08.
 
