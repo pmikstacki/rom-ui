@@ -91,3 +91,8 @@ See the [deployment result](../evidence/gallery/rom-forms/public/result.json).
 
 The structured Forms candidate passed all 92 local gallery cases and 57 compiled snippets.
 Both browsers verified exact unit decimals, enum tokens, reference IDs, typed action inputs and retained rejected action drafts.
+
+The structured Forms increment is deployed from commit `5f69d40`.
+All eight affected public form and snippet checks passed in Chromium and WebKit.
+This focused run does not replace complete public qualification.
+See the [structured-form deployment result](../evidence/gallery/structured-forms/public/result.json).

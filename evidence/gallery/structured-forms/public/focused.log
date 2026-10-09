@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:2511840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts (1.8s)
+  ✓  2 [chromium] › tests/forms.spec.ts:18:1 › Studio forms distinguish false, unchanged, null and removal and respect read-only state (2.7s)
+  ✓  3 [chromium] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input (2.3s)
+  ✓  4 [chromium] › tests/snippets.spec.ts:67:3 › forms has a copyable example for every listed export (866ms)
+(node:2512252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [webkit] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts (1.5s)
+  ✓  6 [webkit] › tests/forms.spec.ts:18:1 › Studio forms distinguish false, unchanged, null and removal and respect read-only state (2.1s)
+  ✓  7 [webkit] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input (2.1s)
+  ✓  8 [webkit] › tests/snippets.spec.ts:67:3 › forms has a copyable example for every listed export (1.4s)
+
+  8 passed (15.9s)

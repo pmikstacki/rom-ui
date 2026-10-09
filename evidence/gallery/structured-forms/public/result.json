@@ -1,0 +1,14 @@
+{
+  "url": "https://romui.cybernomad.it/#forms",
+  "sourceCommit": "5f69d40",
+  "image": "rom-ui-gallery:5f69d40",
+  "imageId": "sha256:fbcfcc0267ba45879649726acf0df7d3442a99d8138fe6a59afa8585c4bc5427",
+  "focusedBrowserPassed": 8,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "scope": "Forms interactions and ResourceForm/ActionForm snippets only",
+  "fullPublicQualification": false,
+  "limits": "Previous full public run retained three Chromium ERR_NETWORK_CHANGED navigation failures; this focused run does not replace full qualification. Static host and local callbacks."
+}
