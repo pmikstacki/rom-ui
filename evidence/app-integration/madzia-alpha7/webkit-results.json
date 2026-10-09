@@ -16,5 +16,6 @@
   ],
   "backendBinary": "/root/madzia/backend/target/debug/forest-quiz",
   "site": "/var/tmp/rom-ui-madzia-alpha7/site",
-  "scope": "Candidate frontend with isolated local backend fixtures; Chromium app suites."
+  "scope": "Candidate frontend with isolated local backend fixtures; WebKit desktop/mobile journey, persistence and sidebar suites.",
+  "engine": "WebKit"
 }
