@@ -4,7 +4,7 @@
   import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
   import * as Sheet from "../../components/ui/sheet/index.js";
   import { Button } from "../../components/ui/button/index.js";
-  import { preserveEditor } from "./preserve-editor.ts";
+  import { preserveEditor, hasFocusedEditor } from "./preserve-editor.ts";
   import { lockDetailsScroll } from "./details-scroll-lock.ts";
 
   let {
@@ -80,6 +80,9 @@
     side="right"
     forceMount
     preventScroll={false}
+    onOpenAutoFocus={(event) => {
+      if (hasFocusedEditor(mobileTarget)) event.preventDefault();
+    }}
     onCloseAutoFocus={(event) => {
       event.preventDefault();
       if (mobile.current && !open) returnFocus();

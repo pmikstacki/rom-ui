@@ -88,3 +88,56 @@ test("reduced motion displays complete details without content animation", async
   const motion = await dialog.evaluate(element => ({ animation: getComputedStyle(element).animationName, transition: getComputedStyle(element).transitionDuration }));
   expect(motion).toEqual({ animation: "none", transition: "0s" });
 });
+
+test("responsive relocation retains the focused editor and exact text selection in both directions", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(fixture);
+  await page.getByRole("button", { name: "Open inspection details", exact: true }).click();
+  const draft = page.getByRole("textbox", { name: "Inspection draft", exact: true });
+  await draft.fill("Raw unchanged composition draft");
+  await draft.focus();
+  await draft.evaluate((element: HTMLTextAreaElement) => { element.dataset.focusWitness = "same-node"; element.setSelectionRange(2, 9, "backward"); });
+  for (const viewport of [{ width: 390, height: 500 }, { width: 1440, height: 900 }]) {
+    await page.setViewportSize(viewport);
+    await expect(draft).toBeFocused();
+    await expect(draft).toHaveAttribute("data-focus-witness", "same-node");
+    await expect(draft).toHaveValue("Raw unchanged composition draft");
+    expect(await draft.evaluate((element: HTMLTextAreaElement) => [element.selectionStart, element.selectionEnd, element.selectionDirection])).toEqual([2, 9, "backward"]);
+  }
+});
+
+test("responsive relocation does not restore an editor after deliberate focus departure", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(fixture);
+  await page.getByRole("button", { name: "Open inspection details", exact: true }).click();
+  const draft = page.getByRole("textbox", { name: "Inspection draft", exact: true });
+  await draft.focus();
+  const summary = page.getByRole("button", { name: "Inspection summary", exact: true });
+  await summary.focus();
+  await page.setViewportSize({ width: 390, height: 500 });
+  await expect(draft).not.toBeFocused();
+  await expect(page.getByRole("dialog", { name: "Inspection details", exact: true })).toBeVisible();
+});
+
+for (const invalid of ["disabled", "inert", "detached"] as const) {
+  test(`responsive relocation does not restore an ${invalid} editor`, async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(fixture);
+    await page.getByRole("button", { name: "Open inspection details", exact: true }).click();
+    const draft = page.getByRole("textbox", { name: "Inspection draft", exact: true });
+    await draft.focus();
+    await draft.evaluate((element: HTMLTextAreaElement, invalid) => {
+      if (invalid === "disabled") element.disabled = true;
+      else if (invalid === "inert") element.parentElement!.inert = true;
+      else element.remove();
+    }, invalid);
+    await page.setViewportSize({ width: 390, height: 500 });
+    const dialog = page.getByRole("dialog", { name: "Inspection details", exact: true });
+    await expect(dialog).toBeVisible();
+    expect(await page.evaluate(() => document.activeElement?.tagName === "TEXTAREA")).toBe(false);
+    if (invalid !== "detached") await expect(page.locator("textarea")).not.toBeFocused();
+    else await expect(page.locator("textarea")).toHaveCount(0);
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("button", { name: "Open inspection details", exact: true })).toBeFocused();
+  });
+}
