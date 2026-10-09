@@ -7,14 +7,14 @@ It is not served by a ROM runtime. Its records, chat responses and activity prog
 | Required feature | Current gallery | Required completion evidence |
 | --- | --- | --- |
 | General inputs, buttons, checkbox, slider, native select | Installed rom-ui demos | ROM-bound read/write states and host integration checks |
-| Optional, nullable, read-only and undisclosed field states | Missing ROM form demo | Actual descriptor-driven form, absence/null/removal and permission cases |
-| Exact integer and decimal editing | Generic input only | Accepted and rejected ROM codec values, without numeric rounding |
-| Date, datetime, time, color, email, URL | Missing semantic editor demo | Installed Studio semantic renderers and real Resource actions |
-| Multiline and JSON document editing | Textarea only | Expansion, retained invalid drafts and validated wire values |
-| Unit value editing | Missing | Value/unit contract and real mutation outcomes |
-| Enum/list/structured value editing | Native select only | Studio ValueEditor/ListEditor/EnumListChoices with actual descriptors |
-| Resource reference editing | Generic reference picker | Authorized lookup and exact ID actions through the ROM binding |
-| Form submission and recovery | Local examples | Confirmed receipts, rejection, stale revisions and unknown outcome recovery |
+| Optional, nullable, read-only and undisclosed field states | Installed Studio optional/nullable and read-only previews; undisclosed demo missing | Actual descriptor-driven form, absence/null/removal and permission cases |
+| Exact integer and decimal editing | Installed Studio exact u64 and decimal editors | Accepted and rejected ROM codec values, without numeric rounding |
+| Date, datetime, time, color, email, URL | Installed Studio semantic editors | Installed Studio semantic renderers and real Resource actions |
+| Multiline and JSON document editing | Installed Studio multiline and structured JSON editors | Expansion, retained invalid drafts and validated wire values |
+| Unit value editing | Installed Studio value/unit editor | Value/unit contract and real mutation outcomes |
+| Enum/list/structured value editing | Installed Studio enum, lists and map editors | Studio ValueEditor/ListEditor/EnumListChoices with actual descriptors |
+| Resource reference editing | Generic picker and Studio exact-ID editor; no authorized gallery lookup | Authorized lookup and exact ID actions through the ROM binding |
+| Form submission and recovery | Installed ResourceForm and ActionForm with local accepted/rejected callbacks | Confirmed receipts, rejection, stale revisions and unknown outcome recovery |
 | Chat composer extensions | New actions slot | Installed slot tests and ROM host-owned tool actions |
 | Agent activity | New interactive local example | Authorized live task observation and cancel/retry actions with outcomes |
 | Flow and maps | Installed generic compositions | ROM-backed Resource projections and approved map-provider descriptors |
@@ -35,4 +35,5 @@ Its generic control facades and ConversationLayout use the same installed owner 
 The new `rom-studio/forms` entry point exposes existing Studio forms and renderer contracts.
 Semantic editors and recovery remain in Studio.
 The installed forms consumer passed exact-integer and rejected-submission cases in both browsers.
-These checks establish the API boundary; rich gallery form examples and actual ROM-backed submissions remain pending.
+The gallery now uses installed ResourceForm and ActionForm exports for 18 semantic and structured fields.
+These previews retain exact values and rejected drafts. Actual ROM-backed submissions and recovery remain pending.
