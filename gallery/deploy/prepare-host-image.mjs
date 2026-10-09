@@ -22,7 +22,16 @@ const executable = path.join(output, "runtime/gallery/rom-ui-gallery-host");
 copy(binary, executable);
 fs.chmodSync(executable, 0o755);
 copy("/etc/ssl/certs/ca-certificates.crt", path.join(output, "runtime/etc/ssl/certs/ca-certificates.crt"));
-fs.cpSync(assets, path.join(output, "assets"), { recursive: true });
+function copyAssets(directory, target) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const source = path.join(directory, entry.name);
+    const destination = path.join(target, entry.name);
+    if (entry.isDirectory()) copyAssets(source, destination);
+    else if (entry.isFile()) copy(source, destination);
+    else throw Error("Gallery assets must contain only regular files and directories.");
+  }
+}
+copyAssets(assets, path.join(output, "assets"));
 copy(new URL("host.Dockerfile", import.meta.url), path.join(output, "Dockerfile"));
 fs.writeFileSync(path.join(output, "runtime-inputs.json"), JSON.stringify(hashes, null, 2) + "\n");
 console.log(`Prepared ${libraries.length} runtime libraries and the host binary.`);

@@ -7,7 +7,7 @@
   import { createStudioBootstrap, parseStudioBootstrap } from "rom-studio";
   import type { ApplicationState } from "rom-studio/application";
   import type { SessionLifecycleState } from "rom-studio/auth";
-  import type { WireValue, ResourceDescriptor } from "rom-studio/client";
+  import type { WireValue, ResourceDescriptor, Operation } from "rom-studio/client";
   import Showcase from "./Showcase.svelte";
   import RomResourceForm from "./RomResourceForm.svelte";
   import RomTaskActivity from "./RomTaskActivity.svelte";
@@ -19,6 +19,7 @@
   let session = $state.raw<SessionLifecycleState | null>(null);
   let error = $state("");
   let restoreEpoch = $state(0);
+  let mutationsInFlight = $state(0);
   let providers = $state<{ id: string; label: string }[]>([]);
   const blocked = $derived(appState?.recovery?.state.hasUnresolvedIntent ?? false);
   const submitting = $derived(appState?.recovery?.state.phase === "submitting");
@@ -73,15 +74,26 @@
     error = "";
     try { await action(); } catch (problem) { error = problem instanceof Error ? problem.message : "ROM operation failed."; }
   }
+  async function updateResource(action: () => Promise<unknown>) {
+    mutationsInFlight++;
+    try { await action(); }
+    finally { mutationsInFlight--; }
+  }
+  async function mutate(id: string, revision: bigint | null, operation: Operation) {
+    const application = connection?.application;
+    if (!application) throw Error("Connect to ROM first.");
+    await updateResource(() => application.mutate(id, revision, operation));
+  }
   async function invoke(name: string, input: WireValue) {
     if (!connection || !appState?.selected) throw Error("Choose an authorized Resource first.");
-    await connection.application.mutate(appState.selected.key.id, appState.selected.revision, { type: "action", input: { name, input } });
+    await mutate(appState.selected.key.id, appState.selected.revision, { type: "action", input: { name, input } });
   }
 </script>
 
 <Showcase title="Live ROM Resources" api="rom-studio/application" level={2}>
   <p class="muted">Host-discovered fields, exact revisions and authorized actions use the installed ROM controller. Pending mutations retain their original command for recovery.</p>
   {#if error}<p role="status">{error}</p>{/if}
+  {#if mutationsInFlight > 0}<p role="status" data-testid="rom-update-pending">Updating Resource…</p>{/if}
   {#if connection}
     <p role="status">Session: {session?.status ?? "checking"}</p>
     {#if session?.status !== "authenticated"}{#each providers as provider}<a href={connection.loginUrl(provider.id)}>Sign in with {provider.label}</a>{/each}{/if}
@@ -106,18 +118,18 @@
       </div>
       {#if appState.selected?.value}
         {#if appState.selected.key.kind === "gallery-tasks"}
-          <RomTaskActivity record={appState.selected} disabled={blocked || submitting || draftBlocked} invoke={name => perform(() => invoke(name, null))} />
+          <RomTaskActivity record={appState.selected} disabled={blocked || submitting || draftBlocked || mutationsInFlight > 0} invoke={name => perform(() => invoke(name, null))} />
         {/if}
         <Button onclick={() => perform(async () => { await connection!.application.restoreSelectedIntent(); restoreEpoch++; })}>Restore saved draft and mutation</Button>
         <p>Resource: {appState.selected.key.id} · Revision: {String(appState.selected.revision)}</p>
         {#key `${appState.selected.key.kind}:${appState.selected.key.id}:${appState.selected.revision}`}
-          <RomResourceForm application={connection.application} {descriptor} record={appState.selected} editor={appState.editor} disabled={blocked || submitting || draftBlocked} {restoreEpoch} />
-          {#each descriptor.action_inputs as action}<ActionForm {descriptor} {action} readonly={blocked || submitting || draftBlocked} oninvoke={input => invoke(action.name, input)} />{/each}
+          <RomResourceForm updating={mutationsInFlight > 0} {mutate} application={connection.application} {descriptor} record={appState.selected} editor={appState.editor} disabled={blocked || submitting || draftBlocked || mutationsInFlight > 0} {restoreEpoch} />
+          {#each descriptor.action_inputs as action}<ActionForm {descriptor} {action} readonly={blocked || submitting || draftBlocked || mutationsInFlight > 0} oninvoke={input => invoke(action.name, input)} />{/each}
         {/key}
       {/if}
       {#if appState.recovery?.state.phase === "unknown" || appState.recovery?.state.phase === "prepared"}
         <p role="status">{appState.recovery.state.phase === "prepared" ? "A saved command is ready to send. It has not been attempted." : "The outcome is unknown. Retry the original saved mutation."}</p>
-        <Button onclick={() => perform(() => connection!.application.retry())}>Retry saved mutation</Button>
+        <Button onclick={() => perform(() => updateResource(() => connection!.application.retry()))}>Retry saved mutation</Button>
       {/if}
     {/if}
   {/if}

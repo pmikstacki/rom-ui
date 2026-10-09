@@ -3,12 +3,14 @@
   import { ResourceForm, type ResourceFormSubmission } from "rom-studio/forms";
   import type { ApplicationController, ApplicationState } from "rom-studio/application";
   import type { ResourceDescriptor, ProjectedView } from "rom-studio/client";
-  let { application, descriptor, record, editor, disabled, restoreEpoch }: {
+  let { application, mutate, descriptor, record, editor, disabled, updating, restoreEpoch }: {
     application: ApplicationController;
+    mutate: ApplicationController["mutate"];
     descriptor: ResourceDescriptor;
     record: ProjectedView;
     editor: ApplicationState["editor"];
     disabled: boolean;
+    updating: boolean;
     restoreEpoch: number;
   } = $props();
   // Each keyed form owns its original principal and Resource target.
@@ -17,7 +19,7 @@
   const writer = untrack(() => application.createDraftWriter(record.key.id));
   let confirmed = $state(0);
   async function submit(input: ResourceFormSubmission) {
-    await application.mutate(record.key.id, record.revision, input);
+    await mutate(record.key.id, record.revision, input);
     if (application.state.editor?.status === "idle") confirmed++;
   }
 </script>
@@ -32,6 +34,7 @@
   direct
   mode="patch"
   {submit}
+  readonly={updating}
   submitDisabled={disabled}
   onDraftChange={(snapshot, input) => writer.stage(snapshot, input)}
 />

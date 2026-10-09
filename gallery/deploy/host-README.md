@@ -15,7 +15,7 @@ docker build -t rom-ui-gallery-host:<revision> /absolute/path/to/new-context
 
 The current preparer supports the Nix-linked Linux binary. It copies required shared libraries and the system CA certificate bundle.
 
-The context includes runtime input hashes. Keep the context and build log with the release evidence.
+The context includes hashes for the host binary, runtime libraries, CA bundle, Dockerfile, and every gallery asset. Keep the context and build log with the release evidence.
 
 ## Configure persistent storage
 

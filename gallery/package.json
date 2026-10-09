@@ -14,7 +14,7 @@
     "svelte": "5.57.1",
     "@xyflow/svelte": "1.7.0",
     "maplibre-gl": "6.7.0",
-    "rom-studio": "file:./packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz"
+    "rom-studio": "file:./packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

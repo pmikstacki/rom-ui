@@ -1,5 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 
+import { loginGallery } from "./rom-host-login";
+
 const host = process.env.ROM_GALLERY_HOST_URL;
 test("dedicated ROM host isolates visitors and persists exact values", async ({ page, browser }) => {
   test.skip(!host, "Requires the dedicated local gallery host and synthetic OIDC provider.");
@@ -8,15 +10,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   expect(base.protocol).toBe("http:");
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
-  async function login(target: Page, account: string) {
-    await target.goto(`${base.href}#rom`);
-    await target.getByRole("link", { name: "Sign in with Gallery account", exact: true }).click();
-    await target.getByLabel("Fixture account", { exact: true }).selectOption(account);
-    await target.getByRole("button", { name: "Sign in", exact: true }).click();
-    await target.getByRole("button", { name: "Allow", exact: true }).click();
-    await expect(target).toHaveURL(base.href);
-    await target.goto(`${base.href}#rom`);
-  }
+  const login = (target: Page, account: string) => loginGallery(target, base, account);
   await login(page, "alice");
   const discovered = await page.evaluate(async () => {
     const session = await fetch("/auth/session").then(response => response.json());
@@ -34,6 +28,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   await count.fill(saved);
   await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
   await expect(page.getByRole("button", { name: "Save changes", exact: true })).toBeDisabled();
+  await expect(page.getByTestId("rom-update-pending")).toHaveCount(0);
   await page.reload();
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-samples");
   await page.getByRole("button", { name: "alice-sample", exact: true }).click();
@@ -61,6 +56,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   await expect(page.getByText("Alice's sample", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Save 2 changes", exact: true }).click();
   await expect(page.getByRole("button", { name: "Save changes", exact: true })).toBeDisabled();
+  await expect(page.getByTestId("rom-update-pending")).toHaveCount(0);
   await page.reload();
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
   await page.getByRole("button", { name: "alice-fields", exact: true }).click();
@@ -73,6 +69,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   await page.getByRole("textbox", { name: "input unit", exact: true }).fill("kg");
   await page.getByRole("button", { name: "Run measure", exact: true }).click();
   await expect(page.getByRole("textbox", { name: "measurement value", exact: true })).toHaveValue(measurement);
+  await expect(page.getByTestId("rom-update-pending")).toHaveCount(0);
   await page.reload();
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-fields");
   await page.getByRole("button", { name: "alice-fields", exact: true }).click();
@@ -89,6 +86,7 @@ test("dedicated ROM host isolates visitors and persists exact values", async ({ 
   }
   await page.getByRole("button", { name: "Cancel ROM task", exact: true }).click();
   await expect(activity.getByRole("status")).toHaveText("canceled");
+  await expect(page.getByTestId("rom-update-pending")).toHaveCount(0);
   await page.reload();
   await page.getByLabel("Resource kind", { exact: true }).selectOption("gallery-tasks");
   await page.getByRole("button", { name: "alice-task", exact: true }).click();

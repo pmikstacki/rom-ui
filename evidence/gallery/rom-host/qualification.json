@@ -1,5 +1,5 @@
 {
-  "studioArchiveSha256": "7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce",
+  "studioArchiveSha256": "39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305",
   "studio": {
     "unitTests": 424,
     "checkErrors": 0,
@@ -44,18 +44,59 @@
   },
   "publicDeployment": {
     "romHosted": false,
-    "staticImage": "rom-ui-gallery:b722ba2"
+    "staticImage": "rom-ui-gallery:b722ba2",
+    "oidc": {
+      "provider": "Authentik",
+      "application": "rom-ui-gallery",
+      "providerId": 2,
+      "issuer": "https://auth.yggdrasil.cybernomad.it/application/o/rom-ui-gallery/",
+      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+      "dedicatedClient": true,
+      "configurationPrepared": true,
+      "visitorMappingPending": true,
+      "credentialValuesRecorded": false
+    },
+    "stagedImage": {
+      "localImageId": "91b90e5933e1f06026dbb6ff318552cfcdb7e88eb65a75042c9aec52b8964b17",
+      "remoteImageId": "sha256:5f0aad1332fc81adc12068a61da7590b41382143020af0a9d05230c7069eaf2c",
+      "archiveSha256": "aa5e2529d86a4a1155a5f38bd6cb166bc0cc51c48b53ccf31a4c7ae06b7b34a1",
+      "verifiedImageFiles": 47,
+      "missingFiles": 0,
+      "mismatchedFiles": 0,
+      "releaseDirectory": "/opt/rom-ui-gallery/releases/rom-host-91b90e5933e1",
+      "loopbackPort": 18080,
+      "romBootstrapPresent": true,
+      "anonymousSessionStatus": 200,
+      "providerDiscoveryStatus": 200,
+      "publicServiceChanged": false,
+      "login": {
+        "status": 303,
+        "authorizationHost": "auth.yggdrasil.cybernomad.it",
+        "clientId": "rom-ui-gallery",
+        "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+        "statePresent": true,
+        "noncePresent": true,
+        "secureCookie": true,
+        "httpOnlyCookie": true
+      },
+      "anonymousApiStatus": {
+        "discover": 401,
+        "read": 401
+      },
+      "composeConfigurationValid": true,
+      "sigtermExit": 0
+    }
   },
   "limits": [
-    "Production OIDC configuration pending",
+    "Production visitor mapping and authenticated acceptance pending",
     "Flow and maps ROM resource bindings pending",
     "Public ROM deployment and HTTPS acceptance pending"
   ],
   "logs": {
-    "producer": "/var/tmp/rom-editor-cleanup-full-verifier.log",
+    "producer": "/var/tmp/rom-public-app-session-full-verifier-configured.log",
     "host": "/var/tmp/rom-gallery-rich-fields-check.log",
     "browser": "/var/tmp/rom-gallery-noop-reset-browser.log",
-    "owner": "/var/tmp/rom-ui-cleanup-full-verifier-configured.log"
+    "owner": "/var/tmp/rom-ui-public-session-full-verifier-repeat.log"
   },
   "ownerVerifier": {
     "exit": 0,
@@ -136,5 +177,75 @@
     "extrasRomVersion": "0.0.3",
     "galleryRomVersion": "0.1.0",
     "state": "Pending version-boundary integration and installed-consumer qualification"
-  }
+  },
+  "sessionCompositionCandidate": {
+    "archiveSha256": "39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305",
+    "publicExport": "rom-studio/application#createAppSession",
+    "producerFullVerifierExit": 0,
+    "producerUnitTests": 424,
+    "galleryCheckErrors": 0,
+    "galleryCheckWarnings": 0,
+    "galleryBuildPassed": true,
+    "installedBrowser": {
+      "chromium": "passed",
+      "webkit": "intermittent query access-control error",
+      "unchangedWebkitRepeatPassed": 2,
+      "unchangedWebkitRepeatFailed": 1,
+      "final": {
+        "passed": 4,
+        "engines": [
+          "chromium",
+          "webkit"
+        ],
+        "log": "/var/tmp/rom-gallery-retry-readonly-browser.log",
+        "includesLostAcknowledgement": true,
+        "originalCommandBytesReplayed": true,
+        "controlsDisabledDuringDelayedRefresh": true
+      },
+      "failuresPreserved": [
+        "/var/tmp/rom-gallery-public-session-browser.log",
+        "/var/tmp/rom-gallery-public-session-webkit-repeat.log",
+        "/var/tmp/rom-gallery-update-lifetime-browser.log",
+        "/var/tmp/rom-gallery-retry-lifetime-red.log",
+        "/var/tmp/rom-gallery-retry-lifetime-green.log"
+      ]
+    },
+    "logs": {
+      "producer": "/var/tmp/rom-public-app-session-full-verifier-configured.log",
+      "browser": "/var/tmp/rom-gallery-public-session-browser.log",
+      "webkitRepeat": "/var/tmp/rom-gallery-public-session-webkit-repeat.log"
+    },
+    "adoptionState": "Qualified installed package and backend browser journeys",
+    "sourceReview": {
+      "mode": "read-only",
+      "materialFindingsResolved": 1,
+      "additionalMaterialFindings": 0,
+      "scope": [
+        "public session helper adoption",
+        "parent mutation and retry lifetime",
+        "read-only fields during refresh",
+        "actual backend lost-acknowledgement regression"
+      ]
+    },
+    "ownerFirstRun": {
+      "exit": 1,
+      "consumerPassed": 139,
+      "consumerFailed": 1,
+      "log": "/var/tmp/rom-ui-public-session-full-verifier.log"
+    },
+    "ownerFocusRepeat": {
+      "passed": 3,
+      "sourceChanged": false,
+      "log": "/var/tmp/rom-gallery-session-focus-repeat.log"
+    },
+    "ownerFullRepeat": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 6,
+      "hostTests": 9,
+      "log": "/var/tmp/rom-ui-public-session-full-verifier-repeat.log"
+    }
+  },
+  "previousStudioArchiveSha256": "7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce"
 }

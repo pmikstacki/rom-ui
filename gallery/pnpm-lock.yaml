@@ -19,8 +19,8 @@ importers:
         specifier: 6.7.0
         version: 6.7.0
       rom-studio:
-        specifier: file:./packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz
-        version: file:packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(typescript@6.0.3)(zod@4.6.5)
+        specifier: file:./packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz
+        version: file:packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(typescript@6.0.3)(zod@4.6.5)
       rom-ui:
         specifier: file:../rom-ui-840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164.tgz
         version: file:../rom-ui-840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164.tgz(@internationalized/date@3.12.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(svelte@5.57.1)(tailwind-merge@3.7.0)
@@ -1095,8 +1095,8 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  rom-studio@file:packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz:
-    resolution: {integrity: sha512-uE2JQUd6Mat3v7uv+thuxfMJIezRc+5nCVh/R32nhUdLns+vxkY52NCTuAu6/CeEdzRP2DFTdxKC4JTSITcjAQ==, tarball: file:packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz}
+  rom-studio@file:packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz:
+    resolution: {integrity: sha512-AAQWlrYOhNoz8gkvg2GCMaPmPBh/k8QafIeHOxMr0L4hghNXiBHqxVvlxVBk5HEI9cZ38m8bFlql0loYjZru5A==, tarball: file:packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz}
     version: 0.1.0
 
   rom-ui@file:../rom-ui-840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164.tgz:
@@ -2365,7 +2365,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.13
       '@rolldown/binding-win32-x64-msvc': 1.2.13
 
-  rom-studio@file:packages/rom-studio-7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce.tgz(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(typescript@6.0.3)(zod@4.6.5):
+  rom-studio@file:packages/rom-studio-39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305.tgz(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.2(@types/node@22.20.5)(jiti@2.7.0)))(@xyflow/svelte@1.7.0(svelte@5.57.1))(maplibre-gl@6.7.0)(typescript@6.0.3)(zod@4.6.5):
     dependencies:
       '@internationalized/date': 3.12.4
       '@lucide/svelte': 1.51.0(svelte@5.57.1)
