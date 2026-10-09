@@ -15,11 +15,14 @@
   const initialDescriptor = untrack(() => descriptor);
   const initialRecord = untrack(() => record);
   const writer = untrack(() => application.createDraftWriter(record.key.id));
+  let confirmed = $state(0);
   async function submit(input: ResourceFormSubmission) {
     await application.mutate(record.key.id, record.revision, input);
+    if (application.state.editor?.status === "idle") confirmed++;
   }
 </script>
 
+{#key confirmed}
 <ResourceForm
   descriptor={initialDescriptor}
   value={initialRecord.value ?? {}}
@@ -32,3 +35,4 @@
   submitDisabled={disabled}
   onDraftChange={(snapshot, input) => writer.stage(snapshot, input)}
 />
+{/key}

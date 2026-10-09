@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+: "${ROM_GALLERY_SOURCE:?Set the qualified ROM source directory}"
+node --input-type=module <<'JS'
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const inputs = JSON.parse(fs.readFileSync('source/rom-inputs.json', 'utf8'));
+for (const [file, expected] of Object.entries(inputs)) {
+  const bytes = fs.readFileSync(path.join(process.env.ROM_GALLERY_SOURCE, file));
+  if (crypto.createHash('sha256').update(bytes).digest('hex') !== expected) throw Error(`ROM source mismatch: ${file}`);
+}
+JS
+config=()
+for crate in rom rom-identity rom-sqlite rom-studio-host; do
+  config+=(--config "patch.crates-io.$crate.path=\"$ROM_GALLERY_SOURCE/crates/$crate\"")
+done
+cargo fmt -- --check
+cargo test "${config[@]}" --locked
+cargo clippy "${config[@]}" --all-targets --locked -- -D warnings
+cargo build "${config[@]}" --locked

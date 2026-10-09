@@ -21,6 +21,7 @@
   let providers = $state<{ id: string; label: string }[]>([]);
   const blocked = $derived(appState?.recovery?.state.hasUnresolvedIntent ?? false);
   const submitting = $derived(appState?.recovery?.state.phase === "submitting");
+  const draftBlocked = $derived(appState?.editor?.status === "writing" || appState?.editor?.status === "error");
   const descriptor = $derived(appState?.descriptors.find(item => item.kind === appState?.kind));
   const referenceDefinition = $derived(JSON.stringify(appState?.phase === "ready" ? appState.descriptors : []));
   const referenceScope = $derived(session?.status === "authenticated" && appState?.session?.status === "active" ? session.identity?.generation : null);
@@ -100,8 +101,8 @@
         <Button onclick={() => perform(async () => { await connection!.application.restoreSelectedIntent(); restoreEpoch++; })}>Restore saved draft and mutation</Button>
         <p>Resource: {appState.selected.key.id} · Revision: {String(appState.selected.revision)}</p>
         {#key `${appState.selected.key.kind}:${appState.selected.key.id}:${appState.selected.revision}`}
-          <RomResourceForm application={connection.application} {descriptor} record={appState.selected} editor={appState.editor} disabled={blocked || submitting} {restoreEpoch} />
-          {#each descriptor.action_inputs as action}<ActionForm {descriptor} {action} readonly={blocked || submitting} oninvoke={input => invoke(action.name, input)} />{/each}
+          <RomResourceForm application={connection.application} {descriptor} record={appState.selected} editor={appState.editor} disabled={blocked || submitting || draftBlocked} {restoreEpoch} />
+          {#each descriptor.action_inputs as action}<ActionForm {descriptor} {action} readonly={blocked || submitting || draftBlocked} oninvoke={input => invoke(action.name, input)} />{/each}
         {/key}
       {/if}
       {#if appState.recovery?.state.phase === "unknown" || appState.recovery?.state.phase === "prepared"}
