@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { componentExamples } from "../src/component-examples";
 
 const expected = {
-  forms: ["ResourceForm"],
+  forms: ["ResourceForm", "ActionForm"],
   controls: [
     "Button",
     "Input",

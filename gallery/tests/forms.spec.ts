@@ -39,3 +39,30 @@ test("Studio forms distinguish false, unchanged, null and removal and respect re
   await expect(page.getByRole("button", { name: "note options", exact: true })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Save 2 changes", exact: true })).toBeDisabled();
 });
+
+test("Studio forms expose structured fields and typed action input", async ({ page }) => {
+  await page.goto("/#forms");
+  await expect(page.getByRole("group", { name: "measurement", exact: true })).toBeVisible();
+  await expect(page.getByRole("group", { name: "tags", exact: true })).toBeVisible();
+  await expect(page.getByRole("group", { name: "category", exact: true })).toBeVisible();
+  await expect(page.getByRole("group", { name: "related", exact: true })).toBeVisible();
+  await expect(page.getByLabel("related value", { exact: true })).toHaveValue("task-a");
+  await page.getByLabel("measurement value", { exact: true }).fill("9007199254740993.125");
+  await page.getByRole("button", { name: "category value", exact: true }).click();
+  await page.getByRole("option", { name: "Maintenance", exact: true }).click();
+  await page.getByRole("button", { name: "Save 2 changes", exact: true }).click();
+  await expect(page.getByLabel("Submitted form", { exact: true })).toContainText('"measurement":{"op":"set","value":{"value":"9007199254740993.125","unit":"kg"}}');
+  await expect(page.getByLabel("Submitted form", { exact: true })).toContainText('"category":{"op":"set","value":"maintenance"}');
+  await page.getByRole("button", { name: "message mode", exact: true }).click();
+  await page.getByRole("option", { name: "Set value", exact: true }).click();
+  await page.getByLabel("message value", { exact: true }).fill("Preserve my annotation");
+  await page.getByRole("button", { name: "Run annotate", exact: true }).click();
+  await expect(page.getByLabel("Action input preview", { exact: true })).toContainText('"message":"Preserve my annotation"');
+  await page.getByLabel("Reject application submission", { exact: true }).check();
+  await page.getByLabel("message value", { exact: true }).fill("Retain this rejected action draft");
+  await page.getByRole("button", { name: "Run annotate", exact: true }).click();
+  await expect(page.getByRole("alert")).toContainText("Application rejected this action.");
+  await expect(page.getByLabel("message value", { exact: true })).toHaveValue("Retain this rejected action draft");
+  await page.getByLabel("Read-only form", { exact: true }).check();
+  await expect(page.getByRole("button", { name: "Run annotate", exact: true })).toBeDisabled();
+});

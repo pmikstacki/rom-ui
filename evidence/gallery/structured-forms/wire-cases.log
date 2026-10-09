@@ -1,0 +1,19 @@
+[WebServer] (node:2484004) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2484024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:2484136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts (476ms)
+  ✓  2 [chromium] › tests/forms.spec.ts:18:1 › Studio forms distinguish false, unchanged, null and removal and respect read-only state (1.3s)
+  ✓  3 [chromium] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input (805ms)
+(node:2484412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [webkit] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts (604ms)
+  ✓  5 [webkit] › tests/forms.spec.ts:18:1 › Studio forms distinguish false, unchanged, null and removal and respect read-only state (1.6s)
+  ✓  6 [webkit] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input (1.3s)
+
+  6 passed (8.2s)

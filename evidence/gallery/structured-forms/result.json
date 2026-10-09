@@ -1,0 +1,14 @@
+{
+  "galleryPassed": 92,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "snippetsChecked": 57,
+  "svelteErrors": 0,
+  "svelteWarnings": 0,
+  "wireCasesPassed": 6,
+  "review": "rich_forms_review: no material findings, source inspection plus targeted executed log",
+  "sourceScope": "Gallery data, rendering and examples; installed owner and Studio archives unchanged",
+  "limits": "Local previews. No authorized lookup, durable commits, receipt recovery or ROM-backed hosting proof."
+}

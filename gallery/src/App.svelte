@@ -61,7 +61,7 @@
       tags: "graph nodes madzia xyflow",
     },
   ];
-  sections.push({ id: "forms", label: "Forms", icon: "▦", count: "12", description: "Descriptor-driven fields from ROM Studio.", tags: "resource form semantic date time datetime color email url decimal json nullable optional readonly" });
+  sections.push({ id: "forms", label: "Forms", icon: "▦", count: "18", description: "Descriptor-driven fields from ROM Studio.", tags: "resource form semantic date time datetime color email url decimal json nullable optional readonly" });
   sections.push({
     id: "studio-primitives",
     label: "Studio primitives",

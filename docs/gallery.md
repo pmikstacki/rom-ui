@@ -78,7 +78,8 @@ A gallery pnpm override keeps direct controls and Studio controls on one ROM UI 
 
 The submission callback previews local wire values. It does not commit Resource changes.
 Live sessions, authorization, action receipts and recovery remain pending.
-Unit values, enum/list editors, references and typed action examples also remain pending.
+The local candidate also includes unit values, enum/list/map editors, exact reference IDs and typed action inputs.
+Authorized reference lookup and actual action execution remain pending.
 The archive is an authoring source candidate, not an admitted ROM release.
 Retained [producer evidence](../evidence/gallery/rom-forms/producer-result.json) identifies installed files and executed checks.
 
@@ -87,3 +88,6 @@ Public HTTPS assets match the local build. Both browsers passed the four Forms c
 The full public run passed 87 cases and failed three Chromium navigations with `ERR_NETWORK_CHANGED`.
 This run does not establish complete public browser qualification.
 See the [deployment result](../evidence/gallery/rom-forms/public/result.json).
+
+The structured Forms candidate passed all 92 local gallery cases and 57 compiled snippets.
+Both browsers verified exact unit decimals, enum tokens, reference IDs, typed action inputs and retained rejected action drafts.
