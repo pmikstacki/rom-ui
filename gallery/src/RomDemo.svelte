@@ -12,6 +12,7 @@
   import RomResourceForm from "./RomResourceForm.svelte";
   import RomTaskActivity from "./RomTaskActivity.svelte";
   import RomWorkflow from "./RomWorkflow.svelte";
+  import RomMap from "./RomMap.svelte";
   import { createRomConnection } from "./rom-connection";
   const componentId = $props.id();
   const resourceKindId = `${componentId}-resource-kind`;
@@ -89,6 +90,16 @@
     if (!connection || !appState?.selected) throw Error("Choose an authorized Resource first.");
     await mutate(appState.selected.key.id, appState.selected.revision, { type: "action", input: { name, input } });
   }
+  async function selectMap(id: string): Promise<"accepted" | "rejected" | "unknown"> {
+    error = "";
+    try {
+      await invoke("select", id);
+      return "accepted";
+    } catch (problem) {
+      error = problem instanceof Error ? problem.message : "ROM operation failed.";
+      return connection?.application.state.recovery?.state.hasUnresolvedIntent ? "unknown" : "rejected";
+    }
+  }
 </script>
 
 <Showcase title="Live ROM Resources" api="rom-studio/application" level={2}>
@@ -108,16 +119,20 @@
           {#each appState.descriptors as item}<option value={item.kind}>{item.presentation?.label ?? item.kind}</option>{/each}
         </select>
       </div>
-      {#if appState.kind === "gallery-tasks" || appState.kind === "gallery-workflows"}
+      {#if appState.kind === "gallery-tasks" || appState.kind === "gallery-workflows" || appState.kind === "gallery-maps"}
         <p class="muted">Changes from other tabs can appear live. If another tab changes this Resource, restore saved work before sending another action.</p>
         <Button onclick={() => appState?.live ? connection!.application.stopLive() : void perform(() => connection!.application.observe())}>
-          {appState.live ? "Stop live" : "Start live"} {appState.kind === "gallery-workflows" ? "workflow" : "task"} updates
+          {appState.live ? "Stop live" : "Start live"} {appState.kind === "gallery-workflows" ? "workflow" : appState.kind === "gallery-maps" ? "map" : "task"} updates
         </Button>
       {/if}
       <div aria-label="Authorized Resources">
         {#each appState.rows as row}<Button onclick={() => perform(() => connection!.application.selectRow(row.key.id))}>{row.key.id}</Button>{/each}
       </div>
       {#if appState.selected?.value}
+        {#if appState.selected.key.kind === "gallery-maps"}
+          <RomMap record={appState.selected} {descriptor} disabled={blocked || submitting || draftBlocked || mutationsInFlight > 0}
+            authorityToken={referenceScope} recoveryToken={restoreEpoch} select={selectMap} />
+        {/if}
         {#if appState.selected.key.kind === "gallery-workflows"}
           <RomWorkflow record={appState.selected} {descriptor} disabled={blocked || submitting || draftBlocked || mutationsInFlight > 0} select={stage => perform(() => invoke("select", stage))} />
         {/if}

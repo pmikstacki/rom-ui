@@ -12,6 +12,10 @@ pub use provision::{Visitor, provision};
 mod host;
 pub use host::{read_configuration, serve};
 mod fields;
+mod map_provider;
+#[cfg(test)]
+mod map_provider_tests;
+mod map_scene;
 mod tasks;
 mod workflow;
 #[cfg(test)]

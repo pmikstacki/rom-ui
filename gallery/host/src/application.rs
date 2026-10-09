@@ -20,6 +20,26 @@ fn owned(actor: &Actor, _: Access, sample: &Sample) -> bool {
 fn gallery_builder() -> Builder {
     Runtime::builder()
         .resource(
+            crate::map_scene::MapScene::definition()
+                .policy(|actor, _, scene| {
+                    bootstrap(actor)
+                        || (actor.authority == "gallery-visitors" && scene.owner == actor.subject)
+                })
+                .field_policy(|actor, access, field, _| {
+                    matches!(access, Access::Read)
+                        || bootstrap(actor)
+                        || matches!(field, "name" | "selected")
+                })
+                .validate_transition(|_, _, after| {
+                    if let Some(scene) = after {
+                        scene.validate_selection()?;
+                    }
+                    Ok(())
+                })
+                .action(crate::map_scene::SELECT)
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
+        .resource(
             crate::workflow::Workflow::definition()
                 .policy(|actor, _, workflow| {
                     bootstrap(actor)

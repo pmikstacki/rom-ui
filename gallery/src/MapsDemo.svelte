@@ -1,11 +1,10 @@
 <script lang="ts">
   import Showcase from "./Showcase.svelte";
   import {
-    setWorkerUrl,
     type Map as MapInstance,
     type StyleSpecification,
   } from "maplibre-gl";
-  import MapWorker from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+  import "./map-worker";
   import {
     ResourceMap,
     MapClusterLayer,
@@ -16,7 +15,6 @@
     type MapResourcePoint,
   } from "rom-ui/maps";
   import { Button, Slider, Label } from "rom-ui/controls";
-  setWorkerUrl(MapWorker);
   let map = $state<MapInstance | null>(null);
   let selectedId = $state<string | null>(null);
   let authority = $state(0);
