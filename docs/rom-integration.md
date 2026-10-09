@@ -5,7 +5,7 @@ The gallery installs both packages through its frozen pnpm lock. It does not imp
 
 | Application need | Supported installed entry | Responsibility |
 | --- | --- | --- |
-| Inputs, dialogs, notifications and layout | rom-ui/controls, rom-ui/primitives/<family>, rom-ui/ui/components | Shared generic behavior |
+| Inputs, dialogs, notifications and layout | rom-ui/controls, `rom-ui/primitives/<family>`, rom-ui/ui/components | Shared generic behavior |
 | Chat messages, composer and extension actions | rom-ui/chat | Presentation and submission callback lifetime |
 | Agent progress and activity actions | rom-ui/chat | Display disclosed progress; invoke host callbacks |
 | Workflow presentation and smooth fitting | rom-ui/flow | Graph interaction and viewport behavior |
