@@ -1,0 +1,24 @@
+{
+  "sourceCommit": "64e9f57c13d30f50b61e4b0ecb761dd26ed9abf0",
+  "url": "https://romui.cybernomad.it/#forms",
+  "image": "rom-ui-gallery:64e9f57",
+  "imageId": "sha256:9872dc72b2b2d8a8844151c593755d786422b9ec6a963ac18ca98e02db8f67dc",
+  "previousImageRetained": "rom-ui-gallery:5c863c1",
+  "deployArchiveSha256": "18b6a312465f38b924fd97bd5871adfba10d8a37c3ff8e786e994bf1ef31b2ea",
+  "browser": {
+    "exitCode": 1,
+    "passed": 87,
+    "failed": 3,
+    "formsPassed": 4,
+    "webkitPassed": 45,
+    "chromiumPassed": 42,
+    "failedCases": [
+      "Flex accepted native",
+      "Flex unsupported snapshots",
+      "Chat failure draft retention"
+    ],
+    "failure": "All three page.goto calls failed with net::ERR_NETWORK_CHANGED before component assertions",
+    "fullPublicQualification": false
+  },
+  "hosting": "Static nginx; live ROM actions and ROM-hosted gallery pending"
+}

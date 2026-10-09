@@ -81,3 +81,9 @@ Live sessions, authorization, action receipts and recovery remain pending.
 Unit values, enum/list editors, references and typed action examples also remain pending.
 The archive is an authoring source candidate, not an admitted ROM release.
 Retained [producer evidence](../evidence/gallery/rom-forms/producer-result.json) identifies installed files and executed checks.
+
+The Forms increment is deployed at `/#forms` from source commit `64e9f57`.
+Public HTTPS assets match the local build. Both browsers passed the four Forms checks.
+The full public run passed 87 cases and failed three Chromium navigations with `ERR_NETWORK_CHANGED`.
+This run does not establish complete public browser qualification.
+See the [deployment result](../evidence/gallery/rom-forms/public/result.json).
