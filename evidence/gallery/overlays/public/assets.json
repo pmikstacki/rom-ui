@@ -1,0 +1,18 @@
+{
+  "origin": "https://romui.cybernomad.it",
+  "sourceCommit": "a72d166",
+  "assets": [
+    {
+      "path": "/assets/index-BIhFc46F.js",
+      "sha256": "9b9c8c08656d7b85a81e08400d75df223ab2bab60533f65be19ecc6528de43b0"
+    },
+    {
+      "path": "/assets/index-Cz4UKdfT.css",
+      "sha256": "18be534a955b554469f9c9fd4abcdcf45e4f84b9619521d2450f4432fdacd26b"
+    }
+  ],
+  "health": 200,
+  "missing": 404,
+  "tls": "Normal certificate verification",
+  "hosting": "Static nginx; actual ROM runtime pending"
+}

@@ -106,3 +106,7 @@ Inline status notifications have application-owned messages and dismissal. They 
 Content animations use an explicit reduced-motion override; backdrop animations remain unchanged.
 This increment passed all 98 local gallery cases and 61 compiled snippets.
 Toaster integration and actual ROM action notifications remain pending.
+
+The overlays increment is deployed at `/#overlays` from commit `a72d166`.
+All six affected public checks passed in Chromium and WebKit. HTTPS assets match the local build.
+See the [overlay deployment result](../evidence/gallery/overlays/public/result.json).
