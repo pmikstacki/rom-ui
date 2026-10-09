@@ -20,6 +20,17 @@ fn owned(actor: &Actor, _: Access, sample: &Sample) -> bool {
 fn gallery_builder() -> Builder {
     Runtime::builder()
         .resource(
+            crate::workflow::Workflow::definition()
+                .policy(|actor, _, workflow| {
+                    bootstrap(actor)
+                        || (actor.authority == "gallery-visitors"
+                            && workflow.owner == actor.subject)
+                })
+                .allow_all_fields()
+                .action(crate::workflow::SELECT)
+                .discovery_policy(|actor, _| actor.authority == "gallery-visitors"),
+        )
+        .resource(
             crate::tasks::Task::definition()
                 .policy(|actor, _, task| {
                     bootstrap(actor)

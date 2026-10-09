@@ -8,7 +8,7 @@
     "fullRomVerifierPassed": true
   },
   "host": {
-    "tests": 9,
+    "tests": 10,
     "lockedBuildPassed": true,
     "clippyWarningsDeniedPassed": true,
     "sigtermExit": 0
@@ -89,7 +89,7 @@
   },
   "limits": [
     "Production visitor mapping and authenticated acceptance pending",
-    "Flow and maps ROM resource bindings pending",
+    "Map ROM resource binding pending",
     "Public ROM deployment and HTTPS acceptance pending"
   ],
   "logs": {
@@ -247,5 +247,49 @@
       "log": "/var/tmp/rom-ui-public-session-full-verifier-repeat.log"
     }
   },
-  "previousStudioArchiveSha256": "7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce"
+  "previousStudioArchiveSha256": "7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce",
+  "workflowCandidate": {
+    "hostTests": 10,
+    "hostCheckPassed": true,
+    "galleryCheckErrors": 0,
+    "galleryCheckWarnings": 0,
+    "galleryBuildPassed": true,
+    "initialBackendBrowserPassed": 6,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "checks": [
+      "disclosed enum drives nodes",
+      "selection invokes revision-checked ROM action",
+      "selection persists after reload",
+      "other-tab selection observed live",
+      "foreign resource is absent",
+      "invalid stage changes no state",
+      "exact replay retains original receipt",
+      "stale selection rejected",
+      "undisclosed selection action leaves graph read-only",
+      "changed input under original command identity rejected"
+    ],
+    "sourceReview": {
+      "materialFindings": 0,
+      "minorCapabilityCheckAdded": true
+    },
+    "logs": {
+      "host": "/var/tmp/rom-gallery-workflow-host-check.log",
+      "browser": "/var/tmp/rom-gallery-workflow-browser.log",
+      "fullVerifier": "/var/tmp/rom-ui-workflow-full-verifier.log",
+      "finalBrowser": "/var/tmp/rom-gallery-workflow-final-browser.log",
+      "finalHost": "/var/tmp/rom-gallery-workflow-final-host-check.log"
+    },
+    "state": "Qualified installed components, host and actual backend browser journeys",
+    "finalBackendBrowserPassed": 6,
+    "ownerVerifier": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 8,
+      "hostTests": 10
+    }
+  }
 }

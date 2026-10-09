@@ -13,3 +13,6 @@ mod host;
 pub use host::{read_configuration, serve};
 mod fields;
 mod tasks;
+mod workflow;
+#[cfg(test)]
+mod workflow_tests;

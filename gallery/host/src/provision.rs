@@ -117,6 +117,23 @@ pub async fn provision(
             },
         )
         .await?;
+        let workflow_id = format!("{}-workflow", visitor.id);
+        if let Some(row) = storage.load(&key::<crate::workflow::Workflow>(&workflow_id))?
+            && let Some(value) = row.value
+            && crate::workflow::Workflow::decode(value)?.owner != visitor.subject
+        {
+            return Err(invalid());
+        }
+        seed(
+            runtime,
+            storage,
+            &workflow_id,
+            crate::workflow::Workflow::example(
+                &visitor.subject,
+                &format!("{}'s workflow", visitor.label),
+            ),
+        )
+        .await?;
         let task_id = format!("{}-task", visitor.id);
         if let Some(row) = storage.load(&key::<crate::tasks::Task>(&task_id))?
             && let Some(value) = row.value
