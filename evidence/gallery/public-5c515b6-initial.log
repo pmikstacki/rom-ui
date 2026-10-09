@@ -1,0 +1,446 @@
+
+Running 38 tests using 1 worker
+
+(node:1456757) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (3.2s)
+  ✓   2 [chromium] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (2.4s)
+  ✓   3 [chromium] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (2.6s)
+  ✓   4 [chromium] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (974ms)
+  ✓   5 [chromium] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (948ms)
+  ✓   6 [chromium] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (1.6s)
+  ✓   7 [chromium] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (1.1s)
+  ✓   8 [chromium] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (2.0s)
+  ✓   9 [chromium] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (1.7s)
+  ✓  10 [chromium] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame (900ms)
+  ✓  11 [chromium] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur (823ms)
+  ✓  12 [chromium] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer (2.3s)
+  ✓  13 [chromium] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel (1.8s)
+  ✓  14 [chromium] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main (1.5s)
+  ✓  15 [chromium] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus (531ms)
+  ✓  16 [chromium] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection (1.5s)
+  ✓  17 [chromium] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery (2.3s)
+  ✓  18 [chromium] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers (3.1s)
+  ✓  19 [chromium] › tests/maps.spec.ts:89:1 › clusters render on a tileless style without implicit font requests (3.1s)
+(node:1459257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 [webkit] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (329ms)
+(node:1459512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 [webkit] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (286ms)
+(node:1459908) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  22 [webkit] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (388ms)
+(node:1460460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  23 [webkit] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (361ms)
+(node:1460979) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 [webkit] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (290ms)
+(node:1461182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  25 [webkit] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (310ms)
+(node:1461318) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  26 [webkit] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (292ms)
+(node:1461447) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  27 [webkit] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (290ms)
+(node:1461572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  28 [webkit] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (280ms)
+(node:1461753) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  29 [webkit] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame (282ms)
+(node:1461952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  30 [webkit] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur (297ms)
+(node:1462094) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  31 [webkit] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer (343ms)
+(node:1462770) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  32 [webkit] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel (408ms)
+(node:1463261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  33 [webkit] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main (472ms)
+(node:1463780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  34 [webkit] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus (367ms)
+(node:1464146) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  35 [webkit] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection (307ms)
+(node:1464252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  36 [webkit] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery (293ms)
+(node:1464387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  37 [webkit] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers (317ms)
+(node:1464559) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  38 [webkit] › tests/maps.spec.ts:89:1 › clusters render on a tileless style without implicit font requests (300ms)
+
+
+  1) [webkit] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable ──────
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/", waiting until "load"
+
+
+      2 |
+      3 | test("gallery navigation, theme and controls are usable", async ({ page }) => {
+    > 4 |   await page.goto("/");
+        |              ^
+      5 |   await expect(
+      6 |     page.getByRole("heading", {
+      7 |       name: "Komponenty, które pasują do Twojej aplikacji.",
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:4:14
+
+    Error Context: test-results/gallery-gallery-navigation-theme-and-controls-are-usable-webkit/error-context.md
+
+  2) [webkit] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      20 |   page,
+      21 | }) => {
+    > 22 |   await page.goto("/#chat");
+         |              ^
+      23 |   const composer = page.getByRole("textbox", { name: "Wiadomość" });
+      24 |   await composer.fill("Cześć");
+      25 |   await composer.press("Shift+Enter");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:22:14
+
+    Error Context: test-results/gallery-chat-submits-text--309bb-Enter-and-ignores-IME-Enter-webkit/error-context.md
+
+  3) [webkit] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      52 |   page,
+      53 | }) => {
+    > 54 |   await page.goto("/#chat");
+         |              ^
+      55 |   const composer = page.getByRole("textbox", { name: "Wiadomość" });
+      56 |   await page.getByRole("checkbox", { name: "Symuluj błąd wysyłania" }).check();
+      57 |   await composer.fill("Zachowaj tę wiadomość");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:54:14
+
+    Error Context: test-results/gallery-chat-failures-reta-386b8-s-not-erase-a-changed-draft-webkit/error-context.md
+
+  4) [webkit] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#flow", waiting until "load"
+
+
+      78 |   page,
+      79 | }) => {
+    > 80 |   await page.goto("/#flow");
+         |              ^
+      81 |   const choice = page.getByRole("button", { name: /01 Projektuj/ });
+      82 |   await choice.focus();
+      83 |   await choice.press("Enter");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:80:14
+
+    Error Context: test-results/gallery-Flow-choices-are-k-1e937-d-change-the-host-selection-webkit/error-context.md
+
+  5) [webkit] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/", waiting until "load"
+
+
+      90 | }) => {
+      91 |   await page.setViewportSize({ width: 390, height: 844 });
+    > 92 |   await page.goto("/");
+         |              ^
+      93 |   await page.getByRole("button", { name: "Otwórz nawigację" }).click();
+      94 |   await page.getByRole("button", { name: "Czat AI", exact: true }).click();
+      95 |   await expect(page.getByRole("textbox", { name: "Wiadomość" })).toBeVisible();
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:92:14
+
+    Error Context: test-results/gallery-mobile-navigation--51b10-without-horizontal-overflow-webkit/error-context.md
+
+  6) [webkit] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      107 |   page,
+      108 | }) => {
+    > 109 |   await page.goto("/#chat");
+          |              ^
+      110 |   const composer = page.getByRole("textbox", { name: "Wiadomość" });
+      111 |   await composer.fill("Stara rozmowa");
+      112 |   await composer.press("Enter");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:109:14
+
+    Error Context: test-results/gallery-authority-change-i-a84b9-he-replacement-conversation-webkit/error-context.md
+
+  7) [webkit] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      130 | }) => {
+      131 |   await page.setViewportSize({ width: 1200, height: 900 });
+    > 132 |   await page.goto("/#chat");
+          |              ^
+      133 |   const opener = page.getByRole("button", { name: "Otwórz panel boczny ↗" });
+      134 |   await opener.click();
+      135 |   const editor = page.getByRole("textbox", { name: "Wiadomość" });
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:132:14
+
+    Error Context: test-results/gallery-responsive-panel-p-8706b--and-returns-focus-on-close-webkit/error-context.md
+
+  8) [webkit] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/", waiting until "load"
+
+
+      164 |   page,
+      165 | }) => {
+    > 166 |   await page.goto("/");
+          |              ^
+      167 |   await page
+      168 |     .getByRole("searchbox", { name: "Szukaj komponentów" })
+      169 |     .fill("slider");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:166:14
+
+    Error Context: test-results/gallery-conversation-text--2f33e-rch-opens-its-matching-demo-webkit/error-context.md
+
+  9) [webkit] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#flow", waiting until "load"
+
+
+      192 |   page,
+      193 | }) => {
+    > 194 |   await page.goto("/#flow");
+          |              ^
+      195 |   const viewport = page.locator(".svelte-flow__viewport");
+      196 |   await page
+      197 |     .getByRole("checkbox", { name: "Automatyczne dopasowanie" })
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:194:14
+
+    Error Context: test-results/gallery-inactive-Flow-fitt-52bc3--a-manually-zoomed-viewport-webkit/error-context.md
+
+  10) [webkit] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      215 | }) => {
+      216 |   await page.setViewportSize({ width: 1200, height: 900 });
+    > 217 |   await page.goto("/#chat");
+          |              ^
+      218 |   const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
+      219 |   await expansion.focus();
+      220 |   await page.setViewportSize({ width: 390, height: 844 });
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:217:14
+
+    Error Context: test-results/gallery-ROM-focus-correcti-54a4d-ansion-control-to-its-frame-webkit/error-context.md
+
+  11) [webkit] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      229 | }) => {
+      230 |   await page.setViewportSize({ width: 1200, height: 900 });
+    > 231 |   await page.goto("/#chat");
+          |              ^
+      232 |   const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
+      233 |   await expansion.focus();
+      234 |   await expansion.evaluate((element) => (element as HTMLElement).blur());
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:231:14
+
+    Error Context: test-results/gallery-ROM-focus-correcti-0a88d-focus-after-deliberate-blur-webkit/error-context.md
+
+  12) [webkit] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      244 | }) => {
+      245 |   await page.setViewportSize({ width: 390, height: 600 });
+    > 246 |   await page.goto("/#chat");
+          |              ^
+      247 |   await page
+      248 |     .getByRole("textbox", { name: "Wiadomość" })
+      249 |     .fill("Przykładowy akapit.\n".repeat(120));
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:246:14
+
+    Error Context: test-results/gallery-long-messages-scro-c325e-h-a-visible-mobile-composer-webkit/error-context.md
+
+  13) [webkit] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      272 |   page,
+      273 | }) => {
+    > 274 |   await page.goto("/#chat");
+          |              ^
+      275 |   const editor = page.getByRole("textbox", { name: "Wiadomość" });
+      276 |   await editor.fill("Jedno wysłanie");
+      277 |   await editor.evaluate((element) =>
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:274:14
+
+    Error Context: test-results/gallery-one-composer-retai-dd280-p-when-moved-into-the-panel-webkit/error-context.md
+
+  14) [webkit] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#chat", waiting until "load"
+
+
+      294 |   page,
+      295 | }) => {
+    > 296 |   await page.goto("/#chat");
+          |              ^
+      297 |   await page.getByRole("textbox", { name: "Wiadomość" }).fill("Szkic");
+      298 |   const skip = page.getByRole("link", { name: "Przejdź do treści" });
+      299 |   await skip.focus();
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:296:14
+
+    Error Context: test-results/gallery-skip-link-preserve-b74c9-rrent-demo-and-focuses-main-webkit/error-context.md
+
+  15) [webkit] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/", waiting until "load"
+
+
+      310 | }) => {
+      311 |   await page.setViewportSize({ width: 390, height: 844 });
+    > 312 |   await page.goto("/");
+          |              ^
+      313 |   const toggle = page.getByRole("button", { name: "Otwórz nawigację" });
+      314 |   await toggle.focus();
+      315 |   await page.keyboard.press("Shift+Tab");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/gallery.spec.ts:312:14
+
+    Error Context: test-results/gallery-collapsed-mobile-n-9e9e6--not-receive-keyboard-focus-webkit/error-context.md
+
+  16) [webkit] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#maps", waiting until "load"
+
+
+      4 |   page,
+      5 | }) => {
+    > 6 |   await page.goto("/#maps");
+        |              ^
+      7 |   await expect(
+      8 |     page.getByRole("heading", { name: "Mapy", exact: true }),
+      9 |   ).toBeVisible();
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:6:14
+
+    Error Context: test-results/maps-real-MapLibre-map-ren-ee3cd-rces-and-keyboard-selection-webkit/error-context.md
+
+  17) [webkit] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#maps", waiting until "load"
+
+
+      21 |   page,
+      22 | }) => {
+    > 23 |   await page.goto("/#maps");
+         |              ^
+      24 |   await expect(
+      25 |     page.getByRole("region", { name: "Mapa zasobów", exact: true }),
+      26 |   ).toHaveAttribute("data-rom-map-ready", "true");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:23:14
+
+    Error Context: test-results/maps-map-selection-rejecti-fcc38-ate-until-explicit-recovery-webkit/error-context.md
+
+  18) [webkit] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#maps", waiting until "load"
+
+
+      67 |       remote.push(request.url());
+      68 |   });
+    > 69 |   await page.goto("/#maps");
+         |              ^
+      70 |   const map = page.getByRole("region", { name: "Mapa zasobów", exact: true });
+      71 |   await expect(map).toHaveAttribute("data-rom-map-ready", "true");
+      72 |   await page.getByRole("button", { name: "Zmień motyw" }).click();
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:69:14
+
+    Error Context: test-results/maps-theme-and-responsive--330c8-ch-hidden-default-providers-webkit/error-context.md
+
+  19) [webkit] › tests/maps.spec.ts:89:1 › clusters render on a tileless style without implicit font requests 
+
+    Error: page.goto: TLS support is not available
+    Call log:
+      - navigating to "https://romui.cybernomad.it/#maps", waiting until "load"
+
+
+      94 |     if (message.type() === "error") errors.push(message.text());
+      95 |   });
+    > 96 |   await page.goto("/#maps");
+         |              ^
+      97 |   await expect(
+      98 |     page.getByRole("region", { name: "Mapa zasobów", exact: true }),
+      99 |   ).toHaveAttribute("data-rom-map-ready", "true");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:96:14
+
+    Error Context: test-results/maps-clusters-render-on-a--ea17d-hout-implicit-font-requests-webkit/error-context.md
+
+  19 failed
+    [webkit] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable ───────
+    [webkit] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter 
+    [webkit] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft 
+    [webkit] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection 
+    [webkit] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow 
+    [webkit] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation 
+    [webkit] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close 
+    [webkit] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo 
+    [webkit] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport 
+    [webkit] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame 
+    [webkit] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur 
+    [webkit] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer 
+    [webkit] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel 
+    [webkit] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main ─
+    [webkit] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus 
+    [webkit] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection 
+    [webkit] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery 
+    [webkit] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers 
+    [webkit] › tests/maps.spec.ts:89:1 › clusters render on a tileless style without implicit font requests 
+  19 passed (52.6s)

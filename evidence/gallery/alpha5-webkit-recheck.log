@@ -1,0 +1,21 @@
+[WebServer] (node:1581757) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1581785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:1582005) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (634ms)
+  ✓  2 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (697ms)
+(node:1582382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (627ms)
+  ✓  4 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (532ms)
+(node:1582767) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (542ms)
+  ✓  6 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (522ms)
+
+  6 passed (8.2s)

@@ -33,7 +33,7 @@
       id: "welcome",
       role: "assistant",
       content:
-        "Cześć! To galeria komponentów rozmowy.\n\nMożesz wpisać wiadomość, rozwinąć panel i sprawdzić zachowanie na telefonie. Odpowiedzi są symulowane lokalnie — żaden tekst nie trafia do modelu AI.",
+        "Hello! This is the conversation component gallery.\n\nYou can write a message, expand the panel, and try it on a phone. Responses are simulated locally — no text is sent to an AI model.",
     },
   ]);
   let count = 0;
@@ -50,10 +50,10 @@
         id: `assistant-${++count}`,
         role: "assistant",
         content:
-          "To lokalna odpowiedź demonstracyjna.\n\nW swojej aplikacji podłączysz tu dowolny model, strumień odpowiedzi lub kolejkę zadań. Komponenty odpowiadają za prezentację i interakcję.",
+          "This is a local demo response.\n\nIn your application, connect any model, response stream, or task queue here. The components handle presentation and interaction.",
         citations: [
           {
-            label: "Repozytorium ROM UI ↗",
+            label: "ROM UI repository ↗",
             href: "https://github.com/pmikstacki/rom-ui",
           },
         ],
@@ -71,34 +71,34 @@
 
 <div class="chat-intro">
   <div>
-    <span class="mini-tag">DEMO LOKALNE</span>
-    <p class="muted">Twój model. Twoje dane. Gotowa przestrzeń do rozmowy.</p>
+    <span class="mini-tag">LOCAL DEMO</span>
+    <p class="muted">Your model. Your data. A ready space for conversation.</p>
   </div>
   <Button
     bind:ref={opener}
     variant="outline"
     onclick={() => {
       open = true;
-    }}>Otwórz panel boczny ↗</Button
+    }}>Open side panel ↗</Button
   >
 </div>
 {#snippet heading()}
   <div class="assistant-heading">
     <span class="assistant-mark" aria-hidden="true">✳</span>
     <div>
-      <h3>Asystent</h3>
-      <span class="muted">Przykład interfejsu czatu AI</span>
+      <h3>Assistant</h3>
+      <span class="muted">Example AI chat interface</span>
     </div>
   </div>
 {/snippet}
 {#snippet messageBody()}
   <ChatMessages
     {messages}
-    userLabel="Ty"
+    userLabel="You"
     assistantLabel="ROM Assistant"
-    pendingLabel="Przygotowuję odpowiedź…"
-    errorLabel="Błąd odpowiedzi"
-    emptyLabel="Rozpocznij nową rozmowę."
+    pendingLabel="Preparing a response…"
+    errorLabel="Response error"
+    emptyLabel="Start a new conversation."
   />
 {/snippet}
 {#snippet composer()}
@@ -106,11 +106,11 @@
     bind:value={draft}
     authorityToken={authority}
     onSubmit={send}
-    label="Wiadomość"
-    placeholder="Napisz wiadomość…"
-    sendLabel="Wyślij"
-    hint="Enter wysyła · Shift+Enter nowa linia"
-    errorLabel="Nie udało się wysłać. Spróbuj ponownie."
+    label="Message"
+    placeholder="Write a message…"
+    sendLabel="Send"
+    hint="Enter sends · Shift+Enter adds a new line"
+    errorLabel="Could not send. Try again."
   />
 {/snippet}
 {#snippet sessions()}
@@ -122,15 +122,15 @@
       onclick={() => {
         history = !history;
       }}
-      >Historia rozmów <span aria-hidden="true">{history ? "−" : "+"}</span
+      >Conversation history <span aria-hidden="true">{history ? "−" : "+"}</span
       ></Button
     ><Button variant="ghost" size="sm" onclick={newConversation}
-      >Nowa rozmowa</Button
+      >New conversation</Button
     >
   </div>
   {#if history}<p class="muted session-note">
-      Bieżąca sesja · {messages.filter((message) => message.role === "user")
-        .length} wiadomości. Historia w tym przykładzie nie jest zapisywana.
+      Current session · {messages.filter((message) => message.role === "user")
+        .length} messages. History is not saved in this example.
     </p>{/if}
 {/snippet}
 <div class="chat-stage" class:expanded hidden={open}>
@@ -138,17 +138,17 @@
 </div>
 <div class="demo-options">
   <label class="checkbox-row"
-    ><input type="checkbox" bind:checked={fail} /> Symuluj błąd wysyłania</label
+    ><input type="checkbox" bind:checked={fail} /> Simulate send failure</label
   >
-  <p>Sprawdź zachowanie szkicu po odrzuceniu wiadomości.</p>
+  <p>Check how the draft behaves when a message is rejected.</p>
 </div>
 <ResponsiveDetails
   bind:open
   {opener}
   id="gallery-chat-panel"
-  title="Asystent w panelu"
-  description="Responsywny panel rozmowy z zachowaniem szkicu."
-  closeLabel="Zamknij panel rozmowy"
+  title="Assistant panel"
+  description="A responsive conversation panel that preserves the draft."
+  closeLabel="Close conversation panel"
   breakpoint="(max-width: 799px)"
   showDesktopHeader={true}
 >
@@ -159,21 +159,21 @@
   use:preserveEditor={open ? panelTarget : inlineTarget}
 >
   <ConversationLayout
-    label="Przykład rozmowy"
-    bodyLabel="Wiadomości rozmowy"
+    label="Example conversation"
+    bodyLabel="Conversation messages"
     header={heading}
     body={messageBody}
     footer={composer}
     history={sessions}
     bind:expanded
     bind:bodyRef
-    expansion={{ expandLabel: "Rozwiń", collapseLabel: "Zwiń" }}
+    expansion={{ expandLabel: "Expand", collapseLabel: "Collapse" }}
   />
 </div>
 <div class="note-row">
   <span class="mini-tag">ROM + ASTRAL PLANE</span>
   <p>
-    Układ z ROM oraz interakcje inspirowane asystentem Astral Plane. Bez
-    zależności od konkretnego backendu.
+    Layout from ROM, with interactions inspired by the Astral Plane assistant.
+    Independent of any specific backend.
   </p>
 </div>

@@ -145,7 +145,6 @@
   let isLoaded = $state(false);
   let isStyleLoaded = $state(false);
   let isInteracting = $state(false);
-  let initialStyleApplied = false;
   let initialCenterZoomApplied = false;
   let pendingStyle = $state<MapStyleOption | null>(null);
   let styleSwapInFlight = false;
@@ -262,7 +261,6 @@
       failed = false;
       styleSwapInFlight = false;
       isStyleLoaded = true;
-      initialStyleApplied = true;
       onstyleloaded?.();
     };
 
@@ -350,7 +348,7 @@
     const style = currentStyle;
     const styleKey = currentStyleKey;
 
-    if (!map || !initialStyleApplied || appliedStyleKey === styleKey) {
+    if (!map || appliedStyleKey === styleKey) {
       return;
     }
 

@@ -19,10 +19,10 @@
       position: { x: 180, y: 20 },
       data: {
         stage: "START",
-        label: "Twoja aplikacja",
+        label: "Your application",
         selected: false,
         choose: () => {
-          selected = "Twoja aplikacja";
+          selected = "Your application";
         },
       },
     },
@@ -32,10 +32,10 @@
       position: { x: 30, y: 160 },
       data: {
         stage: "01",
-        label: "Projektuj",
-        selected: selected === "Projektuj",
+        label: "Design",
+        selected: selected === "Design",
         choose: () => {
-          selected = "Projektuj";
+          selected = "Design";
         },
       },
     },
@@ -45,10 +45,10 @@
       position: { x: 330, y: 160 },
       data: {
         stage: "02",
-        label: "Buduj",
-        selected: selected === "Buduj",
+        label: "Build",
+        selected: selected === "Build",
         choose: () => {
-          selected = "Buduj";
+          selected = "Build";
         },
       },
     },
@@ -58,11 +58,11 @@
       position: { x: 180, y: 310 },
       data: {
         stage: "03",
-        label: "Udostępnij",
-        selected: selected === "Udostępnij",
+        label: "Share",
+        selected: selected === "Share",
         muted: !selected,
         choose: () => {
-          selected = "Udostępnij";
+          selected = "Share";
         },
       },
     },
@@ -78,24 +78,25 @@
 <section class="demo-card flow-example">
   <div class="card-heading">
     <span class="specimen-number">01</span>
-    <h3>Od pomysłu do interakcji</h3>
+    <h3>From idea to interaction</h3>
     <code>FlowChoiceNode · FlowFit</code>
   </div>
   <p class="muted">
-    Wybierz węzeł myszą lub klawiaturą. Przybliżenie i przesuwanie obsługuje
-    Svelte Flow.
+    Select a node with a mouse or keyboard. Svelte Flow handles zooming and
+    panning.
   </p>
   <div class="flow-toolbar">
     <span
-      >Wybór: <strong data-testid="flow-choice">{selected || "—"}</strong></span
+      >Selection: <strong data-testid="flow-choice">{selected || "—"}</strong
+      ></span
     ><Button
       variant="outline"
       size="sm"
       onclick={() => {
         fit++;
-      }}>Dopasuj widok</Button
+      }}>Fit view</Button
     ><label class="checkbox-row"
-      ><input type="checkbox" bind:checked={active} /> Automatyczne dopasowanie</label
+      ><input type="checkbox" bind:checked={active} /> Automatic fitting</label
     >
   </div>
   <div class="flow-canvas" data-testid="flow-canvas">
@@ -122,9 +123,9 @@
   </div>
 </section>
 <div class="note-row">
-  <span class="mini-tag">WYDZIELONE Z MADZIA</span>
+  <span class="mini-tag">EXTRACTED FROM MADZIA</span>
   <p>
-    Komponenty prezentują graf. Układ węzłów, ścieżki i reguły wyboru pozostają
-    w aplikacji.
+    Components display the graph. Node layout, paths, and selection rules remain
+    in your application.
   </p>
 </div>

@@ -8,30 +8,31 @@
     Slider,
     NativeSelect,
     NativeSelectOption,
+    NativeSelectOptGroup,
   } from "rom-ui/controls";
   let name = $state("ROM UI");
   let checked = $state(true);
   let intensity = $state([65]);
   let size = $state("medium");
-  let description = $state("Jeden zestaw kontrolek. Wiele własnych aplikacji.");
+  let description = $state(
+    "One set of controls. Many applications of your own.",
+  );
 </script>
 
 <div class="demo-grid">
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">01</span>
-      <h3>Przyciski</h3>
+      <h3>Buttons</h3>
       <code>Button</code>
     </div>
-    <p class="muted">Warianty, które współdzielą zachowanie i styl.</p>
+    <p class="muted">Variants that share behavior and style.</p>
     <div class="button-row">
-      <Button onclick={() => (name = "Nowy projekt")}
-        >Utwórz projekt <span aria-hidden="true">↗</span></Button
-      ><Button variant="secondary">Drugorzędny</Button><Button variant="outline"
-        >Obrys</Button
-      ><Button variant="ghost">Bez tła</Button><Button disabled
-        >Niedostępny</Button
-      >
+      <Button onclick={() => (name = "New project")}
+        >Create project <span aria-hidden="true">↗</span></Button
+      ><Button variant="secondary">Secondary</Button><Button variant="outline"
+        >Outline</Button
+      ><Button variant="ghost">Ghost</Button><Button disabled>Disabled</Button>
     </div>
     <div class="code-line">
       import &#123; Button &#125; from 'rom-ui/controls';
@@ -40,20 +41,20 @@
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">02</span>
-      <h3>Pola tekstowe</h3>
+      <h3>Text fields</h3>
       <code>Input · Textarea</code>
     </div>
     <div class="field">
-      <Label for="project-name">Nazwa projektu</Label><Input
+      <Label for="project-name">Project name</Label><Input
         id="project-name"
         bind:value={name}
       /><span class="field-caption"
-        >Bieżąca wartość: <strong data-testid="control-value">{name}</strong
+        >Current value: <strong data-testid="control-value">{name}</strong
         ></span
       >
     </div>
     <div class="field">
-      <Label for="project-description">Opis</Label><Textarea
+      <Label for="project-description">Description</Label><Textarea
         id="project-description"
         bind:value={description}
         rows={3}
@@ -63,45 +64,49 @@
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">03</span>
-      <h3>Wybór i zakres</h3>
+      <h3>Selection and range</h3>
       <code>Checkbox · Slider</code>
     </div>
     <div class="checkbox-row">
       <Checkbox id="notifications" bind:checked /><Label for="notifications"
-        >Powiadomienia włączone</Label
-      ><span class="mini-tag">{checked ? "Tak" : "Nie"}</span>
+        >Notifications enabled</Label
+      ><span class="mini-tag">{checked ? "Yes" : "No"}</span>
     </div>
     <div class="field">
-      <Label for="intensity">Intensywność · {intensity[0]}%</Label><Slider
+      <Label for="intensity">Intensity · {intensity[0]}%</Label><Slider
         type="multiple"
         id="intensity"
         bind:value={intensity}
         min={0}
         max={100}
         step={1}
-        aria-label="Intensywność"
+        aria-label="Intensity"
       />
     </div>
     <div class="field">
-      <Label for="project-size">Rozmiar projektu</Label><NativeSelect
+      <Label for="project-size">Project size</Label><NativeSelect
         id="project-size"
         bind:value={size}
-        ><NativeSelectOption value="small">Mały</NativeSelectOption
-        ><NativeSelectOption value="medium">Średni</NativeSelectOption
-        ><NativeSelectOption value="large">Duży</NativeSelectOption
+        ><NativeSelectOptGroup label="Project sizes"
+          ><NativeSelectOption value="small">Small</NativeSelectOption
+          ><NativeSelectOption value="medium">Medium</NativeSelectOption
+          ><NativeSelectOption value="large">Large</NativeSelectOption
+          ></NativeSelectOptGroup
         ></NativeSelect
       >
     </div>
   </section>
   <section class="demo-card foundation-note">
-    <span class="small-kicker">Z ROM STUDIO</span>
-    <h3>Podstawa interfejsu,<br />bez logiki Twojej aplikacji.</h3>
+    <span class="small-kicker">FROM ROM STUDIO</span>
+    <h3>
+      An interface foundation,<br />with your application logic kept separate.
+    </h3>
     <p>
-      Przekazujesz wartości, etykiety i zdarzenia. Kontrolki odpowiadają za
-      interakcję, dostępność i wspólny motyw.
+      You provide values, labels, and events. Controls handle interaction,
+      accessibility, and the shared theme.
     </p>
     <div class="pill-row">
-      <span>Klawiatura</span><span>Tryb ciemny</span><span>Svelte 5</span>
+      <span>Keyboard</span><span>Dark mode</span><span>Svelte 5</span>
     </div>
   </section>
 </div>

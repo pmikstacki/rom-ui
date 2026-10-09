@@ -26,6 +26,12 @@
   let popup = $state(false);
   let clusters = $state(false);
   let clusterCount = $state(0);
+  let basemap = $state(
+    new URLSearchParams(window.location.search).get("basemap") === "schematic"
+      ? "schematic"
+      : "streets",
+  );
+  let streetFeatures = $state(0);
   const clusterData: import("geojson").FeatureCollection<
     import("geojson").Point
   > = {
@@ -44,6 +50,9 @@
     if (!instance) return;
     const update = () => {
       if (!instance.isStyleLoaded()) return;
+      streetFeatures = instance
+        .queryRenderedFeatures()
+        .filter((f) => f.source === "openmaptiles").length;
       clusterCount = instance
         .queryRenderedFeatures()
         .filter((f) => f.layer.id.startsWith("clusters-")).length;
@@ -55,11 +64,14 @@
   });
   let zoom = $state(12);
   const points: MapResourcePoint[] = [
-    { id: "resource/a", title: "Punkt A", longitude: 19.89, latitude: 50.065 },
-    { id: "resource/b", title: "Punkt B", longitude: 19.925, latitude: 50.055 },
-    { id: "resource/c", title: "Punkt C", longitude: 19.96, latitude: 50.07 },
+    { id: "resource/a", title: "Point A", longitude: 19.89, latitude: 50.065 },
+    { id: "resource/b", title: "Point B", longitude: 19.925, latitude: 50.055 },
+    { id: "resource/c", title: "Point C", longitude: 19.96, latitude: 50.07 },
   ];
-  const styles: { light: StyleSpecification; dark: StyleSpecification } = {
+  const schematicStyles: {
+    light: StyleSpecification;
+    dark: StyleSpecification;
+  } = {
     light: {
       version: 8,
       sources: {},
@@ -83,13 +95,21 @@
       ],
     },
   };
+  const styles = $derived(
+    basemap === "streets"
+      ? {
+          light: "https://tiles.openfreemap.org/styles/positron",
+          dark: "https://tiles.openfreemap.org/styles/dark",
+        }
+      : schematicStyles,
+  );
   const area: import("geojson").FeatureCollection = {
     type: "FeatureCollection",
     features: [
       {
         type: "Feature",
         id: "park",
-        properties: { name: "Obszar demonstracyjny" },
+        properties: { name: "Demo area" },
         geometry: {
           type: "Polygon",
           coordinates: [
@@ -128,39 +148,49 @@
 <div class="maps-intro">
   <div>
     <span class="mini-tag">MAPCN-SVELTE / MAPLIBRE</span>
-    <p class="muted">Zasoby, warstwy i trasy we wspólnym motywie ROM.</p>
+    <p class="muted">Resources, layers and routes in the shared ROM theme.</p>
   </div>
   <Button
     variant="outline"
     onclick={() => {
       map?.jumpTo({ center: [19.925, 50.065], zoom: 12 });
-    }}>Przywróć widok</Button
+    }}>Reset view</Button
   >
 </div>
 <section class="demo-card map-example">
   <div class="card-heading">
     <span class="specimen-number">01</span>
-    <h3>Mapa zasobów</h3>
+    <h3>Resource map</h3>
     <code>ResourceMap · MapGeoJSON · MapRoute</code>
   </div>
   <p class="muted">
-    Wybierz punkt na mapie. To schemat danych demonstracyjnych, bez zewnętrznych
-    kafelków.
+    Explore the streets of Kraków and select a demo resource. The points and
+    route are illustrative.
   </p>
   <div class="map-summary">
+    <label
+      >Basemap <select aria-label="Basemap" bind:value={basemap}
+        ><option value="streets">Street map</option><option value="schematic"
+          >Schematic</option
+        ></select
+      ></label
+    >
     <span
-      >Dokładny ID: <strong data-testid="map-selection"
-        >{selectedId ?? "—"}</strong
+      >Exact ID: <strong data-testid="map-selection">{selectedId ?? "—"}</strong
       ></span
-    ><span>Przybliżenie: {zoom.toFixed(1)}</span><Button
+    ><span>Zoom: {zoom.toFixed(1)}</span><Button
       variant="ghost"
       size="sm"
       onclick={() => {
         popup = !popup;
-      }}>Informacje o mapie</Button
+      }}>About this map</Button
     >
   </div>
-  <div class="map-canvas">
+  <div
+    class="map-canvas"
+    data-basemap-features={streetFeatures}
+    data-basemap={basemap}
+  >
     <ResourceMap
       {points}
       {selectedId}
@@ -168,16 +198,16 @@
       recoveryToken={recovery}
       onSelect={select}
       bind:map
-      label="Mapa zasobów"
-      failedLabel="Nie wybrano zasobu."
-      unknownLabel="Wynik wyboru wymaga potwierdzenia."
+      label="Resource map"
+      failedLabel="Resource selection was rejected."
+      unknownLabel="Confirm the selection outcome before continuing."
       mapOptions={{
         styles,
         center: [19.925, 50.065],
         zoom: 12,
-        loadingLabel: "Wczytywanie mapy",
-        errorLabel: "Ta przeglądarka nie może wyświetlić mapy.",
-        options: { scrollZoom: false },
+        loadingLabel: "Loading map",
+        errorLabel: "The map could not be loaded. Try the schematic view.",
+        options: { scrollZoom: false, attributionControl: { compact: false } },
         onviewportchange: (viewport) => {
           zoom = viewport.zoom;
         },
@@ -185,11 +215,11 @@
       controls={{
         showCompass: true,
         labels: {
-          zoomIn: "Przybliż mapę",
-          zoomOut: "Oddal mapę",
-          compass: "Ustaw północ",
-          locate: "Moja lokalizacja",
-          fullscreen: "Pełny ekran",
+          zoomIn: "Zoom in",
+          zoomOut: "Zoom out",
+          compass: "Reset north",
+          locate: "My location",
+          fullscreen: "Fullscreen",
         },
       }}
     >
@@ -211,21 +241,22 @@
       {#if popup}<MapPopup
           longitude={19.925}
           latitude={50.08}
-          closeLabel="Zamknij informacje"
+          closeButton={true}
+          closeLabel="Close map information"
           onclose={() => {
             popup = false;
           }}
-          ><strong>Twoje źródło danych</strong>
+          ><strong>Your data source</strong>
           <p class="muted">
-            Host wybiera styl mapy i przekazuje ujawnione zasoby. Kontrolka nie
-            pobiera rekordów z ROM.
+            The host selects a map provider and supplies disclosed resources.
+            The control does not fetch ROM records.
           </p></MapPopup
         >{/if}
     </ResourceMap>
   </div>
   <div class="map-progress">
     <Label for="route-progress"
-      >Postęp trasy · {Math.round(progress[0] * 100)}%</Label
+      >Route progress · {Math.round(progress[0] * 100)}%</Label
     ><Slider
       type="multiple"
       id="route-progress"
@@ -233,7 +264,7 @@
       min={0}
       max={1}
       step={0.01}
-      aria-label="Postęp trasy"
+      aria-label="Route progress"
     />
   </div>
   <div class="code-line">
@@ -242,26 +273,30 @@
 </section>
 <div class="demo-options">
   <label class="checkbox-row"
-    ><input type="checkbox" bind:checked={clusters} /> Pokaż klastry</label
+    ><input type="checkbox" bind:checked={clusters} /> Show clusters</label
   >
-  <span data-testid="map-cluster-count">{clusterCount}</span>
+  <span
+    >Visible clusters: <span data-testid="map-cluster-count"
+      >{clusterCount}</span
+    ></span
+  >
   <label class="checkbox-row"
-    ><input type="checkbox" bind:checked={reject} /> Symuluj odrzucenie wyboru</label
+    ><input type="checkbox" bind:checked={reject} /> Simulate rejected selection</label
   ><label class="checkbox-row"
-    ><input type="checkbox" bind:checked={unknown} /> Symuluj wynik nieznany</label
+    ><input type="checkbox" bind:checked={unknown} /> Simulate unknown outcome</label
   ><Button
     variant="outline"
     size="sm"
     onclick={() => {
       recovery++;
       unknown = false;
-    }}>Potwierdź wynik</Button
+    }}>Confirm outcome</Button
   >
 </div>
 <div class="note-row">
-  <span class="mini-tag">DOSTOSOWANE DO ROM</span>
+  <span class="mini-tag">ADAPTED TO ROM</span>
   <p>
-    Dokładne identyfikatory, jawne wyniki wyboru i zakres danych kontrolowany
-    przez hosta. Style i kafelki pozostają Twoim wyborem.
+    Exact IDs, explicit selection outcomes and host-controlled data. Choose your
+    own styles and tile provider.
   </p>
 </div>

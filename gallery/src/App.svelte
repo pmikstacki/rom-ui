@@ -1,5 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { ROMUIFlex } from "rom-ui/flex";
+  import ComponentSnippets from "./ComponentSnippets.svelte";
+  import {
+    componentExamples,
+    type ExampleCategory,
+  } from "./component-examples";
+  let pageFlex: ROMUIFlex;
+  let navigation = 0;
   const version = __ROM_UI_VERSION__;
   const loaders = new Map([
     ["controls", () => import("./ControlsDemo.svelte")],
@@ -7,38 +15,39 @@
     ["chat", () => import("./ChatDemo.svelte")],
     ["flow", () => import("./FlowDemo.svelte")],
     ["maps", () => import("./MapsDemo.svelte")],
+    ["flex", () => import("./FlexDemo.svelte")],
   ]);
   const sections = [
     {
       id: "overview",
-      label: "Przegląd",
+      label: "Overview",
       icon: "◈",
-      count: "05",
-      description: "Zobacz, co możesz zbudować.",
-      tags: "galeria wszystkie komponenty",
+      count: "06",
+      description: "See what you can build.",
+      tags: "gallery all components",
     },
     {
       id: "controls",
-      label: "Podstawy",
+      label: "Controls",
       icon: "⊞",
-      count: "07",
-      description: "Małe kontrolki. Spójne zachowanie.",
+      count: "09",
+      description: "Small controls. Consistent behavior.",
       tags: "button input textarea checkbox slider label select",
     },
     {
       id: "compositions",
-      label: "Kompozycje",
+      label: "Compositions",
       icon: "▥",
       count: "06",
-      description: "Większe elementy, które łączą kontrolki.",
+      description: "Larger elements that combine controls.",
       tags: "history responsive details reference selection layout",
     },
     {
       id: "chat",
-      label: "Czat AI",
+      label: "AI Chat",
       icon: "✳",
       count: "03",
-      description: "Przestrzeń na rozmowę z dowolnym modelem.",
+      description: "A space to chat with any model.",
       tags: "assistant conversation composer messages astral plane",
     },
     {
@@ -46,23 +55,37 @@
       label: "Flow",
       icon: "⌘",
       count: "02",
-      description: "Interaktywne ścieżki z Svelte Flow.",
-      tags: "graph graf węzły madzia xyflow",
+      description: "Interactive paths with Svelte Flow.",
+      tags: "graph nodes madzia xyflow",
     },
   ];
   sections.push({
     id: "maps",
-    label: "Mapy",
+    label: "Maps",
     icon: "◎",
     count: "16",
-    description: "Zasoby i warstwy na mapach MapLibre.",
-    tags: "mapcn maplibre geojson mapa marker trasa zasoby",
+    description: "Resources and layers on MapLibre maps.",
+    tags: "mapcn maplibre geojson map marker route resources",
+  });
+  sections.push({
+    id: "flex",
+    label: "Flex",
+    icon: "⇄",
+    count: "02",
+    description:
+      "View transitions with Animotion and the View Transitions API.",
+    tags: "transition animation motion view flex",
   });
   let current = $state("overview");
   let query = $state("");
   let mobileNav = $state(false);
   let dark = $state(false);
   const demo = $derived(loaders.get(current)?.());
+  const snippetCategory = $derived(
+    Object.hasOwn(componentExamples, current)
+      ? (current as ExampleCategory)
+      : null,
+  );
   const section = $derived(
     sections.find((section) => section.id === current) ?? sections[0],
   );
@@ -71,16 +94,25 @@
       .slice(1)
       .filter((item) =>
         `${item.label} ${item.tags}`
-          .toLocaleLowerCase("pl")
-          .includes(query.toLocaleLowerCase("pl")),
+          .toLocaleLowerCase("en")
+          .includes(query.toLocaleLowerCase("en")),
       ),
   );
-  function navigate(id: string) {
-    current = id;
-    window.location.hash = id;
+  async function navigate(id: string) {
+    const ticket = ++navigation;
     mobileNav = false;
     query = "";
-    window.scrollTo({ top: 0 });
+    await loaders
+      .get(id)?.()
+      .catch(() => undefined);
+    if (ticket !== navigation) return;
+    const update = () => {
+      current = id;
+      window.location.hash = id;
+      window.scrollTo({ top: 0 });
+    };
+    if (pageFlex) await pageFlex.run(update);
+    else update();
   }
   function setTheme() {
     dark = !dark;
@@ -101,6 +133,7 @@
       dark = localStorage.getItem("rom-ui-theme") === "dark";
     } catch {}
     document.documentElement.classList.toggle("dark", dark);
+    document.documentElement.classList.toggle("light", !dark);
     return () => window.removeEventListener("hashchange", route);
   });
 </script>
@@ -113,7 +146,7 @@
     event.preventDefault();
     document.getElementById("main")?.focus();
     document.getElementById("main")?.scrollIntoView({ block: "start" });
-  }}>Przejdź do treści</a
+  }}>Skip to content</a
 >
 <div class="gallery-shell">
   <aside class="sidebar" class:mobile-open={mobileNav}>
@@ -123,13 +156,13 @@
       onclick={() => {
         mobileNav = false;
       }}
-      aria-label="ROM UI — przegląd"
+      aria-label="ROM UI — overview"
       ><span class="brand-symbol" aria-hidden="true">r.</span><span
         >ROM<span class="brand-ui"> / UI</span></span
       ><span class="alpha-tag">alpha</span></a
     >
-    <div class="sidebar-section-label">BIBLIOTEKA KOMPONENTÓW</div>
-    <nav aria-label="Galeria komponentów">
+    <div class="sidebar-section-label">COMPONENT LIBRARY</div>
+    <nav aria-label="Component gallery">
       {#each sections as item}<button
           class:active={current === item.id}
           aria-current={current === item.id ? "page" : undefined}
@@ -141,14 +174,14 @@
         >{/each}
     </nav>
     <div class="sidebar-note">
-      <span class="status-dot"></span> Wyodrębnione z prawdziwych aplikacji.
+      <span class="status-dot"></span> Extracted from real applications.
     </div>
     <div class="sidebar-footer">
       <a
         href="https://github.com/pmikstacki/rom-ui"
         target="_blank"
         rel="noopener noreferrer"
-        >Repozytorium <span aria-hidden="true">↗</span></a
+        >Repository <span aria-hidden="true">↗</span></a
       ><span>Svelte 5 · pnpm</span>
     </div>
   </aside>
@@ -156,14 +189,14 @@
     <header class="topbar">
       <button
         class="mobile-toggle icon-button"
-        aria-label={mobileNav ? "Zamknij nawigację" : "Otwórz nawigację"}
+        aria-label={mobileNav ? "Close navigation" : "Open navigation"}
         aria-expanded={mobileNav}
         onclick={() => {
           mobileNav = !mobileNav;
         }}>☰</button
       >
       <div class="breadcrumb">
-        Galeria <span>/</span> <strong>{section.label}</strong>
+        Gallery <span>/</span> <strong>{section.label}</strong>
       </div>
       <div class="topbar-actions">
         <label class="search"
@@ -178,130 +211,143 @@
             ><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg
           ><input
             type="search"
-            aria-label="Szukaj komponentów"
-            placeholder="Szukaj komponentów…"
+            aria-label="Search components"
+            placeholder="Search components…"
             bind:value={query}
           /></label
         ><button
           class="icon-button theme-toggle"
-          aria-label="Zmień motyw"
+          aria-label="Toggle theme"
           aria-pressed={dark}
           onclick={setTheme}>{dark ? "☀" : "◐"}</button
         >
       </div>
     </header>
     <main id="main" tabindex="-1">
-      {#if query}
-        <div class="page-heading">
-          <span class="small-kicker">WYSZUKIWANIE</span>
-          <h1>Wyniki dla „{query}”</h1>
-          <p class="muted">
-            Wybierz rodzinę komponentów, aby otworzyć działające przykłady.
-          </p>
-        </div>
-        <div class="category-grid">
-          {#each matches as item}<button
-              class="category-card"
-              onclick={() => navigate(item.id)}
-              ><span class="category-icon" aria-hidden="true">{item.icon}</span>
-              <h2>{item.label}</h2>
-              <p>{item.description}</p>
-              <span class="category-footer"
-                >Otwórz przykłady <span aria-hidden="true">↗</span></span
-              ></button
-            >{/each}
-        </div>
-        {#if !matches.length}<p class="empty-search">
-            Brak pasujących komponentów. Spróbuj „chat”, „slider” lub „flow”.
-          </p>{/if}
-      {:else if current === "overview"}
-        <section class="hero">
-          <div class="hero-copy">
-            <span class="hero-kicker"
-              ><span class="status-dot"></span> ROM UI · {version}</span
-            >
-            <h1>Komponenty, które pasują do Twojej aplikacji.</h1>
-            <p>
-              Od pojedynczego pola do całej rozmowy. Zestaw kontrolek Svelte,
-              wydzielony z ROM Studio i rozwijany w rzeczywistych aplikacjach.
+      <ROMUIFlex bind:this={pageFlex} native={true} label="Gallery view">
+        {#if query}
+          <div class="page-heading">
+            <span class="small-kicker">SEARCH</span>
+            <h1>Results for “{query}”</h1>
+            <p class="muted">
+              Choose a component family to open working examples.
             </p>
-            <div class="hero-actions">
-              <button class="primary-link" onclick={() => navigate("controls")}
-                >Poznaj komponenty <span aria-hidden="true">↗</span></button
-              ><a
-                href="https://github.com/pmikstacki/rom-ui"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Zobacz kod <span aria-hidden="true">↗</span></a
+          </div>
+          <div class="category-grid">
+            {#each matches as item}<button
+                class="category-card"
+                onclick={() => navigate(item.id)}
+                ><span class="category-icon" aria-hidden="true"
+                  >{item.icon}</span
+                >
+                <h2>{item.label}</h2>
+                <p>{item.description}</p>
+                <span class="category-footer"
+                  >Open examples <span aria-hidden="true">↗</span></span
+                ></button
+              >{/each}
+          </div>
+          {#if !matches.length}<p class="empty-search">
+              No matching components. Try “chat”, “slider”, or “flow”.
+            </p>{/if}
+        {:else if current === "overview"}
+          <section class="hero">
+            <div class="hero-copy">
+              <span class="hero-kicker"
+                ><span class="status-dot"></span> ROM UI · {version}</span
+              >
+              <h1>Components that fit your application.</h1>
+              <p>
+                From a single field to a complete conversation. A set of Svelte
+                controls, extracted from ROM Studio and developed in real
+                applications.
+              </p>
+              <div class="hero-actions">
+                <button
+                  class="primary-link"
+                  onclick={() => navigate("controls")}
+                  >Explore components <span aria-hidden="true">↗</span></button
+                ><a
+                  href="https://github.com/pmikstacki/rom-ui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View source <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-orbit orbit-one"></div>
+              <div class="art-orbit orbit-two"></div>
+              <div class="art-orbit orbit-three"></div>
+              <div class="art-tile art-tile-one">⊞</div>
+              <div class="art-tile art-tile-two">✳</div>
+              <div class="art-tile art-tile-three">⌘</div>
+              <div class="art-center">r<span>.</span></div>
+              <div class="art-caption">COMPOSE YOUR INTERFACE</div>
+            </div>
+          </section>
+          <div class="section-heading">
+            <div>
+              <span class="small-kicker">SIX STARTING POINTS</span>
+              <h2>Try it yourself</h2>
+            </div>
+            <span class="muted">Live examples, your own data</span>
+          </div>
+          <div class="category-grid">
+            {#each sections.slice(1) as item}<button
+                class="category-card"
+                onclick={() => navigate(item.id)}
+                ><span class="category-icon" aria-hidden="true"
+                  >{item.icon}</span
+                ><span class="category-index">{item.count} / components</span>
+                <h2>{item.label}</h2>
+                <p>{item.description}</p>
+                <span class="category-footer"
+                  >Open examples <span aria-hidden="true">↗</span></span
+                ></button
+              >{/each}
+          </div>
+          <section class="principles">
+            <div>
+              <span class="small-kicker">YOUR HOST, YOUR RULES</span>
+              <h2>
+                Presentation is shared.<br />Logic belongs to your application.
+              </h2>
+            </div>
+            <p>
+              Controls accept values and events. Compositions arrange the
+              interface. The AI model, history, permissions, and data storage
+              remain where you define them.
+            </p>
+            <div class="pill-row">
+              <span>Public API</span><span>Installed package</span><span
+                >Optional Flow</span
               >
             </div>
-          </div>
-          <div class="hero-art" aria-hidden="true">
-            <div class="art-orbit orbit-one"></div>
-            <div class="art-orbit orbit-two"></div>
-            <div class="art-orbit orbit-three"></div>
-            <div class="art-tile art-tile-one">⊞</div>
-            <div class="art-tile art-tile-two">✳</div>
-            <div class="art-tile art-tile-three">⌘</div>
-            <div class="art-center">r<span>.</span></div>
-            <div class="art-caption">COMPOSE YOUR INTERFACE</div>
-          </div>
-        </section>
-        <div class="section-heading">
-          <div>
-            <span class="small-kicker">PIĘĆ PUNKTÓW STARTOWYCH</span>
-            <h2>Sprawdź w praktyce</h2>
-          </div>
-          <span class="muted">Żywe przykłady, własne dane</span>
-        </div>
-        <div class="category-grid">
-          {#each sections.slice(1) as item}<button
-              class="category-card"
-              onclick={() => navigate(item.id)}
-              ><span class="category-icon" aria-hidden="true">{item.icon}</span
-              ><span class="category-index">{item.count} / komponenty</span>
-              <h2>{item.label}</h2>
-              <p>{item.description}</p>
-              <span class="category-footer"
-                >Otwórz przykłady <span aria-hidden="true">↗</span></span
-              ></button
-            >{/each}
-        </div>
-        <section class="principles">
-          <div>
-            <span class="small-kicker">TWÓJ HOST, TWOJE REGUŁY</span>
-            <h2>Prezentacja jest wspólna.<br />Logika należy do aplikacji.</h2>
-          </div>
-          <p>
-            Kontrolki przyjmują wartości i zdarzenia. Kompozycje układają
-            interfejs. Model AI, historia, uprawnienia i zapis danych pozostają
-            tam, gdzie je definiujesz.
-          </p>
-          <div class="pill-row">
-            <span>Publiczne API</span><span>Instalowany pakiet</span><span
-              >Opcjonalny Flow</span
+          </section>
+        {:else}
+          <div class="page-heading">
+            <span class="small-kicker"
+              >ROM UI / {section.label.toLocaleUpperCase("en")}</span
             >
+            <h1>{section.label}</h1>
+            <p class="muted">{section.description}</p>
           </div>
-        </section>
-      {:else}
-        <div class="page-heading">
-          <span class="small-kicker"
-            >ROM UI / {section.label.toLocaleUpperCase("pl")}</span
-          >
-          <h1>{section.label}</h1>
-          <p class="muted">{section.description}</p>
-        </div>
-        {#await demo}<p class="muted" role="status">
-            Wczytywanie przykładów…
-          </p>{:then loaded}{#if loaded}<loaded.default />{/if}{:catch}<p
-            role="alert"
-          >
-            Nie udało się wczytać przykładów. Odśwież stronę.
-          </p>{/await}
-      {/if}
+          {#await demo}<p class="muted" role="status">
+              Loading examples…
+            </p>{:then loaded}{#if loaded}<loaded.default />{/if}{:catch}<p
+              role="alert"
+            >
+              Could not load examples. Refresh the page.
+            </p>{/await}
+        {/if}
+        {#if snippetCategory}<ComponentSnippets
+            category={snippetCategory}
+          />{/if}
+      </ROMUIFlex>
       <footer class="page-footer">
-        <span>ROM UI · Galeria komponentów</span><span
-          >MIT · {version} · <a href="/licenses.txt">Licencje</a></span
+        <span>ROM UI · Component gallery</span><span
+          >MIT · {version} · <a href="/licenses.txt">Licenses</a></span
         >
       </footer>
     </main>

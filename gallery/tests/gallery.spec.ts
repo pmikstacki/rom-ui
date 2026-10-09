@@ -2,48 +2,50 @@ import { test, expect } from "@playwright/test";
 
 test("gallery navigation, theme and controls are usable", async ({ page }) => {
   await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page).toHaveTitle("Overview · ROM UI");
   await expect(
     page.getByRole("heading", {
-      name: "Komponenty, które pasują do Twojej aplikacji.",
+      name: "Components that fit your application.",
     }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Zmień motyw" }).click();
+  await page.getByRole("button", { name: "Toggle theme" }).click();
   await expect(page.locator("html")).toHaveClass(/dark/);
   await page.reload();
   await expect(page.locator("html")).toHaveClass(/dark/);
-  await page.getByRole("button", { name: "Podstawy", exact: true }).click();
-  await page.getByLabel("Nazwa projektu").fill("Mój projekt");
-  await expect(page.getByTestId("control-value")).toHaveText("Mój projekt");
+  await page.getByRole("button", { name: "Controls", exact: true }).click();
+  await page.getByLabel("Project name").fill("My project");
+  await expect(page.getByTestId("control-value")).toHaveText("My project");
 });
 
 test("chat submits text, preserves Shift+Enter and ignores IME Enter", async ({
   page,
 }) => {
   await page.goto("/#chat");
-  const composer = page.getByRole("textbox", { name: "Wiadomość" });
-  await composer.fill("Cześć");
+  const composer = page.getByRole("textbox", { name: "Message" });
+  await composer.fill("Hello");
   await composer.press("Shift+Enter");
-  await expect(composer).toHaveValue("Cześć\n");
+  await expect(composer).toHaveValue("Hello\n");
   await composer.dispatchEvent("compositionstart");
   await composer.dispatchEvent("keydown", { key: "Enter", isComposing: true });
-  await expect(composer).toHaveValue("Cześć\n");
+  await expect(composer).toHaveValue("Hello\n");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("Cześć", { exact: true }),
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("Hello", { exact: true }),
   ).toHaveCount(0);
   await composer.dispatchEvent("compositionend");
   await composer.press("Enter");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("Cześć", { exact: true }),
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("Hello", { exact: true }),
   ).toBeVisible();
   await expect(composer).toHaveValue("");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("To lokalna odpowiedź demonstracyjna.", { exact: false })
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("This is a local demo response.", { exact: false })
       .last(),
   ).toBeVisible();
 });
@@ -52,37 +54,33 @@ test("chat failures retain drafts, pending completion does not erase a changed d
   page,
 }) => {
   await page.goto("/#chat");
-  const composer = page.getByRole("textbox", { name: "Wiadomość" });
-  await page.getByRole("checkbox", { name: "Symuluj błąd wysyłania" }).check();
-  await composer.fill("Zachowaj tę wiadomość");
+  const composer = page.getByRole("textbox", { name: "Message" });
+  await page.getByRole("checkbox", { name: "Simulate send failure" }).check();
+  await composer.fill("Keep this message");
   await composer.press("Enter");
-  await expect(
-    page.getByText("Nie udało się wysłać. Spróbuj ponownie."),
-  ).toBeVisible();
-  await expect(composer).toHaveValue("Zachowaj tę wiadomość");
-  await page
-    .getByRole("checkbox", { name: "Symuluj błąd wysyłania" })
-    .uncheck();
+  await expect(page.getByText("Could not send. Try again.")).toBeVisible();
+  await expect(composer).toHaveValue("Keep this message");
+  await page.getByRole("checkbox", { name: "Simulate send failure" }).uncheck();
   await composer.press("Enter");
-  await composer.fill("Kolejny szkic");
+  await composer.fill("Next draft");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("To lokalna odpowiedź demonstracyjna.", { exact: false })
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("This is a local demo response.", { exact: false })
       .last(),
   ).toBeVisible();
-  await expect(composer).toHaveValue("Kolejny szkic");
+  await expect(composer).toHaveValue("Next draft");
 });
 
 test("Flow choices are keyboard buttons and change the host selection", async ({
   page,
 }) => {
   await page.goto("/#flow");
-  const choice = page.getByRole("button", { name: /01 Projektuj/ });
+  const choice = page.getByRole("button", { name: /01 Design/ });
   await choice.focus();
   await choice.press("Enter");
   await expect(choice).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByTestId("flow-choice")).toHaveText("Projektuj");
+  await expect(page.getByTestId("flow-choice")).toHaveText("Design");
 });
 
 test("mobile navigation and chat fit without horizontal overflow", async ({
@@ -90,16 +88,16 @@ test("mobile navigation and chat fit without horizontal overflow", async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await page.getByRole("button", { name: "Otwórz nawigację" }).click();
-  await page.getByRole("button", { name: "Czat AI", exact: true }).click();
-  await expect(page.getByRole("textbox", { name: "Wiadomość" })).toBeVisible();
+  await page.getByRole("button", { name: "Open navigation" }).click();
+  await page.getByRole("button", { name: "AI Chat", exact: true }).click();
+  await expect(page.getByRole("textbox", { name: "Message" })).toBeVisible();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
   await expect(
-    page.getByRole("button", { name: "Wyślij", exact: true }),
+    page.getByRole("button", { name: "Send", exact: true }),
   ).toBeVisible();
 });
 
@@ -107,21 +105,23 @@ test("authority change isolates a pending message from the replacement conversat
   page,
 }) => {
   await page.goto("/#chat");
-  const composer = page.getByRole("textbox", { name: "Wiadomość" });
-  await composer.fill("Stara rozmowa");
+  const composer = page.getByRole("textbox", { name: "Message" });
+  await composer.fill("Old conversation");
   await composer.press("Enter");
   await expect(page.locator("form[aria-busy=true]")).toHaveCount(1);
-  await page.getByRole("button", { name: "Nowa rozmowa", exact: true }).click();
-  await composer.fill("Nowy szkic");
+  await page
+    .getByRole("button", { name: "New conversation", exact: true })
+    .click();
+  await composer.fill("New draft");
   await page.waitForTimeout(700); // The demo host's old 550ms request must finish.
-  await expect(composer).toHaveValue("Nowy szkic");
+  await expect(composer).toHaveValue("New draft");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("Stara rozmowa", { exact: true }),
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("Old conversation", { exact: true }),
   ).toHaveCount(0);
   await expect(
-    page.getByRole("button", { name: "Wyślij", exact: true }),
+    page.getByRole("button", { name: "Send", exact: true }),
   ).toBeEnabled();
 });
 
@@ -130,33 +130,33 @@ test("responsive panel preserves the focused editor and returns focus on close",
 }) => {
   await page.setViewportSize({ width: 1200, height: 900 });
   await page.goto("/#chat");
-  const opener = page.getByRole("button", { name: "Otwórz panel boczny ↗" });
+  const opener = page.getByRole("button", { name: "Open side panel ↗" });
   await opener.click();
-  const editor = page.getByRole("textbox", { name: "Wiadomość" });
-  await editor.fill("Szkic między ekranami");
+  const editor = page.getByRole("textbox", { name: "Message" });
+  await editor.fill("Draft across screens");
   await editor.evaluate((element) =>
     element.setAttribute("data-editor-identity", "original"),
   );
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(editor).toHaveValue("Szkic między ekranami");
+  await expect(editor).toHaveValue("Draft across screens");
   await expect(editor).toHaveAttribute("data-editor-identity", "original");
   await expect(editor).toBeFocused();
   await expect(
-    page.getByRole("button", { name: "Wyślij", exact: true }),
+    page.getByRole("button", { name: "Send", exact: true }),
   ).toBeInViewport();
   await page.setViewportSize({ width: 1200, height: 900 });
   await expect(
-    page.getByRole("region", { name: "Asystent w panelu", exact: true }),
+    page.getByRole("region", { name: "Assistant panel", exact: true }),
   ).toBeVisible();
   await expect(page.getByRole("dialog")).toBeHidden();
   await expect(editor).toBeFocused();
   await page
-    .getByRole("region", { name: "Asystent w panelu", exact: true })
-    .getByRole("button", { name: "Zamknij panel rozmowy" })
+    .getByRole("region", { name: "Assistant panel", exact: true })
+    .getByRole("button", { name: "Close conversation panel" })
     .click();
   await expect(opener).toBeFocused();
-  await expect(page.getByRole("textbox", { name: "Wiadomość" })).toHaveValue(
-    "Szkic między ekranami",
+  await expect(page.getByRole("textbox", { name: "Message" })).toHaveValue(
+    "Draft across screens",
   );
 });
 
@@ -165,22 +165,22 @@ test("conversation text is escaped and search opens its matching demo", async ({
 }) => {
   await page.goto("/");
   await page
-    .getByRole("searchbox", { name: "Szukaj komponentów" })
+    .getByRole("searchbox", { name: "Search components" })
     .fill("slider");
   await page
-    .getByRole("button", { name: /Podstawy/ })
+    .getByRole("button", { name: /Controls/ })
     .last()
     .click();
   await expect(
-    page.getByRole("heading", { name: "Wybór i zakres" }),
+    page.getByRole("heading", { name: "Selection and range" }),
   ).toBeVisible();
   await page.goto("/#chat");
   const text = '<img src=x onerror="window.__romInjected=true">';
-  await page.getByRole("textbox", { name: "Wiadomość" }).fill(text);
-  await page.getByRole("button", { name: "Wyślij", exact: true }).click();
+  await page.getByRole("textbox", { name: "Message" }).fill(text);
+  await page.getByRole("button", { name: "Send", exact: true }).click();
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
+      .getByRole("region", { name: "Conversation messages", exact: true })
       .getByText(text, { exact: true }),
   ).toBeVisible();
   expect(
@@ -193,20 +193,14 @@ test("inactive Flow fitting does not reset a manually zoomed viewport", async ({
 }) => {
   await page.goto("/#flow");
   const viewport = page.locator(".svelte-flow__viewport");
-  await page
-    .getByRole("checkbox", { name: "Automatyczne dopasowanie" })
-    .uncheck();
+  await page.getByRole("checkbox", { name: "Automatic fitting" }).uncheck();
   await page.getByRole("button", { name: "Zoom In", exact: true }).click();
   await page.waitForTimeout(400); // Svelte Flow animates its zoom control for 300ms.
   const transform = await viewport.getAttribute("style");
-  await page
-    .getByRole("button", { name: "Dopasuj widok", exact: true })
-    .click();
+  await page.getByRole("button", { name: "Fit view", exact: true }).click();
   await page.waitForTimeout(100); // Two canceled animation frames must not fit.
   await expect(viewport).toHaveAttribute("style", transform!);
-  await page
-    .getByRole("checkbox", { name: "Automatyczne dopasowanie" })
-    .check();
+  await page.getByRole("checkbox", { name: "Automatic fitting" }).check();
   await expect(viewport).not.toHaveAttribute("style", transform!);
 });
 
@@ -215,12 +209,12 @@ test("ROM focus correction moves a hidden expansion control to its frame", async
 }) => {
   await page.setViewportSize({ width: 1200, height: 900 });
   await page.goto("/#chat");
-  const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
+  const expansion = page.getByRole("button", { name: "Expand", exact: true });
   await expansion.focus();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(expansion).toBeHidden();
   await expect(
-    page.getByRole("region", { name: "Przykład rozmowy", exact: true }),
+    page.getByRole("region", { name: "Example conversation", exact: true }),
   ).toBeFocused();
 });
 
@@ -229,7 +223,7 @@ test("ROM focus correction does not reclaim focus after deliberate blur", async 
 }) => {
   await page.setViewportSize({ width: 1200, height: 900 });
   await page.goto("/#chat");
-  const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
+  const expansion = page.getByRole("button", { name: "Expand", exact: true });
   await expansion.focus();
   await expansion.evaluate((element) => (element as HTMLElement).blur());
   await page.setViewportSize({ width: 390, height: 844 });
@@ -245,26 +239,24 @@ test("long messages scroll inside the conversation with a visible mobile compose
   await page.setViewportSize({ width: 390, height: 600 });
   await page.goto("/#chat");
   await page
-    .getByRole("textbox", { name: "Wiadomość" })
-    .fill("Przykładowy akapit.\n".repeat(120));
-  await page.getByRole("button", { name: "Wyślij", exact: true }).click();
+    .getByRole("textbox", { name: "Message" })
+    .fill("Example paragraph.\n".repeat(120));
+  await page.getByRole("button", { name: "Send", exact: true }).click();
   const body = page.getByRole("region", {
-    name: "Wiadomości rozmowy",
+    name: "Conversation messages",
     exact: true,
   });
   await expect(
-    body.getByText("To lokalna odpowiedź demonstracyjna.", { exact: false }),
+    body.getByText("This is a local demo response.", { exact: false }),
   ).toBeVisible();
   expect(
     await body.evaluate(
       (element) => element.scrollHeight > element.clientHeight,
     ),
   ).toBe(true);
+  await expect(page.getByRole("textbox", { name: "Message" })).toBeInViewport();
   await expect(
-    page.getByRole("textbox", { name: "Wiadomość" }),
-  ).toBeInViewport();
-  await expect(
-    page.getByRole("button", { name: "Wyślij", exact: true }),
+    page.getByRole("button", { name: "Send", exact: true }),
   ).toBeInViewport();
 });
 
@@ -272,21 +264,21 @@ test("one composer retains pending ownership when moved into the panel", async (
   page,
 }) => {
   await page.goto("/#chat");
-  const editor = page.getByRole("textbox", { name: "Wiadomość" });
-  await editor.fill("Jedno wysłanie");
+  const editor = page.getByRole("textbox", { name: "Message" });
+  await editor.fill("One send");
   await editor.evaluate((element) =>
     element.setAttribute("data-editor-witness", "single"),
   );
   await editor.press("Enter");
-  await page.getByRole("button", { name: "Otwórz panel boczny ↗" }).click();
+  await page.getByRole("button", { name: "Open side panel ↗" }).click();
   await expect(
-    page.getByRole("button", { name: "Wyślij", exact: true }),
+    page.getByRole("button", { name: "Send", exact: true }),
   ).toBeDisabled();
   await expect(editor).toHaveAttribute("data-editor-witness", "single");
   await expect(
     page
-      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
-      .getByText("Jedno wysłanie", { exact: true }),
+      .getByRole("region", { name: "Conversation messages", exact: true })
+      .getByText("One send", { exact: true }),
   ).toHaveCount(1);
 });
 
@@ -294,14 +286,14 @@ test("skip link preserves the current demo and focuses main", async ({
   page,
 }) => {
   await page.goto("/#chat");
-  await page.getByRole("textbox", { name: "Wiadomość" }).fill("Szkic");
-  const skip = page.getByRole("link", { name: "Przejdź do treści" });
+  await page.getByRole("textbox", { name: "Message" }).fill("Draft");
+  const skip = page.getByRole("link", { name: "Skip to content" });
   await skip.focus();
   await skip.press("Enter");
   await expect(page).toHaveURL(/#chat$/);
   await expect(page.locator("main")).toBeFocused();
-  await expect(page.getByRole("textbox", { name: "Wiadomość" })).toHaveValue(
-    "Szkic",
+  await expect(page.getByRole("textbox", { name: "Message" })).toHaveValue(
+    "Draft",
   );
 });
 
@@ -310,7 +302,7 @@ test("collapsed mobile navigation does not receive keyboard focus", async ({
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  const toggle = page.getByRole("button", { name: "Otwórz nawigację" });
+  const toggle = page.getByRole("button", { name: "Open navigation" });
   await toggle.focus();
   await page.keyboard.press("Shift+Tab");
   expect(

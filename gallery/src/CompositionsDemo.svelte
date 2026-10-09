@@ -9,7 +9,7 @@
   } from "rom-ui/ui/components";
   let open = $state(false);
   let opener = $state<HTMLElement | null>(null);
-  let draft = $state("Projekt demonstracyjny");
+  let draft = $state("Demo project");
   let selected = $state("project");
   let choice = $state(false);
   let reference = $state("project/demo");
@@ -25,19 +25,19 @@
     ],
   };
   const layoutLabels = {
-    left: "W lewo",
-    right: "W prawo",
-    up: "W górę",
-    down: "W dół",
-    wider: "Poszerz",
-    narrower: "Zwęź",
-    taller: "Podwyższ",
-    shorter: "Obniż",
-    show: "Pokaż",
-    hide: "Ukryj",
-    invalid: "Niepoprawny układ",
-    failed: "Zmiana odrzucona",
-    unknown: "Wynik nieznany",
+    left: "Left",
+    right: "Right",
+    up: "Up",
+    down: "Down",
+    wider: "Wider",
+    narrower: "Narrower",
+    taller: "Taller",
+    shorter: "Shorter",
+    show: "Show",
+    hide: "Hide",
+    invalid: "Invalid layout",
+    failed: "Change rejected",
+    unknown: "Unknown outcome",
   };
   const lookup = {
     descriptor: () => ({
@@ -50,12 +50,12 @@
     lookup: async (_kind: string, search: string) => ({
       status: "ready" as const,
       candidates: [
-        { id: "project/demo", title: "Projekt demonstracyjny" },
-        { id: "project/gallery", title: "Galeria komponentów" },
+        { id: "project/demo", title: "Demo project" },
+        { id: "project/gallery", title: "Component gallery" },
       ].filter((item) =>
         item.title
-          .toLocaleLowerCase("pl")
-          .includes(search.toLocaleLowerCase("pl")),
+          .toLocaleLowerCase("en")
+          .includes(search.toLocaleLowerCase("en")),
       ),
       limited: false,
     }),
@@ -63,17 +63,22 @@
   const entries = [
     {
       id: "project",
-      title: "Projekt interfejsu",
+      title: "Interface project",
       instant: 1791504000000,
       count: 6,
     },
     {
       id: "flow",
-      title: "Przegląd przepływu",
+      title: "Flow overview",
       instant: 1791417600000,
       count: 3,
     },
-    { id: "chat", title: "Pierwsza rozmowa", instant: 1791331200000, count: 2 },
+    {
+      id: "chat",
+      title: "First conversation",
+      instant: 1791331200000,
+      count: 2,
+    },
   ];
 </script>
 
@@ -81,10 +86,12 @@
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">01</span>
-      <h3>Historia</h3>
+      <h3>History</h3>
       <code>HistoryList</code>
     </div>
-    <p class="muted">Wybór rozmowy lub wersji. Dane i zapis kontroluje host.</p>
+    <p class="muted">
+      Select a conversation or version. The host controls data and storage.
+    </p>
     <HistoryList
       {entries}
       selectedId={selected}
@@ -92,48 +99,48 @@
         selected = id;
       }}
       authorityToken="gallery"
-      locale="pl-PL"
-      label="Przykładowa historia"
-      empty="Brak historii"
+      locale="en-US"
+      label="Example history"
+      empty="No history"
       messages={(key, values) =>
         key === "history.count"
-          ? `${values?.formattedCount} wiadomości`
-          : "Nie udało się wybrać."}
+          ? `${values?.formattedCount} messages`
+          : "Could not select."}
     />
   </section>
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">02</span>
-      <h3>Karta wyboru</h3>
+      <h3>Selection card</h3>
       <code>SelectionCard</code>
     </div>
-    <p class="muted">Jednoznaczny wybór z obsługą wyniku operacji.</p>
+    <p class="muted">An explicit choice that handles the operation outcome.</p>
     <SelectionCard
       id="example"
-      title="Prosty widok"
+      title="Simple view"
       selected={choice}
       authorityToken="gallery"
-      failedLabel="Operacja odrzucona"
-      unknownLabel="Wynik nieznany"
+      failedLabel="Operation rejected"
+      unknownLabel="Unknown outcome"
       onToggle={() => {
         choice = !choice;
         return "accepted";
       }}
-      ><span class="muted">Wybierz kartę, aby zmienić lokalny stan.</span
+      ><span class="muted">Select the card to change local state.</span
       ></SelectionCard
     >
   </section>
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">04</span>
-      <h3>Układ kart</h3>
+      <h3>Card layout</h3>
       <code>LayoutControls</code>
     </div>
     <LayoutControls
       {layout}
       options={layoutOptions}
-      label="Układ przykładowej karty"
-      itemLabel={() => "Karta"}
+      label="Example card layout"
+      itemLabel={() => "Card"}
       labels={layoutLabels}
       authorityToken="gallery"
       onChange={(_command, proposal) => {
@@ -142,20 +149,20 @@
       }}
     />
     <p class="muted">
-      Pozycja: {layout[0].x}, {layout[0].y} · Rozmiar: {layout[0].width} × {layout[0]
-        .height} · {layout[0].visible ? "Widoczna" : "Ukryta"}
+      Position: {layout[0].x}, {layout[0].y} · Size: {layout[0].width} × {layout[0]
+        .height} · {layout[0].visible ? "Visible" : "Hidden"}
     </p>
   </section>
   <section class="demo-card">
     <div class="card-heading">
       <span class="specimen-number">05</span>
-      <h3>Odwołanie do zasobu</h3>
+      <h3>Resource reference</h3>
       <code>ReferencePicker</code>
     </div>
     <ReferencePicker
       kind="projects"
       value={reference}
-      label="Projekt powiązany"
+      label="Related project"
       {lookup}
       normalizeId={(value) => value}
       authorityToken="gallery"
@@ -163,58 +170,58 @@
         reference = String(value);
       }}
       messages={{
-        chooseLabel: "Wybierz projekt",
-        searchLabel: "Szukaj projektów",
-        valueLabel: "Identyfikator projektu",
-        idPlaceholder: "Dokładny identyfikator",
-        searchPlaceholder: "Szukaj w przykładach…",
-        loading: "Wczytywanie…",
-        candidateHint: "Przykładowe zasoby",
-        empty: "Brak wyników",
-        manualHint: "Możesz podać dokładny identyfikator.",
-        more: "Dostępne są dalsze wyniki.",
-        unavailable: "Wybór niedostępny.",
-        failed: "Nie udało się pobrać.",
-        searchTooLong: "Skróć zapytanie.",
-        attemptsExceeded: "Spróbuj ponownie później.",
-        invalidId: "Niepoprawny identyfikator.",
+        chooseLabel: "Choose project",
+        searchLabel: "Search projects",
+        valueLabel: "Project ID",
+        idPlaceholder: "Exact ID",
+        searchPlaceholder: "Search examples…",
+        loading: "Loading…",
+        candidateHint: "Example resources",
+        empty: "No results",
+        manualHint: "You can enter an exact ID.",
+        more: "More results are available.",
+        unavailable: "Selection unavailable.",
+        failed: "Could not fetch.",
+        searchTooLong: "Shorten the query.",
+        attemptsExceeded: "Try again later.",
+        invalidId: "Invalid ID.",
       }}
     />
-    <p class="muted">Wybrany identyfikator: {reference}</p>
+    <p class="muted">Selected ID: {reference}</p>
   </section>
   <section class="demo-card wide">
     <div class="card-heading">
       <span class="specimen-number">03</span>
-      <h3>Responsywne szczegóły</h3>
+      <h3>Responsive details</h3>
       <code>ResponsiveDetails</code>
     </div>
     <p class="muted">
-      Panel na szerokim ekranie, szuflada na telefonie. Ten sam edytor i ten sam
-      szkic.
+      A panel on wide screens, a drawer on phones. The same editor and the same
+      draft.
     </p>
     <Button
       bind:ref={opener}
       onclick={() => {
         open = true;
-      }}>Otwórz szczegóły <span aria-hidden="true">↗</span></Button
+      }}>Open details <span aria-hidden="true">↗</span></Button
     >
     <div class="details-example">
       <ResponsiveDetails
         bind:open
         {opener}
         id="gallery-details"
-        title="Szczegóły projektu"
-        description="Przykładowy edytor zachowujący szkic podczas zmiany szerokości."
-        closeLabel="Zamknij szczegóły"
+        title="Project details"
+        description="An example editor that preserves its draft when the width changes."
+        closeLabel="Close details"
         breakpoint="(max-width: 799px)"
       >
         <div class="field">
-          <Label for="detail-name">Tytuł projektu</Label><Input
+          <Label for="detail-name">Project title</Label><Input
             id="detail-name"
             bind:value={draft}
           />
           <p class="muted">
-            Zmień tytuł i szerokość okna. Wartość pozostaje w edytorze.
+            Change the title and window width. The value stays in the editor.
           </p>
         </div>
       </ResponsiveDetails>
