@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-09T08:22:18.411Z",
+  "changed": [
+    {
+      "path": "frontend/package.json",
+      "sha256": "8ac12a69e87dc19ccea1aaf4c1d5344d310c8da273e4f58ec76d57e50bfa275e"
+    },
+    {
+      "path": "frontend/src/GraphFit.svelte",
+      "sha256": "cc5170c7223cf61134de94ce8a2262d21cbfb169ee0e46da6a01b38b220fb873"
+    },
+    {
+      "path": "frontend/src/ChoiceNode.svelte",
+      "sha256": "b7f1e6b8693912d7bafd07d1edeb983f171f11bc0e2ccdbd9019c82a9c8f1f89"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "63fcf21049ee2802e0ea6391b50e76def5c6361398c08a01b3fc6a003409513d"
+    },
+    {
+      "path": "frontend/vendor/rom-studio/package.json",
+      "sha256": "a9bee840778a6b9578d432940d0414175ebaf5aedfd655a58eca00fed61e0b3e"
+    },
+    {
+      "path": "frontend/vendor/rom-studio/src/controls.ts",
+      "sha256": "fedae345435db3d261abf54617dadf4bb2400956d4a9f3ba5b24abb759c30e3d"
+    },
+    {
+      "path": "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/index.ts",
+      "sha256": "909343486e1e434071f1e7fd5982d1ebf1c5ef4d029e8f936a4086b2cd3b4ea4"
+    },
+    {
+      "path": "frontend/tests/persistent-journey.cjs",
+      "sha256": "28ae5a6db770b6662a1bf98e15b9ba068722379d3a73ee9d44977a31d30851dd"
+    },
+    {
+      "path": "frontend/src/lib/ui/sidebar/index.ts",
+      "sha256": "909343486e1e434071f1e7fd5982d1ebf1c5ef4d029e8f936a4086b2cd3b4ea4"
+    },
+    {
+      "path": "frontend/pnpm-lock.yaml",
+      "sha256": "ae8aa4eeb9b2968b4edfabec0b08adf2d6448ee78dc77a931fa5f02044dcea58"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "sha256": "c9354f5861d905655ad33df526367ae6c806c62ac8333be4550a5ce0584e934e"
+    }
+  ],
+  "removed": [
+    "frontend/src/lib/ui/sidebar/LICENSE.md",
+    "frontend/src/lib/ui/sidebar/SOURCE.md",
+    "frontend/src/lib/ui/sidebar/constants.ts",
+    "frontend/src/lib/ui/sidebar/context.svelte.ts",
+    "frontend/src/lib/ui/sidebar/sidebar-content.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-footer.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-group-action.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-group-content.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-group-label.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-group.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-header.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-input.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-inset.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-action.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-badge.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-button.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-item.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-skeleton.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-sub-button.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-sub-item.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu-sub.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-menu.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-provider.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-rail.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-separator.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar-trigger.svelte",
+    "frontend/src/lib/ui/sidebar/sidebar.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/button/button.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/button/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/input/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/input/input.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/native-select/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/native-select/native-select-opt-group.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/native-select/native-select-option.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/native-select/native-select.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/separator/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/separator/separator.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-close.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-content.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-description.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-footer.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-header.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-overlay.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-portal.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-title.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet-trigger.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sheet/sheet.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/constants.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/context.svelte.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-content.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-footer.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-group-action.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-group-content.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-group-label.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-group.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-header.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-input.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-inset.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-action.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-badge.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-button.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-item.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-skeleton.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-sub-button.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-sub-item.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu-sub.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-menu.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-provider.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-rail.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-separator.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar-trigger.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/sidebar/sidebar.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/skeleton/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/skeleton/skeleton.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/textarea/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/textarea/textarea.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/index.ts",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/tooltip-content.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/tooltip-portal.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/tooltip-provider.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/tooltip-trigger.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/tooltip/tooltip.svelte",
+    "frontend/vendor/rom-studio/src/lib/components/ui/utils.ts",
+    "frontend/vendor/rom-studio/src/lib/hooks/is-mobile.svelte.ts",
+    "frontend/package-lock.json"
+  ],
+  "originalsBackup": "/var/tmp/rom-ui-madzia-alpha7/../rom-ui-madzia-alpha7-before.tar.gz",
+  "dockerBackup": "/var/tmp/rom-ui-madzia-alpha7/Dockerfile-before",
+  "concurrentDrift": false
+}

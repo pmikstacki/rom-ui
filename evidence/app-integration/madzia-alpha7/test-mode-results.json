@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09T08:17:27.249Z",
+  "results": [
+    {
+      "file": "test-environment.cjs",
+      "exitCode": 0
+    }
+  ],
+  "backendBinary": "/root/madzia/backend/target/debug/forest-quiz",
+  "site": "/var/tmp/rom-ui-madzia-alpha7/site-test",
+  "scope": "Candidate frontend with isolated local backend fixtures; Chromium app suites."
+}

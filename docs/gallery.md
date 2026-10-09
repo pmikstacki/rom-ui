@@ -133,3 +133,11 @@ See [showcase evidence](../evidence/gallery/showcase/result.json).
 The showcase refactor is deployed from commit `b722ba2`.
 All six affected public browser cases passed. All 34 public files match the local build.
 See [showcase deployment evidence](../evidence/gallery/showcase/public/result.json).
+
+## Installed application migration
+
+Madzia now uses the same released alpha.7 Flow, controls and sidebar implementations.
+Its old import paths remain as facades. The frontend and container build use pnpm.
+Local application checks passed in Chromium, with focused desktop and mobile checks in WebKit.
+The root build matches the tested candidate. Public application deployment remains pending.
+See [Madzia migration evidence](../evidence/app-integration/madzia-alpha7/README.md).

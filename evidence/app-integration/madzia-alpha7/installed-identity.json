@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0-alpha.7",
+  "archiveSha256": "840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164",
+  "installedOwnerFilesMatched": 249,
+  "directControls": "/var/tmp/rom-ui-madzia-alpha7/frontend/node_modules/.pnpm/rom-ui@https+++github.com+pmikstacki+rom-ui+releases+download+v0.1.0-alpha.7+rom-ui-0.1_25a65526f384a190131b25d80a436852/node_modules/rom-ui/src/controls.ts",
+  "studioControls": "/var/tmp/rom-ui-madzia-alpha7/frontend/node_modules/.pnpm/rom-ui@https+++github.com+pmikstacki+rom-ui+releases+download+v0.1.0-alpha.7+rom-ui-0.1_25a65526f384a190131b25d80a436852/node_modules/rom-ui/src/controls.ts",
+  "sameImplementation": true
+}

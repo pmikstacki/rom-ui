@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-09T08:21:21.987Z",
+  "results": [
+    {
+      "file": "journey-webkit.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "persistent-journey-webkit.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "sidebar-appearance-webkit.cjs",
+      "exitCode": 0
+    }
+  ],
+  "backendBinary": "/root/madzia/backend/target/debug/forest-quiz",
+  "site": "/var/tmp/rom-ui-madzia-alpha7/site",
+  "scope": "Candidate frontend with isolated local backend fixtures; Chromium app suites."
+}
