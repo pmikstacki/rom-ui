@@ -1,0 +1,38 @@
+{
+  "url": "https://romui.cybernomad.it",
+  "source_commit": "5c7fd1b0e9ce545a6d4fce96517345a35f7c5bd0",
+  "image": "rom-ui-gallery:5c7fd1b",
+  "image_id": "sha256:49b7c1b200820b6d64c15ba4283027ef56cb047e059d86e61e82cec457edb87e",
+  "deployment_archive_sha256": "208e45cc323f546c34ee6f6bc65665c4714e7bbaff218cce1101cb4dd26e675e",
+  "entry_assets": [
+    {
+      "path": "/assets/index-6bOVtJZA.js",
+      "status": 200,
+      "sha256": "1bf401d62ddcf0ab61f1d4aa146b4800dc7675df34396e62d7b1dd35e769537c"
+    },
+    {
+      "path": "/assets/index-CJxH7YAm.css",
+      "status": 200,
+      "sha256": "917ce3c9cf07ee2c92a2ef60275f16207f8e3b4b0ca9134203a79dfc7f7d4d5d"
+    }
+  ],
+  "statuses": {
+    "/healthz": 200,
+    "/licenses.txt": 200,
+    "/assets/nonexistent.js": 404
+  },
+  "rom_hosted": false,
+  "rom_connected": false,
+  "previous_image_retained": "rom-ui-gallery:427d7f8",
+  "public_verifier": {
+    "exit_code": 0,
+    "passed": 80,
+    "failed": 0,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "certificate_verification": true,
+    "log": "alpha6-public-verifier.log"
+  }
+}
