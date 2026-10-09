@@ -27,3 +27,12 @@ Preserve current Studio public paths and keep generic primitives reusable outsid
 A ROM-backed gallery requires an isolated host with explicit demo policies and a persistent Resource store.
 Record the runtime image, installed package identities, lockfiles and public HTTPS checks.
 A component-browser test or a static health endpoint does not prove that integration.
+
+## Shared implementation verification
+
+Studio uses the released alpha.7 archive for 14 additional primitive families.
+Its generic control facades and ConversationLayout use the same installed owner implementations.
+The new `rom-studio/forms` entry point exposes existing Studio forms and renderer contracts.
+Semantic editors and recovery remain in Studio.
+The installed forms consumer passed exact-integer and rejected-submission cases in both browsers.
+These checks establish the API boundary; rich gallery form examples and actual ROM-backed submissions remain pending.

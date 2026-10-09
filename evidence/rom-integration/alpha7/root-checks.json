@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-09T07:18:40.727Z",
+  "drift": [],
+  "checks": {
+    "svelteErrors": 0,
+    "svelteWarnings": 0,
+    "unitPassed": 418,
+    "identityBrowserPassed": 2
+  },
+  "logs": [
+    "/var/tmp/rom-ui-alpha7-root-check.log",
+    "/var/tmp/rom-ui-alpha7-root-unit.log",
+    "/var/tmp/rom-ui-alpha7-root-build.log",
+    "/var/tmp/rom-ui-alpha7-root-identity.log"
+  ],
+  "limits": "Full verifier passed isolated candidate; root checks do not qualify unrelated concurrent Rust work or complete gallery ROM binding."
+}

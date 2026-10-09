@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "exitCode": 0,
+  "command": "./scripts/check",
+  "root": "/root/.codex/worktrees/rom-gallery-binding/ROM",
+  "manifest": "/var/tmp/rom-gallery-binding-alpha7-full-inputs.json",
+  "sourceFiles": 3547,
+  "drift": [],
+  "log": "/var/tmp/rom-gallery-binding-alpha7-full-verifier.log",
+  "logSha256": "e9a1908f06ebcd99e19e339197b4d3603e055346c86977b7492ca0faedd23cee",
+  "limits": "Isolated source candidate; not root integration, release acceptance, or ROM-backed public gallery proof"
+}

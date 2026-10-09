@@ -40,7 +40,11 @@ Its Provider enables Ctrl/Cmd+B and the `sidebar_state` presentation cookie by d
 Set `keyboardShortcut={false}` and `persistState={false}` for embedded instances that must not share those policies.
 The gallery disables both.
 
-This candidate does not establish completed Studio facade migration or actual ROM-backed interactions.
+ROM Studio now reexports these families from the installed alpha.7 archive.
+The integration preserves existing public paths and removes 105 local implementation files.
+Root checks passed: 418 unit tests, zero Svelte diagnostics and both browser identity cases.
+The isolated integration candidate also passed the full ROM local verifier and 54 independent installed-consumer browser cases.
+These results do not establish actual ROM-backed gallery interactions.
 
 ## Deployment
 
@@ -48,6 +52,11 @@ Use a dedicated static container on the existing Coolify network.
 Set its Caddy host label to `romui.cybernomad.it`.
 Preserve other containers and shared proxy configuration.
 Record the built source identity, archive checksum and public verification with each deployment.
+
+The alpha.7 public deployment passed all 84 gallery cases in Chromium and WebKit.
+The earlier Chromium runs failed while loading entry assets with `ERR_NETWORK_CHANGED`.
+Retained traces establish the loading failure; they do not establish its infrastructure cause.
+See the committed [public result](../evidence/gallery/alpha7-public/result.json) and [integration checks](../evidence/rom-integration/alpha7/root-checks.json).
 
 ## Map source
 

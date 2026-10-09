@@ -21,3 +21,8 @@ Keep model execution, credentials, authorization and persistence in the host.
 
 Remaining acceptance includes installed host migrations, ROM-backed gallery interactions and the ROM-extras map-provider integration.
 Do not mark the goal complete from presentation-only browser tests.
+
+Refactor the gallery around shared showcase components for previews, options and expandable snippets.
+Use one component catalog for navigation, overview and search.
+Use ROMUIFlex for consistent transitions, with reduced motion and keyboard focus preserved.
+Include the full descriptor-driven Studio field set, dialogs and notifications in the gallery.
