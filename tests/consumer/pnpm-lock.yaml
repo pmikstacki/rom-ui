@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       rom-ui:
-        specifier: file:../../rom-ui-5e58cd6772da8a6cb7774c2d332fc74cd958447a0c67acd1a038dcc8efb84b6a.tgz
-        version: file:../../rom-ui-5e58cd6772da8a6cb7774c2d332fc74cd958447a0c67acd1a038dcc8efb84b6a.tgz(@internationalized/date@3.12.4)(svelte@5.57.1)
+        specifier: file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz
+        version: file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz(@internationalized/date@3.12.4)(svelte@5.57.1)
       svelte:
         specifier: 5.57.1
         version: 5.57.1
@@ -605,9 +605,9 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  rom-ui@file:../../rom-ui-5e58cd6772da8a6cb7774c2d332fc74cd958447a0c67acd1a038dcc8efb84b6a.tgz:
-    resolution: {integrity: sha512-8gtNtCFcn7t9uodrnm3nMxd6KleFruDVAU4FYgBSpzCuZbILT7yYBX8dhk1x2FOCcSKSMyDcXxDuTLWYYlHMgQ==, tarball: file:../../rom-ui-5e58cd6772da8a6cb7774c2d332fc74cd958447a0c67acd1a038dcc8efb84b6a.tgz}
-    version: 0.1.0-alpha.2
+  rom-ui@file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz:
+    resolution: {integrity: sha512-//dTQBinXMaeWg1DL0DWfC2yF/3xf+6AjbWurvbBBPQu2tjZAMZCf0YPFW/pPT/gkr+76oixIu8vupITRPa+IQ==, tarball: file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz}
+    version: 0.1.0-alpha.3
     peerDependencies:
       svelte: 5.57.1
 
@@ -1157,7 +1157,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.13
       '@rolldown/binding-win32-x64-msvc': 1.2.13
 
-  rom-ui@file:../../rom-ui-5e58cd6772da8a6cb7774c2d332fc74cd958447a0c67acd1a038dcc8efb84b6a.tgz(@internationalized/date@3.12.4)(svelte@5.57.1):
+  rom-ui@file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz(@internationalized/date@3.12.4)(svelte@5.57.1):
     dependencies:
       '@lucide/svelte': 1.51.0(svelte@5.57.1)
       bits-ui: 2.19.5(@internationalized/date@3.12.4)(svelte@5.57.1)

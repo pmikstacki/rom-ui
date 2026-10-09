@@ -4,7 +4,7 @@
   import ChevronRightIcon from "@lucide/svelte/icons/chevron-right";
   import * as Sheet from "../../components/ui/sheet/index.js";
   import { Button } from "../../components/ui/button/index.js";
-  import { preserveEditor, hasFocusedEditor } from "./preserve-editor.ts";
+  import { preserveEditor, hasFocusedEditor, captureEditorFocus } from "./preserve-editor.ts";
   import { lockDetailsScroll } from "./details-scroll-lock.ts";
 
   let {
@@ -35,6 +35,17 @@
   let desktopTarget = $state<HTMLDivElement | null>(null);
   let mobileTarget = $state<HTMLDivElement | null>(null);
   const sheetOpen = $derived(mobile.current && open);
+
+  let previousMobile: boolean | null = null;
+  $effect.pre(() => {
+    const compact = mobile.current;
+    const editorOpen = open;
+    const crossed = previousMobile !== null && previousMobile !== compact;
+    previousMobile = compact;
+    if (crossed && editorOpen) {
+      captureEditorFocus(compact ? desktopTarget : mobileTarget, compact ? mobileTarget : desktopTarget);
+    }
+  });
 
   function returnFocus() {
     if (opener?.isConnected && !opener.matches(":disabled") &&

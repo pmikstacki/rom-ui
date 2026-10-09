@@ -103,6 +103,10 @@ test("responsive relocation retains the focused editor and exact text selection 
     await expect(draft).toHaveAttribute("data-focus-witness", "same-node");
     await expect(draft).toHaveValue("Raw unchanged composition draft");
     expect(await draft.evaluate((element: HTMLTextAreaElement) => [element.selectionStart, element.selectionEnd, element.selectionDirection])).toEqual([2, 9, "backward"]);
+    await page.evaluate(async () => {
+      await Promise.race([Promise.all(document.getAnimations().map(animation => animation.finished.catch(() => undefined))), new Promise((_, reject) => setTimeout(() => reject(new Error("Breakpoint animation deadline")), 2000))]);
+      await new Promise(requestAnimationFrame);
+    });
   }
 });
 
