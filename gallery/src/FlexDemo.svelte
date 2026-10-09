@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { ROMUIFlex } from "rom-ui/flex";
   import { Button } from "rom-ui/controls";
   let flex: ROMUIFlex;
@@ -24,11 +25,7 @@
   }
 </script>
 
-<section class="demo-card">
-  <div class="card-heading">
-    <h3>Caller-owned view transitions</h3>
-    <code>ROMUIFlex · Animotion · View Transitions</code>
-  </div>
+<Showcase title="Caller-owned view transitions" api="ROMUIFlex · Animotion · View Transitions" level={3}>
   <p>
     The application chooses the view. Motion adds a transition after the
     application accepts the change.
@@ -76,7 +73,7 @@
   <div class="code-line">
     import &#123; ROMUIFlex &#125; from 'rom-ui/flex';
   </div>
-</section>
+</Showcase>
 
 <style>
   .flex-content {

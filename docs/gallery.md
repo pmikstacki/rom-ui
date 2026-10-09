@@ -110,3 +110,22 @@ Toaster integration and actual ROM action notifications remain pending.
 The overlays increment is deployed at `/#overlays` from commit `a72d166`.
 All six affected public checks passed in Chromium and WebKit. HTTPS assets match the local build.
 See the [overlay deployment result](../evidence/gallery/overlays/public/result.json).
+
+## Shared gallery structure
+
+`gallery/src/catalog.ts` owns family metadata and lazy demo loaders.
+Navigation, overview cards and search results use this catalog. The overview count is derived from its entries.
+`CategoryGrid` renders both overview cards and search results.
+`Showcase` and `ShowcaseHeading` share preview framing, API labels and headings across the demo families.
+The chat conversation retains its viewport layout; its agent activity preview uses the shared frame.
+`ComponentSnippets` and `Snippet` continue to own the expandable, copyable usage examples.
+
+Gallery navigation uses installed ROMUIFlex transitions and moves keyboard focus to the main content after navigation.
+Shared previews use a short entrance animation. Reduced-motion preferences disable this animation.
+The refactor preserves installed package identities and existing hash routes.
+
+The refactor passed the full local verifier: 78 unit tests, two headless tests and 140 installed-consumer browser cases.
+All 102 gallery browser cases passed in Chromium and WebKit. All 61 snippets compiled.
+An initial frame around the chat conversation failed the mobile composer visibility check.
+The final layout preserves the conversation viewport and frames the activity panel instead.
+See [showcase evidence](../evidence/gallery/showcase/result.json).

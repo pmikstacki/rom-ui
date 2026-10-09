@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import {
     setWorkerUrl,
     type Map as MapInstance,
@@ -157,12 +158,7 @@
     }}>Reset view</Button
   >
 </div>
-<section class="demo-card map-example">
-  <div class="card-heading">
-    <span class="specimen-number">01</span>
-    <h3>Resource map</h3>
-    <code>ResourceMap · MapGeoJSON · MapRoute</code>
-  </div>
+<Showcase title="Resource map" api="ResourceMap · MapGeoJSON · MapRoute" number="01" level={3} class="map-example">
   <p class="muted">
     Explore the streets of Kraków and select a demo resource. The points and
     route are illustrative.
@@ -270,7 +266,7 @@
   <div class="code-line">
     import &#123; ResourceMap, MapRoute, MapGeoJSON &#125; from 'rom-ui/maps';
   </div>
-</section>
+</Showcase>
 <div class="demo-options">
   <label class="checkbox-row"
     ><input type="checkbox" bind:checked={clusters} /> Show clusters</label

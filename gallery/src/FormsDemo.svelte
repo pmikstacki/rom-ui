@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { ResourceForm, ActionForm, type ResourceFormSubmission } from "rom-studio/forms";
   import { stringifyWire, type ResourceDescriptor, type WireObject, type WireValue, type ActionInput } from "rom-studio/client";
   const action: ActionInput = { name: "annotate", version: 1, input: { type: "object", value: [{ name: "message", shape: { type: "string" } }] } };
@@ -41,8 +42,7 @@
   }
 </script>
 
-<section class="demo-card">
-  <div class="card-heading"><h2>Studio semantic fields</h2><code>rom-studio/forms</code></div>
+<Showcase title="Studio semantic fields" api="rom-studio/forms" level={2}>
   <p class="muted">These are the same descriptor-driven editors used by ROM Studio. Dates, exact decimals, structured JSON and field states retain their ROM contracts.</p>
   <p class="muted">Local submission preview. This example does not persist a Resource; live ROM actions and receipt recovery are still pending.</p>
   <div class="demo-options">
@@ -52,17 +52,16 @@
   <ResourceForm {descriptor} {value} {readonly} mode="patch" direct {submit} />
   <h3>Local submission preview</h3>
   <pre aria-label="Submitted form">{submitted}</pre>
-</section>
+</Showcase>
 
-<section class="demo-card action-preview">
-  <div class="card-heading"><h2>Typed action input</h2><code>ActionForm</code></div>
+<Showcase title="Typed action input" api="ActionForm" level={2} class="action-preview">
   <p class="muted">The same descriptor drives the action form. This callback previews its input locally; it does not invoke a ROM action.</p>
   <ActionForm {descriptor} {action} {readonly} oninvoke={invoke} />
   <h3>Local action input preview</h3>
   <pre aria-label="Action input preview">{actionInput}</pre>
-</section>
+</Showcase>
 
 <style>
-  .action-preview { margin-top: 1.25rem; }
+  :global(.action-preview) { margin-top: 1.25rem; }
   pre { overflow: auto; max-height: 16rem; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; }
 </style>

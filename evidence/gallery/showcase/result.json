@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09T08:07:43.890Z",
+  "base": "8961921",
+  "command": "GIO_EXTRA_MODULES=<existing glib networking> ROM_CHROMIUM_PATH=/root/.nix-profile/bin/chromium ROM_WEBKIT_EXECUTABLE=/var/tmp/rom-studio-webkit-2359/pw_run.sh ./scripts/check",
+  "exitCode": 0,
+  "unit": 78,
+  "headless": 2,
+  "installedConsumerBrowser": 140,
+  "galleryBrowser": 102,
+  "compiledSnippets": 61,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "sourceDrift": false,
+  "review": "Read-only reviewer found no material regressions.",
+  "retainedFailure": "Initial chat frame pushed mobile composer below viewport; shared frame moved to activity panel. New initial test selector corrected to searchbox.",
+  "limits": [
+    "Local form/action callbacks remain previews.",
+    "Public hosting remains static nginx.",
+    "This refactor does not complete ROM sessions, app migrations or map providers."
+  ]
+}

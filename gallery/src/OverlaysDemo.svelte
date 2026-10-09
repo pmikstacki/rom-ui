@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { Button, Input } from "rom-ui/controls";
   import * as Dialog from "rom-ui/primitives/dialog";
   import * as Sheet from "rom-ui/primitives/sheet";
@@ -11,8 +12,7 @@
 </script>
 
 <div class="demo-grid">
-  <section class="demo-card">
-    <div class="card-heading"><h2>Dialog</h2><code>rom-ui/primitives/dialog</code></div>
+  <Showcase title="Dialog" api="rom-ui/primitives/dialog" level={2}>
     <p class="muted">Edit a host-owned draft. Escape closes the dialog and restores focus.</p>
     <Dialog.Root bind:open>
       <Dialog.Trigger>Open dialog</Dialog.Trigger>
@@ -22,9 +22,8 @@
         <Dialog.Footer><Dialog.Close>Cancel</Dialog.Close><Button onclick={accept}>Accept locally</Button></Dialog.Footer>
       </Dialog.Content>
     </Dialog.Root>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading"><h2>Sheet</h2><code>rom-ui/primitives/sheet</code></div>
+  </Showcase>
+  <Showcase title="Sheet" api="rom-ui/primitives/sheet" level={2}>
     <p class="muted">A shared modal panel for resource details.</p>
     <Sheet.Root>
       <Sheet.Trigger>Open sheet</Sheet.Trigger>
@@ -34,9 +33,8 @@
         <Sheet.Footer><Sheet.Close>Close details</Sheet.Close></Sheet.Footer>
       </Sheet.Content>
     </Sheet.Root>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading"><h2>Popover</h2><code>rom-ui/primitives/popover</code></div>
+  </Showcase>
+  <Showcase title="Popover" api="rom-ui/primitives/popover" level={2}>
     <p class="muted">Keep small options close to their opening control.</p>
     <Popover.Root>
       <Popover.Trigger>Open popover</Popover.Trigger>
@@ -45,22 +43,20 @@
         <Popover.Close>Close options</Popover.Close>
       </Popover.Content>
     </Popover.Root>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading"><h2>Inline notifications</h2><code>rom-ui/primitives/alert</code></div>
+  </Showcase>
+  <Showcase title="Inline notifications" api="rom-ui/primitives/alert" level={2}>
     <p class="muted">The application chooses the message, lifetime and dismissal. This example reports local interaction only.</p>
     <Button onclick={() => notification = "Local preview ready."}>Show notification</Button>
     {#if notification}
-      <Alert.Root role="status" aria-live="polite" class="feedback">
+      <Alert.Root role="status" aria-live="polite" class="feedback overlay-feedback">
         <Alert.Title>Local feedback</Alert.Title><Alert.Description>{notification}</Alert.Description>
         <Alert.Action><Button variant="ghost" aria-label="Dismiss notification" onclick={() => notification = ""}>Dismiss</Button></Alert.Action>
       </Alert.Root>
     {/if}
-  </section>
+  </Showcase>
 </div>
 
 <style>
-  h2 { font-size: 1rem; margin: 0; }
-  .demo-card :global(.feedback) { margin-top: 1rem; }
+  :global(.overlay-feedback) { margin-top: 1rem; }
   .panel-copy { padding: 1rem; }
 </style>

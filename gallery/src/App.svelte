@@ -6,105 +6,26 @@
     componentExamples,
     type ExampleCategory,
   } from "./component-examples";
+  import { sections, families, resolveSection } from "./catalog";
+  import CategoryGrid from "./CategoryGrid.svelte";
   let pageFlex: ROMUIFlex;
   let navigation = 0;
   const version = __ROM_UI_VERSION__;
-  const loaders = new Map([
-    ["controls", () => import("./ControlsDemo.svelte")],
-    ["forms", () => import("./FormsDemo.svelte")],
-    ["overlays", () => import("./OverlaysDemo.svelte")],
-    ["studio-primitives", () => import("./StudioPrimitivesDemo.svelte")],
-    ["compositions", () => import("./CompositionsDemo.svelte")],
-    ["chat", () => import("./ChatDemo.svelte")],
-    ["flow", () => import("./FlowDemo.svelte")],
-    ["maps", () => import("./MapsDemo.svelte")],
-    ["flex", () => import("./FlexDemo.svelte")],
-  ]);
-  const sections = [
-    {
-      id: "overview",
-      label: "Overview",
-      icon: "◈",
-      count: "07",
-      description: "See what you can build.",
-      tags: "gallery all components",
-    },
-    {
-      id: "controls",
-      label: "Controls",
-      icon: "⊞",
-      count: "11",
-      description: "Small controls. Consistent behavior.",
-      tags: "button input textarea checkbox slider label select badge switch",
-    },
-    {
-      id: "compositions",
-      label: "Compositions",
-      icon: "▥",
-      count: "06",
-      description: "Larger elements that combine controls.",
-      tags: "history responsive details reference selection layout",
-    },
-    {
-      id: "chat",
-      label: "AI Chat",
-      icon: "✳",
-      count: "04",
-      description: "A space to chat with any model.",
-      tags: "assistant conversation composer messages astral plane",
-    },
-    {
-      id: "flow",
-      label: "Flow",
-      icon: "⌘",
-      count: "02",
-      description: "Interactive paths with Svelte Flow.",
-      tags: "graph nodes madzia xyflow",
-    },
-  ];
-  sections.push({ id: "overlays", label: "Dialogs & feedback", icon: "▢", count: "04", description: "Dialogs, panels, popovers and inline notifications.", tags: "dialog sheet modal popover alert notifications feedback" });
-  sections.push({ id: "forms", label: "Forms", icon: "▦", count: "18", description: "Descriptor-driven fields from ROM Studio.", tags: "resource form semantic date time datetime color email url decimal json nullable optional readonly" });
-  sections.push({
-    id: "studio-primitives",
-    label: "Studio primitives",
-    icon: "▤",
-    count: "14",
-    description: "Shared building blocks used by ROM Studio.",
-    tags: "switch select tabs badge menu table sidebar alert card breadcrumb tooltip skeleton separator",
-  });
-  sections.push({
-    id: "maps",
-    label: "Maps",
-    icon: "◎",
-    count: "16",
-    description: "Resources and layers on MapLibre maps.",
-    tags: "mapcn maplibre geojson map marker route resources",
-  });
-  sections.push({
-    id: "flex",
-    label: "Flex",
-    icon: "⇄",
-    count: "02",
-    description:
-      "View transitions with Animotion and the View Transitions API.",
-    tags: "transition animation motion view flex",
-  });
   let current = $state("overview");
   let query = $state("");
   let mobileNav = $state(false);
   let dark = $state(false);
-  const demo = $derived(loaders.get(current)?.());
+  const demo = $derived(resolveSection(current).load?.());
   const snippetCategory = $derived(
     Object.hasOwn(componentExamples, current)
       ? (current as ExampleCategory)
       : null,
   );
   const section = $derived(
-    sections.find((section) => section.id === current) ?? sections[0],
+    resolveSection(current),
   );
   const matches = $derived(
-    sections
-      .slice(1)
+    families
       .filter((item) =>
         `${item.label} ${item.tags}`
           .toLocaleLowerCase("en")
@@ -115,8 +36,7 @@
     const ticket = ++navigation;
     mobileNav = false;
     query = "";
-    await loaders
-      .get(id)?.()
+    await resolveSection(id).load?.()
       .catch(() => undefined);
     if (ticket !== navigation) return;
     const update = () => {
@@ -124,7 +44,7 @@
       window.location.hash = id;
       window.scrollTo({ top: 0 });
     };
-    if (pageFlex) await pageFlex.run(update);
+    if (pageFlex) await pageFlex.run(update, { focus: () => document.getElementById("main") });
     else update();
   }
   function setTheme() {
@@ -138,7 +58,7 @@
   onMount(() => {
     const route = () => {
       const id = location.hash.slice(1);
-      current = sections.some((section) => section.id === id) ? id : "overview";
+      current = resolveSection(id).id;
     };
     route();
     window.addEventListener("hashchange", route);
@@ -246,20 +166,7 @@
               Choose a component family to open working examples.
             </p>
           </div>
-          <div class="category-grid">
-            {#each matches as item}<button
-                class="category-card"
-                onclick={() => navigate(item.id)}
-                ><span class="category-icon" aria-hidden="true"
-                  >{item.icon}</span
-                >
-                <h2>{item.label}</h2>
-                <p>{item.description}</p>
-                <span class="category-footer"
-                  >Open examples <span aria-hidden="true">↗</span></span
-                ></button
-              >{/each}
-          </div>
+          <CategoryGrid items={matches} {navigate} />
           {#if !matches.length}<p class="empty-search">
               No matching components. Try “chat”, “slider”, or “flow”.
             </p>{/if}
@@ -306,20 +213,7 @@
             </div>
             <span class="muted">Live examples, your own data</span>
           </div>
-          <div class="category-grid">
-            {#each sections.slice(1) as item}<button
-                class="category-card"
-                onclick={() => navigate(item.id)}
-                ><span class="category-icon" aria-hidden="true"
-                  >{item.icon}</span
-                ><span class="category-index">{item.count} / components</span>
-                <h2>{item.label}</h2>
-                <p>{item.description}</p>
-                <span class="category-footer"
-                  >Open examples <span aria-hidden="true">↗</span></span
-                ></button
-              >{/each}
-          </div>
+          <CategoryGrid items={families} {navigate} />
           <section class="principles">
             <div>
               <span class="small-kicker">YOUR HOST, YOUR RULES</span>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import {
     Button,
     Badge,
@@ -23,12 +24,7 @@
 </script>
 
 <div class="demo-grid">
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">01</span>
-      <h3>Buttons</h3>
-      <code>Button</code>
-    </div>
+  <Showcase title="Buttons" api="Button" number="01" level={3}>
     <p class="muted">Variants that share behavior and style.</p>
     <div class="button-row">
       <Button onclick={() => (name = "New project")}
@@ -40,13 +36,8 @@
     <div class="code-line">
       import &#123; Button &#125; from 'rom-ui/controls';
     </div>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">02</span>
-      <h3>Text fields</h3>
-      <code>Input · Textarea</code>
-    </div>
+  </Showcase>
+  <Showcase title="Text fields" api="Input · Textarea" number="02" level={3}>
     <div class="field">
       <Label for="project-name">Project name</Label><Input
         id="project-name"
@@ -63,13 +54,8 @@
         rows={3}
       />
     </div>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">03</span>
-      <h3>Selection and range</h3>
-      <code>Checkbox · Slider</code>
-    </div>
+  </Showcase>
+  <Showcase title="Selection and range" api="Checkbox · Slider" number="03" level={3}>
     <div class="checkbox-row">
       <Checkbox id="notifications" bind:checked /><Label for="notifications"
         >Notifications enabled</Label
@@ -98,13 +84,8 @@
         ></NativeSelect
       >
     </div>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">04</span>
-      <h3>Status and live updates</h3>
-      <code>Badge · Switch</code>
-    </div>
+  </Showcase>
+  <Showcase title="Status and live updates" api="Badge · Switch" number="04" level={3}>
     <div class="checkbox-row">
       <Switch id="live-updates" bind:checked={live} /><Label for="live-updates"
         >Live updates</Label
@@ -113,7 +94,7 @@
       >
     </div>
     <p class="muted">The host owns the status and subscription lifecycle.</p>
-  </section>
+  </Showcase>
   <section class="demo-card foundation-note">
     <span class="small-kicker">FROM ROM STUDIO</span>
     <h3>

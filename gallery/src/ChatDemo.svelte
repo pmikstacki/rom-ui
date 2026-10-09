@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { tick } from "svelte";
   import AgentActivityDemo from "./AgentActivityDemo.svelte";
   import { Button } from "rom-ui/controls";
@@ -262,7 +263,9 @@
   </p>
 </div>
 
-<AgentActivityDemo />
+<Showcase title="Agent activity" api="rom-ui/chat" level={2}>
+  <AgentActivityDemo />
+</Showcase>
 
 <style>
   .extension-menu {

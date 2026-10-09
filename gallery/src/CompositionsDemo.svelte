@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { Button, Input, Label } from "rom-ui/controls";
   import {
     ResponsiveDetails,
@@ -83,12 +84,7 @@
 </script>
 
 <div class="demo-grid compositions">
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">01</span>
-      <h3>History</h3>
-      <code>HistoryList</code>
-    </div>
+  <Showcase title="History" api="HistoryList" number="01" level={3}>
     <p class="muted">
       Select a conversation or version. The host controls data and storage.
     </p>
@@ -107,13 +103,8 @@
           ? `${values?.formattedCount} messages`
           : "Could not select."}
     />
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">02</span>
-      <h3>Selection card</h3>
-      <code>SelectionCard</code>
-    </div>
+  </Showcase>
+  <Showcase title="Selection card" api="SelectionCard" number="02" level={3}>
     <p class="muted">An explicit choice that handles the operation outcome.</p>
     <SelectionCard
       id="example"
@@ -129,13 +120,8 @@
       ><span class="muted">Select the card to change local state.</span
       ></SelectionCard
     >
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">04</span>
-      <h3>Card layout</h3>
-      <code>LayoutControls</code>
-    </div>
+  </Showcase>
+  <Showcase title="Card layout" api="LayoutControls" number="04" level={3}>
     <LayoutControls
       {layout}
       options={layoutOptions}
@@ -152,13 +138,8 @@
       Position: {layout[0].x}, {layout[0].y} · Size: {layout[0].width} × {layout[0]
         .height} · {layout[0].visible ? "Visible" : "Hidden"}
     </p>
-  </section>
-  <section class="demo-card">
-    <div class="card-heading">
-      <span class="specimen-number">05</span>
-      <h3>Resource reference</h3>
-      <code>ReferencePicker</code>
-    </div>
+  </Showcase>
+  <Showcase title="Resource reference" api="ReferencePicker" number="05" level={3}>
     <ReferencePicker
       kind="projects"
       value={reference}
@@ -188,13 +169,8 @@
       }}
     />
     <p class="muted">Selected ID: {reference}</p>
-  </section>
-  <section class="demo-card wide">
-    <div class="card-heading">
-      <span class="specimen-number">03</span>
-      <h3>Responsive details</h3>
-      <code>ResponsiveDetails</code>
-    </div>
+  </Showcase>
+  <Showcase title="Responsive details" api="ResponsiveDetails" number="03" level={3} class="wide">
     <p class="muted">
       A panel on wide screens, a drawer on phones. The same editor and the same
       draft.
@@ -226,5 +202,5 @@
         </div>
       </ResponsiveDetails>
     </div>
-  </section>
+  </Showcase>
 </div>

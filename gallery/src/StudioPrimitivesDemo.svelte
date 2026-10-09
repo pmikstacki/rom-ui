@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import { Badge, type BadgeVariant } from "rom-ui/controls";
   import { Switch } from "rom-ui/primitives/switch";
   import * as Select from "rom-ui/primitives/select";
@@ -25,6 +26,7 @@
   const variant: BadgeVariant = "outline";
 </script>
 
+<Showcase title="Shared Studio primitives" api="rom-ui/primitives/*" level={2}>
 <section class="shared-studio-controls" aria-label="Shared Studio primitives">
   <p class="muted">
     The same generic primitives used by ROM Studio. These examples use local
@@ -159,6 +161,7 @@
     >{JSON.stringify({ enabled, choice, tab, changes, sidebarOpen })}</output
   >
 </section>
+</Showcase>
 
 <style>
   .shared-studio-controls {

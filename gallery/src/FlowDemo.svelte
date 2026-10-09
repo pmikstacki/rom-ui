@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Showcase from "./Showcase.svelte";
   import {
     SvelteFlow,
     Background,
@@ -75,12 +76,7 @@
   ];
 </script>
 
-<section class="demo-card flow-example">
-  <div class="card-heading">
-    <span class="specimen-number">01</span>
-    <h3>From idea to interaction</h3>
-    <code>FlowChoiceNode · FlowFit</code>
-  </div>
+<Showcase title="From idea to interaction" api="FlowChoiceNode · FlowFit" number="01" level={3} class="flow-example">
   <p class="muted">
     Select a node with a mouse or keyboard. Svelte Flow handles zooming and
     panning.
@@ -121,7 +117,7 @@
   <div class="code-line">
     import &#123; FlowChoiceNode, FlowFit &#125; from 'rom-ui/flow';
   </div>
-</section>
+</Showcase>
 <div class="note-row">
   <span class="mini-tag">EXTRACTED FROM MADZIA</span>
   <p>
