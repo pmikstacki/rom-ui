@@ -990,3 +990,21 @@ h1 {
 .art-center span {
   display: inline;
 }
+
+.editor-transport,
+.inline-conversation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+@media (max-width: 799px) {
+  .sidebar {
+    visibility: hidden;
+  }
+  .sidebar.mobile-open {
+    visibility: visible;
+  }
+}

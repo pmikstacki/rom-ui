@@ -8,12 +8,23 @@
     type ChatMessage,
   } from "rom-ui/chat";
   import { ResponsiveDetails } from "rom-ui/ui/components";
+  import {
+    preserveEditor,
+    captureEditorFocus,
+  } from "rom-ui/ui/commands/preserve-editor";
   let draft = $state("");
   let expanded = $state(false);
   let open = $state(false);
   let opener = $state<HTMLElement | null>(null);
   let bodyRef = $state<HTMLDivElement | null>(null);
-  let panelBody = $state<HTMLDivElement | null>(null);
+  let inlineTarget = $state<HTMLDivElement | null>(null);
+  let panelTarget = $state<HTMLDivElement | null>(null);
+  $effect.pre(() => {
+    captureEditorFocus(
+      open ? inlineTarget : panelTarget,
+      open ? panelTarget : inlineTarget,
+    );
+  });
   let history = $state(false);
   let fail = $state(false);
   let authority = $state(0);
@@ -49,8 +60,7 @@
       },
     ];
     await tick();
-    for (const body of [bodyRef, panelBody])
-      body?.scrollTo({ top: body.scrollHeight, behavior: "instant" });
+    bodyRef?.scrollTo({ top: bodyRef.scrollHeight, behavior: "instant" });
   }
   function newConversation() {
     authority++;
@@ -124,17 +134,7 @@
     </p>{/if}
 {/snippet}
 <div class="chat-stage" class:expanded hidden={open}>
-  <ConversationLayout
-    label="Przykład rozmowy"
-    bodyLabel="Wiadomości rozmowy"
-    header={heading}
-    body={messageBody}
-    footer={composer}
-    history={sessions}
-    bind:expanded
-    bind:bodyRef
-    expansion={{ expandLabel: "Rozwiń", collapseLabel: "Zwiń" }}
-  />
+  <div class="inline-conversation" bind:this={inlineTarget}></div>
 </div>
 <div class="demo-options">
   <label class="checkbox-row"
@@ -152,18 +152,24 @@
   breakpoint="(max-width: 799px)"
   showDesktopHeader={true}
 >
-  <div class="panel-conversation">
-    <ConversationLayout
-      label="Rozmowa w panelu"
-      bodyLabel="Wiadomości w panelu"
-      header={heading}
-      body={messageBody}
-      footer={composer}
-      history={sessions}
-      bind:bodyRef={panelBody}
-    />
-  </div>
+  <div class="panel-conversation" bind:this={panelTarget}></div>
 </ResponsiveDetails>
+<div
+  class="editor-transport"
+  use:preserveEditor={open ? panelTarget : inlineTarget}
+>
+  <ConversationLayout
+    label="Przykład rozmowy"
+    bodyLabel="Wiadomości rozmowy"
+    header={heading}
+    body={messageBody}
+    footer={composer}
+    history={sessions}
+    bind:expanded
+    bind:bodyRef
+    expansion={{ expandLabel: "Rozwiń", collapseLabel: "Zwiń" }}
+  />
+</div>
 <div class="note-row">
   <span class="mini-tag">ROM + ASTRAL PLANE</span>
   <p>

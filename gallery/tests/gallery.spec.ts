@@ -210,35 +210,110 @@ test("inactive Flow fitting does not reset a manually zoomed viewport", async ({
   await expect(viewport).not.toHaveAttribute("style", transform!);
 });
 
-test('ROM focus correction moves a hidden expansion control to its frame', async ({ page }) => {
-  await page.setViewportSize({ width:1200, height:900 });
-  await page.goto('/#chat');
-  const expansion=page.getByRole('button',{name:'Rozwiń',exact:true});
+test("ROM focus correction moves a hidden expansion control to its frame", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1200, height: 900 });
+  await page.goto("/#chat");
+  const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
   await expansion.focus();
-  await page.setViewportSize({width:390,height:844});
+  await page.setViewportSize({ width: 390, height: 844 });
   await expect(expansion).toBeHidden();
-  await expect(page.getByRole('region',{name:'Przykład rozmowy',exact:true})).toBeFocused();
+  await expect(
+    page.getByRole("region", { name: "Przykład rozmowy", exact: true }),
+  ).toBeFocused();
 });
 
-test('ROM focus correction does not reclaim focus after deliberate blur', async ({ page }) => {
-  await page.setViewportSize({width:1200,height:900});
-  await page.goto('/#chat');
-  const expansion=page.getByRole('button',{name:'Rozwiń',exact:true});
+test("ROM focus correction does not reclaim focus after deliberate blur", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1200, height: 900 });
+  await page.goto("/#chat");
+  const expansion = page.getByRole("button", { name: "Rozwiń", exact: true });
   await expansion.focus();
-  await expansion.evaluate(element=>(element as HTMLElement).blur());
-  await page.setViewportSize({width:390,height:844});
+  await expansion.evaluate((element) => (element as HTMLElement).blur());
+  await page.setViewportSize({ width: 390, height: 844 });
   await expect(expansion).toBeHidden();
-  expect(await page.evaluate(()=>document.activeElement===document.body)).toBe(true);
+  expect(
+    await page.evaluate(() => document.activeElement === document.body),
+  ).toBe(true);
 });
 
-test('long messages scroll inside the conversation with a visible mobile composer', async ({ page }) => {
-  await page.setViewportSize({width:390,height:600});
-  await page.goto('/#chat');
-  await page.getByRole('textbox',{name:'Wiadomość'}).fill('Przykładowy akapit.\n'.repeat(120));
-  await page.getByRole('button',{name:'Wyślij',exact:true}).click();
-  const body=page.getByRole('region',{name:'Wiadomości rozmowy',exact:true});
-  await expect(body.getByText('To lokalna odpowiedź demonstracyjna.',{exact:false})).toBeVisible();
-  expect(await body.evaluate(element=>element.scrollHeight>element.clientHeight)).toBe(true);
-  await expect(page.getByRole('textbox',{name:'Wiadomość'})).toBeInViewport();
-  await expect(page.getByRole('button',{name:'Wyślij',exact:true})).toBeInViewport();
+test("long messages scroll inside the conversation with a visible mobile composer", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 600 });
+  await page.goto("/#chat");
+  await page
+    .getByRole("textbox", { name: "Wiadomość" })
+    .fill("Przykładowy akapit.\n".repeat(120));
+  await page.getByRole("button", { name: "Wyślij", exact: true }).click();
+  const body = page.getByRole("region", {
+    name: "Wiadomości rozmowy",
+    exact: true,
+  });
+  await expect(
+    body.getByText("To lokalna odpowiedź demonstracyjna.", { exact: false }),
+  ).toBeVisible();
+  expect(
+    await body.evaluate(
+      (element) => element.scrollHeight > element.clientHeight,
+    ),
+  ).toBe(true);
+  await expect(
+    page.getByRole("textbox", { name: "Wiadomość" }),
+  ).toBeInViewport();
+  await expect(
+    page.getByRole("button", { name: "Wyślij", exact: true }),
+  ).toBeInViewport();
+});
+
+test("one composer retains pending ownership when moved into the panel", async ({
+  page,
+}) => {
+  await page.goto("/#chat");
+  const editor = page.getByRole("textbox", { name: "Wiadomość" });
+  await editor.fill("Jedno wysłanie");
+  await editor.evaluate((element) =>
+    element.setAttribute("data-editor-witness", "single"),
+  );
+  await editor.press("Enter");
+  await page.getByRole("button", { name: "Otwórz panel boczny ↗" }).click();
+  await expect(
+    page.getByRole("button", { name: "Wyślij", exact: true }),
+  ).toBeDisabled();
+  await expect(editor).toHaveAttribute("data-editor-witness", "single");
+  await expect(
+    page
+      .getByRole("region", { name: "Wiadomości rozmowy", exact: true })
+      .getByText("Jedno wysłanie", { exact: true }),
+  ).toHaveCount(1);
+});
+
+test("skip link preserves the current demo and focuses main", async ({
+  page,
+}) => {
+  await page.goto("/#chat");
+  await page.getByRole("textbox", { name: "Wiadomość" }).fill("Szkic");
+  const skip = page.getByRole("link", { name: "Przejdź do treści" });
+  await skip.focus();
+  await skip.press("Enter");
+  await expect(page).toHaveURL(/#chat$/);
+  await expect(page.locator("main")).toBeFocused();
+  await expect(page.getByRole("textbox", { name: "Wiadomość" })).toHaveValue(
+    "Szkic",
+  );
+});
+
+test("collapsed mobile navigation does not receive keyboard focus", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const toggle = page.getByRole("button", { name: "Otwórz nawigację" });
+  await toggle.focus();
+  await page.keyboard.press("Shift+Tab");
+  expect(
+    await page.evaluate(() => !!document.activeElement?.closest(".sidebar")),
+  ).toBe(false);
 });

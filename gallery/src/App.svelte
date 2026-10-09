@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  const version = __ROM_UI_VERSION__;
   const loaders = new Map([
     ["controls", () => import("./ControlsDemo.svelte")],
     ["compositions", () => import("./CompositionsDemo.svelte")],
@@ -95,7 +96,15 @@
 </script>
 
 <svelte:head><title>{section.label} · ROM UI</title></svelte:head>
-<a class="skip-link" href="#main">Przejdź do treści</a>
+<a
+  class="skip-link"
+  href="#main"
+  onclick={(event) => {
+    event.preventDefault();
+    document.getElementById("main")?.focus();
+    document.getElementById("main")?.scrollIntoView({ block: "start" });
+  }}>Przejdź do treści</a
+>
 <div class="gallery-shell">
   <aside class="sidebar" class:mobile-open={mobileNav}>
     <a
@@ -199,7 +208,7 @@
         <section class="hero">
           <div class="hero-copy">
             <span class="hero-kicker"
-              ><span class="status-dot"></span> ROM UI · 0.1.0-alpha.4</span
+              ><span class="status-dot"></span> ROM UI · {version}</span
             >
             <h1>Komponenty, które pasują do Twojej aplikacji.</h1>
             <p>
@@ -281,8 +290,7 @@
           </p>{/await}
       {/if}
       <footer class="page-footer">
-        <span>ROM UI · Galeria komponentów</span><span>MIT · 0.1.0-alpha.4</span
-        >
+        <span>ROM UI · Galeria komponentów</span><span>MIT · {version}</span>
       </footer>
     </main>
   </div>

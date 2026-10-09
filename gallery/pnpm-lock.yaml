@@ -15,8 +15,8 @@ importers:
         specifier: 1.7.0
         version: 1.7.0(svelte@5.57.1)
       rom-ui:
-        specifier: file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz
-        version: file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(svelte@5.57.1)
+        specifier: file:../rom-ui-12db0319b5bb182e2f0eeb1724e44eaef503f41609df25bc09671d6b9f7ba093.tgz
+        version: file:../rom-ui-12db0319b5bb182e2f0eeb1724e44eaef503f41609df25bc09671d6b9f7ba093.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(svelte@5.57.1)
       svelte:
         specifier: 5.57.1
         version: 5.57.1
@@ -677,8 +677,8 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  rom-ui@file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz:
-    resolution: {integrity: sha512-cb1qJSjXS6kN7RLw3l2TBZgRgMlXFo84rrgE+EYGGZlI9hSSTd/wbgwDAYgpYVlQFoCg6WZrgCLiM+s2veBJtQ==, tarball: file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz}
+  rom-ui@file:../rom-ui-12db0319b5bb182e2f0eeb1724e44eaef503f41609df25bc09671d6b9f7ba093.tgz:
+    resolution: {integrity: sha512-qqMJjgzTtGTJlZlt98Sa8vcYroDDyUkRVuKQnG9znPDOX97DsAS/8uqVegOozk+hI2k0GOCc2JG6ThgGhqQc7g==, tarball: file:../rom-ui-12db0319b5bb182e2f0eeb1724e44eaef503f41609df25bc09671d6b9f7ba093.tgz}
     version: 0.1.0-alpha.4
     peerDependencies:
       '@xyflow/svelte': 1.7.0
@@ -1312,7 +1312,7 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.13
       '@rolldown/binding-win32-x64-msvc': 1.2.13
 
-  rom-ui@file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(svelte@5.57.1):
+  rom-ui@file:../rom-ui-12db0319b5bb182e2f0eeb1724e44eaef503f41609df25bc09671d6b9f7ba093.tgz(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(svelte@5.57.1):
     dependencies:
       '@lucide/svelte': 1.51.0(svelte@5.57.1)
       bits-ui: 2.19.5(@internationalized/date@3.12.4)(svelte@5.57.1)

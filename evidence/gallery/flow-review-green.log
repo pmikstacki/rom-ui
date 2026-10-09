@@ -1,0 +1,17 @@
+[WebServer] (node:1278714) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1278751) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:1278983) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Deactivate fitting (686ms)
+  ✓  2 [chromium] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Unmount fitting (499ms)
+(node:1279255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [webkit] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Deactivate fitting (802ms)
+  ✓  4 [webkit] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Unmount fitting (767ms)
+
+  4 passed (5.0s)

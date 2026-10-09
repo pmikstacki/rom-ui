@@ -1,6 +1,10 @@
 <script lang="ts">
   import { tick } from "svelte";
-  import { useSvelteFlow } from "@xyflow/svelte";
+  import {
+    useSvelteFlow,
+    useNodesInitialized,
+    useViewportInitialized,
+  } from "@xyflow/svelte";
   let {
     signature,
     focusIds = [],
@@ -16,7 +20,9 @@
     minZoom?: number;
     maxZoom?: number;
   } = $props();
-  const { fitView } = useSvelteFlow();
+  const { fitView, getNodes } = useSvelteFlow();
+  const nodesReady = useNodesInitialized();
+  const viewportReady = useViewportInitialized();
   $effect(() => {
     signature;
     const focused = focusIds.map((id) => ({ id }));
@@ -27,7 +33,13 @@
       maxZoom,
       duration: 0,
     };
-    if (!active) return;
+    if (
+      !active ||
+      !nodesReady.current ||
+      !viewportReady.current ||
+      getNodes().length === 0
+    )
+      return;
     let canceled = false;
     let first: number | undefined;
     let second: number | undefined;
@@ -35,7 +47,14 @@
       if (canceled) return;
       first = requestAnimationFrame(() => {
         second = requestAnimationFrame(() => {
-          if (!canceled) void fitView(options);
+          if (
+            !canceled &&
+            active &&
+            nodesReady.current &&
+            viewportReady.current &&
+            getNodes().length > 0
+          )
+            void fitView(options);
         });
       });
     });
