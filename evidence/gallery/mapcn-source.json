@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/MariusLang/mapcn-svelte",
+  "commit": "b33a920c0d420959be47bdc00d110252e6751c20",
+  "license": "MIT",
+  "files": {
+    "Map.svelte": "023d2676283dd19da173be78ab9de08957913443dc0a506655d9ba9653bc6634",
+    "MapArc.svelte": "c4900ab60b4b5f555e940065e731704506e0afd8447c6dbe7140f276ee3a024e",
+    "MapClusterLayer.svelte": "3b07cda21c283e348ac32d1684ec33b4fce1e5ea8d7ad899926403a1fd9a3770",
+    "MapControls.svelte": "ffc26db946be3acdd43dcc6afbba3b611ff6baf1f29e27b055b23633aca4785d",
+    "MapGeoJSON.svelte": "7ae0193e2781082be696d6283fdcd8a4395249ccd6369fc927ac077f6ea1e0ac",
+    "MapMarker.svelte": "56b04715bf4e9a46ba3863467fca0aed2a118dcb6588235f49780e4a47c231bb",
+    "MapPopup.svelte": "57ddd02a9703eacea4f568a37f7d310afeddcc72459abd11c7cadc505a5501fd",
+    "MapRoute.svelte": "532ae41a21d55a0208da6a87becb9eedf276d1bca1a858459570b56f194128f8",
+    "MarkerContent.svelte": "9735079af6c4584db09b294ead4127e8779a6e16f985da340532c28b982e3f02",
+    "MarkerLabel.svelte": "3ce1be5b79910dcb782a5d748028a7b209d410a1f7138e8a18a9fba251ad27cd",
+    "MarkerPopup.svelte": "fa77e0370f1db3258064e33ed3bc285c48d349f9acb3423c749752d7d3747eb7",
+    "MarkerTooltip.svelte": "b6f503e8f5a1ad9c636e3d3522d8360f9d7aef857993a69efafc5911c655487e",
+    "RouteMarker.svelte": "427a108e958f16ccd1d381785d90dfc611c5373d0e189cf90432dac3a46a1bb5",
+    "RouteProgress.svelte": "d4fa706dafa55522dd6478bde7333307a381f184398497de2d3c3884be04abdd",
+    "index.ts": "41bbaefa3da213ef622dbdd945637b2f1818316e2d78d83d59004fbb6abea0bb",
+    "route-context.ts": "07125529861700e182fcfb39e59898b3b834c4d01a71c4158897d0eeb5569fac",
+    "route.ts": "94ad775c15cfb20d61dc75d58ed381f72cd24135a95941317b8a181dba9111e0",
+    "theme.ts": "db91b63fa1e123690772e9e2df340df9d4d75f742e073623fb0090de60e628d2",
+    "use-map.svelte.ts": "0a573eeb0cb5167a4e9503ef67f0dc16c38248af2f1de21582b5f468f5e77ce9"
+  },
+  "adaptations": [
+    "ROM shared utilities and theme",
+    "No SvelteKit alias",
+    "No automatic CDN worker or CARTO basemap",
+    "Host labels and error reporting",
+    "ResourceMap composition"
+  ]
+}

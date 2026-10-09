@@ -1,7 +1,7 @@
 # Public component gallery
 
 The gallery target is https://romui.cybernomad.it.
-The gallery contains synthetic controls, composition, chat and Flow examples.
+The gallery contains synthetic controls, composition, chat, Flow and map examples.
 Chat responses are simulated locally. The gallery does not send prompts to an AI service.
 
 The gallery installs a content-addressed archive from the repository root.
@@ -19,7 +19,7 @@ corepack pnpm --dir gallery run dev
 
 Set `ROM_CHROMIUM_PATH` and `ROM_WEBKIT_EXECUTABLE` when using external browser executables.
 The full verifier builds both installed consumers and runs both browser engines.
-The gallery uses hash navigation; direct links include `/#chat` and `/#flow`.
+The gallery uses hash navigation; direct links include `/#chat`, `/#flow` and `/#maps`.
 
 ## Source boundaries
 

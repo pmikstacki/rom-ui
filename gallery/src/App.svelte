@@ -6,13 +6,14 @@
     ["compositions", () => import("./CompositionsDemo.svelte")],
     ["chat", () => import("./ChatDemo.svelte")],
     ["flow", () => import("./FlowDemo.svelte")],
+    ["maps", () => import("./MapsDemo.svelte")],
   ]);
   const sections = [
     {
       id: "overview",
       label: "Przegląd",
       icon: "◈",
-      count: "04",
+      count: "05",
       description: "Zobacz, co możesz zbudować.",
       tags: "galeria wszystkie komponenty",
     },
@@ -49,6 +50,14 @@
       tags: "graph graf węzły madzia xyflow",
     },
   ];
+  sections.push({
+    id: "maps",
+    label: "Mapy",
+    icon: "◎",
+    count: "16",
+    description: "Zasoby i warstwy na mapach MapLibre.",
+    tags: "mapcn maplibre geojson mapa marker trasa zasoby",
+  });
   let current = $state("overview");
   let query = $state("");
   let mobileNav = $state(false);
@@ -76,6 +85,7 @@
   function setTheme() {
     dark = !dark;
     document.documentElement.classList.toggle("dark", dark);
+    document.documentElement.classList.toggle("light", !dark);
     try {
       localStorage.setItem("rom-ui-theme", dark ? "dark" : "light");
     } catch {}
@@ -239,7 +249,7 @@
         </section>
         <div class="section-heading">
           <div>
-            <span class="small-kicker">CZTERY PUNKTY STARTOWE</span>
+            <span class="small-kicker">PIĘĆ PUNKTÓW STARTOWYCH</span>
             <h2>Sprawdź w praktyce</h2>
           </div>
           <span class="muted">Żywe przykłady, własne dane</span>
@@ -290,7 +300,9 @@
           </p>{/await}
       {/if}
       <footer class="page-footer">
-        <span>ROM UI · Galeria komponentów</span><span>MIT · {version}</span>
+        <span>ROM UI · Galeria komponentów</span><span
+          >MIT · {version} · <a href="/licenses.txt">Licencje</a></span
+        >
       </footer>
     </main>
   </div>

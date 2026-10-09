@@ -16,7 +16,7 @@ export default defineConfig({
       name: "chromium",
       use: {
         browserName: "chromium",
-        launchOptions: { executablePath: process.env.ROM_CHROMIUM_PATH },
+        launchOptions: { executablePath: process.env.ROM_CHROMIUM_PATH, args: ["--enable-unsafe-swiftshader", "--use-angle=swiftshader-webgl"] },
       },
     },
     {

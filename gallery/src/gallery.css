@@ -1008,3 +1008,33 @@ h1 {
     visibility: visible;
   }
 }
+
+.maps-intro,
+.map-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.map-summary {
+  margin: 18px 0;
+  font-size: 12px;
+}
+.map-canvas {
+  height: 480px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.map-progress {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0;
+  max-width: 400px;
+}
+@media (max-width: 799px) {
+  .map-canvas {
+    height: 430px;
+  }
+}

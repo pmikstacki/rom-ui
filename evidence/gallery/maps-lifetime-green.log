@@ -1,0 +1,19 @@
+[WebServer] (node:1420187) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1420212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:1420304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/maps-lifetime.spec.ts:2:1 › controlled viewport changed during movement applies when motion ends (1.4s)
+  ✓  2 [chromium] › tests/maps-lifetime.spec.ts:15:1 › arc interaction can be enabled after mounting and disabled again (1.9s)
+  ✓  3 [chromium] › tests/maps-lifetime.spec.ts:33:1 › changing the GeoJSON URL replaces the displayed dataset (1.1s)
+(node:1420739) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [webkit] › tests/maps-lifetime.spec.ts:2:1 › controlled viewport changed during movement applies when motion ends (1.3s)
+  ✓  5 [webkit] › tests/maps-lifetime.spec.ts:15:1 › arc interaction can be enabled after mounting and disabled again (2.0s)
+  ✓  6 [webkit] › tests/maps-lifetime.spec.ts:33:1 › changing the GeoJSON URL replaces the displayed dataset (1.2s)
+
+  6 passed (11.3s)
