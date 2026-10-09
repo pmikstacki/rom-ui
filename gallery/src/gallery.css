@@ -1,5 +1,6 @@
 @import "rom-ui/styles";
 @source './';
+@source '../node_modules/rom-studio/src';
 :root {
   --background: #f6f5f2;
   --foreground: #272c2b;

@@ -1,0 +1,39 @@
+[WebServer] (node:2409551) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2409585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:2409657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts (5.3s)
+
+
+  1) [chromium] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Forms', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Forms', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Forms', exact: true })
+
+
+      2 | test("Studio descriptor forms preserve exact values and rejected drafts", async ({ page }) => {
+      3 |   await page.goto("/#forms");
+    > 4 |   await expect(page.getByRole("heading", { name: "Forms", exact: true })).toBeVisible();
+        |                                                                           ^
+      5 |   await expect(page.getByText("Local submission preview", { exact: true })).toBeVisible();
+      6 |   await expect(page.getByRole("textbox", { name: "count", exact: true })).toHaveValue("9007199254740993");
+      7 | });
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/forms.spec.ts:4:75
+
+    Error Context: ../../../../../../var/tmp/rom-ui-rich-forms-red-results/forms-Studio-descriptor-fo-eb7ac--values-and-rejected-drafts-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/forms.spec.ts:2:1 › Studio descriptor forms preserve exact values and rejected drafts 

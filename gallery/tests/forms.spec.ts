@@ -1,0 +1,41 @@
+import { test, expect } from "@playwright/test";
+test("Studio descriptor forms preserve exact values and rejected drafts", async ({ page }) => {
+  await page.goto("/#forms");
+  await expect(page.getByRole("heading", { name: "Forms", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Local submission preview", exact: true })).toBeVisible();
+  const count = page.getByLabel("count value", { exact: true });
+  await expect(count).toHaveValue("9007199254740993");
+  await count.fill("9007199254740995");
+  await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
+  await expect(page.getByLabel("Submitted form", { exact: true })).toContainText("9007199254740995");
+  await page.getByLabel("Reject application submission", { exact: true }).check();
+  await count.fill("9007199254740997");
+  await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
+  await expect(page.getByRole("alert")).toContainText("Application rejected this patch.");
+  await expect(count).toHaveValue("9007199254740997");
+});
+
+test("Studio forms distinguish false, unchanged, null and removal and respect read-only state", async ({ page }) => {
+  await page.goto("/#forms");
+  const enabled = page.getByRole("switch", { name: "enabled value", exact: true });
+  await expect(enabled).not.toBeChecked();
+  await enabled.click();
+  await enabled.click();
+  await page.getByRole("button", { name: "Save 1 change", exact: true }).click();
+  const submitted = page.getByLabel("Submitted form", { exact: true });
+  await expect(submitted).toContainText('"value":false');
+  await expect(submitted).not.toContainText('"note"');
+  await page.getByRole("button", { name: "note options", exact: true }).click();
+  await page.getByRole("menuitem", { name: "Set null", exact: true }).click();
+  await page.getByRole("button", { name: "Save 2 changes", exact: true }).click();
+  await expect(submitted).toContainText('"note":{"op":"set","value":null}');
+  await page.getByRole("button", { name: "note options", exact: true }).click();
+  await page.getByRole("menuitem", { name: "Remove field", exact: true }).click();
+  await page.getByRole("button", { name: "Save 2 changes", exact: true }).click();
+  await expect(submitted).toContainText('"note":{"op":"remove"}');
+  await page.getByLabel("Read-only form", { exact: true }).check();
+  await expect(enabled).toBeDisabled();
+  await expect(page.getByLabel("count value", { exact: true })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "note options", exact: true })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Save 2 changes", exact: true })).toBeDisabled();
+});

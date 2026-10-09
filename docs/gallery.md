@@ -67,3 +67,17 @@ Choose Schematic to view local overlays without a geographic provider.
 The gallery retains this recovery option if the first provider request fails.
 See [OpenFreeMap integration](https://openfreemap.org/quick_start/) and [terms](https://openfreemap.org/tos/).
 ROM-extras provider/browser descriptor integration remains pending until its adapter is available.
+
+## Studio form candidate
+
+The local Forms section installs a checksum-pinned ROM Studio authoring archive.
+It uses the public `rom-studio/forms` entry point.
+Dates, times, color, email, URL, multiline text, JSON documents and exact decimals use Studio semantic editors.
+Integer, boolean and optional nullable controls use the same descriptor-driven form.
+A gallery pnpm override keeps direct controls and Studio controls on one ROM UI archive.
+
+The submission callback previews local wire values. It does not commit Resource changes.
+Live sessions, authorization, action receipts and recovery remain pending.
+Unit values, enum/list editors, references and typed action examples also remain pending.
+The archive is an authoring source candidate, not an admitted ROM release.
+Retained [producer evidence](../evidence/gallery/rom-forms/producer-result.json) identifies installed files and executed checks.

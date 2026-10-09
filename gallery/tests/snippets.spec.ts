@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import { componentExamples } from "../src/component-examples";
 
 const expected = {
+  forms: ["ResourceForm"],
   controls: [
     "Button",
     "Input",
@@ -82,7 +83,7 @@ for (const [category, names] of Object.entries(expected)) {
       ).toBeVisible();
       const code = await detail.locator("pre code").textContent();
       expect(code).toContain(name);
-      expect(code).toContain('from "rom-ui/');
+      expect(code).toContain(category === "forms" ? 'from "rom-studio/' : 'from "rom-ui/');
       expect(code).toContain("<script");
       // Render code as text, without creating executable script elements.
       await expect(detail.locator("script")).toHaveCount(0);

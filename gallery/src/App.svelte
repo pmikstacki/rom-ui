@@ -11,6 +11,7 @@
   const version = __ROM_UI_VERSION__;
   const loaders = new Map([
     ["controls", () => import("./ControlsDemo.svelte")],
+    ["forms", () => import("./FormsDemo.svelte")],
     ["studio-primitives", () => import("./StudioPrimitivesDemo.svelte")],
     ["compositions", () => import("./CompositionsDemo.svelte")],
     ["chat", () => import("./ChatDemo.svelte")],
@@ -60,6 +61,7 @@
       tags: "graph nodes madzia xyflow",
     },
   ];
+  sections.push({ id: "forms", label: "Forms", icon: "▦", count: "12", description: "Descriptor-driven fields from ROM Studio.", tags: "resource form semantic date time datetime color email url decimal json nullable optional readonly" });
   sections.push({
     id: "studio-primitives",
     label: "Studio primitives",
@@ -297,7 +299,7 @@
           </section>
           <div class="section-heading">
             <div>
-              <span class="small-kicker">SEVEN STARTING POINTS</span>
+              <span class="small-kicker">COMPONENT FAMILIES</span>
               <h2>Try it yourself</h2>
             </div>
             <span class="muted">Live examples, your own data</span>
