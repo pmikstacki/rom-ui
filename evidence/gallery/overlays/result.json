@@ -1,0 +1,39 @@
+{
+  "galleryPassed": 98,
+  "snippetsChecked": 61,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "svelteErrors": 0,
+  "svelteWarnings": 0,
+  "review": "rich_forms_review: read-only review, no material findings",
+  "sourceFiles": [
+    {
+      "path": "gallery/src/App.svelte",
+      "sha256": "1c6e3c2919fb0844625382fb029481e40ebd6a4a485f225f41c0e391f0ed851e"
+    },
+    {
+      "path": "gallery/src/OverlaysDemo.svelte",
+      "sha256": "f3058d20927f7a378b4fdd48fed5b02723873a01e06c082c21067b66dab4123c"
+    },
+    {
+      "path": "gallery/src/overlay-examples.ts",
+      "sha256": "f16942d8d399c145e2b6dc1fdb31c5707ae2d8a786f71395357414d0a0943407"
+    },
+    {
+      "path": "gallery/src/component-examples.ts",
+      "sha256": "19cf999e6288fcdf124dfc09dc2988de1d68593ba0ba95b3b677906de413206a"
+    },
+    {
+      "path": "gallery/tests/overlays.spec.ts",
+      "sha256": "f97ea55cb30d0fbd7bb134fce5e0780bd2cae087c5393ad95b449aa76927866c"
+    },
+    {
+      "path": "gallery/tests/snippets.spec.ts",
+      "sha256": "06769a6ca8fcb5d67ad747c7d3e11d2f4f41ca8173c3682d76eabc5485569860"
+    }
+  ],
+  "reducedMotion": "Content animations disabled by explicit important utility; backdrop animation is not changed or qualified by this test",
+  "limits": "Local preview only. Inline notifications, not toaster integration. Actual ROM actions and hosting remain pending."
+}

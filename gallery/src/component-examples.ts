@@ -1,3 +1,4 @@
+import { overlayExamples } from "./overlay-examples.ts";
 import { studioPrimitiveExamples } from "./studio-primitive-examples.ts";
 export type ExampleCategory =
   | "controls"
@@ -7,7 +8,8 @@ export type ExampleCategory =
   | "maps"
   | "flex"
   | "studio-primitives"
-  | "forms";
+  | "forms"
+  | "overlays";
 export interface ComponentExample {
   name: string;
   note: string;
@@ -318,6 +320,7 @@ const flex = ["ROMUIFlex", "FlexView"].map((name) =>
 );
 export const componentExamples: Record<ExampleCategory, ComponentExample[]> = {
   controls,
+  overlays: overlayExamples,
   forms: [{ name: "ResourceForm", note: "Studio descriptor-driven editors. This example previews a local callback; connect the submission to the ROM application session for durable actions and recovery.", code: "<script lang=\"ts\">\n  import { ResourceForm, type ResourceFormSubmission } from \"rom-studio/forms\";\n  import { stringifyWire, type ResourceDescriptor, type WireObject } from \"rom-studio/client\";\n  const descriptor: ResourceDescriptor = {\n    kind: \"public-forms\", version: 1, actions: [], action_inputs: [],\n    fields: [\n      { name: \"appointment\", shape: { type: \"string\" }, codec: { name: \"rom.date\", version: 1 } },\n      { name: \"amount\", shape: { type: \"string\" }, codec: { name: \"rom.decimal\", version: 1 } },\n      { name: \"count\", shape: { type: \"u64\" } },\n      { name: \"enabled\", shape: { type: \"bool\" } },\n      { name: \"note\", shape: { type: \"optional\", value: { type: \"nullable\", value: { type: \"string\" } } } },\n    ],\n  };\n  const value: WireObject = {\n    appointment: \"2024-02-29\", amount: \"9007199254740993.000000000000000001\",\n    count: 9007199254740993n, enabled: false, note: \"Keep this note\",\n  };\n  let submitted = $state(\"none\");\n  let rejecting = $state(false);\n  async function submit(input: ResourceFormSubmission) {\n    if (rejecting) throw Error(\"Application rejected this patch.\");\n    submitted = stringifyWire(input);\n  }\n</script>\n\n<main>\n  <h1>Installed ROM form</h1>\n  <label><input type=\"checkbox\" bind:checked={rejecting} /> Reject application submission</label>\n  <ResourceForm {descriptor} {value} mode=\"patch\" direct {submit} />\n  <output aria-label=\"Submitted form\">{submitted}</output>\n</main>\n" }, { name: "ActionForm", note: "Typed action inputs from Studio descriptors. This local callback previews values; connect the ROM application session for invocation, authorization and durable recovery.", code: "<script lang=\"ts\">\n  import { ActionForm } from \"rom-studio/forms\";\n  import { stringifyWire, type ActionInput, type ResourceDescriptor, type WireValue } from \"rom-studio/client\";\n  const action: ActionInput = { name: \"annotate\", version: 1, input: { type: \"object\", value: [{ name: \"message\", shape: { type: \"string\" } }] } };\n  const descriptor: ResourceDescriptor = { kind: \"task\", version: 1, fields: [], actions: [action.name], action_inputs: [action] };\n  let preview = $state(\"none\");\n  async function invoke(input: WireValue) { preview = stringifyWire(input); }\n</script>\n\n<ActionForm {descriptor} {action} oninvoke={invoke} />\n<output aria-label=\"Action input preview\">{preview}</output>" }],
   "studio-primitives": studioPrimitiveExamples,
   compositions,

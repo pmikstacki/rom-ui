@@ -96,3 +96,13 @@ The structured Forms increment is deployed from commit `5f69d40`.
 All eight affected public form and snippet checks passed in Chromium and WebKit.
 This focused run does not replace complete public qualification.
 See the [structured-form deployment result](../evidence/gallery/structured-forms/public/result.json).
+
+## Dialogs and inline feedback
+
+The overlays candidate uses installed Dialog, Sheet, Popover and Alert primitives.
+Each family has a compiled, copyable example.
+Dialog drafts remain in host state after Escape. Modal and popover dismissal restore focus.
+Inline status notifications have application-owned messages and dismissal. They describe local interaction only.
+Content animations use an explicit reduced-motion override; backdrop animations remain unchanged.
+This increment passed all 98 local gallery cases and 61 compiled snippets.
+Toaster integration and actual ROM action notifications remain pending.

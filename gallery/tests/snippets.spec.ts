@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import { componentExamples } from "../src/component-examples";
 
 const expected = {
+  overlays: ["Dialog", "Sheet", "Popover", "Alert"],
   forms: ["ResourceForm", "ActionForm"],
   controls: [
     "Button",
