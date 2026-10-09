@@ -19,7 +19,9 @@ Extract an interactive agent activity panel informed by Astral's working/progres
 The panel must support actions and live updates through the ROM integration.
 Keep model execution, credentials, authorization and persistence in the host.
 
-Remaining acceptance includes installed host migrations, ROM-backed gallery interactions and the ROM-extras map-provider integration.
+The ROM-backed gallery and ROM-extras map-provider integration are deployed and locally qualified.
+Remaining production acceptance requires an approved gallery account mapping and authenticated public journeys.
+Astral supplies the activity-panel reference; this goal does not require integrating its application or backend.
 Do not mark the goal complete from presentation-only browser tests.
 
 Refactor the gallery around shared showcase components for previews, options and expandable snippets.

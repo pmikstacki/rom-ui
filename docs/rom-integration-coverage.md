@@ -1,5 +1,28 @@
 # ROM integration coverage audit
 
+Current deployed source: `363f679`. The gallery runs on ROM Studio hosting with persistent SQLite and dedicated Authentik OIDC.
+Public origin: https://romui.cybernomad.it.
+
+| Requirement | Current evidence | Remaining limit |
+| --- | --- | --- |
+| Shared controls, English gallery and per-export snippets | Installed-package verifier, 140 consumer browser cases, 61 compiled snippets, 110 gallery browser cases | A synthetic preview does not establish an application-specific integration |
+| Semantic and structured forms, exact values and references | Installed Studio forms; actual host save, reload and visitor isolation in Chromium and WebKit | Production authenticated acceptance requires an approved account mapping |
+| Resource session, actions and recovery | Public createAppSession facade; real commit followed by dropped acknowledgements and identical retries | Candidate Studio archive is not an admitted ROM release |
+| Chat composer extensions and persisted messages | Installed shared chat controls, actions slot, ROM conversation Resource and append-only host policy | No AI model is invoked by the gallery |
+| Agent activity | Generic interactive panel, real ROM task actions and observation | Task execution is synthetic; Astral is a source reference, not a service integration |
+| Flow and smooth fitting | Shared Flow with ROM workflow selection, persistence and live observation | Application domain policy remains in each host |
+| Maps | Qualified ROM-extras configured style, ROM map Resource, persisted selection and explicit origin policy | Controlled tile fixtures do not prove live-provider availability |
+| Flex, dialogs and notifications | Installed generic controls, transitions, focus and reduced-motion browser coverage | Host callbacks own application effects |
+| Public ROM hosting | 49 image files verified; valid public HTTPS; four public browser smoke cases | No production accounts have been granted access |
+
+The complete owner verifier exited successfully. Ten actual-host browser cases passed across Chromium and WebKit.
+See [conversation qualification](../evidence/gallery/rom-host/conversation.json) and [public deployment acceptance](../evidence/gallery/rom-host/conversation-public-deployment.json).
+The installed Studio archive SHA-256 is `39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305`.
+
+The following baseline records the earlier static deployment and earlier qualification runs. It does not describe the current deployment.
+
+# Historical integration baseline
+
 Inspected on 2026-10-09 against `/root/ROM/studio` and the ROM UI gallery source.
 The public gallery currently uses a dedicated static nginx container behind Caddy on the Coolify network.
 It is not served by a ROM runtime. Its records, chat responses and activity progress are local examples.
