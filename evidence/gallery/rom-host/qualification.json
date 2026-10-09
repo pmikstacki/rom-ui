@@ -43,49 +43,13 @@
     }
   },
   "publicDeployment": {
-    "romHosted": false,
-    "staticImage": "rom-ui-gallery:b722ba2",
-    "oidc": {
-      "provider": "Authentik",
-      "application": "rom-ui-gallery",
-      "providerId": 2,
-      "issuer": "https://auth.yggdrasil.cybernomad.it/application/o/rom-ui-gallery/",
-      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
-      "dedicatedClient": true,
-      "configurationPrepared": true,
-      "visitorMappingPending": true,
-      "credentialValuesRecorded": false
-    },
-    "stagedImage": {
-      "localImageId": "91b90e5933e1f06026dbb6ff318552cfcdb7e88eb65a75042c9aec52b8964b17",
-      "remoteImageId": "sha256:5f0aad1332fc81adc12068a61da7590b41382143020af0a9d05230c7069eaf2c",
-      "archiveSha256": "aa5e2529d86a4a1155a5f38bd6cb166bc0cc51c48b53ccf31a4c7ae06b7b34a1",
-      "verifiedImageFiles": 47,
-      "missingFiles": 0,
-      "mismatchedFiles": 0,
-      "releaseDirectory": "/opt/rom-ui-gallery/releases/rom-host-91b90e5933e1",
-      "loopbackPort": 18080,
-      "romBootstrapPresent": true,
-      "anonymousSessionStatus": 200,
-      "providerDiscoveryStatus": 200,
-      "publicServiceChanged": false,
-      "login": {
-        "status": 303,
-        "authorizationHost": "auth.yggdrasil.cybernomad.it",
-        "clientId": "rom-ui-gallery",
-        "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
-        "statePresent": true,
-        "noncePresent": true,
-        "secureCookie": true,
-        "httpOnlyCookie": true
-      },
-      "anonymousApiStatus": {
-        "discover": 401,
-        "read": 401
-      },
-      "composeConfigurationValid": true,
-      "sigtermExit": 0
-    }
+    "romHosted": true,
+    "origin": "https://romui.cybernomad.it",
+    "sourceCommit": "3981f41",
+    "image": "sha256:c7a2555e2428bfe15b650ef6ba2bf07bbc31fb3056b37a59b8864ef4761546fa",
+    "acceptance": "public-deployment.json",
+    "visitorMapping": "Awaiting account selection",
+    "authenticatedPublicJourneysPassed": false
   },
   "limits": [
     "Production visitor mapping and authenticated acceptance pending",
@@ -290,6 +254,51 @@
       "galleryBrowserPassed": 108,
       "backendDependentSkipped": 8,
       "hostTests": 10
+    }
+  },
+  "previousPublicDeployment": {
+    "romHosted": false,
+    "staticImage": "rom-ui-gallery:b722ba2",
+    "oidc": {
+      "provider": "Authentik",
+      "application": "rom-ui-gallery",
+      "providerId": 2,
+      "issuer": "https://auth.yggdrasil.cybernomad.it/application/o/rom-ui-gallery/",
+      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+      "dedicatedClient": true,
+      "configurationPrepared": true,
+      "visitorMappingPending": true,
+      "credentialValuesRecorded": false
+    },
+    "stagedImage": {
+      "localImageId": "91b90e5933e1f06026dbb6ff318552cfcdb7e88eb65a75042c9aec52b8964b17",
+      "remoteImageId": "sha256:5f0aad1332fc81adc12068a61da7590b41382143020af0a9d05230c7069eaf2c",
+      "archiveSha256": "aa5e2529d86a4a1155a5f38bd6cb166bc0cc51c48b53ccf31a4c7ae06b7b34a1",
+      "verifiedImageFiles": 47,
+      "missingFiles": 0,
+      "mismatchedFiles": 0,
+      "releaseDirectory": "/opt/rom-ui-gallery/releases/rom-host-91b90e5933e1",
+      "loopbackPort": 18080,
+      "romBootstrapPresent": true,
+      "anonymousSessionStatus": 200,
+      "providerDiscoveryStatus": 200,
+      "publicServiceChanged": false,
+      "login": {
+        "status": 303,
+        "authorizationHost": "auth.yggdrasil.cybernomad.it",
+        "clientId": "rom-ui-gallery",
+        "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+        "statePresent": true,
+        "noncePresent": true,
+        "secureCookie": true,
+        "httpOnlyCookie": true
+      },
+      "anonymousApiStatus": {
+        "discover": 401,
+        "read": 401
+      },
+      "composeConfigurationValid": true,
+      "sigtermExit": 0
     }
   }
 }

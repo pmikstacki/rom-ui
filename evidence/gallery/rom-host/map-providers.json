@@ -111,6 +111,7 @@
   "limits": [
     "Configured map provider qualification uses controlled HTTPS metadata fixtures; no claim of live OSM tile service acceptance.",
     "ROM backend map browser test substitutes tile images, while using actual authorized Resource APIs and persistence.",
-    "Public gallery remains on previous static image."
-  ]
+    "Public ROM-host deployment is qualified separately; authenticated public Resource journeys await account selection."
+  ],
+  "publicDeploymentAcceptance": "public-deployment.json"
 }
