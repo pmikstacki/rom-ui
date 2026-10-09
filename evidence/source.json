@@ -26,5 +26,21 @@
   },
   "transformations": {
     "studio/src/app.css": "Omit application-specific .studio-content rules; preserve primitive theme and imports."
+  },
+  "galleryExtraction": {
+    "date": "2026-10-09",
+    "romConversationLayout": {
+      "sourceCommit": "1a2b7934139f3d7bb4cb04aaf4a90bd9405ab470",
+      "provenance": "authoring_checkout",
+      "sha256": "02b88f1f4608a36ee77e26bd43dd527382d8d200ea43a3bf5da5021755a5515c"
+    },
+    "madzia": {
+      "provenance": "authoring_checkout",
+      "files": {
+        "ChoiceNode.svelte": "62521dea76593db5c606e3da3b6ad56075e46d6f611ab61e1eb58ffcc0c4ee04",
+        "GraphFit.svelte": "0020c244dd73569f05646427356389b5c30bb1112631541a14b3e0b8e08c83f2"
+      }
+    },
+    "astralPlane": "Behavioral requirements reviewed; AGPL application sources not copied into the MIT package."
   }
 }

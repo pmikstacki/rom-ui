@@ -1,11 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 const installed = fs.realpathSync("node_modules/rom-ui");
 const modules = fs.realpathSync("node_modules") + path.sep;
 assert.ok(installed.startsWith(modules), "Package must live inside consumer node_modules, including pnpm's virtual store");
-const source = path.resolve("../..");
+const source = path.resolve(fileURLToPath(new URL("../", import.meta.url)));
 function compare(relative) {
   for (const entry of fs.readdirSync(path.join(source, relative), { withFileTypes: true })) {
     const file = path.join(relative, entry.name);

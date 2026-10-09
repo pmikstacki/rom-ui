@@ -1,15 +1,18 @@
 {
-  "name": "rom-ui-consumer",
+  "name": "rom-ui-gallery",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite --host 0.0.0.0",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "playwright test"
   },
   "dependencies": {
-    "rom-ui": "file:../../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz",
-    "svelte": "5.57.1"
+    "rom-ui": "file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz",
+    "svelte": "5.57.1",
+    "@xyflow/svelte": "1.7.0"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

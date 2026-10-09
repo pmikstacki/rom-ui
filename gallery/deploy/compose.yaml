@@ -1,0 +1,19 @@
+services:
+  gallery:
+    image: ${ROM_UI_GALLERY_IMAGE:?Set the reviewed gallery image}
+    container_name: rom-ui-gallery
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    labels:
+      caddy: romui.cybernomad.it
+      caddy.reverse_proxy: "{{upstreams 80}}"
+      caddy_ingress_network: coolify
+    networks:
+      - coolify
+networks:
+  coolify:
+    external: true
