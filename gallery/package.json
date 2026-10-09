@@ -10,7 +10,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "rom-ui": "file:../rom-ui-bbcd1c26bd47dfa869f255894d664aea31c5bf50b9ebb70686549cfd62d41025.tgz",
+    "rom-ui": "file:../rom-ui-840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164.tgz",
     "svelte": "5.57.1",
     "@xyflow/svelte": "1.7.0",
     "maplibre-gl": "6.7.0"

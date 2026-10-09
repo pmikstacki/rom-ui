@@ -1,7 +1,7 @@
 # Public component gallery
 
 The gallery target is https://romui.cybernomad.it.
-The gallery contains synthetic controls, composition, chat, Flow, map and Flex examples.
+The gallery contains synthetic controls, Studio primitives, composition, chat, Flow, map and Flex examples.
 Chat responses are simulated locally. The gallery does not send prompts to an AI service.
 
 The gallery installs a content-addressed archive from the repository root.
@@ -20,7 +20,7 @@ corepack pnpm --dir gallery run dev
 Set `ROM_CHROMIUM_PATH` and `ROM_WEBKIT_EXECUTABLE` when using external browser executables.
 The full verifier builds both installed consumers and runs both browser engines.
 It also compiles and type-checks all copyable usage examples against the installed archive.
-The gallery uses hash navigation; direct links include `/#chat`, `/#flow`, `/#maps` and `/#flex`.
+The gallery uses hash navigation; direct links include `/#studio-primitives`, `/#chat`, `/#flow`, `/#maps` and `/#flex`.
 
 ## Source boundaries
 
@@ -30,6 +30,17 @@ New chat form and message components implement reusable presentation contracts.
 Astral Plane supplies interaction requirements: bounded chat, expandable history, IME and a visible composer.
 Its astrology, queue, storage, authority and AGPL application source remain in the host.
 The package does not copy those application sources into its MIT distribution.
+
+## Shared Studio primitives
+
+The alpha.7 candidate extracts 14 additional primitive families from the recorded ROM authoring checkout.
+The provenance record freezes their source hashes. Tooltip adds its missing default accessibility role.
+Sidebar retains the existing mobile focus callback and compatibility defaults.
+Its Provider enables Ctrl/Cmd+B and the `sidebar_state` presentation cookie by default.
+Set `keyboardShortcut={false}` and `persistState={false}` for embedded instances that must not share those policies.
+The gallery disables both.
+
+This candidate does not establish completed Studio facade migration or actual ROM-backed interactions.
 
 ## Deployment
 

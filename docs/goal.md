@@ -4,6 +4,9 @@ Extend rom-ui with reusable ROM-connected controls, Flow, AI chat, maps and view
 Use pnpm. Publish and verify the English gallery at https://romui.cybernomad.it.
 Provide a copyable example for every visual control.
 
+Studio, applications and the gallery must use the same installed generic implementations from rom-ui.
+Preserve existing Studio import paths through facades. Do not retain separate copies of shared control behavior.
+
 Components must be plug and play with ROM through a supported installed integration.
 A static demonstration with local records does not satisfy the ROM integration requirement.
 Preserve exact Resource IDs, authorized observation, action receipts, failure recovery and application-owned policy.

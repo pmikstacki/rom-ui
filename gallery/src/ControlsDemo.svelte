@@ -1,6 +1,8 @@
 <script lang="ts">
   import {
     Button,
+    Badge,
+    Switch,
     Input,
     Textarea,
     Label,
@@ -12,6 +14,7 @@
   } from "rom-ui/controls";
   let name = $state("ROM UI");
   let checked = $state(true);
+  let live = $state(false);
   let intensity = $state([65]);
   let size = $state("medium");
   let description = $state(
@@ -95,6 +98,21 @@
         ></NativeSelect
       >
     </div>
+  </section>
+  <section class="demo-card">
+    <div class="card-heading">
+      <span class="specimen-number">04</span>
+      <h3>Status and live updates</h3>
+      <code>Badge · Switch</code>
+    </div>
+    <div class="checkbox-row">
+      <Switch id="live-updates" bind:checked={live} /><Label for="live-updates"
+        >Live updates</Label
+      ><Badge variant={live ? "default" : "outline"}
+        >{live ? "Live" : "Paused"}</Badge
+      >
+    </div>
+    <p class="muted">The host owns the status and subscription lifecycle.</p>
   </section>
   <section class="demo-card foundation-note">
     <span class="small-kicker">FROM ROM STUDIO</span>

@@ -1,5 +1,12 @@
+import { studioPrimitiveExamples } from "./studio-primitive-examples.ts";
 export type ExampleCategory =
-  "controls" | "compositions" | "chat" | "flow" | "maps" | "flex";
+  | "controls"
+  | "compositions"
+  | "chat"
+  | "flow"
+  | "maps"
+  | "flex"
+  | "studio-primitives";
 export interface ComponentExample {
   name: string;
   note: string;
@@ -78,6 +85,7 @@ controls.splice(
     "Group related native options under an accessible label.",
   ),
 );
+controls.push(...studioPrimitiveExamples.slice(0, 2));
 const composition = (
   name: string,
   script: string,
@@ -309,6 +317,7 @@ const flex = ["ROMUIFlex", "FlexView"].map((name) =>
 );
 export const componentExamples: Record<ExampleCategory, ComponentExample[]> = {
   controls,
+  "studio-primitives": studioPrimitiveExamples,
   compositions,
   chat,
   flow: [flowCode("FlowChoiceNode"), flowCode("FlowFit")],

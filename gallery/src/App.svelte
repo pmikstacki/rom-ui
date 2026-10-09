@@ -11,6 +11,7 @@
   const version = __ROM_UI_VERSION__;
   const loaders = new Map([
     ["controls", () => import("./ControlsDemo.svelte")],
+    ["studio-primitives", () => import("./StudioPrimitivesDemo.svelte")],
     ["compositions", () => import("./CompositionsDemo.svelte")],
     ["chat", () => import("./ChatDemo.svelte")],
     ["flow", () => import("./FlowDemo.svelte")],
@@ -22,7 +23,7 @@
       id: "overview",
       label: "Overview",
       icon: "◈",
-      count: "06",
+      count: "07",
       description: "See what you can build.",
       tags: "gallery all components",
     },
@@ -30,9 +31,9 @@
       id: "controls",
       label: "Controls",
       icon: "⊞",
-      count: "09",
+      count: "11",
       description: "Small controls. Consistent behavior.",
-      tags: "button input textarea checkbox slider label select",
+      tags: "button input textarea checkbox slider label select badge switch",
     },
     {
       id: "compositions",
@@ -59,6 +60,14 @@
       tags: "graph nodes madzia xyflow",
     },
   ];
+  sections.push({
+    id: "studio-primitives",
+    label: "Studio primitives",
+    icon: "▤",
+    count: "14",
+    description: "Shared building blocks used by ROM Studio.",
+    tags: "switch select tabs badge menu table sidebar alert card breadcrumb tooltip skeleton separator",
+  });
   sections.push({
     id: "maps",
     label: "Maps",
@@ -288,7 +297,7 @@
           </section>
           <div class="section-heading">
             <div>
-              <span class="small-kicker">SIX STARTING POINTS</span>
+              <span class="small-kicker">SEVEN STARTING POINTS</span>
               <h2>Try it yourself</h2>
             </div>
             <span class="muted">Live examples, your own data</span>

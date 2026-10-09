@@ -1,0 +1,106 @@
+
+> rom-ui-consumer@0.0.0 check /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+Getting Svelte diagnostics...
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:2:12
+Error: Module '"rom-ui"' has no exported member 'Badge'. (ts)
+<script lang="ts">
+  import { Badge, type BadgeVariant } from "rom-ui/controls";
+  import { Switch } from "rom-ui/primitives/switch";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:2:24
+Error: Module '"rom-ui"' has no exported member 'BadgeVariant'. (ts)
+<script lang="ts">
+  import { Badge, type BadgeVariant } from "rom-ui/controls";
+  import { Switch } from "rom-ui/primitives/switch";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:3:26
+Error: Cannot find module 'rom-ui/primitives/switch' or its corresponding type declarations. (ts)
+  import { Badge, type BadgeVariant } from "rom-ui/controls";
+  import { Switch } from "rom-ui/primitives/switch";
+  import * as Select from "rom-ui/primitives/select";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:4:27
+Error: Cannot find module 'rom-ui/primitives/select' or its corresponding type declarations. (ts)
+  import { Switch } from "rom-ui/primitives/switch";
+  import * as Select from "rom-ui/primitives/select";
+  import * as Tabs from "rom-ui/primitives/tabs";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:5:25
+Error: Cannot find module 'rom-ui/primitives/tabs' or its corresponding type declarations. (ts)
+  import * as Select from "rom-ui/primitives/select";
+  import * as Tabs from "rom-ui/primitives/tabs";
+  import * as Menu from "rom-ui/primitives/dropdown-menu";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:6:25
+Error: Cannot find module 'rom-ui/primitives/dropdown-menu' or its corresponding type declarations. (ts)
+  import * as Tabs from "rom-ui/primitives/tabs";
+  import * as Menu from "rom-ui/primitives/dropdown-menu";
+  import * as AlertDialog from "rom-ui/primitives/alert-dialog";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:7:32
+Error: Cannot find module 'rom-ui/primitives/alert-dialog' or its corresponding type declarations. (ts)
+  import * as Menu from "rom-ui/primitives/dropdown-menu";
+  import * as AlertDialog from "rom-ui/primitives/alert-dialog";
+  import * as Alert from "rom-ui/primitives/alert";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:8:26
+Error: Cannot find module 'rom-ui/primitives/alert' or its corresponding type declarations. (ts)
+  import * as AlertDialog from "rom-ui/primitives/alert-dialog";
+  import * as Alert from "rom-ui/primitives/alert";
+  import * as Card from "rom-ui/primitives/card";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:9:25
+Error: Cannot find module 'rom-ui/primitives/card' or its corresponding type declarations. (ts)
+  import * as Alert from "rom-ui/primitives/alert";
+  import * as Card from "rom-ui/primitives/card";
+  import * as Breadcrumb from "rom-ui/primitives/breadcrumb";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:10:31
+Error: Cannot find module 'rom-ui/primitives/breadcrumb' or its corresponding type declarations. (ts)
+  import * as Card from "rom-ui/primitives/card";
+  import * as Breadcrumb from "rom-ui/primitives/breadcrumb";
+  import * as Table from "rom-ui/primitives/table";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:11:26
+Error: Cannot find module 'rom-ui/primitives/table' or its corresponding type declarations. (ts)
+  import * as Breadcrumb from "rom-ui/primitives/breadcrumb";
+  import * as Table from "rom-ui/primitives/table";
+  import * as Tooltip from "rom-ui/primitives/tooltip";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:12:28
+Error: Cannot find module 'rom-ui/primitives/tooltip' or its corresponding type declarations. (ts)
+  import * as Table from "rom-ui/primitives/table";
+  import * as Tooltip from "rom-ui/primitives/tooltip";
+  import * as Sidebar from "rom-ui/primitives/sidebar";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:13:28
+Error: Cannot find module 'rom-ui/primitives/sidebar' or its corresponding type declarations. (ts)
+  import * as Tooltip from "rom-ui/primitives/tooltip";
+  import * as Sidebar from "rom-ui/primitives/sidebar";
+  import { Separator } from "rom-ui/primitives/separator";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:14:29
+Error: Cannot find module 'rom-ui/primitives/separator' or its corresponding type declarations. (ts)
+  import * as Sidebar from "rom-ui/primitives/sidebar";
+  import { Separator } from "rom-ui/primitives/separator";
+  import { Skeleton } from "rom-ui/primitives/skeleton";
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:15:28
+Error: Cannot find module 'rom-ui/primitives/skeleton' or its corresponding type declarations. (ts)
+  import { Separator } from "rom-ui/primitives/separator";
+  import { Skeleton } from "rom-ui/primitives/skeleton";
+  let enabled = $state(false);
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:52:63
+Error: Parameter 'event' implicitly has an 'any' type. (ts)
+  <Sidebar.Provider bind:open={sidebarOpen} style="min-height: 12rem">
+    <Sidebar.Root collapsible="icon" onMobileCloseAutoFocus={(event) => { event.preventDefault(); trigger?.focus(); }}>
+      <Sidebar.Content><Sidebar.Group><Sidebar.GroupLabel>Resource navigation</Sidebar.GroupLabel><Sidebar.Menu><Sidebar.MenuItem><Sidebar.MenuButton onclick={() => changes++}>Choose resource</Sidebar.MenuButton></Sidebar.MenuItem></Sidebar.Menu></Sidebar.Group></Sidebar.Content>
+
+====================================
+svelte-check found 16 errors and 0 warnings in 1 file
+ ELIFECYCLE  Command failed with exit code 1.

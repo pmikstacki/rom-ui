@@ -2,11 +2,12 @@
 
 Reusable Svelte 5 controls and UI compositions extracted from ROM Studio.
 
-- `rom-ui/controls`: Input, Button, Textarea, NativeSelect, Checkbox, Slider and Label.
-- `rom-ui/chat`: ConversationLayout, ChatComposer and ChatMessages.
+- `rom-ui/controls`: Input, Button, Textarea, NativeSelect, Checkbox, Slider, Label, Badge and Switch.
+- `rom-ui/chat`: ConversationLayout, ChatComposer, ChatMessages and AgentActivity.
 - `rom-ui/flow`: FlowChoiceNode and FlowFit, with an optional Svelte Flow peer.
 - `rom-ui/maps`: MapLibre maps, markers, routes, GeoJSON and host-owned Resource selection.
 - `rom-ui/flex`: ROMUIFlex and FlexView with View Transitions and Animotion fallback.
+- `rom-ui/primitives/*`: shared Studio families, including Select, Tabs, dropdown menus, alerts, tables and Sidebar.
 - `rom-ui/styles`: shared Tailwind theme and control styles.
 - `rom-ui/ui`: request ownership, selection, source links, export snapshots, follow-latest and layout validation.
 - `rom-ui/ui/components`: ResponsiveDetails, HistoryList, SelectionCard, LayoutControls, ReferencePicker and ConversationLayout.
@@ -15,7 +16,8 @@ Client, discovery, authentication and durable mutation recovery remain in ROM.
 ReferencePicker requires a host normalizer. It does not import ROM codecs or descriptors.
 See [composition contracts](docs/compositions.md).
 
-The extraction package is available as [v0.1.0-alpha.6](https://github.com/pmikstacki/rom-ui/releases/tag/v0.1.0-alpha.6).
+The extraction uses versioned GitHub release archives.
+The current source candidate is `0.1.0-alpha.7`.
 Existing ROM Studio integrations retain their public facade paths.
 The distribution uses a GitHub release archive and a frozen pnpm lock.
 See [ROM integration evidence](docs/rom-integration.md).
@@ -23,7 +25,7 @@ See [ROM integration evidence](docs/rom-integration.md).
 Install the alpha archive in a separate application:
 
 ```sh
-corepack pnpm@10.30.0 add https://github.com/pmikstacki/rom-ui/releases/download/v0.1.0-alpha.6/rom-ui-0.1.0-alpha.6.tgz
+corepack pnpm@10.30.0 add https://github.com/pmikstacki/rom-ui/releases/download/v0.1.0-alpha.7/rom-ui-0.1.0-alpha.7.tgz
 ```
 
 Use the pinned pnpm 10.30.0 through Corepack.

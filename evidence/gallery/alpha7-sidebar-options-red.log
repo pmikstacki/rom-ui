@@ -1,0 +1,16 @@
+
+> rom-ui-consumer@0.0.0 check /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+Getting Svelte diagnostics...
+
+/root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/src/StudioPrimitivesHarness.svelte:150:21
+Error: Object literal may only specify known properties, and '"keyboardShortcut"' does not exist in type 'HTMLAttributes<HTMLDivElement> & { ref?: HTMLElement | null | undefined; } & { open?: boolean | undefined; onOpenChange?: ((open: boolean) => void) | undefined; }'. (ts)
+  </Sidebar.Provider>
+  <Sidebar.Provider keyboardShortcut={false} persistState={false} bind:open={embeddedOpen} style="min-height: 1rem">
+    <Sidebar.Trigger aria-label="Toggle embedded navigation" />
+
+====================================
+svelte-check found 1 error and 0 warnings in 1 file
+ ELIFECYCLE  Command failed with exit code 1.
