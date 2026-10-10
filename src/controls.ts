@@ -10,3 +10,5 @@ export {
 export { Checkbox } from "./lib/components/ui/checkbox/index.js";
 export { Slider } from "./lib/components/ui/slider/index.js";
 export { Label } from "./lib/components/ui/label/index.js";
+export { Badge, badgeVariants, type BadgeVariant } from "./lib/components/ui/badge/index.js";
+export { Switch } from "./lib/components/ui/switch/index.js";

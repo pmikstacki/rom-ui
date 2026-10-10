@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-09T08:20:37.351Z",
+  "results": [
+    {
+      "file": "journey.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "session.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "trip-decision.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "countdown-tree.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "graph-history.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "trip-timeline.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "sidebar-appearance.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "login-navigation.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "login-initial-refresh.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "surprise-routes.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "persistent-journey.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "accounts-tickets.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "account-switch.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "ticket-navigation.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "chat-audit.cjs",
+      "exitCode": 0
+    }
+  ],
+  "backendBinary": "/root/madzia/backend/target/debug/forest-quiz",
+  "site": "/var/tmp/rom-ui-madzia-alpha7/site",
+  "scope": "Candidate frontend with isolated local backend fixtures; Chromium app suites."
+}

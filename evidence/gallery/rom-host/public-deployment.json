@@ -1,0 +1,72 @@
+{
+  "sourceCommit": "3981f41",
+  "origin": "https://romui.cybernomad.it",
+  "hosting": "ROM Studio host with production Authentik OIDC and persistent SQLite",
+  "localImage": "6ab037e5468184b9ba377e39d7017ca01b66531fb6770756a97c90c90456d462",
+  "remoteImage": "sha256:c7a2555e2428bfe15b650ef6ba2bf07bbc31fb3056b37a59b8864ef4761546fa",
+  "archiveSha256": "7d56c888e0f1ca66f210e5004f23f6c2eea9a9de1222afa07c9335ea6d878da5",
+  "imageFilesVerified": 49,
+  "release": "/opt/rom-ui-gallery/releases/rom-host-map-6ab037e54681",
+  "rollbackContainer": "rom-ui-gallery-static-b722ba2",
+  "httpsAcceptance": {
+    "/": {
+      "status": 200,
+      "romProfile": true,
+      "mapCsp": true
+    },
+    "/auth/session": {
+      "status": 200,
+      "body": {
+        "authenticated": false,
+        "generation": "anonymous"
+      }
+    },
+    "/auth/providers": {
+      "status": 200,
+      "body": {
+        "primary": null,
+        "providers": [
+          {
+            "id": "gallery-visitors",
+            "label": "Gallery account"
+          }
+        ]
+      }
+    },
+    "/api/discover": {
+      "status": 401
+    },
+    "/api/read": {
+      "status": 401
+    },
+    "login": {
+      "status": 303,
+      "host": "auth.yggdrasil.cybernomad.it",
+      "client": "rom-ui-gallery",
+      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+      "statePresent": true,
+      "noncePresent": true
+    }
+  },
+  "publicBrowser": {
+    "passed": 4,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "scope": [
+      "Gallery navigation, theme and controls",
+      "Composer extension actions"
+    ],
+    "log": "/var/tmp/rom-ui-map-public-browser.log"
+  },
+  "fullVerifier": {
+    "exitCode": 0,
+    "log": "/var/tmp/rom-ui-map-final-full-verifier.log"
+  },
+  "limits": [
+    "Production visitor account mapping awaits account selection; authenticated public Resource journeys are not yet qualified.",
+    "Chat history currently remains a local demo; ROM-backed task activity is synthetic, not execution of an AI model.",
+    "Backend map selection is qualified with actual local ROM persistence and substituted tile images; no live OSM tile-service acceptance claim."
+  ]
+}

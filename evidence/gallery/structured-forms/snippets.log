@@ -1,0 +1,7 @@
+(node:2485259) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Checking 57 copyable examples against the installed archive: /tmp/rom-ui-gallery-snippets-9CtQL0
+Loading svelte-check in workspace: /tmp/rom-ui-gallery-snippets-9CtQL0
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

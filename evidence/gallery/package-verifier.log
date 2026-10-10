@@ -1,0 +1,872 @@
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+Done in 242ms using pnpm v10.30.0
+
+> rom-ui@0.1.0-alpha.4 build /root/.codex/worktrees/rom-ui-gallery/rom-ui
+> tsc --project tsconfig.build.json
+
+
+> rom-ui@0.1.0-alpha.4 check /root/.codex/worktrees/rom-ui-gallery/rom-ui
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-gallery/rom-ui
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> rom-ui@0.1.0-alpha.4 test:unit /root/.codex/worktrees/rom-ui-gallery/rom-ui
+> node --experimental-strip-types --test tests/unit/*.test.ts
+
+TAP version 13
+# (node:1215885) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: submission requires text within the limit and an available composer
+ok 1 - submission requires text within the limit and an available composer
+  ---
+  duration_ms: 0.651499
+  type: 'test'
+  ...
+# Subtest: only unmodified Enter outside composition submits
+ok 2 - only unmodified Enter outside composition submits
+  ---
+  duration_ms: 0.185292
+  type: 'test'
+  ...
+# Subtest: citations accept only absolute web links
+ok 3 - citations accept only absolute web links
+  ---
+  duration_ms: 0.26335
+  type: 'test'
+  ...
+# Subtest: IME confirmation with legacy key code 229 does not submit after compositionend
+ok 4 - IME confirmation with legacy key code 229 does not submit after compositionend
+  ---
+  duration_ms: 0.108807
+  type: 'test'
+  ...
+# (node:1215886) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: capture detaches exact context and every export attempt receives fresh data
+ok 5 - capture detaches exact context and every export attempt receives fresh data
+  ---
+  duration_ms: 0.867389
+  type: 'test'
+  ...
+# Subtest: captured identity is deeply immutable and excludes extra fields
+ok 6 - captured identity is deeply immutable and excludes extra fields
+  ---
+  duration_ms: 0.320529
+  type: 'test'
+  ...
+# Subtest: identity is captured before the clone callback can change host selection
+ok 7 - identity is captured before the clone callback can change host selection
+  ---
+  duration_ms: 0.154584
+  type: 'test'
+  ...
+# Subtest: a snapshot is context, not current authorization or a file operation
+ok 8 - a snapshot is context, not current authorization or a file operation
+  ---
+  duration_ms: 1.968843
+  type: 'test'
+  ...
+# (node:1215887) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: content notifications coalesce and keep the view at its latest item
+ok 9 - content notifications coalesce and keep the view at its latest item
+  ---
+  duration_ms: 1.436131
+  type: 'test'
+  ...
+# Subtest: manual upward scroll cancels following until explicit resume
+ok 10 - manual upward scroll cancels following until explicit resume
+  ---
+  duration_ms: 0.222433
+  type: 'test'
+  ...
+# Subtest: a manual scroll after queued content wins over the pending frame
+ok 11 - a manual scroll after queued content wins over the pending frame
+  ---
+  duration_ms: 0.216702
+  type: 'test'
+  ...
+# Subtest: disposal cancels queued frames, observers and future scroll effects
+ok 12 - disposal cancels queued frames, observers and future scroll effects
+  ---
+  duration_ms: 0.202004
+  type: 'test'
+  ...
+# Subtest: invalid thresholds are rejected before installing observers
+ok 13 - invalid thresholds are rejected before installing observers
+  ---
+  duration_ms: 0.564053
+  type: 'test'
+  ...
+# Subtest: a viewport resize scroll event without upward movement keeps following
+ok 14 - a viewport resize scroll event without upward movement keeps following
+  ---
+  duration_ms: 0.287396
+  type: 'test'
+  ...
+# Subtest: even a small upward movement stops following until explicit resume
+ok 15 - even a small upward movement stops following until explicit resume
+  ---
+  duration_ms: 0.298527
+  type: 'test'
+  ...
+# Subtest: viewport enlargement clamping the previous position does not count as manual upward movement
+ok 16 - viewport enlargement clamping the previous position does not count as manual upward movement
+  ---
+  duration_ms: 0.192196
+  type: 'test'
+  ...
+# (node:1215888) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: history preserves exact IDs and detaches bounded display data
+ok 17 - history preserves exact IDs and detaches bounded display data
+  ---
+  duration_ms: 0.670295
+  type: 'test'
+  ...
+# Subtest: history rejects duplicate IDs, excessive values and invalid dates
+ok 18 - history rejects duplicate IDs, excessive values and invalid dates
+  ---
+  duration_ms: 0.418936
+  type: 'test'
+  ...
+# Subtest: history dates use explicit locale and timezone without changing stored instants
+ok 19 - history dates use explicit locale and timezone without changing stored instants
+  ---
+  duration_ms: 12.349058
+  type: 'test'
+  ...
+# Subtest: history captures each value once before validating its admitted bounds
+ok 20 - history captures each value once before validating its admitted bounds
+  ---
+  duration_ms: 0.186985
+  type: 'test'
+  ...
+# Subtest: history iterates only its captured entry count without calling an overridden map
+ok 21 - history iterates only its captured entry count without calling an overridden map
+  ---
+  duration_ms: 0.321432
+  type: 'test'
+  ...
+# (node:1215889) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: superseding settles the caller even when old work ignores cancellation
+ok 22 - superseding settles the caller even when old work ignores cancellation
+  ---
+  duration_ms: 4.888635
+  type: 'test'
+  ...
+# Subtest: late errors never classify or publish over a newer result
+ok 23 - late errors never classify or publish over a newer result
+  ---
+  duration_ms: 0.627032
+  type: 'test'
+  ...
+# Subtest: an abort listener may start a newer request without the interrupted run overwriting it
+ok 24 - an abort listener may start a newer request without the interrupted run overwriting it
+  ---
+  duration_ms: 0.275013
+  type: 'test'
+  ...
+# Subtest: pending notification can clear work before its task starts
+ok 25 - pending notification can clear work before its task starts
+  ---
+  duration_ms: 0.207714
+  type: 'test'
+  ...
+# Subtest: clone and classifier callbacks cannot publish after clearing ownership
+ok 26 - clone and classifier callbacks cannot publish after clearing ownership
+  ---
+  duration_ms: 0.302435
+  type: 'test'
+  ...
+# Subtest: ready data is cloned and errors expose only the host code
+ok 27 - ready data is cloned and errors expose only the host code
+  ---
+  duration_ms: 0.140227
+  type: 'test'
+  ...
+# Subtest: dispose settles pending work and never publishes again
+ok 28 - dispose settles pending work and never publishes again
+  ---
+  duration_ms: 1.251459
+  type: 'test'
+  ...
+# Subtest: a throwing notification rejects the wrapper without classifying host defects
+ok 29 - a throwing notification rejects the wrapper without classifying host defects
+  ---
+  duration_ms: 0.558061
+  type: 'test'
+  ...
+# Subtest: a synchronous task rejection becomes a sanitized current error
+ok 30 - a synchronous task rejection becomes a sanitized current error
+  ---
+  duration_ms: 0.262649
+  type: 'test'
+  ...
+# (node:1215893) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout proposals retain exact IDs and validate move/size/visibility without mutation
+ok 31 - layout proposals retain exact IDs and validate move/size/visibility without mutation
+  ---
+  duration_ms: 1.18314
+  type: 'test'
+  ...
+# Subtest: invalid commands and corrupt layouts never propose a fallback
+ok 32 - invalid commands and corrupt layouts never propose a fallback
+  ---
+  duration_ms: 0.167328
+  type: 'test'
+  ...
+# (node:1215907) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: layout capture detaches and freezes only a valid host-selected catalog
+ok 33 - layout capture detaches and freezes only a valid host-selected catalog
+  ---
+  duration_ms: 1.006804
+  type: 'test'
+  ...
+# Subtest: unknown duplicate and malformed layout IDs are rejected without a fallback
+ok 34 - unknown duplicate and malformed layout IDs are rejected without a fallback
+  ---
+  duration_ms: 0.240467
+  type: 'test'
+  ...
+# Subtest: position size and visible values must satisfy finite integer catalog bounds
+ok 35 - position size and visible values must satisfy finite integer catalog bounds
+  ---
+  duration_ms: 0.308206
+  type: 'test'
+  ...
+# Subtest: corrupt stored layouts and entry limits are rejected without throwing
+ok 36 - corrupt stored layouts and entry limits are rejected without throwing
+  ---
+  duration_ms: 0.215329
+  type: 'test'
+  ...
+# Subtest: invalid host catalogs and limits are configuration errors
+ok 37 - invalid host catalogs and limits are configuration errors
+  ---
+  duration_ms: 0.476356
+  type: 'test'
+  ...
+# Subtest: stored getters cannot widen the captured host bounds
+ok 38 - stored getters cannot widen the captured host bounds
+  ---
+  duration_ms: 0.143503
+  type: 'test'
+  ...
+# Subtest: inherited and changing catalog bounds remain in the exact validated snapshot
+ok 39 - inherited and changing catalog bounds remain in the exact validated snapshot
+  ---
+  duration_ms: 0.180413
+  type: 'test'
+  ...
+# Subtest: stored array proxy errors become invalid layout results
+ok 40 - stored array proxy errors become invalid layout results
+  ---
+  duration_ms: 0.596034
+  type: 'test'
+  ...
+# Subtest: layout entry getters cannot extend the captured item limit during iteration
+ok 41 - layout entry getters cannot extend the captured item limit during iteration
+  ---
+  duration_ms: 0.303276
+  type: 'test'
+  ...
+# (node:1215916) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: the UI entry exposes disposable computations without application imports
+ok 42 - the UI entry exposes disposable computations without application imports
+  ---
+  duration_ms: 0.709759
+  type: 'test'
+  ...
+# Subtest: public composition combines exact selection with validated display links
+ok 43 - public composition combines exact selection with validated display links
+  ---
+  duration_ms: 0.826952
+  type: 'test'
+  ...
+# Subtest: headless package entry validates host layouts without importing Svelte
+ok 44 - headless package entry validates host layouts without importing Svelte
+  ---
+  duration_ms: 6.48499
+  type: 'test'
+  ...
+# (node:1215919) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+ok 45 - reference candidate admission detaches exact IDs and bounds count and UTF8 bytes
+  ---
+  duration_ms: 2.022355
+  type: 'test'
+  ...
+# Subtest: reference admission rejects malformed/duplicate candidates and bounds search UTF8
+ok 46 - reference admission rejects malformed/duplicate candidates and bounds search UTF8
+  ---
+  duration_ms: 0.276826
+  type: 'test'
+  ...
+# (node:1215944) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: unknown classification holds one command until explicit reset without automatic retry
+ok 47 - unknown classification holds one command until explicit reset without automatic retry
+  ---
+  duration_ms: 0.688058
+  type: 'test'
+  ...
+# Subtest: old scope/rejection/disposal cannot publish a stale command result
+ok 48 - old scope/rejection/disposal cannot publish a stale command result
+  ---
+  duration_ms: 0.174742
+  type: 'test'
+  ...
+# Subtest: throwing then getter cannot establish an outcome
+ok 49 - throwing then getter cannot establish an outcome
+  ---
+  duration_ms: 1.123336
+  type: 'test'
+  ...
+# Subtest: callback acknowledgement failure is unknown until explicit host recovery
+ok 50 - callback acknowledgement failure is unknown until explicit host recovery
+  ---
+  duration_ms: 0.186465
+  type: 'test'
+  ...
+# Subtest: pending publisher reset or dispose prevents stale callback dispatch
+ok 51 - pending publisher reset or dispose prevents stale callback dispatch
+  ---
+  duration_ms: 0.15772
+  type: 'test'
+  ...
+# (node:1215949) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: selection preserves exact opaque IDs and returns detached snapshots
+ok 52 - selection preserves exact opaque IDs and returns detached snapshots
+  ---
+  duration_ms: 1.232744
+  type: 'test'
+  ...
+# Subtest: single selection toggles and replaces without inferring labels
+ok 53 - single selection toggles and replaces without inferring labels
+  ---
+  duration_ms: 0.144254
+  type: 'test'
+  ...
+# Subtest: removing available IDs prunes selection and clear empties it
+ok 54 - removing available IDs prunes selection and clear empties it
+  ---
+  duration_ms: 0.411893
+  type: 'test'
+  ...
+# Subtest: invalid catalogs and initial selection fail explicitly
+ok 55 - invalid catalogs and initial selection fail explicitly
+  ---
+  duration_ms: 0.284661
+  type: 'test'
+  ...
+# Subtest: invalid replacement is atomic and does not discard current selection
+ok 56 - invalid replacement is atomic and does not discard current selection
+  ---
+  duration_ms: 0.162719
+  type: 'test'
+  ...
+# (node:1215987) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: normalizes approved internal and external links without fetching
+ok 57 - normalizes approved internal and external links without fetching
+  ---
+  duration_ms: 1.419449
+  type: 'test'
+  ...
+# Subtest: scheme and credentials checks precede any internal callback
+ok 58 - scheme and credentials checks precede any internal callback
+  ---
+  duration_ms: 0.207435
+  type: 'test'
+  ...
+# Subtest: origin comparisons reject lookalike hosts and protocol-relative outsiders
+ok 59 - origin comparisons reject lookalike hosts and protocol-relative outsiders
+  ---
+  duration_ms: 0.259794
+  type: 'test'
+  ...
+# Subtest: internal callback sees immutable normalized path and failures reject links
+ok 60 - internal callback sees immutable normalized path and failures reject links
+  ---
+  duration_ms: 0.187416
+  type: 'test'
+  ...
+# Subtest: raw input has a fixed UTF8 bound and rejects control characters
+ok 61 - raw input has a fixed UTF8 bound and rejects control characters
+  ---
+  duration_ms: 0.476255
+  type: 'test'
+  ...
+# Subtest: unsafe or ambiguous configuration fails explicitly
+ok 62 - unsafe or ambiguous configuration fails explicitly
+  ---
+  duration_ms: 0.558632
+  type: 'test'
+  ...
+# Subtest: a JavaScript async internal validator cannot approve a blocked link
+ok 63 - a JavaScript async internal validator cannot approve a blocked link
+  ---
+  duration_ms: 0.261537
+  type: 'test'
+  ...
+# Subtest: a rejected async validator is ignored without an unhandled rejection
+ok 64 - a rejected async validator is ignored without an unhandled rejection
+  ---
+  duration_ms: 4.089275
+  type: 'test'
+  ...
+1..64
+# tests 64
+# suites 0
+# pass 64
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 192.030295
+
+> rom-ui@0.1.0-alpha.4 prepack /root/.codex/worktrees/rom-ui-gallery/rom-ui
+> corepack pnpm run build
+
+
+> rom-ui@0.1.0-alpha.4 build /root/.codex/worktrees/rom-ui-gallery/rom-ui
+> tsc --project tsconfig.build.json
+
+📦  rom-ui@0.1.0-alpha.4
+Tarball Contents
+dist/headless/lib/ui/components/details-scroll-lock.d.ts
+dist/headless/lib/ui/components/details-scroll-lock.js
+dist/headless/lib/ui/components/layout-controls.d.ts
+dist/headless/lib/ui/components/layout-controls.js
+dist/headless/lib/ui/components/preserve-editor.d.ts
+dist/headless/lib/ui/components/preserve-editor.js
+dist/headless/lib/ui/components/reference-lookup.d.ts
+dist/headless/lib/ui/components/reference-lookup.js
+dist/headless/lib/ui/components/reference-picker.d.ts
+dist/headless/lib/ui/components/reference-picker.js
+dist/headless/lib/ui/components/selection-card.d.ts
+dist/headless/lib/ui/components/selection-card.js
+dist/headless/lib/ui/export-snapshot.d.ts
+dist/headless/lib/ui/export-snapshot.js
+dist/headless/lib/ui/follow-latest.d.ts
+dist/headless/lib/ui/follow-latest.js
+dist/headless/lib/ui/history.d.ts
+dist/headless/lib/ui/history.js
+dist/headless/lib/ui/latest-request.d.ts
+dist/headless/lib/ui/latest-request.js
+dist/headless/lib/ui/layout.d.ts
+dist/headless/lib/ui/layout.js
+dist/headless/lib/ui/messages.d.ts
+dist/headless/lib/ui/messages.js
+dist/headless/lib/ui/selection.d.ts
+dist/headless/lib/ui/selection.js
+dist/headless/lib/ui/source-link.d.ts
+dist/headless/lib/ui/source-link.js
+dist/headless/ui.d.ts
+dist/headless/ui.js
+docs/chat-flow.md
+docs/design.md
+evidence/source.json
+LICENSE
+package.json
+README.md
+src/chat.ts
+src/controls.ts
+src/flow.ts
+src/lib/chat/ChatComposer.svelte
+src/lib/chat/ChatMessages.svelte
+src/lib/chat/contracts.ts
+src/lib/components/ui/button/button.svelte
+src/lib/components/ui/button/index.ts
+src/lib/components/ui/checkbox/checkbox.svelte
+src/lib/components/ui/checkbox/index.ts
+src/lib/components/ui/command/command-dialog.svelte
+src/lib/components/ui/command/command-empty.svelte
+src/lib/components/ui/command/command-group.svelte
+src/lib/components/ui/command/command-input.svelte
+src/lib/components/ui/command/command-item.svelte
+src/lib/components/ui/command/command-link-item.svelte
+src/lib/components/ui/command/command-list.svelte
+src/lib/components/ui/command/command-loading.svelte
+src/lib/components/ui/command/command-separator.svelte
+src/lib/components/ui/command/command-shortcut.svelte
+src/lib/components/ui/command/command.svelte
+src/lib/components/ui/command/index.ts
+src/lib/components/ui/dialog/dialog-close.svelte
+src/lib/components/ui/dialog/dialog-content.svelte
+src/lib/components/ui/dialog/dialog-description.svelte
+src/lib/components/ui/dialog/dialog-footer.svelte
+src/lib/components/ui/dialog/dialog-header.svelte
+src/lib/components/ui/dialog/dialog-overlay.svelte
+src/lib/components/ui/dialog/dialog-portal.svelte
+src/lib/components/ui/dialog/dialog-title.svelte
+src/lib/components/ui/dialog/dialog-trigger.svelte
+src/lib/components/ui/dialog/dialog.svelte
+src/lib/components/ui/dialog/index.ts
+src/lib/components/ui/input-group/index.ts
+src/lib/components/ui/input-group/input-group-addon.svelte
+src/lib/components/ui/input-group/input-group-button.svelte
+src/lib/components/ui/input-group/input-group-input.svelte
+src/lib/components/ui/input-group/input-group-text.svelte
+src/lib/components/ui/input-group/input-group-textarea.svelte
+src/lib/components/ui/input-group/input-group.svelte
+src/lib/components/ui/input/index.ts
+src/lib/components/ui/input/input.svelte
+src/lib/components/ui/label/index.ts
+src/lib/components/ui/label/label.svelte
+src/lib/components/ui/LICENSE.md
+src/lib/components/ui/native-select/index.ts
+src/lib/components/ui/native-select/native-select-opt-group.svelte
+src/lib/components/ui/native-select/native-select-option.svelte
+src/lib/components/ui/native-select/native-select.svelte
+src/lib/components/ui/popover/index.ts
+src/lib/components/ui/popover/popover-close.svelte
+src/lib/components/ui/popover/popover-content.svelte
+src/lib/components/ui/popover/popover-description.svelte
+src/lib/components/ui/popover/popover-header.svelte
+src/lib/components/ui/popover/popover-portal.svelte
+src/lib/components/ui/popover/popover-title.svelte
+src/lib/components/ui/popover/popover-trigger.svelte
+src/lib/components/ui/popover/popover.svelte
+src/lib/components/ui/sheet/index.ts
+src/lib/components/ui/sheet/sheet-close.svelte
+src/lib/components/ui/sheet/sheet-content.svelte
+src/lib/components/ui/sheet/sheet-description.svelte
+src/lib/components/ui/sheet/sheet-footer.svelte
+src/lib/components/ui/sheet/sheet-header.svelte
+src/lib/components/ui/sheet/sheet-overlay.svelte
+src/lib/components/ui/sheet/sheet-portal.svelte
+src/lib/components/ui/sheet/sheet-title.svelte
+src/lib/components/ui/sheet/sheet-trigger.svelte
+src/lib/components/ui/sheet/sheet.svelte
+src/lib/components/ui/slider/index.ts
+src/lib/components/ui/slider/slider.svelte
+src/lib/components/ui/textarea/index.ts
+src/lib/components/ui/textarea/textarea.svelte
+src/lib/components/ui/utils.ts
+src/lib/flow/FlowChoiceNode.svelte
+src/lib/flow/FlowFit.svelte
+src/lib/flow/types.ts
+src/lib/ui/components/ConversationLayout.svelte
+src/lib/ui/components/details-scroll-lock.ts
+src/lib/ui/components/HistoryList.svelte
+src/lib/ui/components/layout-controls.ts
+src/lib/ui/components/LayoutControls.svelte
+src/lib/ui/components/preserve-editor.ts
+src/lib/ui/components/reference-lookup.ts
+src/lib/ui/components/reference-picker.ts
+src/lib/ui/components/ReferencePicker.svelte
+src/lib/ui/components/ResponsiveDetails.svelte
+src/lib/ui/components/selection-card.ts
+src/lib/ui/components/SelectionCard.svelte
+src/lib/ui/export-snapshot.ts
+src/lib/ui/follow-latest.ts
+src/lib/ui/history.ts
+src/lib/ui/latest-request.ts
+src/lib/ui/layout.ts
+src/lib/ui/messages.ts
+src/lib/ui/selection.ts
+src/lib/ui/source-link.ts
+src/styles.css
+src/ui-components.ts
+src/ui.ts
+THIRD_PARTY_NOTICES.md
+Tarball Details
+rom-ui-0.1.0-alpha.4.tgz
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +84
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 84, reused 84, downloaded 0, added 84, done
+
+dependencies:
++ rom-ui 0.1.0-alpha.4
++ svelte 5.57.1
+
+devDependencies:
++ @playwright/test 1.63.0
++ @sveltejs/vite-plugin-svelte 7.3.1
++ @tailwindcss/vite 4.3.3
++ @types/node 22.20.5
++ svelte-check 4.7.6
++ tailwindcss 4.3.3
++ typescript 6.0.3
++ vite 8.3.2
+
+Done in 785ms using pnpm v10.30.0
+Installed source and compiled headless modules match the packed candidate
+
+> rom-ui-consumer@0.0.0 check /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> rom-ui-consumer@0.0.0 build /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer
+> vite build
+
+4:23:55 AM [vite-plugin-svelte] no Svelte config found at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer - using default configuration.
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 789 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/focus-boundary.html                    0.24 kB │ gzip:  0.19 kB
+dist/index.html                             0.58 kB │ gzip:  0.31 kB
+dist/details.html                           0.64 kB │ gzip:  0.32 kB
+dist/history.html                           0.64 kB │ gzip:  0.31 kB
+dist/reference.html                         0.64 kB │ gzip:  0.31 kB
+dist/selection-layout.html                  0.65 kB │ gzip:  0.32 kB
+dist/assets/ui-components-CpGPpkO-.css      0.12 kB │ gzip:  0.11 kB
+dist/assets/index-Dy160qv2.css              0.42 kB │ gzip:  0.24 kB
+dist/assets/check-p7O677G5.css             52.95 kB │ gzip:  9.16 kB
+dist/assets/history-tbZRv-ex.js             2.06 kB │ gzip:  1.10 kB
+dist/assets/details-WhoMsqn9.js             2.07 kB │ gzip:  1.04 kB
+dist/assets/reference-Btae4ler.js           2.19 kB │ gzip:  1.23 kB
+dist/assets/focus-boundary-C0yN4SW2.js      3.14 kB │ gzip:  1.33 kB
+dist/assets/selection-layout-BcAUOwH_.js    4.00 kB │ gzip:  1.74 kB
+dist/assets/index-ZKr6Uwy5.js              34.45 kB │ gzip:  9.26 kB
+dist/assets/index-client-PU-CZNXy.js       52.97 kB │ gzip: 20.24 kB
+dist/assets/check-mdPebhuk.js              89.64 kB │ gzip: 31.44 kB
+dist/assets/ui-components-CqAIyn5p.js     138.03 kB │ gzip: 40.08 kB
+
+✓ built in 1.22s
+TAP version 13
+# Subtest: installed headless package retains exact IDs, large integers and immutable export context
+ok 1 - installed headless package retains exact IDs, large integers and immutable export context
+  ---
+  duration_ms: 1.066408
+  type: 'test'
+  ...
+# Subtest: installed latest request settles superseded callers and fences late work
+ok 2 - installed latest request settles superseded callers and fences late work
+  ---
+  duration_ms: 2.304392
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43.146632
+[WebServer] (node:1216731) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1216754) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: installed headless package retains exact IDs, large integers and immutable export context
+ok 1 - installed headless package retains exact IDs, large integers and immutable export context
+  ---
+  duration_ms: 1.076497
+  type: 'test'
+  ...
+# Subtest: installed latest request settles superseded callers and fences late work
+ok 2 - installed latest request settles superseded callers and fences late work
+  ---
+  duration_ms: 1.274183
+  type: 'test'
+  ...
+
+Running 106 tests using 1 worker
+
+(node:1216839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [chromium] › tests/controls.spec.ts:3:1 › installed public controls preserve bound values, native refs and keyboard operations (360ms)
+  ✓    2 [chromium] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 1280x900 (176ms)
+  ✓    3 [chromium] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 390x500 (159ms)
+  ✓    4 [chromium] › tests/details.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (228ms)
+  ✓    5 [chromium] › tests/details.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (410ms)
+  ✓    6 [chromium] › tests/details.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (237ms)
+  ✓    7 [chromium] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (402ms)
+  ✓    8 [chromium] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (394ms)
+  ✓    9 [chromium] › tests/details.spec.ts:59:1 › active close control uses the host's changed label (444ms)
+  ✓   10 [chromium] › tests/details.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (694ms)
+  ✓   11 [chromium] › tests/details.spec.ts:81:1 › reduced motion displays complete details without content animation (159ms)
+  ✓   12 [chromium] › tests/details.spec.ts:92:1 › responsive relocation retains the focused editor and exact text selection in both directions (406ms)
+  ✓   13 [chromium] › tests/details.spec.ts:113:1 › responsive relocation does not restore an editor after deliberate focus departure (181ms)
+  ✓   14 [chromium] › tests/details.spec.ts:127:3 › responsive relocation does not restore an disabled editor (226ms)
+  ✓   15 [chromium] › tests/details.spec.ts:127:3 › responsive relocation does not restore an inert editor (212ms)
+  ✓   16 [chromium] › tests/details.spec.ts:127:3 › responsive relocation does not restore an detached editor (211ms)
+  ✓   17 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: hidden-target (81ms)
+  ✓   18 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: external-departure (94ms)
+  ✓   19 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: body-departure (93ms)
+  ✓   20 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: late-target (78ms)
+  ✓   21 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: rapid-reversal (78ms)
+  ✓   22 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: disabled (94ms)
+  ✓   23 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: inert (96ms)
+  ✓   24 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: detached (74ms)
+  ✓   25 [chromium] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: destroyed (80ms)
+  ✓   26 [chromium] › tests/focus-boundary.spec.ts:21:1 › rapid native breakpoint reversal retains one editor and its selection (220ms)
+  ✓   27 [chromium] › tests/focus-boundary.spec.ts:32:1 › Escape while crossing closes details without restoring a stale editor (209ms)
+  ✓   28 [chromium] › tests/focus-boundary.spec.ts:32:1 › close button while crossing closes details without restoring a stale editor (450ms)
+  ✓   29 [chromium] › tests/history.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (122ms)
+  ✓   30 [chromium] › tests/history.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (123ms)
+  ✓   31 [chromium] › tests/history.spec.ts:38:1 › history metadata and empty text follow a locale change (189ms)
+  ✓   32 [chromium] › tests/history.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (195ms)
+  ✓   33 [chromium] › tests/history.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (242ms)
+  ✓   34 [chromium] › tests/history.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (245ms)
+  ✓   35 [chromium] › tests/history.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (245ms)
+  ✓   36 [chromium] › tests/reference.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (312ms)
+  ✓   37 [chromium] › tests/reference.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (936ms)
+  ✓   38 [chromium] › tests/reference.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (194ms)
+  ✓   39 [chromium] › tests/reference.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.1s)
+  ✓   40 [chromium] › tests/reference.spec.ts:82:3 › Deny response leaves manual exact ID entry available (208ms)
+  ✓   41 [chromium] › tests/reference.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (243ms)
+  ✓   42 [chromium] › tests/reference.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.5s)
+  ✓   43 [chromium] › tests/reference.spec.ts:125:1 › host validation rejects a manual draft without publishing a different exact ID (115ms)
+  ✓   44 [chromium] › tests/selection-layout.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (170ms)
+  ✓   45 [chromium] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (225ms)
+  ✓   46 [chromium] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (245ms)
+  ✓   47 [chromium] › tests/selection-layout.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (209ms)
+  ✓   48 [chromium] › tests/selection-layout.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (308ms)
+  ✓   49 [chromium] › tests/selection-layout.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (328ms)
+  ✓   50 [chromium] › tests/selection-layout.spec.ts:164:1 › disabled host controls cannot dispatch (130ms)
+  ✓   51 [chromium] › tests/selection-layout.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (256ms)
+  ✓   52 [chromium] › tests/selection-layout.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (262ms)
+  ✓   53 [chromium] › tests/selection-layout.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (212ms)
+(node:1218887) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   54 [webkit] › tests/controls.spec.ts:3:1 › installed public controls preserve bound values, native refs and keyboard operations (357ms)
+  ✓   55 [webkit] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 1280x900 (290ms)
+  ✓   56 [webkit] › tests/controls.spec.ts:25:3 › installed stylesheet and wrapper contracts support a compact composer at 390x500 (305ms)
+  ✓   57 [webkit] › tests/details.spec.ts:4:1 › desktop details are a named nonmodal region with an independent focusable summary (349ms)
+  ✓   58 [webkit] › tests/details.spec.ts:18:1 › mobile details are modal, scroll long content, and Escape returns focus (542ms)
+  ✓   59 [webkit] › tests/details.spec.ts:32:1 › one mounted editor retains its raw draft through desktop and mobile transitions (339ms)
+  ✓   60 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Remove opening control (500ms)
+  ✓   61 [webkit] › tests/details.spec.ts:49:3 › mobile close uses explicit fallback after Disable opening control (516ms)
+  ✓   62 [webkit] › tests/details.spec.ts:59:1 › active close control uses the host's changed label (547ms)
+  ✓   63 [webkit] › tests/details.spec.ts:69:1 › closing one mobile details lifetime retains another modal's body scroll lock (760ms)
+  ✓   64 [webkit] › tests/details.spec.ts:81:1 › reduced motion displays complete details without content animation (272ms)
+  ✓   65 [webkit] › tests/details.spec.ts:92:1 › responsive relocation retains the focused editor and exact text selection in both directions (627ms)
+  ✓   66 [webkit] › tests/details.spec.ts:113:1 › responsive relocation does not restore an editor after deliberate focus departure (290ms)
+  ✓   67 [webkit] › tests/details.spec.ts:127:3 › responsive relocation does not restore an disabled editor (306ms)
+  ✓   68 [webkit] › tests/details.spec.ts:127:3 › responsive relocation does not restore an inert editor (324ms)
+  ✓   69 [webkit] › tests/details.spec.ts:127:3 › responsive relocation does not restore an detached editor (300ms)
+  ✓   70 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: hidden-target (224ms)
+  ✓   71 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: external-departure (248ms)
+  ✓   72 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: body-departure (255ms)
+  ✓   73 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: late-target (248ms)
+  ✓   74 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: rapid-reversal (251ms)
+  ✓   75 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: disabled (227ms)
+  ✓   76 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: inert (238ms)
+  ✓   77 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: detached (212ms)
+  ✓   78 [webkit] › tests/focus-boundary.spec.ts:3:3 › one-transition focus intent: destroyed (245ms)
+  ✓   79 [webkit] › tests/focus-boundary.spec.ts:21:1 › rapid native breakpoint reversal retains one editor and its selection (307ms)
+  ✓   80 [webkit] › tests/focus-boundary.spec.ts:32:1 › Escape while crossing closes details without restoring a stale editor (296ms)
+  ✓   81 [webkit] › tests/focus-boundary.spec.ts:32:1 › close button while crossing closes details without restoring a stale editor (537ms)
+  ✓   82 [webkit] › tests/history.spec.ts:5:1 › history titles stay readable and have full accessible names on narrow screens (241ms)
+  ✓   83 [webkit] › tests/history.spec.ts:24:1 › native keyboard activation calls the host and moves only its confirmed current marker (243ms)
+  ✓   84 [webkit] › tests/history.spec.ts:38:1 › history metadata and empty text follow a locale change (314ms)
+  ✓   85 [webkit] › tests/history.spec.ts:50:1 › uncertain writes and refused host navigation cannot optimistically change history (334ms)
+  ✓   86 [webkit] › tests/history.spec.ts:70:1 › pending failure is sanitized and its message reacts to locale changes (364ms)
+  ✓   87 [webkit] › tests/history.spec.ts:98:1 › old-owner pending navigation cannot report a failure in the new scope (371ms)
+  ✓   88 [webkit] › tests/history.spec.ts:120:1 › NaN authority tokens do not strand pending navigation (383ms)
+  ✓   89 [webkit] › tests/reference.spec.ts:4:1 › selection callback authority rebind never associates the old label with the new owner (469ms)
+  ✓   90 [webkit] › tests/reference.spec.ts:18:1 › host labels update while pending and readonly stops the pending request (1.1s)
+  ✓   91 [webkit] › tests/reference.spec.ts:44:1 › public picker selects with keyboard and preserves exact ID (330ms)
+  ✓   92 [webkit] › tests/reference.spec.ts:62:1 › authority change aborts and fences uncooperative late response (1.2s)
+  ✓   93 [webkit] › tests/reference.spec.ts:82:3 › Deny response leaves manual exact ID entry available (347ms)
+  ✓   94 [webkit] › tests/reference.spec.ts:82:3 › Overflow response leaves manual exact ID entry available (344ms)
+  ✓   95 [webkit] › tests/reference.spec.ts:99:1 › nonempty search debounces and caps an opened flow at eight attempts (2.6s)
+  ✓   96 [webkit] › tests/reference.spec.ts:125:1 › host validation rejects a manual draft without publishing a different exact ID (238ms)
+  ✓   97 [webkit] › tests/selection-layout.spec.ts:3:1 › native cards support keyboard multi-selection and sibling actions do not toggle (293ms)
+  ✓   98 [webkit] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 1280 (354ms)
+  ✓   99 [webkit] › tests/selection-layout.spec.ts:32:3 › layout commands preserve host identity and bounds at 390 (339ms)
+  ✓  100 [webkit] › tests/selection-layout.spec.ts:78:3 › Reject commands is sanitized and never changes confirmed selection/layout (346ms)
+  ✓  101 [webkit] › tests/selection-layout.spec.ts:100:1 › unknown outcomes hold barriers until explicit host recovery and messages follow locale (431ms)
+  ✓  102 [webkit] › tests/selection-layout.spec.ts:133:1 › scope change fences held callback failures and NaN token settles normally (467ms)
+  ✓  103 [webkit] › tests/selection-layout.spec.ts:164:1 › disabled host controls cannot dispatch (286ms)
+  ✓  104 [webkit] › tests/selection-layout.spec.ts:181:1 › disabling during a held callback does not strand the command after reenable (399ms)
+  ✓  105 [webkit] › tests/selection-layout.spec.ts:202:1 › layout callback is fenced across authority change and corrupt layout never falls back (419ms)
+  ✓  106 [webkit] › tests/selection-layout.spec.ts:231:1 › lost acknowledgement after host work is unknown and cannot retry implicitly (357ms)
+
+  106 passed (41.2s)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1 -1
++-
+Progress: resolved 1, reused 1, downloaded 0, added 1, done
+
+Done in 261ms using pnpm v10.30.0
+Installed source and compiled headless modules match the packed candidate
+
+> rom-ui-gallery@0.0.0 check /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery
+> svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> rom-ui-gallery@0.0.0 build /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery
+> vite build
+
+4:24:41 AM [vite-plugin-svelte] no Svelte config found at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery - using default configuration.
+vite v8.3.2 building client environment for production...
+transforming...
+✓ 1058 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.54 kB │ gzip:  0.37 kB
+dist/assets/FlowDemo-CwGOC75V.css           0.94 kB │ gzip:  0.45 kB
+dist/assets/ChatDemo-BIqlDzzp.css           1.10 kB │ gzip:  0.49 kB
+dist/assets/ui-components-Da2sYnHP.css      1.30 kB │ gzip:  0.46 kB
+dist/assets/index-DhEyFunp.css             81.66 kB │ gzip: 14.55 kB
+dist/assets/ControlsDemo-OLDId7u9.js        4.14 kB │ gzip:  1.72 kB
+dist/assets/CompositionsDemo-BxbCa7ob.js    5.43 kB │ gzip:  2.54 kB
+dist/assets/ChatDemo-NDwnf8Ac.js            8.61 kB │ gzip:  3.94 kB
+dist/assets/index-h83tGPqt.js              65.76 kB │ gzip: 25.49 kB
+dist/assets/controls-C6rSDG59.js          120.36 kB │ gzip: 38.92 kB
+dist/assets/ui-components-Cgrj-R-4.js     140.27 kB │ gzip: 40.71 kB
+dist/assets/FlowDemo-d5TuyufQ.js          165.16 kB │ gzip: 53.08 kB
+
+✓ built in 1.47s
+[WebServer] (node:1223036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1223063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:1223157) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (390ms)
+  ✓   2 [chromium] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (961ms)
+  ✓   3 [chromium] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (1.8s)
+  ✓   4 [chromium] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (149ms)
+  ✓   5 [chromium] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (217ms)
+  ✓   6 [chromium] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (879ms)
+  ✓   7 [chromium] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (377ms)
+  ✓   8 [chromium] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (1.0s)
+  ✓   9 [chromium] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (829ms)
+(node:1223847) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [webkit] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (474ms)
+  ✓  11 [webkit] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (1.1s)
+  ✓  12 [webkit] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (2.0s)
+  ✓  13 [webkit] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (390ms)
+  ✓  14 [webkit] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (382ms)
+  ✓  15 [webkit] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (1.1s)
+  ✓  16 [webkit] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (555ms)
+  ✓  17 [webkit] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (1.3s)
+  ✓  18 [webkit] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (1.0s)
+
+  18 passed (17.1s)

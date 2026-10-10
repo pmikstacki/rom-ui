@@ -14,3 +14,16 @@ corepack pnpm run check
 corepack pnpm run build
 node --test tests/headless.test.mjs
 corepack pnpm exec playwright test
+cd ../..
+node scripts/gallery-package.mjs --check
+cd gallery
+corepack pnpm install --frozen-lockfile --ignore-scripts
+node ../scripts/verify-installed-package.mjs
+corepack pnpm run check
+node --experimental-strip-types ../scripts/check-gallery-snippets.mjs
+corepack pnpm run build
+corepack pnpm exec playwright test
+cd ..
+if [[ -n "${ROM_GALLERY_SOURCE:-}" ]]; then
+  ./gallery/host/check
+fi

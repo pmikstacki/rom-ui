@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-09",
+  "base": "a596253f7fc060f1b8128e9a4f36dc96cab4327e",
+  "packageVersion": "0.1.0-alpha.4",
+  "installedArchive": "file:../rom-ui-5fafc906eabcf83c9bdaa1f844d9e5c9e509becfcc014016ce6b8561ed346a44.tgz",
+  "command": "ROM_CHROMIUM_PATH=/root/.nix-profile/bin/chromium ROM_WEBKIT_EXECUTABLE=/var/tmp/rom-studio-webkit-2359/pw_run.sh ./scripts/check",
+  "result": "passed",
+  "unitTests": 64,
+  "nodeHeadlessTests": 2,
+  "consumerBrowserTests": 106,
+  "galleryBrowserTests": 18,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "limits": "Host migrations and public deployment are not yet verified."
+}

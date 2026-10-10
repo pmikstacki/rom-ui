@@ -8,8 +8,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "rom-ui": "file:../../rom-ui-c91fb9c4c70aa35c7101e756bab9ea9e7dafffc89002acd5f8934035197caf07.tgz",
-    "svelte": "5.57.1"
+    "rom-ui": "file:../../rom-ui-840e1d256b4186406486ec34fe66e75587ac9e10c58d4178f8c9c52e92118164.tgz",
+    "svelte": "5.57.1",
+    "@xyflow/svelte": "1.7.0",
+    "maplibre-gl": "6.7.0"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

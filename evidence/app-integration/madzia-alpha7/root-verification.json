@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-09T08:23:01.773Z",
+  "frozenInstallExit": 0,
+  "checkExit": 0,
+  "checkErrors": 0,
+  "checkWarnings": 0,
+  "buildExit": 0,
+  "installedOwnerFilesMatched": 249,
+  "sameRomUiImplementation": true,
+  "rootEntryAssetsByteIdenticalToTestedCandidate": [
+    "index.html",
+    "assets/index-DgfAQ-Pb.js",
+    "assets/index-DvCVtc4Q.css"
+  ],
+  "ownedFilesUnchanged": true,
+  "publicApplicationDeployment": false,
+  "rootGeneratedOutputsByteIdenticalToTestedCandidate": [
+    "index.html",
+    "assets/WeekendApp-ByHenam3.css",
+    "assets/index-DvCVtc4Q.css",
+    "assets/index-DgfAQ-Pb.js",
+    "assets/WeekendApp-LFCKt1KK.js"
+  ]
+}

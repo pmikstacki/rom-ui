@@ -1,0 +1,29 @@
+[WebServer] (node:1790891) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1790927) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 1 worker
+
+(node:1791040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Deactivate fitting (737ms)
+  ✓   2 [chromium] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Unmount fitting (497ms)
+  ✓   3 [chromium] › tests/flow-lifetime.spec.ts:24:3 › auto fitting respects no-preference motion preference (746ms)
+  ✓   4 [chromium] › tests/flow-lifetime.spec.ts:24:3 › auto fitting respects reduce motion preference (742ms)
+  ✓   5 [chromium] › tests/flow-lifetime.spec.ts:54:3 › in-progress animated fitting stops on Deactivate fitting (735ms)
+  ✓   6 [chromium] › tests/flow-lifetime.spec.ts:54:3 › in-progress animated fitting stops on Unmount fitting (697ms)
+  ✓   7 [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting (938ms)
+  ✓   8 [chromium] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting (944ms)
+(node:1791869) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [webkit] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Deactivate fitting (852ms)
+  ✓  10 [webkit] › tests/flow-lifetime.spec.ts:3:3 › empty graph fit does not leak across Unmount fitting (665ms)
+  ✓  11 [webkit] › tests/flow-lifetime.spec.ts:24:3 › auto fitting respects no-preference motion preference (875ms)
+  ✓  12 [webkit] › tests/flow-lifetime.spec.ts:24:3 › auto fitting respects reduce motion preference (856ms)
+  ✓  13 [webkit] › tests/flow-lifetime.spec.ts:54:3 › in-progress animated fitting stops on Deactivate fitting (839ms)
+  ✓  14 [webkit] › tests/flow-lifetime.spec.ts:54:3 › in-progress animated fitting stops on Unmount fitting (835ms)
+  ✓  15 [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Deactivate fitting (1.2s)
+  ✓  16 [webkit] › tests/flow-lifetime.spec.ts:73:3 › stopped animation does not replay after replacement on Unmount fitting (1.1s)
+
+  16 passed (16.0s)

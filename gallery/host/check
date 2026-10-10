@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+: "${ROM_GALLERY_SOURCE:?Set the qualified ROM source directory}"
+: "${ROM_MAP_PROVIDER_SOURCE:?Set the qualified ROM-extras source directory}"
+node --input-type=module <<'JS'
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const inputs = JSON.parse(fs.readFileSync('source/rom-inputs.json', 'utf8'));
+for (const [file, expected] of Object.entries(inputs)) {
+  const bytes = fs.readFileSync(path.join(process.env.ROM_GALLERY_SOURCE, file));
+  if (crypto.createHash('sha256').update(bytes).digest('hex') !== expected) throw Error(`ROM source mismatch: ${file}`);
+}
+const maps = JSON.parse(fs.readFileSync('../../evidence/gallery/rom-host/map-providers.json', 'utf8'));
+for (const [file, expected] of Object.entries(maps.inputs)) {
+  const bytes = fs.readFileSync(path.join(process.env.ROM_MAP_PROVIDER_SOURCE, file));
+  if (crypto.createHash('sha256').update(bytes).digest('hex') !== expected) throw Error(`Map provider source mismatch: ${file}`);
+}
+JS
+config=()
+for crate in rom rom-fields rom-identity rom-sqlite rom-studio-host; do
+  config+=(--config "patch.crates-io.$crate.path=\"$ROM_GALLERY_SOURCE/crates/$crate\"")
+done
+for crate in rom-map-core rom-map-http rom-configured-maps; do
+  config+=(--config "patch.crates-io.$crate.path=\"$ROM_MAP_PROVIDER_SOURCE/crates/$crate\"")
+done
+cargo fmt -- --check
+cargo test "${config[@]}" --locked
+cargo clippy "${config[@]}" --all-targets --locked -- -D warnings
+cargo build "${config[@]}" --locked

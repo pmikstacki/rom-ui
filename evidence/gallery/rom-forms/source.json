@@ -1,0 +1,28 @@
+{
+  "archive": "gallery/packages/rom-studio-83d336b3a425032f33fded530c7ed1c809559efc356d89128b43dbff0c870cdf.tgz",
+  "sha256": "83d336b3a425032f33fded530c7ed1c809559efc356d89128b43dbff0c870cdf",
+  "bytes": 294298,
+  "source": "/root/.codex/worktrees/rom-gallery-binding/ROM/studio",
+  "producerResult": "evidence/gallery/rom-forms/producer-result.json",
+  "sourceMode": "authoring_checkout",
+  "admittedRelease": false,
+  "publicEntry": "rom-studio/forms",
+  "sharedROMUI": "Gallery pnpm override resolves Studio and direct imports to the same content-addressed alpha.7 archive",
+  "license": "Archive includes LICENSE and THIRD_PARTY_NOTICES; Vite build emits used module licenses",
+  "limits": "Local descriptor renderer demo; no actual Resource commits, sessions, authorization or receipt recovery in this gallery example",
+  "sourceBaselineCommit": "1a2b7934139f3d7bb4cb04aaf4a90bd9405ab470",
+  "sourceIdentity": "Authoring checkout with inherited and owned changes; producer-result.json retains packaged source file hashes and executed archive/install/check/build/browser commands. Not a clean commit or admitted release.",
+  "archiveGenerationCommand": {
+    "program": "tar",
+    "args": [
+      "-czf",
+      "/var/tmp/rom-ui-alpha7-studio-public-green/studio-source.tar.gz",
+      "-C",
+      "/var/tmp/rom-ui-alpha7-studio-public-green/source-stage",
+      "rom-studio-source"
+    ],
+    "cwd": "/var/tmp/rom-ui-alpha7-studio-public-green/source-stage",
+    "exit_code": 0,
+    "signal": null
+  }
+}

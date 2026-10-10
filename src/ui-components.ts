@@ -11,3 +11,4 @@ export type { CompositionCommandResult } from "./lib/ui/components/selection-car
 export { default as ReferencePicker } from "./lib/ui/components/ReferencePicker.svelte";
 export type { ReferenceLookup, ReferenceLookupResult, ReferenceCandidate, ReferenceScope } from "./lib/ui/components/reference-lookup.ts";
 export type { ReferencePickerMessages } from "./lib/ui/components/reference-picker.ts";
+export { default as ConversationLayout } from './lib/ui/components/ConversationLayout.svelte';

@@ -1,0 +1,22 @@
+{
+  "fullVerifier": {
+    "command": "./scripts/check",
+    "exitCode": 0,
+    "unitPassed": 78,
+    "headlessPassed": 2,
+    "installedConsumerBrowserPassed": 140,
+    "snippetsChecked": 56,
+    "galleryBrowserPassed": 88,
+    "log": "full-verifier.log"
+  },
+  "additionalFieldStateChecks": {
+    "passed": 4,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "log": "field-states.log",
+    "scope": "Added test after full verifier; product source unchanged"
+  },
+  "limits": "Local callback example; not deployed or actual ROM action/recovery proof"
+}

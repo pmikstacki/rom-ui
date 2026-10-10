@@ -1,0 +1,28 @@
+{
+  "origin": "https://romui.cybernomad.it",
+  "deployedSource": "363f679",
+  "passed": 104,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "log": "/var/tmp/rom-ui-conversation-public-compatible-repeat-browser.log",
+  "scope": [
+    "controls and rich-form previews",
+    "chat and extension actions",
+    "interactive activity presentation",
+    "Flow and Flex",
+    "maps and origin policy",
+    "dialogs and notifications",
+    "navigation and per-export snippets"
+  ],
+  "limits": [
+    "This suite does not establish authenticated production Resource journeys.",
+    "Three static-host ROM fixture cases were excluded because the public host supplies its own bootstrap."
+  ],
+  "previousAttempt": {
+    "exitCode": 130,
+    "log": "/var/tmp/rom-ui-conversation-public-full-browser.log",
+    "reason": "Stopped after verifying static-host fixture assumptions conflict with production ROM bootstrap."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sourceFiles": [
+    {
+      "path": "src/lib/application/controller.ts",
+      "match": true
+    },
+    {
+      "path": "src/lib/application/editor-confirmation.ts",
+      "match": true
+    },
+    {
+      "path": "src/lib/application/editor-drafts.ts",
+      "match": true
+    },
+    {
+      "path": "src/lib/application/mutation-lane.ts",
+      "match": true
+    },
+    {
+      "path": "src/lib/application/creation-proof.ts",
+      "match": true
+    },
+    {
+      "path": "src/application.ts",
+      "match": true
+    }
+  ],
+  "manifest": {
+    "apiDependenciesAndScriptsMatch": true,
+    "byteIdentical": false,
+    "reason": "pnpm pack reorders scripts and omits packageManager and pnpm metadata"
+  }
+}

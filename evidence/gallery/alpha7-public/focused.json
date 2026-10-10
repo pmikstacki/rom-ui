@@ -1,0 +1,10 @@
+{
+  "url": "https://romui.cybernomad.it",
+  "scope": "Two previously failing Chromium cases; no test retries or assertion changes",
+  "passed": 2,
+  "log": "/var/tmp/rom-ui-alpha7-public-focused.log",
+  "logSha256": "a8a28a0a716ba9edfbe302e7a613fd925d85244ee2e886cce5a0e179a794d49c",
+  "preservedPreviousResults": "/var/tmp/rom-ui-alpha7-public-final-results.tar.gz",
+  "previousTraceFinding": "Entry stylesheet and JavaScript console requests failed with net::ERR_NETWORK_CHANGED before chat rendered",
+  "limits": "Focused pass does not qualify full public suite or actual ROM-backed hosting"
+}

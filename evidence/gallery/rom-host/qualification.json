@@ -1,0 +1,304 @@
+{
+  "studioArchiveSha256": "39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305",
+  "studio": {
+    "unitTests": 424,
+    "checkErrors": 0,
+    "checkWarnings": 0,
+    "componentsBuildPassed": true,
+    "fullRomVerifierPassed": true
+  },
+  "host": {
+    "tests": 10,
+    "lockedBuildPassed": true,
+    "clippyWarningsDeniedPassed": true,
+    "sigtermExit": 0
+  },
+  "actualBackendBrowser": {
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "passed": 2,
+    "checks": [
+      "OIDC fixture sign-in",
+      "exact u64 save and reload",
+      "unchanged value save resets form",
+      "only sample resource discovered",
+      "cross-visitor read denied",
+      "sign-out clears form",
+      "rich-field name save and reload",
+      "exact semantic decimal preservation",
+      "typed measure action and reload",
+      "visitor-scoped reference selection"
+    ],
+    "usesApiRouteMocks": false,
+    "referenceFirstRun": {
+      "chromium": "passed",
+      "webkit": "navigation-time query access-control error",
+      "trace": "/var/tmp/rom-gallery-rich-reference-results"
+    },
+    "referenceUnchangedRepeat": {
+      "passed": 2,
+      "log": "/var/tmp/rom-gallery-rich-reference-repeat-browser.log"
+    }
+  },
+  "publicDeployment": {
+    "romHosted": true,
+    "origin": "https://romui.cybernomad.it",
+    "sourceCommit": "3981f41",
+    "image": "sha256:c7a2555e2428bfe15b650ef6ba2bf07bbc31fb3056b37a59b8864ef4761546fa",
+    "acceptance": "public-deployment.json",
+    "visitorMapping": "Awaiting account selection",
+    "authenticatedPublicJourneysPassed": false
+  },
+  "limits": [
+    "Production visitor mapping and authenticated acceptance pending",
+    "Map ROM resource binding pending",
+    "Public ROM deployment and HTTPS acceptance pending"
+  ],
+  "logs": {
+    "producer": "/var/tmp/rom-public-app-session-full-verifier-configured.log",
+    "host": "/var/tmp/rom-gallery-rich-fields-check.log",
+    "browser": "/var/tmp/rom-gallery-noop-reset-browser.log",
+    "owner": "/var/tmp/rom-ui-public-session-full-verifier-repeat.log"
+  },
+  "ownerVerifier": {
+    "exit": 0,
+    "unitTests": 78,
+    "headlessTests": 2,
+    "consumerBrowserPassed": 140,
+    "compiledSnippets": 61,
+    "galleryBrowserPassed": 108,
+    "backendDependentSkipped": 4,
+    "includesHost": true,
+    "log": "/var/tmp/rom-ui-rich-host-full-verifier.log",
+    "taskInitialRun": {
+      "exit": 1,
+      "consumerPassed": 138,
+      "consumerFailed": 2,
+      "log": "/var/tmp/rom-ui-live-task-full-verifier.log"
+    },
+    "detailsTargetedRepeat": {
+      "passed": 6,
+      "sourceChanged": false,
+      "log": "/var/tmp/rom-ui-task-details-reproduction.log"
+    },
+    "taskFullRepeat": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 4,
+      "hostTests": 9,
+      "log": "/var/tmp/rom-ui-live-task-full-verifier-repeat.log"
+    }
+  },
+  "container": {
+    "image": "localhost/rom-ui-gallery-host:local-rich-fields",
+    "imageId": "02593be5d508aad4b5ca0dceac2087a5c5372c96f1434571f65af6a9516d13a5",
+    "user": "10001:10001",
+    "readOnlyRoot": true,
+    "sigtermExit": 0,
+    "actualBrowserPassed": 2,
+    "log": "/var/tmp/rom-gallery-container-browser.log",
+    "runtimeInputs": "/var/tmp/rom-gallery-host-image-context/runtime-inputs.json"
+  },
+  "liveTask": {
+    "implemented": true,
+    "actualBrowserPassed": 2,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "log": "/var/tmp/rom-gallery-live-task-startstate-browser.log",
+    "checks": [
+      "visitor-owned task cancel",
+      "cancel persists after reload",
+      "retry resumes task",
+      "second-tab cancellation observed without reload",
+      "explicit restore before mutation after another tab changes shared durable intent"
+    ],
+    "limits": [
+      "Synthetic task does not execute an AI model",
+      "Shared durable command updates require explicit restore before new actions"
+    ],
+    "earlierFailures": [
+      "/var/tmp/rom-gallery-live-task-browser.log",
+      "/var/tmp/rom-gallery-live-task-restored-browser.log"
+    ],
+    "sourceReview": {
+      "mode": "read-only",
+      "materialFindings": 0,
+      "scope": [
+        "owner access",
+        "task state transitions",
+        "observation delegation",
+        "synthetic task claim limits"
+      ]
+    }
+  },
+  "mapAdoption": {
+    "inspectedCommit": "17a9007",
+    "extrasRomVersion": "0.0.3",
+    "galleryRomVersion": "0.1.0",
+    "state": "Pending version-boundary integration and installed-consumer qualification"
+  },
+  "sessionCompositionCandidate": {
+    "archiveSha256": "39e9795d4770aec341a50c4eea7d9115e248798f66fc2916c110bc54fecb3305",
+    "publicExport": "rom-studio/application#createAppSession",
+    "producerFullVerifierExit": 0,
+    "producerUnitTests": 424,
+    "galleryCheckErrors": 0,
+    "galleryCheckWarnings": 0,
+    "galleryBuildPassed": true,
+    "installedBrowser": {
+      "chromium": "passed",
+      "webkit": "intermittent query access-control error",
+      "unchangedWebkitRepeatPassed": 2,
+      "unchangedWebkitRepeatFailed": 1,
+      "final": {
+        "passed": 4,
+        "engines": [
+          "chromium",
+          "webkit"
+        ],
+        "log": "/var/tmp/rom-gallery-retry-readonly-browser.log",
+        "includesLostAcknowledgement": true,
+        "originalCommandBytesReplayed": true,
+        "controlsDisabledDuringDelayedRefresh": true
+      },
+      "failuresPreserved": [
+        "/var/tmp/rom-gallery-public-session-browser.log",
+        "/var/tmp/rom-gallery-public-session-webkit-repeat.log",
+        "/var/tmp/rom-gallery-update-lifetime-browser.log",
+        "/var/tmp/rom-gallery-retry-lifetime-red.log",
+        "/var/tmp/rom-gallery-retry-lifetime-green.log"
+      ]
+    },
+    "logs": {
+      "producer": "/var/tmp/rom-public-app-session-full-verifier-configured.log",
+      "browser": "/var/tmp/rom-gallery-public-session-browser.log",
+      "webkitRepeat": "/var/tmp/rom-gallery-public-session-webkit-repeat.log"
+    },
+    "adoptionState": "Qualified installed package and backend browser journeys",
+    "sourceReview": {
+      "mode": "read-only",
+      "materialFindingsResolved": 1,
+      "additionalMaterialFindings": 0,
+      "scope": [
+        "public session helper adoption",
+        "parent mutation and retry lifetime",
+        "read-only fields during refresh",
+        "actual backend lost-acknowledgement regression"
+      ]
+    },
+    "ownerFirstRun": {
+      "exit": 1,
+      "consumerPassed": 139,
+      "consumerFailed": 1,
+      "log": "/var/tmp/rom-ui-public-session-full-verifier.log"
+    },
+    "ownerFocusRepeat": {
+      "passed": 3,
+      "sourceChanged": false,
+      "log": "/var/tmp/rom-gallery-session-focus-repeat.log"
+    },
+    "ownerFullRepeat": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 6,
+      "hostTests": 9,
+      "log": "/var/tmp/rom-ui-public-session-full-verifier-repeat.log"
+    }
+  },
+  "previousStudioArchiveSha256": "7f59fc6c253c18132babac0190efb20c52eefe342035937ae5bd04d00a2785ce",
+  "workflowCandidate": {
+    "hostTests": 10,
+    "hostCheckPassed": true,
+    "galleryCheckErrors": 0,
+    "galleryCheckWarnings": 0,
+    "galleryBuildPassed": true,
+    "initialBackendBrowserPassed": 6,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "checks": [
+      "disclosed enum drives nodes",
+      "selection invokes revision-checked ROM action",
+      "selection persists after reload",
+      "other-tab selection observed live",
+      "foreign resource is absent",
+      "invalid stage changes no state",
+      "exact replay retains original receipt",
+      "stale selection rejected",
+      "undisclosed selection action leaves graph read-only",
+      "changed input under original command identity rejected"
+    ],
+    "sourceReview": {
+      "materialFindings": 0,
+      "minorCapabilityCheckAdded": true
+    },
+    "logs": {
+      "host": "/var/tmp/rom-gallery-workflow-host-check.log",
+      "browser": "/var/tmp/rom-gallery-workflow-browser.log",
+      "fullVerifier": "/var/tmp/rom-ui-workflow-full-verifier.log",
+      "finalBrowser": "/var/tmp/rom-gallery-workflow-final-browser.log",
+      "finalHost": "/var/tmp/rom-gallery-workflow-final-host-check.log"
+    },
+    "state": "Qualified installed components, host and actual backend browser journeys",
+    "finalBackendBrowserPassed": 6,
+    "ownerVerifier": {
+      "exit": 0,
+      "consumerBrowserPassed": 140,
+      "galleryBrowserPassed": 108,
+      "backendDependentSkipped": 8,
+      "hostTests": 10
+    }
+  },
+  "previousPublicDeployment": {
+    "romHosted": false,
+    "staticImage": "rom-ui-gallery:b722ba2",
+    "oidc": {
+      "provider": "Authentik",
+      "application": "rom-ui-gallery",
+      "providerId": 2,
+      "issuer": "https://auth.yggdrasil.cybernomad.it/application/o/rom-ui-gallery/",
+      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+      "dedicatedClient": true,
+      "configurationPrepared": true,
+      "visitorMappingPending": true,
+      "credentialValuesRecorded": false
+    },
+    "stagedImage": {
+      "localImageId": "91b90e5933e1f06026dbb6ff318552cfcdb7e88eb65a75042c9aec52b8964b17",
+      "remoteImageId": "sha256:5f0aad1332fc81adc12068a61da7590b41382143020af0a9d05230c7069eaf2c",
+      "archiveSha256": "aa5e2529d86a4a1155a5f38bd6cb166bc0cc51c48b53ccf31a4c7ae06b7b34a1",
+      "verifiedImageFiles": 47,
+      "missingFiles": 0,
+      "mismatchedFiles": 0,
+      "releaseDirectory": "/opt/rom-ui-gallery/releases/rom-host-91b90e5933e1",
+      "loopbackPort": 18080,
+      "romBootstrapPresent": true,
+      "anonymousSessionStatus": 200,
+      "providerDiscoveryStatus": 200,
+      "publicServiceChanged": false,
+      "login": {
+        "status": 303,
+        "authorizationHost": "auth.yggdrasil.cybernomad.it",
+        "clientId": "rom-ui-gallery",
+        "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors",
+        "statePresent": true,
+        "noncePresent": true,
+        "secureCookie": true,
+        "httpOnlyCookie": true
+      },
+      "anonymousApiStatus": {
+        "discover": 401,
+        "read": 401
+      },
+      "composeConfigurationValid": true,
+      "sigtermExit": 0
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-09",
+  "url": "https://romui.cybernomad.it",
+  "source_commit": "427d7f8130893301d9860836aa1d78aaac1164ec",
+  "image": "rom-ui-gallery:427d7f8",
+  "image_id": "sha256:4cf4dc3164c3354ac6ad6593970ca8b812dbbd8449aac9fa8b4fa7049ea6947a",
+  "deployment_archive_sha256": "ddfca58a4926bef8c9473ecd3d6eb9dc40bb62268e0e1374c4164518d1ce0627",
+  "public_entry_assets_match_local_dist": true,
+  "healthz_status": 200,
+  "licenses_status": 200,
+  "missing_asset_status": 404,
+  "html_language": "en",
+  "release": "https://github.com/pmikstacki/rom-ui/releases/tag/v0.1.0-alpha.5",
+  "previous_image_retained": "rom-ui-gallery:5c515b6",
+  "initial_public_run": {
+    "passed": 71,
+    "failed": 1,
+    "failure": "Chromium street-map test could not find the map region within 20 seconds."
+  },
+  "rom_extras_adapter_integrated": false,
+  "host_facade_migrations_complete": false,
+  "public_recheck": {
+    "exit_code": 0,
+    "passed": 72,
+    "failed": 0,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "log": "alpha5-public-verifier.log",
+    "certificate_verification": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "363f679",
+  "origin": "https://romui.cybernomad.it",
+  "checks": {
+    "/": {
+      "status": 200,
+      "romProfile": true,
+      "mapCsp": true
+    },
+    "/auth/session": {
+      "status": 200
+    },
+    "/auth/providers": {
+      "status": 200
+    },
+    "/api/discover": {
+      "status": 401
+    },
+    "/api/read": {
+      "status": 401
+    },
+    "login": {
+      "status": 303,
+      "host": "auth.yggdrasil.cybernomad.it",
+      "client": "rom-ui-gallery",
+      "callback": "https://romui.cybernomad.it/auth/callback/gallery-visitors"
+    }
+  },
+  "remoteImage": "sha256:972e4b2b9c9294fe6517935f7378184a58230b2a911197f53c5318533c25e59e",
+  "release": "/opt/rom-ui-gallery/releases/rom-host-conversation-363f679",
+  "archiveSha256": "a2a379bf91e4a5302c89a59db3b5b4c2ff7a4d898f1eda8475ccfb7b2067b9be",
+  "imageFilesVerified": 49,
+  "publicBrowser": {
+    "passed": 4,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "log": "/var/tmp/rom-ui-conversation-public-browser.log"
+  },
+  "rollbackImage": "sha256:c7a2555e2428bfe15b650ef6ba2bf07bbc31fb3056b37a59b8864ef4761546fa",
+  "limits": [
+    "Authenticated production journeys remain pending an approved account mapping."
+  ]
+}

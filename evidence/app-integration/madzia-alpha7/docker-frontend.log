@@ -1,0 +1,81 @@
+STEP 1/7: FROM node:22.16.0-bookworm-slim AS frontend
+STEP 2/7: WORKDIR /app/frontend
+--> Using cache d0ea9d18eea1fbaa89e8f581a29446c25d5aadd712a3e1fffda4262b4adacc1b
+--> d0ea9d18eea1
+STEP 3/7: ARG WEEKEND_MODE=production
+--> Using cache b6ebf7d7baf9db1fe5da00953120bb69435cbfe0f882f7785eb00b533be6bf76
+--> b6ebf7d7baf9
+STEP 4/7: ENV VITE_WEEKEND_MODE=${WEEKEND_MODE}
+--> Using cache ccf5122f86b4debf6c73fc486d52ae86b71242c525e63d1044c03cd97aed94c5
+--> ccf5122f86b4
+STEP 5/7: COPY frontend /app/frontend
+--> 1d3044369e71
+STEP 6/7: COPY site /app/site
+--> bfb5e43f6dd5
+STEP 7/7: RUN corepack enable && corepack pnpm install --frozen-lockfile --ignore-scripts && corepack pnpm run check && corepack pnpm run build
+
+   ╭───────────────────────────────────────────────╮
+   │                                               │
+   │     Update available! 10.30.0 → 12.10.1.      │
+   │     Changelog: https://pnpm.io/v/12.10.1      │
+   │   To update, run: corepack use pnpm@12.10.1   │
+   │                                               │
+   ╰───────────────────────────────────────────────╯
+
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +131
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 131, reused 1, downloaded 49, added 40
+Progress: resolved 131, reused 1, downloaded 128, added 128
+Progress: resolved 131, reused 1, downloaded 130, added 131, done
+
+dependencies:
++ @lucide/svelte 1.51.0
++ @xyflow/svelte 1.7.0
++ bits-ui 2.19.5
++ cn 0.3.3
++ qrcode 1.5.4
++ rom-studio rom-studio@file:vendor/rom-studio(@internationalized/date@3.12.4)(@xyflow/svelte@1.7.0(svelte@5.57.1))(svelte@5.57.1)(tailwindcss@4.3.3)
++ rom-ui 0.1.0-alpha.7
++ svelte 5.57.1
++ tailwind-variants 3.3.1
+
+devDependencies:
++ @sveltejs/vite-plugin-svelte 5.1.1
++ @tailwindcss/vite 4.3.3
++ prettier 3.9.9
++ prettier-plugin-svelte 4.1.1
++ svelte-check 4.7.6
++ tailwindcss 4.3.3
++ typescript 5.9.3
++ vite 6.4.4
+
+Done in 4.1s using pnpm v10.30.0
+
+> forest-weekend@1.0.0 check /app/frontend
+> svelte-check --tsconfig ./jsconfig.json
+
+Loading svelte-check in workspace: /app/frontend
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> forest-weekend@1.0.0 build /app/frontend
+> vite build
+
+vite v6.4.4 building for production...
+transforming...
+✓ 5091 modules transformed.
+rendering chunks...
+computing gzip size...
+../site/index.html                        0.46 kB │ gzip:   0.31 kB
+../site/assets/WeekendApp-ByHenam3.css    0.95 kB │ gzip:   0.46 kB
+../site/assets/index-DvCVtc4Q.css        98.67 kB │ gzip:  17.33 kB
+../site/assets/index-DdjrYXYL.js        138.21 kB │ gzip:  50.54 kB
+../site/assets/WeekendApp-CLED8606.js   436.65 kB │ gzip: 142.98 kB
+✓ built in 5.68s
+COMMIT rom-ui-madzia-frontend:alpha7-pruned
+--> 933a9dd06296
+Successfully tagged localhost/rom-ui-madzia-frontend:alpha7-pruned
+933a9dd06296e67192148d04dde5a97bdeb3e3a8007945357ff416c56f41ded9

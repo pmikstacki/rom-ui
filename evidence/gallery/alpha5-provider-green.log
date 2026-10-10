@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:1550484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/maps.spec.ts:142:1 › an unavailable street provider can recover into the schematic view (467ms)
+(node:1550691) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [webkit] › tests/maps.spec.ts:142:1 › an unavailable street provider can recover into the schematic view (521ms)
+
+  2 passed (2.5s)

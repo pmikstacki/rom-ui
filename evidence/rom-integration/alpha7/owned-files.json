@@ -1,0 +1,241 @@
+{
+  "source": "/root/.codex/worktrees/rom-gallery-binding/ROM",
+  "root": "/root/ROM",
+  "owned": [
+    {
+      "path": "studio/package.json",
+      "sha256": "f79891d417c456fec11f61fb9175a49c3c6eb2c87d3b22a3fe4e5a47608e8992"
+    },
+    {
+      "path": "studio/package-lock.json",
+      "sha256": "81be731a6c76c04d898f7973521a668c44a8b24536fc43483eb21c3a8d15266a"
+    },
+    {
+      "path": "studio/pnpm-lock.yaml",
+      "sha256": "035d0e7e005aa13998c279963073ade50f0223b588ec2ea58d97bd6b5f914561"
+    },
+    {
+      "path": "studio/src/controls.ts",
+      "sha256": "2d9aba18db71171443855ba2b03b3cc58cd4f65ef09b868a70fd7281c64bae1d"
+    },
+    {
+      "path": "studio/src/ui-components.ts",
+      "sha256": "c5cb3405a2f1926e8e9a310f47f52578402aa6d5640bad92c4b0764ec686fe42"
+    },
+    {
+      "path": "studio/src/lib/ui/components/ConversationLayout.svelte",
+      "sha256": "1cf44bfed6b55133901f860bd28f5744d2b2053bc940f40e5067a0fe7056952a"
+    },
+    {
+      "path": "studio/vite.config.ts",
+      "sha256": "508ce5c5584e4b5753e4f2ac27c7e911af12a05ce36c190abac675122463c7a7"
+    },
+    {
+      "path": "studio/tests/public-controls/consumer/package-lock.json",
+      "sha256": "64e012c71592ace25c1897ab62ec0b5a06ec75ffce5534c86d0161586d19fcd2"
+    },
+    {
+      "path": "studio/tests/components/shared-primitive-identity.svelte",
+      "sha256": "bf8073b496db3f357580be819978ff658ea34e26926dd9085799e811345bd1f4"
+    },
+    {
+      "path": "studio/tests/components/shared-primitive-identity-main.ts",
+      "sha256": "6ac021ad7711616c1b7e87eb55b90bd6427279aa702e96876d7368ce71e91462"
+    },
+    {
+      "path": "studio/tests/components/shared-primitive-identity.html",
+      "sha256": "e29ef86f9c2df9c0c92fcd05ffa3d5fef6b8345c3a31e2abf5595bb8a383ac99"
+    },
+    {
+      "path": "studio/tests/components/shared-primitive-identity.spec.ts",
+      "sha256": "9f95cc62c954af118d5c2b930d98d8377b2f615e1a907a306d26e2f8a7a54573"
+    },
+    {
+      "path": "studio/src/lib/components/ui/alert/index.ts",
+      "sha256": "42887e6a35e98470a6b89e08055a709778f7feb11942cedb681177cbe61b43e6"
+    },
+    {
+      "path": "studio/src/lib/components/ui/alert-dialog/index.ts",
+      "sha256": "d4590a597076a5165af742a456f6a6278b19be9bd3479971b428d242554c3d2d"
+    },
+    {
+      "path": "studio/src/lib/components/ui/badge/index.ts",
+      "sha256": "4516d6f76188df032a0ad75e8087ad2d7d09b8cb1a364331b1198823091ed4bd"
+    },
+    {
+      "path": "studio/src/lib/components/ui/breadcrumb/index.ts",
+      "sha256": "e89c48dd894518562dc8e20fa07da58b0f6527591cbe4f8feffa426ad8ae008b"
+    },
+    {
+      "path": "studio/src/lib/components/ui/card/index.ts",
+      "sha256": "9da98f6e83c6e75e05fc4d7fa1bc5b5a21e15f8af276c0ec4d79d7c3ea54ca2b"
+    },
+    {
+      "path": "studio/src/lib/components/ui/dropdown-menu/index.ts",
+      "sha256": "8baccfbaaecb2303b760949cf233626c0525360e6494754e47c03ce651151c43"
+    },
+    {
+      "path": "studio/src/lib/components/ui/select/index.ts",
+      "sha256": "9c527b82cdaa6215747eac2cda85b440ec0be53827d0a4c52327c6ff8b09f7eb"
+    },
+    {
+      "path": "studio/src/lib/components/ui/separator/index.ts",
+      "sha256": "88d7bd7850e0ad2ab5228f65aac41d46476722fb442ab5a2153a1c9d8c5b0481"
+    },
+    {
+      "path": "studio/src/lib/components/ui/sidebar/index.ts",
+      "sha256": "486a6a9dbc7f8b5890fb59aaf7101337a833acef6561e5c79ec8cdb53e76e934"
+    },
+    {
+      "path": "studio/src/lib/components/ui/switch/index.ts",
+      "sha256": "1eb50d9ce0739ad21c734d4786d00a039c0ef98490b24f77a563488caf89a301"
+    },
+    {
+      "path": "studio/src/lib/components/ui/table/index.ts",
+      "sha256": "dce215c0994dcf2b51974105e63051640ab5b297c3fc83b3726329d403f0c9bf"
+    },
+    {
+      "path": "studio/src/lib/components/ui/tabs/index.ts",
+      "sha256": "cc5ef4d9c9f5231d94b650b8c4bae2b5f0b734293140b85483b1b3b95604377b"
+    },
+    {
+      "path": "studio/src/lib/components/ui/tooltip/index.ts",
+      "sha256": "d16fed45cd8ad62e95dfc4bc54778e2ad47586cc152e5ab71b376f7f7f62814f"
+    },
+    {
+      "path": "studio/src/lib/components/ui/skeleton/index.ts",
+      "sha256": "b678adc3a9441b690287e1131242f5b1cffa7bdd2a8c0ac49f13c9a39b54ce9f"
+    },
+    {
+      "path": "studio/src/forms.ts",
+      "sha256": "1809ffae4fac61a5989bbb24dba2ecf639f8c7d3b232f2ce566e6871ced714d6"
+    },
+    {
+      "path": "studio/tests/public-controls/consumer/src/PublicFormsConsumer.svelte",
+      "sha256": "0becb8268828c724bc6de756ee6d7fe520f149deaf4670c6eae5b24fc1984c16"
+    },
+    {
+      "path": "studio/tests/public-controls/consumer/src/App.svelte",
+      "sha256": "572b95c2a89d78648339e4ecd6294850e61313869d01926df5824492d9da8786"
+    },
+    {
+      "path": "studio/tests/public-controls/consumer/tests/forms.spec.ts",
+      "sha256": "2a725a429e0501922ef81e1a12818072207a9c54e36d7ce9b594a5390158770a"
+    },
+    {
+      "path": "studio/tests/ai-flow-progress/consumer/package-lock.json",
+      "sha256": "e316debbd14be36ef064a6856ed925f5da675afa385d77b08f6e620e82791520"
+    }
+  ],
+  "removed": [
+    "studio/src/lib/components/ui/alert/alert-action.svelte",
+    "studio/src/lib/components/ui/alert/alert-description.svelte",
+    "studio/src/lib/components/ui/alert/alert-title.svelte",
+    "studio/src/lib/components/ui/alert/alert.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-action.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-cancel.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-content.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-description.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-footer.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-header.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-media.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-overlay.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-portal.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-title.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog-trigger.svelte",
+    "studio/src/lib/components/ui/alert-dialog/alert-dialog.svelte",
+    "studio/src/lib/components/ui/badge/badge.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-ellipsis.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-item.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-link.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-list.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-page.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb-separator.svelte",
+    "studio/src/lib/components/ui/breadcrumb/breadcrumb.svelte",
+    "studio/src/lib/components/ui/card/card-action.svelte",
+    "studio/src/lib/components/ui/card/card-content.svelte",
+    "studio/src/lib/components/ui/card/card-description.svelte",
+    "studio/src/lib/components/ui/card/card-footer.svelte",
+    "studio/src/lib/components/ui/card/card-header.svelte",
+    "studio/src/lib/components/ui/card/card-title.svelte",
+    "studio/src/lib/components/ui/card/card.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-group.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-checkbox-item.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-content.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-group-heading.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-group.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-item.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-label.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-portal.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-radio-group.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-radio-item.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-separator.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-shortcut.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-content.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-sub-trigger.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-sub.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu-trigger.svelte",
+    "studio/src/lib/components/ui/dropdown-menu/dropdown-menu.svelte",
+    "studio/src/lib/components/ui/select/select-content.svelte",
+    "studio/src/lib/components/ui/select/select-group-heading.svelte",
+    "studio/src/lib/components/ui/select/select-group.svelte",
+    "studio/src/lib/components/ui/select/select-item.svelte",
+    "studio/src/lib/components/ui/select/select-label.svelte",
+    "studio/src/lib/components/ui/select/select-portal.svelte",
+    "studio/src/lib/components/ui/select/select-scroll-down-button.svelte",
+    "studio/src/lib/components/ui/select/select-scroll-up-button.svelte",
+    "studio/src/lib/components/ui/select/select-separator.svelte",
+    "studio/src/lib/components/ui/select/select-trigger.svelte",
+    "studio/src/lib/components/ui/select/select-value.svelte",
+    "studio/src/lib/components/ui/select/select.svelte",
+    "studio/src/lib/components/ui/separator/separator.svelte",
+    "studio/src/lib/components/ui/sidebar/constants.ts",
+    "studio/src/lib/components/ui/sidebar/context.svelte.ts",
+    "studio/src/lib/components/ui/sidebar/sidebar-content.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-footer.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-group-action.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-group-content.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-group-label.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-group.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-header.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-input.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-inset.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-action.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-badge.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-button.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-item.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-skeleton.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-sub-button.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-sub-item.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu-sub.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-menu.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-provider.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-rail.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-separator.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar-trigger.svelte",
+    "studio/src/lib/components/ui/sidebar/sidebar.svelte",
+    "studio/src/lib/components/ui/switch/switch.svelte",
+    "studio/src/lib/components/ui/table/table-body.svelte",
+    "studio/src/lib/components/ui/table/table-caption.svelte",
+    "studio/src/lib/components/ui/table/table-cell.svelte",
+    "studio/src/lib/components/ui/table/table-footer.svelte",
+    "studio/src/lib/components/ui/table/table-head.svelte",
+    "studio/src/lib/components/ui/table/table-header.svelte",
+    "studio/src/lib/components/ui/table/table-row.svelte",
+    "studio/src/lib/components/ui/table/table.svelte",
+    "studio/src/lib/components/ui/tabs/tabs-content.svelte",
+    "studio/src/lib/components/ui/tabs/tabs-list.svelte",
+    "studio/src/lib/components/ui/tabs/tabs-trigger.svelte",
+    "studio/src/lib/components/ui/tabs/tabs.svelte",
+    "studio/src/lib/components/ui/tooltip/tooltip-content.svelte",
+    "studio/src/lib/components/ui/tooltip/tooltip-portal.svelte",
+    "studio/src/lib/components/ui/tooltip/tooltip-provider.svelte",
+    "studio/src/lib/components/ui/tooltip/tooltip-trigger.svelte",
+    "studio/src/lib/components/ui/tooltip/tooltip.svelte",
+    "studio/src/lib/components/ui/skeleton/skeleton.svelte"
+  ],
+  "backup": "/var/tmp/rom-ui-alpha7-root-before-integration.tar.gz",
+  "candidateFullVerifier": "/var/tmp/rom-gallery-binding-alpha7-full-green.json",
+  "review": "studio_facade_review: no findings; source inspection only",
+  "limits": "Root affected checks still required; inherited unrelated Rust changes were not copied."
+}

@@ -1,0 +1,68 @@
+
+Running 2 tests using 1 worker
+
+(node:1581955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference (6.2s)
+(node:1583589) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [webkit] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference (5.3s)
+
+
+  1) [chromium] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference 
+
+    Error: expect(locator).toHaveClass(expected) failed
+
+    Locator: locator('html')
+    Expected pattern: /light/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveClass" locator('html') with timeout 5000ms
+      - waiting for locator('html')
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value ""
+
+
+      162 |   await page.emulateMedia({colorScheme:'dark'});
+      163 |   await page.goto('/?basemap=schematic#maps');
+    > 164 |   await expect(page.locator('html')).toHaveClass(/light/);
+          |                                      ^
+      165 |   await expect(page.locator('html')).not.toHaveClass(/dark/);
+      166 |   await expect(page.getByRole('region',{name:'Resource map',exact:true})).toHaveAttribute('data-rom-map-ready','true');
+      167 | });
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:164:38
+
+    Error Context: test-results/maps-gallery-light-theme-o-a5a16-operating-system-preference-chromium/error-context.md
+
+  2) [webkit] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference 
+
+    Error: expect(locator).toHaveClass(expected) failed
+
+    Locator: locator('html')
+    Expected pattern: /light/
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveClass" locator('html') with timeout 5000ms
+      - waiting for locator('html')
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value ""
+
+
+      162 |   await page.emulateMedia({colorScheme:'dark'});
+      163 |   await page.goto('/?basemap=schematic#maps');
+    > 164 |   await expect(page.locator('html')).toHaveClass(/light/);
+          |                                      ^
+      165 |   await expect(page.locator('html')).not.toHaveClass(/dark/);
+      166 |   await expect(page.getByRole('region',{name:'Resource map',exact:true})).toHaveAttribute('data-rom-map-ready','true');
+      167 | });
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/maps.spec.ts:164:38
+
+    Error Context: test-results/maps-gallery-light-theme-o-a5a16-operating-system-preference-webkit/error-context.md
+
+  2 failed
+    [chromium] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference 
+    [webkit] › tests/maps.spec.ts:161:1 › gallery light theme overrides a dark operating-system preference 

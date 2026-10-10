@@ -1,0 +1,70 @@
+[WebServer] (node:1416762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1416800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1416920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset (5.8s)
+(node:1417802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [webkit] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset (6.2s)
+
+
+  1) [chromium] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('dataset')
+    Expected: "B"
+    Received: "A"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByTestId('dataset') with timeout 5000ms
+      - waiting for getByTestId('dataset')
+        14 × locator resolved to <output data-testid="dataset">A</output>
+           - unexpected value "A"
+
+
+      24 |  await expect(page.getByTestId('dataset')).toHaveText('A');
+      25 |  await page.getByRole('button',{name:'Change GeoJSON URL'}).click();
+    > 26 |  await expect(page.getByTestId('dataset')).toHaveText('B');
+         |                                            ^
+      27 | });
+      28 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/maps-lifetime.spec.ts:26:44
+
+    Error Context: test-results/maps-lifetime-changing-the-520b4-laces-the-displayed-dataset-chromium/error-context.md
+
+  2) [webkit] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('dataset')
+    Expected: "B"
+    Received: "A"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByTestId('dataset') with timeout 5000ms
+      - waiting for getByTestId('dataset')
+        14 × locator resolved to <output data-testid="dataset">A</output>
+           - unexpected value "A"
+
+
+      24 |  await expect(page.getByTestId('dataset')).toHaveText('A');
+      25 |  await page.getByRole('button',{name:'Change GeoJSON URL'}).click();
+    > 26 |  await expect(page.getByTestId('dataset')).toHaveText('B');
+         |                                            ^
+      27 | });
+      28 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/maps-lifetime.spec.ts:26:44
+
+    Error Context: test-results/maps-lifetime-changing-the-520b4-laces-the-displayed-dataset-webkit/error-context.md
+
+  2 failed
+    [chromium] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset 
+    [webkit] › tests/maps-lifetime.spec.ts:22:1 › changing the GeoJSON URL replaces the displayed dataset 

@@ -1,0 +1,47 @@
+
+> rom-ui-gallery@0.0.0 test /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery
+> playwright test
+
+[WebServer] (node:1280585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1280613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 30 tests using 1 worker
+
+(node:1280712) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (496ms)
+  ✓   2 [chromium] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (968ms)
+  ✓   3 [chromium] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (1.8s)
+  ✓   4 [chromium] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (179ms)
+  ✓   5 [chromium] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (250ms)
+  ✓   6 [chromium] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (887ms)
+  ✓   7 [chromium] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (372ms)
+  ✓   8 [chromium] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (1.1s)
+  ✓   9 [chromium] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (841ms)
+  ✓  10 [chromium] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame (168ms)
+  ✓  11 [chromium] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur (181ms)
+  ✓  12 [chromium] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer (1.1s)
+  ✓  13 [chromium] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel (970ms)
+  ✓  14 [chromium] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main (151ms)
+  ✓  15 [chromium] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus (120ms)
+(node:1282076) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [webkit] › tests/gallery.spec.ts:3:1 › gallery navigation, theme and controls are usable (494ms)
+  ✓  17 [webkit] › tests/gallery.spec.ts:19:1 › chat submits text, preserves Shift+Enter and ignores IME Enter (1.2s)
+  ✓  18 [webkit] › tests/gallery.spec.ts:51:1 › chat failures retain drafts, pending completion does not erase a changed draft (2.0s)
+  ✓  19 [webkit] › tests/gallery.spec.ts:77:1 › Flow choices are keyboard buttons and change the host selection (403ms)
+  ✓  20 [webkit] › tests/gallery.spec.ts:88:1 › mobile navigation and chat fit without horizontal overflow (422ms)
+  ✓  21 [webkit] › tests/gallery.spec.ts:106:1 › authority change isolates a pending message from the replacement conversation (1.1s)
+  ✓  22 [webkit] › tests/gallery.spec.ts:128:1 › responsive panel preserves the focused editor and returns focus on close (570ms)
+  ✓  23 [webkit] › tests/gallery.spec.ts:163:1 › conversation text is escaped and search opens its matching demo (1.6s)
+  ✓  24 [webkit] › tests/gallery.spec.ts:191:1 › inactive Flow fitting does not reset a manually zoomed viewport (1.1s)
+  ✓  25 [webkit] › tests/gallery.spec.ts:213:1 › ROM focus correction moves a hidden expansion control to its frame (393ms)
+  ✓  26 [webkit] › tests/gallery.spec.ts:227:1 › ROM focus correction does not reclaim focus after deliberate blur (342ms)
+  ✓  27 [webkit] › tests/gallery.spec.ts:242:1 › long messages scroll inside the conversation with a visible mobile composer (1.2s)
+  ✓  28 [webkit] › tests/gallery.spec.ts:271:1 › one composer retains pending ownership when moved into the panel (1.2s)
+  ✓  29 [webkit] › tests/gallery.spec.ts:293:1 › skip link preserves the current demo and focuses main (335ms)
+  ✓  30 [webkit] › tests/gallery.spec.ts:308:1 › collapsed mobile navigation does not receive keyboard focus (281ms)
+
+  30 passed (24.6s)

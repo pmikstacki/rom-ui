@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:1384947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection (772ms)
+  ✓  2 [chromium] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery (1.5s)
+  ✓  3 [chromium] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers (408ms)
+  ✓  4 [chromium] › tests/maps.spec.ts:84:1 › clusters render on a tileless style without implicit font requests (826ms)
+(node:1385667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [webkit] › tests/maps.spec.ts:3:1 › real MapLibre map renders synthetic ROM resources and keyboard selection (821ms)
+  ✓  6 [webkit] › tests/maps.spec.ts:20:1 › map selection rejection and unknown outcome preserve host state until explicit recovery (1.6s)
+  ✓  7 [webkit] › tests/maps.spec.ts:56:1 › theme and responsive transitions retain map layers and do not fetch hidden default providers (531ms)
+  ✓  8 [webkit] › tests/maps.spec.ts:84:1 › clusters render on a tileless style without implicit font requests (1.3s)
+
+  8 passed (9.3s)

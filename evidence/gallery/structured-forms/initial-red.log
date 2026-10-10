@@ -1,0 +1,39 @@
+[WebServer] (node:2477996) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2478014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:2478086) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input (5.3s)
+
+
+  1) [chromium] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('group', { name: 'measurement', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('group', { name: 'measurement', exact: true }) with timeout 5000ms
+      - waiting for getByRole('group', { name: 'measurement', exact: true })
+
+
+      43 | test("Studio forms expose structured fields and typed action input", async ({ page }) => {
+      44 |   await page.goto("/#forms");
+    > 45 |   await expect(page.getByRole("group", { name: "measurement", exact: true })).toBeVisible();
+         |                                                                               ^
+      46 |   await expect(page.getByRole("group", { name: "tags", exact: true })).toBeVisible();
+      47 |   await expect(page.getByRole("group", { name: "category", exact: true })).toBeVisible();
+      48 |   await expect(page.getByRole("group", { name: "related", exact: true })).toBeVisible();
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/forms.spec.ts:45:79
+
+    Error Context: ../../../../../../var/tmp/rom-ui-structured-forms-red-results/forms-Studio-forms-expose--db735-elds-and-typed-action-input-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/forms.spec.ts:43:1 › Studio forms expose structured fields and typed action input 

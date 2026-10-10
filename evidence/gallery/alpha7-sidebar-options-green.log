@@ -1,0 +1,25 @@
+[WebServer] (node:2201832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2201954) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 1 worker
+
+(node:2202065) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/studio-primitives.spec.ts:7:1 › shared switch and select preserve bindings, disabled state and popup focus (759ms)
+  ✓   2 [chromium] › tests/studio-primitives.spec.ts:31:1 › shared tabs and menu support keyboard interaction without invoking disabled actions (533ms)
+  ✓   3 [chromium] › tests/studio-primitives.spec.ts:60:1 › shared confirmation retains focus, cancel leaves host state unchanged and confirm invokes once (843ms)
+  ✓   4 [chromium] › tests/studio-primitives.spec.ts:86:1 › shared status and projection controls retain exact host text and native anchor refs (372ms)
+  ✓   5 [chromium] › tests/studio-primitives.spec.ts:112:1 › shared sidebar preserves desktop state and returns mobile focus to the host trigger (779ms)
+  ✓   6 [chromium] › tests/studio-primitives.spec.ts:139:1 › embedded sidebars can opt out of global shortcuts and shared cookies (435ms)
+(node:2202603) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [webkit] › tests/studio-primitives.spec.ts:7:1 › shared switch and select preserve bindings, disabled state and popup focus (688ms)
+  ✓   8 [webkit] › tests/studio-primitives.spec.ts:31:1 › shared tabs and menu support keyboard interaction without invoking disabled actions (809ms)
+  ✓   9 [webkit] › tests/studio-primitives.spec.ts:60:1 › shared confirmation retains focus, cancel leaves host state unchanged and confirm invokes once (1.1s)
+  ✓  10 [webkit] › tests/studio-primitives.spec.ts:86:1 › shared status and projection controls retain exact host text and native anchor refs (523ms)
+  ✓  11 [webkit] › tests/studio-primitives.spec.ts:112:1 › shared sidebar preserves desktop state and returns mobile focus to the host trigger (933ms)
+  ✓  12 [webkit] › tests/studio-primitives.spec.ts:139:1 › embedded sidebars can opt out of global shortcuts and shared cookies (568ms)
+
+  12 passed (11.0s)

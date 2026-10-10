@@ -1,0 +1,34 @@
+[WebServer] (node:2515733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2515750) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:2515825) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/overlays.spec.ts:2:1 › shared dialog and sheet retain drafts and return focus; notifications can be dismissed (10.0s)
+
+
+  1) [chromium] › tests/overlays.spec.ts:2:1 › shared dialog and sheet retain drafts and return focus; notifications can be dismissed 
+
+    Test timeout of 10000ms exceeded.
+
+    Error: locator.click: Test timeout of 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Open dialog', exact: true })
+
+
+      3 |   await page.goto("/#overlays");
+      4 |   const open = page.getByRole("button", { name: "Open dialog", exact: true });
+    > 5 |   await open.click();
+        |              ^
+      6 |   const dialog = page.getByRole("dialog", { name: "Resource note", exact: true });
+      7 |   await expect(dialog).toBeVisible();
+      8 |   await dialog.getByLabel("Note", { exact: true }).fill("Keep my local draft");
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/gallery/tests/overlays.spec.ts:5:14
+
+    Error Context: ../../../../../../var/tmp/rom-ui-overlays-red-results/overlays-shared-dialog-and-2dc71-ifications-can-be-dismissed-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/overlays.spec.ts:2:1 › shared dialog and sheet retain drafts and return focus; notifications can be dismissed 

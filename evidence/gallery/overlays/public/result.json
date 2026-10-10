@@ -1,0 +1,14 @@
+{
+  "url": "https://romui.cybernomad.it/#overlays",
+  "sourceCommit": "a72d166",
+  "image": "rom-ui-gallery:a72d166",
+  "imageId": "sha256:5cc5e9e8c0662cc99c07bb3df10286b68287c8e38065c60ed39f15cfc054c384",
+  "publicFocusedPassed": 6,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "scope": "Dialog/Sheet/Popover dismissal and focus, local notification dismissal, reduced content motion, overlay snippets",
+  "fullPublicQualification": false,
+  "limits": "Focused deployment checks do not replace full public qualification. Static host, inline notifications and local callbacks; toaster and ROM integration pending."
+}

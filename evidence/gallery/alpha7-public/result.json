@@ -1,0 +1,12 @@
+{
+  "url": "https://romui.cybernomad.it",
+  "passed": 84,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "log": "/var/tmp/rom-ui-alpha7-public-requalification.log",
+  "logSha256": "a941f1c0c0be85eb30da3055751ee258607dc8aa58a6b78f1b05b83f1e18b424",
+  "previousFailuresRetained": "/var/tmp/rom-ui-alpha7-public-final-results.tar.gz",
+  "limits": "Static gallery browser verification; actual ROM-backed hosting and rich semantic forms remain pending."
+}

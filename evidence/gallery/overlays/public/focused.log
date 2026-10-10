@@ -1,0 +1,15 @@
+
+Running 6 tests using 1 worker
+
+(node:2538834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/overlays.spec.ts:2:1 › shared dialog and sheet retain drafts and return focus; notifications can be dismissed (2.5s)
+  ✓  2 [chromium] › tests/overlays.spec.ts:30:1 › dialog content respects reduced motion (1.1s)
+  ✓  3 [chromium] › tests/snippets.spec.ts:68:3 › overlays has a copyable example for every listed export (999ms)
+(node:2539115) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [webkit] › tests/overlays.spec.ts:2:1 › shared dialog and sheet retain drafts and return focus; notifications can be dismissed (2.2s)
+  ✓  5 [webkit] › tests/overlays.spec.ts:30:1 › dialog content respects reduced motion (1.2s)
+  ✓  6 [webkit] › tests/snippets.spec.ts:68:3 › overlays has a copyable example for every listed export (1.2s)
+
+  6 passed (10.3s)

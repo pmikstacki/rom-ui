@@ -1,0 +1,78 @@
+[WebServer] (node:2119746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:2119860) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:2120058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+tooltip-focus-diagnostic {
+  active: '<button data-slot="tooltip-trigger" id="bits-c14" data-state="instant-open" data-delay-duration="0" data-tooltip-trigger="" tabindex="0" type="button" aria-describedby="bits-c19">Explain state<!----></button>',
+  tooltip: '<div data-slot="tooltip-content" class="data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[state=delayed-open]:animate-in data-[state=delayed-open]:fade-in-0 data-[state=delayed-open]:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs has-data-[slot=kbd]:pr-1.5 **:data-[slot=kbd]:relative **:data-[slot=kbd]:isolate **:data-[slot=kbd]:z-50 **:data-[slot=kbd]:rounded-sm z-50 w-fit max-w-xs origin-(--bits-tooltip-content-transform-origin) bg-foreground text-background" data-state="instant-open" data-tooltip-content="" data-side="top" data-align="center" tabindex="-1" id="bits-c19" data-starting-style="" style="pointer-events: auto; --bits-tooltip-content-transform-origin: var(--bits-floating-transform-origin); --bits-tooltip-content-available-width: var(--bits-floating-available-width); --bits-tooltip-content-available-height: var(--bits-floating-available-height); --bits-tooltip-anchor-width: var(--bits-floating-anchor-width); --bits-tooltip-anchor-height: var(--bits-floating-anchor-height);"><!---->The host owns authorization.<!----> <!----><!----><div class="size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] z-50 bg-foreground fill-foreground data-[side=bottom]:-translate-x-1/2 data-[side=bottom]:-translate-y-[calc(-50%_+_1px)] data-[side=left]:-translate-y-[calc(50%_-_3px)] data-[side=right]:translate-x-[calc(50%_+_2px)] data-[side=right]:translate-y-1/2 data-[side=top]:translate-x-1/2 data-[side=top]:translate-y-[calc(-50%_+_2px)]" data-side="top" id="bits-3" style="position: absolute; left: 94px; bottom: 0px; transform: translateY(100%);"></div><!----><!----></div>',
+  trigger: '<button data-slot="tooltip-trigger" id="bits-c14" data-state="instant-open" data-delay-duration="0" data-tooltip-trigger="" tabindex="0" type="button" aria-describedby="bits-c19">Explain state<!----></button>'
+}
+  ✘  1 [chromium] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs (5.4s)
+(node:2120901) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+tooltip-focus-diagnostic {
+  active: '<button data-slot="tooltip-trigger" id="bits-c14" data-state="instant-open" data-delay-duration="0" data-tooltip-trigger="" tabindex="0" type="button" aria-describedby="bits-c19">Explain state<!----></button>',
+  tooltip: '<div data-slot="tooltip-content" class="data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-[state=delayed-open]:animate-in data-[state=delayed-open]:fade-in-0 data-[state=delayed-open]:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs has-data-[slot=kbd]:pr-1.5 **:data-[slot=kbd]:relative **:data-[slot=kbd]:isolate **:data-[slot=kbd]:z-50 **:data-[slot=kbd]:rounded-sm z-50 w-fit max-w-xs origin-(--bits-tooltip-content-transform-origin) bg-foreground text-background" data-state="instant-open" data-tooltip-content="" data-side="top" data-align="center" tabindex="-1" id="bits-c19" style="pointer-events: auto; --bits-tooltip-content-transform-origin: var(--bits-floating-transform-origin); --bits-tooltip-content-available-width: var(--bits-floating-available-width); --bits-tooltip-content-available-height: var(--bits-floating-available-height); --bits-tooltip-anchor-width: var(--bits-floating-anchor-width); --bits-tooltip-anchor-height: var(--bits-floating-anchor-height);" data-starting-style=""><!---->The host owns authorization.<!----> <!----><!----><div class="size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] z-50 bg-foreground fill-foreground data-[side=bottom]:-translate-x-1/2 data-[side=bottom]:-translate-y-[calc(-50%_+_1px)] data-[side=left]:-translate-y-[calc(50%_-_3px)] data-[side=right]:translate-x-[calc(50%_+_2px)] data-[side=right]:translate-y-1/2 data-[side=top]:translate-x-1/2 data-[side=top]:translate-y-[calc(-50%_+_2px)]" data-side="top" id="bits-3" style="position: absolute; left: 94px; bottom: 0px; transform: translateY(100%);"></div><!----><!----></div>',
+  trigger: '<button data-slot="tooltip-trigger" id="bits-c14" data-state="instant-open" data-delay-duration="0" data-tooltip-trigger="" tabindex="0" type="button" aria-describedby="bits-c19">Explain state<!----></button>'
+}
+  ✘  2 [webkit] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs (5.4s)
+
+
+  1) [chromium] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('tooltip')
+    Expected: "The host owns authorization."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('tooltip') with timeout 5000ms
+      - waiting for getByRole('tooltip')
+
+
+      46 |   console.log('tooltip-focus-diagnostic', await page.evaluate(() => ({active:document.activeElement?.outerHTML, tooltip:document.querySelector('[data-slot=tooltip-content]')?.outerHTML, trigger:document.querySelector('[data-slot=tooltip-trigger]')?.outerHTML})));
+      47 |   await expect(page.getByRole('button',{name:'Explain state',exact:true})).toBeFocused();
+    > 48 |   await expect(page.getByRole('tooltip')).toHaveText('The host owns authorization.');
+         |                                           ^
+      49 |   await page.keyboard.press('Escape');await expect(page.getByRole('tooltip')).toHaveCount(0);
+      50 | });
+      51 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/studio-primitives.spec.ts:48:43
+
+    Error Context: test-results/studio-primitives-shared-s-64879-text-and-native-anchor-refs-chromium/error-context.md
+
+  2) [webkit] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('tooltip')
+    Expected: "The host owns authorization."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" getByRole('tooltip') with timeout 5000ms
+      - waiting for getByRole('tooltip')
+
+
+      46 |   console.log('tooltip-focus-diagnostic', await page.evaluate(() => ({active:document.activeElement?.outerHTML, tooltip:document.querySelector('[data-slot=tooltip-content]')?.outerHTML, trigger:document.querySelector('[data-slot=tooltip-trigger]')?.outerHTML})));
+      47 |   await expect(page.getByRole('button',{name:'Explain state',exact:true})).toBeFocused();
+    > 48 |   await expect(page.getByRole('tooltip')).toHaveText('The host owns authorization.');
+         |                                           ^
+      49 |   await page.keyboard.press('Escape');await expect(page.getByRole('tooltip')).toHaveCount(0);
+      50 | });
+      51 |
+        at /root/.codex/worktrees/rom-ui-gallery/rom-ui/tests/consumer/tests/studio-primitives.spec.ts:48:43
+
+    Error Context: test-results/studio-primitives-shared-s-64879-text-and-native-anchor-refs-webkit/error-context.md
+
+  2 failed
+    [chromium] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs 
+    [webkit] › tests/studio-primitives.spec.ts:37:1 › shared status and projection controls retain exact host text and native anchor refs 
